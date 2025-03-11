@@ -7,6 +7,7 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import { useState } from 'react';
+import { PawPrint } from 'lucide-react';
 
 export function GlobalNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ export function GlobalNav() {
           </div>
 
           <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">
-            Littlefoot
+            Littlefoot <PawPrint className="inline-block ml-1 h-4 w-4" />
           </h3>
         </Link>
       </div>
