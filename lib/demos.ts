@@ -81,6 +81,12 @@ export const demos: { name: string; items: Item[] }[] = [
         description:
           'Pass context between Client Components that cross Server/Client Component boundary',
       },
+      {
+        name: 'Crane Chart',
+        slug: 'crane',
+        description:
+          'Interactive chart displaying crane specifications and lifting capacity data',
+      },
     ],
   },
   {
