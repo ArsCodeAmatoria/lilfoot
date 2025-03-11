@@ -93,6 +93,12 @@ export const demos: { name: string; items: Item[] }[] = [
         description:
           'Liebherr 81k self-erect crane with Load-Plus LM 1 and 30° configurations',
       },
+      {
+        name: 'Crane Tables',
+        slug: 'crane-tables',
+        description:
+          'Comprehensive load tables for different crane configurations and angles',
+      },
     ],
   },
   {
