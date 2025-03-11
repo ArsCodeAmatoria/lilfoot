@@ -99,6 +99,12 @@ export const demos: { name: string; items: Item[] }[] = [
         description:
           'Detailed specifications and load tables for the Liebherr 81k self-erecting tower crane',
       },
+      {
+        name: '3D Buffer Demo',
+        slug: 'three-demo',
+        description:
+          'Interactive 3D particle system using Three.js buffer geometry draw range',
+      },
     ],
   },
   {
