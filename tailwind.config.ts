@@ -25,6 +25,7 @@ export default {
           orange: '#F5A623',
           violet: '#7928CA',
         },
+        highlight: '#53C03F',
       },
       backgroundImage: ({ theme }) => ({
         'vc-border-gradient': `radial-gradient(at left top, ${theme(
