@@ -1,8 +1,12 @@
 'use client';
 
-import React from 'react';
-import {
-  Chart as ChartJS,
+import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+
+// Import Chart.js types
+import type {
+  ChartData,
+  ChartOptions,
   CategoryScale,
   LinearScale,
   PointElement,
@@ -14,21 +18,12 @@ import {
   RadialLinearScale,
   ArcElement,
 } from 'chart.js';
-import { Line, Bar, PolarArea, Radar } from 'react-chartjs-2';
 
-// Register ChartJS components
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  BarElement,
-  RadialLinearScale,
-  ArcElement,
-  Title,
-  Tooltip,
-  Legend,
-);
+// Dynamically import the chart components to avoid SSR issues
+const Line = dynamic(() => import('react-chartjs-2').then((mod) => mod.Line), { ssr: false });
+const Bar = dynamic(() => import('react-chartjs-2').then((mod) => mod.Bar), { ssr: false });
+const PolarArea = dynamic(() => import('react-chartjs-2').then((mod) => mod.PolarArea), { ssr: false });
+const Radar = dynamic(() => import('react-chartjs-2').then((mod) => mod.Radar), { ssr: false });
 
 // Sample crane data based on specifications
 // In a real application, this would come from an API call to cranemarket.com
@@ -58,7 +53,7 @@ const craneData = {
       height: 4, // meters
     },
     weight: 48, // tons
-  },
+  }
 };
 
 interface CraneChartProps {
@@ -74,19 +69,60 @@ const CraneChart: React.FC<CraneChartProps> = ({
   highlightColor = '#53C03F',
   showFullData = true,
 }) => {
-  // Use a subset of data for radar/polar to make it more readable
-  const dataPoints = showFullData
-    ? craneData.specifications.liftingCapacity
-    : craneData.specifications.liftingCapacity.filter((_, i) => i % 2 === 0);
+  const [mounted, setMounted] = useState(false);
 
-  const labels = dataPoints.map((item) => `${item.radius}m`);
-  const capacityData = dataPoints.map((item) => item.capacity);
+  // Only render the charts on the client side
+  useEffect(() => {
+    setMounted(true);
+    
+    // Register Chart.js components only on the client side
+    const registerChartComponents = async () => {
+      if (typeof window !== 'undefined') {
+        const { 
+          Chart, 
+          CategoryScale, 
+          LinearScale, 
+          PointElement, 
+          LineElement,
+          BarElement,
+          RadialLinearScale,
+          ArcElement,
+          Title,
+          Tooltip,
+          Legend 
+        } = await import('chart.js');
+        
+        Chart.register(
+          CategoryScale,
+          LinearScale,
+          PointElement,
+          LineElement,
+          BarElement,
+          RadialLinearScale,
+          ArcElement,
+          Title,
+          Tooltip,
+          Legend
+        );
+      }
+    };
+    
+    registerChartComponents();
+  }, []);
+
+  // Use a subset of data for radar/polar to make it more readable
+  const dataPoints = showFullData 
+    ? craneData.specifications.liftingCapacity 
+    : craneData.specifications.liftingCapacity.filter((_, i) => i % 2 === 0);
+  
+  const labels = dataPoints.map(item => `${item.radius}m`);
+  const capacityData = dataPoints.map(item => item.capacity);
 
   // Generate an array of colors with transparency for multi-colored charts
   const generateColors = (baseColor: string, count: number) => {
     // If only one color is needed, return it
     if (count === 1) return [baseColor];
-
+    
     // For multiple colors, create variations
     return Array.from({ length: count }, (_, i) => {
       const hue = (i * 137.508) % 360; // Golden angle approximation for good distribution
@@ -95,7 +131,7 @@ const CraneChart: React.FC<CraneChartProps> = ({
   };
 
   const chartColors = generateColors(highlightColor, dataPoints.length);
-
+  
   const lineBarData = {
     labels,
     datasets: [
@@ -118,7 +154,7 @@ const CraneChart: React.FC<CraneChartProps> = ({
       {
         label: 'Lifting Capacity (tons)',
         data: capacityData,
-        backgroundColor: chartColors.map((color) => `${color}80`), // With opacity
+        backgroundColor: chartColors.map(color => `${color}80`), // With opacity
         borderColor: chartColors,
         borderWidth: 1,
       },
@@ -142,93 +178,93 @@ const CraneChart: React.FC<CraneChartProps> = ({
       },
       tooltip: {
         callbacks: {
-          label: function (context: any) {
+          label: function(context: any) {
             return `Capacity: ${context.parsed.y || context.raw} tons at ${context.label} radius`;
-          },
-        },
-      },
-    },
-    scales:
-      chartType === 'line' || chartType === 'bar'
-        ? {
-            y: {
-              beginAtZero: true,
-              title: {
-                display: true,
-                text: 'Lifting Capacity (tons)',
-                color: 'white',
-              },
-              ticks: {
-                color: 'rgba(255, 255, 255, 0.7)',
-              },
-              grid: {
-                color: 'rgba(255, 255, 255, 0.1)',
-              },
-            },
-            x: {
-              title: {
-                display: true,
-                text: 'Radius (meters)',
-                color: 'white',
-              },
-              ticks: {
-                color: 'rgba(255, 255, 255, 0.7)',
-              },
-              grid: {
-                color: 'rgba(255, 255, 255, 0.1)',
-              },
-            },
           }
-        : {
-            r: {
-              beginAtZero: true,
-              ticks: {
-                color: 'rgba(255, 255, 255, 0.7)',
-              },
-              grid: {
-                color: 'rgba(255, 255, 255, 0.1)',
-              },
-              pointLabels: {
-                color: 'rgba(255, 255, 255, 0.7)',
-              },
-            },
-          },
+        }
+      }
+    },
+    scales: chartType === 'line' || chartType === 'bar' ? {
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Lifting Capacity (tons)',
+          color: 'white',
+        },
+        ticks: {
+          color: 'rgba(255, 255, 255, 0.7)',
+        },
+        grid: {
+          color: 'rgba(255, 255, 255, 0.1)',
+        }
+      },
+      x: {
+        title: {
+          display: true,
+          text: 'Radius (meters)',
+          color: 'white',
+        },
+        ticks: {
+          color: 'rgba(255, 255, 255, 0.7)',
+        },
+        grid: {
+          color: 'rgba(255, 255, 255, 0.1)',
+        }
+      },
+    } : {
+      r: {
+        beginAtZero: true,
+        ticks: {
+          color: 'rgba(255, 255, 255, 0.7)',
+        },
+        grid: {
+          color: 'rgba(255, 255, 255, 0.1)',
+        },
+        pointLabels: {
+          color: 'rgba(255, 255, 255, 0.7)',
+        }
+      }
+    },
   };
 
   return (
-    <div className="w-full rounded-lg bg-black p-4 shadow-lg">
+    <div className="w-full bg-black p-4 rounded-lg shadow-lg">
       <div className="mb-4">
         <h2 className="text-xl font-bold text-white">{craneData.model}</h2>
-        <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-3">
-          <div className="rounded bg-gray-900 p-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+          <div className="bg-gray-900 p-3 rounded">
             <p className="text-gray-400">Max Boom Length</p>
-            <p className="text-lg text-white">
-              {craneData.specifications.boomLength}m
-            </p>
+            <p className="text-white text-lg">{craneData.specifications.boomLength}m</p>
           </div>
-          <div className="rounded bg-gray-900 p-3">
+          <div className="bg-gray-900 p-3 rounded">
             <p className="text-gray-400">Engine Power</p>
-            <p className="text-lg text-white">
-              {craneData.specifications.enginePower}hp
-            </p>
+            <p className="text-white text-lg">{craneData.specifications.enginePower}hp</p>
           </div>
-          <div className="rounded bg-gray-900 p-3">
+          <div className="bg-gray-900 p-3 rounded">
             <p className="text-gray-400">Total Weight</p>
-            <p className="text-lg text-white">
-              {craneData.specifications.weight} tons
-            </p>
+            <p className="text-white text-lg">{craneData.specifications.weight} tons</p>
           </div>
         </div>
       </div>
       <div className="h-80 w-full">
-        {chartType === 'line' ? (
-          <Line options={options} data={lineBarData} />
-        ) : chartType === 'bar' ? (
-          <Bar options={options} data={lineBarData} />
-        ) : chartType === 'polar' ? (
-          <PolarArea options={options} data={polarRadarData} />
-        ) : (
-          <Radar options={options} data={polarRadarData} />
+        {mounted && (
+          <>
+            {chartType === 'line' ? (
+              <Line options={options as any} data={lineBarData} />
+            ) : chartType === 'bar' ? (
+              <Bar options={options as any} data={lineBarData} />
+            ) : chartType === 'polar' ? (
+              <PolarArea options={options as any} data={polarRadarData} />
+            ) : (
+              <Radar options={options as any} data={polarRadarData} />
+            )}
+          </>
+        )}
+        {!mounted && (
+          <div className="flex h-full w-full items-center justify-center">
+            <p className="text-gray-400">Loading chart...</p>
+          </div>
         )}
       </div>
     </div>
