@@ -1,13 +1,12 @@
 'use client';
 
 import { demos, type Item } from '#/lib/demos';
-import { NextLogoDark } from '#/ui/next-logo';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import { useState } from 'react';
-import { PawPrint } from 'lucide-react';
+import { PawPrint, ExternalLink } from 'lucide-react';
 
 export function GlobalNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,12 +20,12 @@ export function GlobalNav() {
           className="group flex w-full items-center gap-x-2.5"
           onClick={close}
         >
-          <div className="h-7 w-7 rounded-full">
-            <NextLogoDark />
+          <div className="h-7 w-7 flex items-center justify-center">
+            <PawPrint size={24} color="#53C03F" />
           </div>
 
           <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">
-            Littlefoot <PawPrint className="inline-block ml-1 h-4 w-4" />
+            Littlefoot
           </h3>
         </Link>
       </div>
@@ -51,22 +50,42 @@ export function GlobalNav() {
           hidden: !isOpen,
         })}
       >
-        <nav className="space-y-6 px-2 pb-24 pt-5">
-          {demos.map((section) => {
-            return (
-              <div key={section.name}>
-                <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400/80">
-                  <div>{section.name}</div>
-                </div>
+        <nav className="flex flex-col h-full space-y-6 px-2 pt-5 pb-4">
+          <div className="flex-grow">
+            {demos.map((section) => {
+              return (
+                <div key={section.name} className="mb-6">
+                  <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400/80">
+                    <div>{section.name}</div>
+                  </div>
 
-                <div className="space-y-1">
-                  {section.items.map((item) => (
-                    <GlobalNavItem key={item.slug} item={item} close={close} />
-                  ))}
+                  <div className="space-y-1">
+                    {section.items.map((item) => (
+                      <GlobalNavItem key={item.slug} item={item} close={close} />
+                    ))}
+                  </div>
                 </div>
+              );
+            })}
+          </div>
+          
+          {/* Bigfoot Crane Attribution */}
+          <div className="mt-auto pt-4 border-t border-gray-800">
+            <div className="px-3 py-2 text-xs text-gray-500">
+              <p className="mb-2">© {new Date().getFullYear()} Littlefoot</p>
+              <div>
+                <a 
+                  href="https://bigfootcrane.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-gray-400 hover:text-gray-300 transition-colors"
+                >
+                  <span>Made by Bigfoot Crane</span>
+                  <ExternalLink size={12} className="ml-1 inline-block" />
+                </a>
               </div>
-            );
-          })}
+            </div>
+          </div>
         </nav>
       </div>
     </div>
