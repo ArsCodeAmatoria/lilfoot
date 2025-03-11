@@ -11,8 +11,10 @@ import {
   Tooltip,
   Legend,
   BarElement,
+  RadialLinearScale,
+  ArcElement,
 } from 'chart.js';
-import { Line, Bar } from 'react-chartjs-2';
+import { Line, Bar, PolarArea, Radar } from 'react-chartjs-2';
 
 // Register ChartJS components
 ChartJS.register(
@@ -21,6 +23,8 @@ ChartJS.register(
   PointElement,
   LineElement,
   BarElement,
+  RadialLinearScale,
+  ArcElement,
   Title,
   Tooltip,
   Legend,
@@ -58,24 +62,41 @@ const craneData = {
 };
 
 interface CraneChartProps {
-  chartType?: 'line' | 'bar';
+  chartType?: 'line' | 'bar' | 'polar' | 'radar';
   title?: string;
   highlightColor?: string;
+  showFullData?: boolean;
 }
 
 const CraneChart: React.FC<CraneChartProps> = ({
   chartType = 'line',
   title = 'Crane Lifting Capacity vs. Radius',
   highlightColor = '#53C03F',
+  showFullData = true,
 }) => {
-  const labels = craneData.specifications.liftingCapacity.map(
-    (item) => `${item.radius}m`,
-  );
-  const capacityData = craneData.specifications.liftingCapacity.map(
-    (item) => item.capacity,
-  );
+  // Use a subset of data for radar/polar to make it more readable
+  const dataPoints = showFullData
+    ? craneData.specifications.liftingCapacity
+    : craneData.specifications.liftingCapacity.filter((_, i) => i % 2 === 0);
 
-  const chartData = {
+  const labels = dataPoints.map((item) => `${item.radius}m`);
+  const capacityData = dataPoints.map((item) => item.capacity);
+
+  // Generate an array of colors with transparency for multi-colored charts
+  const generateColors = (baseColor: string, count: number) => {
+    // If only one color is needed, return it
+    if (count === 1) return [baseColor];
+
+    // For multiple colors, create variations
+    return Array.from({ length: count }, (_, i) => {
+      const hue = (i * 137.508) % 360; // Golden angle approximation for good distribution
+      return `hsl(${hue}, 70%, 50%)`;
+    });
+  };
+
+  const chartColors = generateColors(highlightColor, dataPoints.length);
+
+  const lineBarData = {
     labels,
     datasets: [
       {
@@ -87,6 +108,19 @@ const CraneChart: React.FC<CraneChartProps> = ({
         pointBackgroundColor: highlightColor,
         pointRadius: 5,
         pointHoverRadius: 7,
+      },
+    ],
+  };
+
+  const polarRadarData = {
+    labels,
+    datasets: [
+      {
+        label: 'Lifting Capacity (tons)',
+        data: capacityData,
+        backgroundColor: chartColors.map((color) => `${color}80`), // With opacity
+        borderColor: chartColors,
+        borderWidth: 1,
       },
     ],
   };
@@ -104,30 +138,61 @@ const CraneChart: React.FC<CraneChartProps> = ({
         font: {
           size: 16,
         },
+        color: 'white',
       },
       tooltip: {
         callbacks: {
           label: function (context: any) {
-            return `Capacity: ${context.parsed.y} tons at ${context.label} radius`;
+            return `Capacity: ${context.parsed.y || context.raw} tons at ${context.label} radius`;
           },
         },
       },
     },
-    scales: {
-      y: {
-        beginAtZero: true,
-        title: {
-          display: true,
-          text: 'Lifting Capacity (tons)',
-        },
-      },
-      x: {
-        title: {
-          display: true,
-          text: 'Radius (meters)',
-        },
-      },
-    },
+    scales:
+      chartType === 'line' || chartType === 'bar'
+        ? {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Lifting Capacity (tons)',
+                color: 'white',
+              },
+              ticks: {
+                color: 'rgba(255, 255, 255, 0.7)',
+              },
+              grid: {
+                color: 'rgba(255, 255, 255, 0.1)',
+              },
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Radius (meters)',
+                color: 'white',
+              },
+              ticks: {
+                color: 'rgba(255, 255, 255, 0.7)',
+              },
+              grid: {
+                color: 'rgba(255, 255, 255, 0.1)',
+              },
+            },
+          }
+        : {
+            r: {
+              beginAtZero: true,
+              ticks: {
+                color: 'rgba(255, 255, 255, 0.7)',
+              },
+              grid: {
+                color: 'rgba(255, 255, 255, 0.1)',
+              },
+              pointLabels: {
+                color: 'rgba(255, 255, 255, 0.7)',
+              },
+            },
+          },
   };
 
   return (
@@ -157,9 +222,13 @@ const CraneChart: React.FC<CraneChartProps> = ({
       </div>
       <div className="h-80 w-full">
         {chartType === 'line' ? (
-          <Line options={options} data={chartData} />
+          <Line options={options} data={lineBarData} />
+        ) : chartType === 'bar' ? (
+          <Bar options={options} data={lineBarData} />
+        ) : chartType === 'polar' ? (
+          <PolarArea options={options} data={polarRadarData} />
         ) : (
-          <Bar options={options} data={chartData} />
+          <Radar options={options} data={polarRadarData} />
         )}
       </div>
     </div>
