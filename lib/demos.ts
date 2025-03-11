@@ -87,6 +87,12 @@ export const demos: { name: string; items: Item[] }[] = [
         description:
           'Interactive chart displaying crane specifications and lifting capacity data',
       },
+      {
+        name: 'Self-Erect Crane',
+        slug: 'self-erect',
+        description:
+          'Liebherr 81k self-erect crane with Load-Plus LM 1 and 30° configurations',
+      },
     ],
   },
   {
