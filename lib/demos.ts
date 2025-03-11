@@ -100,6 +100,12 @@ export const demos: { name: string; items: Item[] }[] = [
           'Detailed specifications and load tables for the Liebherr 81k self-erecting tower crane',
       },
       {
+        name: 'Red Seal Practice Exam',
+        slug: 'red-seal-exam',
+        description:
+          'Interactive practice exam for Red Seal Tower Crane Operator certification with detailed feedback',
+      },
+      {
         name: '3D Buffer Demo',
         slug: 'three-demo',
         description:
