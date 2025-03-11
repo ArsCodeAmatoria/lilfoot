@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "NPM_USE_NPMRC": "true"
+    }
+  },
+  "installCommand": "npm install --legacy-peer-deps"
+} 
