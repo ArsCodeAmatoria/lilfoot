@@ -338,18 +338,33 @@ export default function PeccoSK180Page() {
 
         {/* Load Capacity Chart */}
         <section>
-          <h2 className="text-2xl font-bold text-white mb-6">Load Capacity Chart</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">Load Capacity Charts</h2>
           <p className="text-gray-400 mb-6">
-            This chart visualizes the load capacity of the Pecco SK 180 tower crane at different jib radii. 
-            The diagram shows how the maximum load capacity decreases as the jib radius increases, helping 
+            These charts visualize the load capacity of the Pecco SK 180 tower crane at different jib radii. 
+            The diagrams show how the maximum load capacity decreases as the jib radius increases, helping 
             operators determine safe operating limits for specific configurations.
           </p>
-          <LoadCapacityChart />
-          <div className="mt-4 text-sm text-gray-400">
-            <span className="text-highlight font-medium">Note:</span> The chart represents the 196 ft jib length with 2-Part Line configuration. 
-            It shows the relationship between jib radius (from 80 ft to 196 ft) and maximum lifting capacity, 
-            demonstrating how capacity decreases as the hook moves further from the mast. Always refer to the full load charts 
-            above when planning lifts, as capacity varies with different jib lengths.
+          
+          {/* 2-Part Line Chart */}
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-highlight mb-4">2-Part Line Configuration</h3>
+            <LoadCapacityChart configuration="twoPartLine" />
+            <div className="mt-4 text-sm text-gray-400">
+              <span className="text-highlight font-medium">Note:</span> This chart represents the 196 ft jib length with 2-Part Line configuration. 
+              It shows the relationship between jib radius (from 80 ft to 196 ft) and maximum lifting capacity, 
+              demonstrating how capacity decreases as the hook moves further from the mast. The 2-Part line configuration offers faster hoisting speeds with less capacity.
+            </div>
+          </div>
+          
+          {/* 4-Part Line Chart */}
+          <div>
+            <h3 className="text-xl font-bold text-highlight mb-4">4-Part Line Configuration</h3>
+            <LoadCapacityChart configuration="fourPartLine" />
+            <div className="mt-4 text-sm text-gray-400">
+              <span className="text-highlight font-medium">Note:</span> This chart represents the 196 ft jib length with 4-Part Line configuration. 
+              The 4-Part line configuration provides higher lifting capacity (up to 27,600 lbs) at the expense of hoisting speed. 
+              Notice the capacity reduction as radius increases, starting from a higher capacity at shorter radii compared to the 2-Part line.
+            </div>
           </div>
         </section>
 

@@ -25,8 +25,8 @@ ChartJS.register(
   Legend
 );
 
-// Define the load capacity data - using values from the 196 ft jib configuration
-const loadCapacityData = [
+// Define the 2-Part line load capacity data
+const twoPartLineData = [
   { radiusFt: 80, radiusM: 24.4, capacityLbs: 13800, capacityKg: 6250 },
   { radiusFt: 90, radiusM: 27.4, capacityLbs: 12300, capacityKg: 5580 },
   { radiusFt: 101, radiusM: 30.8, capacityLbs: 10800, capacityKg: 4900 },
@@ -39,7 +39,31 @@ const loadCapacityData = [
   { radiusFt: 196, radiusM: 59.7, capacityLbs: 4900, capacityKg: 2220 },
 ];
 
-const LoadCapacityChart: React.FC = () => {
+// Define the 4-Part line load capacity data
+const fourPartLineData = [
+  { radiusFt: 60, radiusM: 18.3, capacityLbs: 19060, capacityKg: 8645 },
+  { radiusFt: 70, radiusM: 21.3, capacityLbs: 15700, capacityKg: 7120 },
+  { radiusFt: 80, radiusM: 24.4, capacityLbs: 13400, capacityKg: 6080 },
+  { radiusFt: 90, radiusM: 27.4, capacityLbs: 11700, capacityKg: 5300 },
+  { radiusFt: 101, radiusM: 30.8, capacityLbs: 10200, capacityKg: 4625 },
+  { radiusFt: 110, radiusM: 33.5, capacityLbs: 9100, capacityKg: 4125 },
+  { radiusFt: 120, radiusM: 36.6, capacityLbs: 8100, capacityKg: 3670 },
+  { radiusFt: 130, radiusM: 39.6, capacityLbs: 7300, capacityKg: 3310 },
+  { radiusFt: 140, radiusM: 42.7, capacityLbs: 6700, capacityKg: 3040 },
+  { radiusFt: 150, radiusM: 45.7, capacityLbs: 6100, capacityKg: 2770 },
+  { radiusFt: 168, radiusM: 51.2, capacityLbs: 5200, capacityKg: 2360 },
+  { radiusFt: 180, radiusM: 54.9, capacityLbs: 4700, capacityKg: 2130 },
+  { radiusFt: 196, radiusM: 59.7, capacityLbs: 4200, capacityKg: 1905 },
+];
+
+interface LoadCapacityChartProps {
+  configuration: 'twoPartLine' | 'fourPartLine';
+}
+
+const LoadCapacityChart: React.FC<LoadCapacityChartProps> = ({ configuration }) => {
+  // Select the appropriate data based on the configuration
+  const loadCapacityData = configuration === 'twoPartLine' ? twoPartLineData : fourPartLineData;
+  
   // Chart options
   const options: ChartOptions<'line'> = {
     responsive: true,
@@ -56,7 +80,7 @@ const LoadCapacityChart: React.FC = () => {
       },
       title: {
         display: true,
-        text: 'Pecco SK 180 - 196 ft Jib (2-Part Line) Load Chart',
+        text: `Pecco SK 180 - 196 ft Jib (${configuration === 'twoPartLine' ? '2-Part' : '4-Part'} Line) Load Chart`,
         color: '#FFFFFF',
         font: {
           size: 18,
@@ -108,7 +132,7 @@ const LoadCapacityChart: React.FC = () => {
       },
       y: {
         min: 0,
-        max: 15000,
+        max: configuration === 'twoPartLine' ? 15000 : 24000,
         ticks: {
           color: '#FFFFFF',
           callback: function(value) {
