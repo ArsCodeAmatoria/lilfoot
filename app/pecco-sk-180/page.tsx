@@ -17,7 +17,10 @@ export default function PeccoSK180Page() {
       <div className="space-y-12">
         {/* 2-Part Line Configuration */}
         <section>
-          <h2 className="text-2xl font-bold text-white mb-6">2-Part Line Configuration</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">
+            <span className="mr-2 text-highlight">2-Part Line</span>
+            Configuration
+          </h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse bg-black">
               <thead>
@@ -151,11 +154,17 @@ export default function PeccoSK180Page() {
               </tbody>
             </table>
           </div>
+          <div className="mt-2 text-sm text-gray-400">
+            <span className="text-highlight font-medium">Note:</span> Empty cells indicate configurations that are not available or not recommended for operation.
+          </div>
         </section>
 
         {/* 4-Part Line Configuration */}
         <section>
-          <h2 className="text-2xl font-bold text-white mb-6">4-Part Line Configuration</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">
+            <span className="mr-2 text-highlight">4-Part Line</span>
+            Configuration
+          </h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse bg-black">
               <thead>
@@ -289,6 +298,9 @@ export default function PeccoSK180Page() {
               </tbody>
             </table>
           </div>
+          <div className="mt-2 text-sm text-gray-400">
+            <span className="text-highlight font-medium">Note:</span> Empty cells indicate configurations that are not available or not recommended for operation.
+          </div>
         </section>
 
         {/* Crane Information */}
@@ -296,7 +308,7 @@ export default function PeccoSK180Page() {
           <h2 className="text-2xl font-bold text-white mb-6">Specifications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-gray-900 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
+              <h3 className="text-xl font-bold text-highlight mb-4">Key Features</h3>
               <ul className="space-y-2 text-gray-300">
                 <li>• Maximum lifting capacity: 27,600 lbs (12,500 kg)</li>
                 <li>• Maximum jib length: 196 ft (59.7 m)</li>
@@ -306,7 +318,7 @@ export default function PeccoSK180Page() {
               </ul>
             </div>
             <div className="bg-gray-900 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-white mb-4">Technical Data</h3>
+              <h3 className="text-xl font-bold text-highlight mb-4">Technical Data</h3>
               <ul className="space-y-2 text-gray-300">
                 <li>• Tower section dimensions: 5.9 ft x 5.9 ft (1.8 m x 1.8 m)</li>
                 <li>• Slewing speed: 0 to 0.8 rpm</li>
@@ -324,24 +336,39 @@ export default function PeccoSK180Page() {
           <div className="bg-gray-900 p-6 rounded-lg text-gray-300">
             <ul className="space-y-4">
               <li>
-                <span className="text-white font-semibold">Load Capacity:</span> The lifting capacity decreases as the 
+                <span className="text-highlight font-semibold">Load Capacity:</span> The lifting capacity decreases as the 
                 hook radius increases, as shown in the load charts above.
               </li>
               <li>
-                <span className="text-white font-semibold">Line Configuration:</span> The 4-part line configuration 
+                <span className="text-highlight font-semibold">Line Configuration:</span> The 4-part line configuration 
                 provides higher lifting capacity at the expense of hoisting speed, while the 2-part line 
                 configuration offers faster hoisting speeds with reduced capacity.
               </li>
               <li>
-                <span className="text-white font-semibold">Safety Considerations:</span> Always refer to the 
+                <span className="text-highlight font-semibold">Safety Considerations:</span> Always refer to the 
                 manufacturer's operation manual for complete safety guidelines and operational procedures.
               </li>
               <li>
-                <span className="text-white font-semibold">Wind Limits:</span> The crane should not be operated in 
+                <span className="text-highlight font-semibold">Wind Limits:</span> The crane should not be operated in 
                 wind speeds exceeding 45 mph (72 km/h). When wind speeds exceed 63 mph (101 km/h), the crane 
                 must be in weather vane mode.
               </li>
             </ul>
+          </div>
+        </section>
+
+        {/* Additional Resources */}
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
+          <div className="bg-gray-900 p-6 rounded-lg text-gray-300">
+            <p className="mb-4">
+              For more information about the Pecco SK 180 Tower Crane or to request a consultation for your construction project, 
+              visit <a href="https://bigfootcrane.com/" className="text-highlight hover:underline" target="_blank" rel="noopener noreferrer">Bigfoot Crane Company</a> or contact our equipment specialists.
+            </p>
+            <p>
+              Proper training and certification are required for safe operation of this equipment. Bigfoot Crane Academy offers 
+              comprehensive training programs for tower crane operators.
+            </p>
           </div>
         </section>
       </div>
