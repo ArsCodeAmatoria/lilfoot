@@ -5,6 +5,7 @@ import SpeedLoadCapacityChart from '../components/SpeedLoadCapacityChart';
 import PdfDownload from '../components/PdfDownload';
 import InteractiveRadiusVisualizer from '../components/InteractiveRadiusVisualizer';
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Liebherr 81k Self-Erecting Crane | Littlefoot',
@@ -16,11 +17,25 @@ export default function Liebherr81kPage() {
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold text-white mb-4">Liebherr 81k Self-Erecting Crane</h1>
-        <p className="text-gray-400 mb-6">
-          The Liebherr 81k is a versatile self-erecting tower crane designed for efficiency and rapid deployment
-          on construction sites. With its 45-meter jib length and maximum lifting capacity of 6,000 kg, it's
-          ideal for residential and commercial construction projects.
-        </p>
+        <div className="flex flex-col md:flex-row gap-6 mb-6">
+          <div className="w-full md:w-2/3">
+            <p className="text-gray-400 mb-6">
+              The Liebherr 81k is a versatile self-erecting tower crane designed for efficiency and rapid deployment
+              on construction sites. With its 45-meter jib length and maximum lifting capacity of 6,000 kg, it's
+              ideal for residential and commercial construction projects.
+            </p>
+          </div>
+          <div className="w-full md:w-1/3">
+            <div className="relative aspect-video rounded-lg overflow-hidden">
+              <Image 
+                src="/images/liebherr81k.jpg" 
+                alt="Liebherr 81k Self-Erecting Crane" 
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Key Specifications */}
@@ -61,33 +76,43 @@ export default function Liebherr81kPage() {
 
         <div className="bg-black p-6 rounded-lg shadow-lg">
           <h2 className="text-xl font-bold text-white mb-4">Transport Dimensions</h2>
-          <ul className="space-y-3 mb-6">
-            <li className="flex justify-between">
-              <span className="text-gray-400">Length:</span>
-              <span className="text-white font-medium">15.3 meters</span>
-            </li>
-            <li className="flex justify-between">
-              <span className="text-gray-400">Width:</span>
-              <span className="text-white font-medium">2.5 meters</span>
-            </li>
-            <li className="flex justify-between">
-              <span className="text-gray-400">Height:</span>
-              <span className="text-white font-medium">3.9 meters</span>
-            </li>
-            <li className="flex justify-between">
-              <span className="text-gray-400">Total Weight:</span>
-              <span className="text-white font-medium">24,800 kg</span>
-            </li>
-          </ul>
+          <div className="flex flex-col gap-4">
+            <div className="relative h-48 rounded-lg overflow-hidden">
+              <Image 
+                src="/images/liebherr81k-transport.jpg" 
+                alt="Liebherr 81k in transport configuration" 
+                fill
+                className="object-cover"
+              />
+            </div>
+            <ul className="space-y-3 mb-6">
+              <li className="flex justify-between">
+                <span className="text-gray-400">Length:</span>
+                <span className="text-white font-medium">15.3 meters</span>
+              </li>
+              <li className="flex justify-between">
+                <span className="text-gray-400">Width:</span>
+                <span className="text-white font-medium">2.5 meters</span>
+              </li>
+              <li className="flex justify-between">
+                <span className="text-gray-400">Height:</span>
+                <span className="text-white font-medium">3.9 meters</span>
+              </li>
+              <li className="flex justify-between">
+                <span className="text-gray-400">Total Weight:</span>
+                <span className="text-white font-medium">24,800 kg</span>
+              </li>
+            </ul>
 
-          <h3 className="text-lg font-semibold text-highlight mb-2">Key Features</h3>
-          <ul className="list-disc list-inside text-gray-400 space-y-1">
-            <li>Quick and efficient assembly without auxiliary crane</li>
-            <li>Compact transport dimensions for versatile site access</li>
-            <li>Variable jib configurations including 30° angle</li>
-            <li>Remote control operation with safety features</li>
-            <li>Energy-efficient electric drive system</li>
-          </ul>
+            <h3 className="text-lg font-semibold text-highlight mb-2">Key Features</h3>
+            <ul className="list-disc list-inside text-gray-400 space-y-1">
+              <li>Quick and efficient assembly without auxiliary crane</li>
+              <li>Compact transport dimensions for versatile site access</li>
+              <li>Variable jib configurations including 30° angle</li>
+              <li>Remote control operation with safety features</li>
+              <li>Energy-efficient electric drive system</li>
+            </ul>
+          </div>
         </div>
       </div>
 
