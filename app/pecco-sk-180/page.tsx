@@ -129,7 +129,6 @@ export default function PeccoSK180Page() {
                   <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
                 </tr>
                 <tr className="border-b border-gray-800 hover:bg-gray-900">
                   <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">101 ft (30.8m)</td>
@@ -138,7 +137,6 @@ export default function PeccoSK180Page() {
                   <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
                   <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
                   <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
@@ -291,7 +289,6 @@ export default function PeccoSK180Page() {
                   <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
                 </tr>
               </tbody>
             </table>
@@ -407,6 +404,71 @@ export default function PeccoSK180Page() {
           </div>
           <div className="mt-2 text-sm text-gray-400">
             <span className="text-highlight font-medium">Note:</span> Line speed varies based on the gear selected and decreases as the load increases. Always operate within the specified capacity limits.
+          </div>
+        </section>
+
+        {/* Motor Information Table */}
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-6">Motor Information</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse bg-black">
+              <thead>
+                <tr className="border-b border-gray-700">
+                  <th className="py-3 px-4 text-left text-white sticky left-0 bg-black z-10 min-w-[180px]">Drive Unit</th>
+                  <th className="py-3 px-4 text-left text-white min-w-[120px]">Horsepower</th>
+                  <th className="py-3 px-4 text-left text-white min-w-[120px]">Kilowatts</th>
+                  <th className="py-3 px-4 text-left text-white min-w-[220px]">Speed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-800 hover:bg-gray-900">
+                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">Trolley (2-Part Line)</td>
+                  <td className="py-3 px-4 text-gray-300">6.4 hp</td>
+                  <td className="py-3 px-4 text-gray-300">4.8 kW</td>
+                  <td className="py-3 px-4 text-gray-300">13 - 249 fpm (4 - 76 m/min)</td>
+                </tr>
+                <tr className="border-b border-gray-800 hover:bg-gray-900">
+                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">Trolley (4-Part Line)</td>
+                  <td className="py-3 px-4 text-gray-300">6.4 hp</td>
+                  <td className="py-3 px-4 text-gray-300">4.8 kW</td>
+                  <td className="py-3 px-4 text-gray-300">6.6 - 125 fpm (2 - 38 m/min)</td>
+                </tr>
+                <tr className="border-b border-gray-800 hover:bg-gray-900">
+                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">Swing</td>
+                  <td className="py-3 px-4 text-gray-300">2 x 6.4 hp</td>
+                  <td className="py-3 px-4 text-gray-300">2 x 4.8 kW</td>
+                  <td className="py-3 px-4 text-gray-300">1.0 rpm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Power Requirements Table */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-white mb-6">Power Requirements</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse bg-black">
+              <thead>
+                <tr className="border-b border-gray-700">
+                  <th className="py-3 px-4 text-left text-white min-w-[120px]">Voltage</th>
+                  <th className="py-3 px-4 text-left text-white min-w-[120px]">Phase</th>
+                  <th className="py-3 px-4 text-left text-white min-w-[120px]">Frequency</th>
+                  <th className="py-3 px-4 text-left text-white min-w-[150px]">Amperage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-800 hover:bg-gray-900">
+                  <td className="py-3 px-4 text-gray-300 font-medium">480 V</td>
+                  <td className="py-3 px-4 text-gray-300">3-Phase</td>
+                  <td className="py-3 px-4 text-gray-300">60 Hz</td>
+                  <td className="py-3 px-4 text-gray-300">225 - 250 Amps</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-2 text-sm text-gray-400">
+            <span className="text-highlight font-medium">Note:</span> Proper electrical installation by a certified electrician is required. Always verify local electrical codes before installation.
           </div>
         </section>
 
