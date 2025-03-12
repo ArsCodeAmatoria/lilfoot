@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import LoadCapacityChart from "../components/LoadCapacityChart";
+import LoadCapacityChart, { PolarAreaCapacityChart } from "../components/LoadCapacityChart";
 
 // Tab Button Component
 function TabButton({ isActive, onClick, children }: { isActive: boolean, onClick: () => void, children: React.ReactNode }) {
@@ -184,7 +184,6 @@ export default function PeccoSK180Page() {
                         <td className="py-3 px-4 text-center text-gray-300"></td>
                         <td className="py-3 px-4 text-center text-gray-300"></td>
                         <td className="py-3 px-4 text-center text-gray-300"></td>
-                        <td className="py-3 px-4 text-center text-gray-300"></td>
                       </tr>
                     </tbody>
                   </table>
@@ -357,7 +356,7 @@ export default function PeccoSK180Page() {
           </div>
           
           {/* 4-Part Line Chart */}
-          <div>
+          <div className="mb-12">
             <h3 className="text-xl font-bold text-highlight mb-4">4-Part Line Configuration</h3>
             <LoadCapacityChart configuration="fourPartLine" />
             <div className="mt-4 text-sm text-gray-400">
@@ -365,6 +364,28 @@ export default function PeccoSK180Page() {
               The 4-Part line configuration provides higher lifting capacity (up to 27,600 lbs) at the expense of hoisting speed. 
               Notice the capacity reduction as radius increases, starting from a higher capacity at shorter radii compared to the 2-Part line.
             </div>
+          </div>
+
+          {/* Capacity Distribution Charts */}
+          <h3 className="text-2xl font-bold text-white mt-14 mb-6">Capacity Distribution (Polar Area Charts)</h3>
+          <p className="text-gray-400 mb-6">
+            These polar area charts provide a different perspective on capacity distribution. Each segment represents capacity at a specific radius, 
+            with the area of each segment proportional to the lifting capacity at that radius.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4">
+            <div>
+              <h4 className="text-xl font-bold text-highlight mb-4 text-center">2-Part Line Distribution</h4>
+              <PolarAreaCapacityChart configuration="twoPartLine" />
+            </div>
+            <div>
+              <h4 className="text-xl font-bold text-highlight mb-4 text-center">4-Part Line Distribution</h4>
+              <PolarAreaCapacityChart configuration="fourPartLine" />
+            </div>
+          </div>
+          <div className="text-sm text-gray-400">
+            <span className="text-highlight font-medium">Note:</span> The polar area charts highlight the dramatic decrease in capacity as the radius increases. 
+            Compare both configurations to see how the 4-Part line maintains higher capacity across all radii compared to the 2-Part line.
           </div>
         </section>
 

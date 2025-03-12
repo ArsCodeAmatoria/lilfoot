@@ -10,9 +10,12 @@ import {
   Title,
   Tooltip,
   Legend,
-  ChartOptions
+  ChartOptions,
+  RadialLinearScale,
+  ArcElement,
+  PolarAreaController
 } from 'chart.js';
-import { Line } from 'react-chartjs-2';
+import { Line, PolarArea } from 'react-chartjs-2';
 
 // Register ChartJS components
 ChartJS.register(
@@ -22,7 +25,10 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  RadialLinearScale,
+  ArcElement,
+  PolarAreaController
 );
 
 // Define the 2-Part line load capacity data for 196 ft jib
@@ -186,4 +192,138 @@ const LoadCapacityChart: React.FC<LoadCapacityChartProps> = ({ configuration }) 
   );
 };
 
+// Polar Area Chart for Capacity Distribution
+const PolarAreaCapacityChart: React.FC<LoadCapacityChartProps> = ({ configuration }) => {
+  // Select the appropriate data based on the configuration
+  const loadCapacityData = configuration === 'twoPartLine' ? twoPartLineData : fourPartLineData;
+  
+  // Get a subset of the data points to make the polar chart clearer
+  const polarData = configuration === 'twoPartLine' 
+    ? [
+        { radiusFt: 80, capacityLbs: 13800 },
+        { radiusFt: 101, capacityLbs: 10800 },
+        { radiusFt: 120, capacityLbs: 8700 },
+        { radiusFt: 150, capacityLbs: 6700 },
+        { radiusFt: 180, capacityLbs: 5400 },
+        { radiusFt: 196, capacityLbs: 4900 }
+      ]
+    : [
+        { radiusFt: 60, capacityLbs: 27600 },
+        { radiusFt: 80, capacityLbs: 19060 },
+        { radiusFt: 101, capacityLbs: 13400 },
+        { radiusFt: 120, capacityLbs: 10200 },
+        { radiusFt: 150, capacityLbs: 7300 },
+        { radiusFt: 196, capacityLbs: 4200 }
+      ];
+
+  // Generate colors with progressively lighter shades of green
+  const generateBackgroundColors = (count: number) => {
+    const baseColor = [83, 192, 63]; // RGB for #53C03F
+    return Array.from({ length: count }, (_, i) => {
+      const opacity = 0.85 - (i * 0.1);
+      return `rgba(${baseColor[0]}, ${baseColor[1]}, ${baseColor[2]}, ${opacity})`;
+    });
+  };
+
+  // Chart options
+  const options: ChartOptions<'polarArea'> = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'right' as const,
+        labels: {
+          color: '#FFFFFF',
+          font: {
+            size: 12
+          },
+          // Format the legend labels to include radius and capacity
+          generateLabels: function(chart) {
+            const datasets = chart.data.datasets;
+            return chart.data.labels?.map((label, i) => {
+              const meta = chart.getDatasetMeta(0);
+              const style = meta.controller.getStyle(i, false);
+              return {
+                text: `${label} ft - ${datasets[0].data[i]?.toLocaleString()} lbs`,
+                fillStyle: style.backgroundColor,
+                strokeStyle: style.borderColor,
+                lineWidth: style.borderWidth,
+                hidden: !chart.getDataVisibility(i),
+                index: i
+              };
+            }) || [];
+          }
+        }
+      },
+      title: {
+        display: true,
+        text: `Pecco SK 180 (${configuration === 'twoPartLine' ? '2-Part' : '4-Part'} Line) Capacity Distribution`,
+        color: '#FFFFFF',
+        font: {
+          size: 18,
+          weight: 'bold'
+        },
+        padding: {
+          top: 10,
+          bottom: 20
+        }
+      },
+      tooltip: {
+        callbacks: {
+          label: (context) => {
+            const value = context.raw as number;
+            return `Capacity: ${value.toLocaleString()} lbs (${Math.round(value / 2.205).toLocaleString()} kg)`;
+          },
+          title: (context) => {
+            return `Radius: ${context[0].label} ft`;
+          }
+        }
+      }
+    },
+    scales: {
+      r: {
+        grid: {
+          color: 'rgba(255, 255, 255, 0.1)'
+        },
+        ticks: {
+          color: 'rgba(255, 255, 255, 0.7)',
+          backdropColor: 'transparent'
+        },
+        angleLines: {
+          color: 'rgba(255, 255, 255, 0.2)'
+        },
+        pointLabels: {
+          color: '#FFFFFF',
+          font: {
+            size: 10
+          }
+        }
+      }
+    }
+  };
+
+  // Chart data
+  const data = {
+    labels: polarData.map(item => item.radiusFt.toString()),
+    datasets: [
+      {
+        label: 'Capacity (lbs)',
+        data: polarData.map(item => item.capacityLbs),
+        backgroundColor: generateBackgroundColors(polarData.length),
+        borderColor: '#FFFFFF',
+        borderWidth: 1
+      }
+    ]
+  };
+
+  return (
+    <div className="bg-gray-900 p-6 rounded-lg">
+      <div className="h-[400px] w-full">
+        <PolarArea options={options} data={data} />
+      </div>
+    </div>
+  );
+};
+
+export { LoadCapacityChart, PolarAreaCapacityChart };
 export default LoadCapacityChart; 
