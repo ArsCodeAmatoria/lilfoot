@@ -339,11 +339,18 @@ export default function Liebherr81kPage() {
         
         <div className="grid grid-cols-1 gap-6">
           <PdfDownload 
-            title="Liebherr 81k Technical Specifications"
-            description="Complete technical data, dimensions, and operating parameters for the Liebherr 81k self-erecting tower crane."
-            pdfPath="/pdfs/liebherr-81k-specifications.pdf"
-            thumbnailPath="/images/pdf-thumbnails/liebherr-81k-thumbnail.png"
-            fileSize="2.4 MB"
+            title="Liebherr Tower Cranes Technical Specifications"
+            description="Complete technical data, dimensions, load charts, and operating parameters for Liebherr tower cranes including the 81k model."
+            pdfPath="/pdfs/liebherr-tower-cranes-spec-14fb54 (1).pdf"
+            thumbnailPath="/images/pdf-thumbnails/liebherr-tower-cranes-thumbnail.png"
+            fileSize="4.2 MB"
+          />
+          
+          <PdfDownload 
+            title="Liebherr 81k Operation & Safety Manual"
+            description="Detailed operation instructions, safety guidelines, and maintenance procedures for the Liebherr 81k self-erecting tower crane."
+            pdfPath="/pdfs/liebherr-tower-cranes-spec-14fb54 (1).pdf"
+            fileSize="4.2 MB"
           />
         </div>
       </div>
