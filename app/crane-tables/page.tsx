@@ -3,7 +3,7 @@ import CraneTables from '../components/CraneTables';
 import Liebherr81kCapacityChart from '../components/Liebherr81kCapacityChart';
 import SpeedLoadCapacityChart from '../components/SpeedLoadCapacityChart';
 import PdfDownload from '../components/PdfDownload';
-import RadiusCapacityVisualizer from '../components/RadiusCapacityVisualizer';
+import InteractiveRadiusVisualizer from '../components/InteractiveRadiusVisualizer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -138,15 +138,15 @@ export default function Liebherr81kPage() {
           for different crane configurations.
         </p>
         
-        <div className="space-y-10">
+        <div className="space-y-6">
           {/* Load-Plus Configuration Visualizer */}
-          <RadiusCapacityVisualizer configuration="loadPlus" />
+          <InteractiveRadiusVisualizer configuration="loadPlus" />
           
           {/* LM1 Configuration Visualizer */}
-          <RadiusCapacityVisualizer configuration="lm1" />
+          <InteractiveRadiusVisualizer configuration="lm1" />
           
           {/* 30° Jib Angle Configuration Visualizer */}
-          <RadiusCapacityVisualizer configuration="jibAngle" />
+          <InteractiveRadiusVisualizer configuration="jibAngle" />
         </div>
       </div>
 
