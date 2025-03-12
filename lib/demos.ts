@@ -84,6 +84,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Self Erect Tower Charts',
+    items: [
+      {
+        name: 'Liebherr 81k',
+        slug: 'crane-tables',
+        description:
+          'Detailed specifications and load tables for the Liebherr 81k self-erecting tower crane',
+      },
+    ],
+  },
+  {
     name: 'Practice Exams',
     items: [
       {
@@ -114,12 +125,6 @@ export const demos: { name: string; items: Item[] }[] = [
         slug: 'self-erect',
         description:
           'Liebherr 81k self-erect crane with Load-Plus LM 1 and 30° configurations',
-      },
-      {
-        name: 'Liebherr 81k',
-        slug: 'crane-tables',
-        description:
-          'Detailed specifications and load tables for the Liebherr 81k self-erecting tower crane',
       },
       {
         name: '3D Buffer Demo',
