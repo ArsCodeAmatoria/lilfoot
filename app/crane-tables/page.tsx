@@ -2,6 +2,7 @@ import React from 'react';
 import CraneTables from '../components/CraneTables';
 import Liebherr81kCapacityChart from '../components/Liebherr81kCapacityChart';
 import SpeedLoadCapacityChart from '../components/SpeedLoadCapacityChart';
+import PdfDownload from '../components/PdfDownload';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -326,6 +327,25 @@ export default function Liebherr81kPage() {
             Liebherr's official website
           </a>.
         </p>
+      </div>
+      
+      {/* PDF Downloads Section */}
+      <div className="mt-8">
+        <h2 className="text-2xl font-bold text-white mb-4">Technical Documentation</h2>
+        <p className="text-gray-400 mb-6">
+          Download detailed technical specifications and operating manuals for the Liebherr 81k self-erecting tower crane.
+          These documents provide comprehensive information for planning, operation, and maintenance.
+        </p>
+        
+        <div className="grid grid-cols-1 gap-6">
+          <PdfDownload 
+            title="Liebherr 81k Technical Specifications"
+            description="Complete technical data, dimensions, and operating parameters for the Liebherr 81k self-erecting tower crane."
+            pdfPath="/pdfs/liebherr-81k-specifications.pdf"
+            thumbnailPath="/images/pdf-thumbnails/liebherr-81k-thumbnail.png"
+            fileSize="2.4 MB"
+          />
+        </div>
       </div>
     </div>
   );
