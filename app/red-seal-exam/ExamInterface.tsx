@@ -144,7 +144,7 @@ export default function ExamInterface() {
       case 'intro':
         return (
           <div className="bg-black p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Red Seal Tower Crane Operator Practice Exam</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Red Seal Practice Exam (Tower)</h2>
             <p className="text-gray-400 mb-6">
               This practice exam is designed to help you prepare for the Red Seal Tower Crane Operator certification exam. 
               It contains 20 multiple-choice questions that simulate the actual exam content and format.

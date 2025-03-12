@@ -9,7 +9,7 @@ export default function RedSealExamPage() {
   return (
     <div className="container mx-auto py-10 px-4">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-white mb-4">Red Seal Tower Crane Operator Practice Exam</h1>
+        <h1 className="text-3xl font-bold text-white mb-4">Red Seal Practice Exam (Tower)</h1>
         <p className="text-gray-400 max-w-3xl">
           Prepare for your Red Seal Tower Crane Operator certification with this interactive practice exam.
           This exam simulates the format and content of the official Red Seal certification test to help you

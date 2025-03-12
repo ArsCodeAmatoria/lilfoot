@@ -73,6 +73,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Practice Exams',
+    items: [
+      {
+        name: 'Red Seal Practice Exam (Tower)',
+        slug: 'red-seal-exam',
+        description:
+          'Interactive practice exam for Red Seal Tower Crane Operator certification with detailed feedback',
+      },
+    ],
+  },
+  {
     name: 'Components',
     items: [
       {
@@ -98,12 +109,6 @@ export const demos: { name: string; items: Item[] }[] = [
         slug: 'crane-tables',
         description:
           'Detailed specifications and load tables for the Liebherr 81k self-erecting tower crane',
-      },
-      {
-        name: 'Red Seal Practice Exam',
-        slug: 'red-seal-exam',
-        description:
-          'Interactive practice exam for Red Seal Tower Crane Operator certification with detailed feedback',
       },
       {
         name: '3D Buffer Demo',
