@@ -3,6 +3,7 @@ import CraneTables from '../components/CraneTables';
 import Liebherr81kCapacityChart from '../components/Liebherr81kCapacityChart';
 import SpeedLoadCapacityChart from '../components/SpeedLoadCapacityChart';
 import PdfDownload from '../components/PdfDownload';
+import RadiusCapacityVisualizer from '../components/RadiusCapacityVisualizer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -126,6 +127,27 @@ export default function Liebherr81kPage() {
           at different boom lengths and operating radii. Use the tabs to switch between different configurations.
         </p>
         <CraneTables />
+      </div>
+
+      {/* Interactive Visualizer Section */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-white mb-4">Interactive Load Capacity Visualizer</h2>
+        <p className="text-gray-400 mb-6">
+          Use the slider below to interactively explore how the Liebherr 81k's lifting capacity changes with jib radius.
+          This interactive tool helps operators understand the relationship between reach and lifting power
+          for different crane configurations.
+        </p>
+        
+        <div className="space-y-10">
+          {/* Load-Plus Configuration Visualizer */}
+          <RadiusCapacityVisualizer configuration="loadPlus" />
+          
+          {/* LM1 Configuration Visualizer */}
+          <RadiusCapacityVisualizer configuration="lm1" />
+          
+          {/* 30° Jib Angle Configuration Visualizer */}
+          <RadiusCapacityVisualizer configuration="jibAngle" />
+        </div>
       </div>
 
       {/* Load Capacity Charts Section */}
