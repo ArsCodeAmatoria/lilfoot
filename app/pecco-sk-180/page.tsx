@@ -1,9 +1,31 @@
+"use client";
+
+import { useState } from "react";
+
 export const metadata = {
   title: 'Pecco SK 180 Tower Crane | Littlefoot',
   description: 'Load charts and specifications for the Pecco SK 180 tower crane with 2-Part and 4-Part line configurations'
 };
 
+// Tab Button Component
+function TabButton({ isActive, onClick, children }: { isActive: boolean, onClick: () => void, children: React.ReactNode }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`px-6 py-3 font-medium transition-colors duration-200 text-lg ${
+        isActive
+          ? "bg-gray-800 text-highlight border-b-2 border-highlight"
+          : "bg-gray-900 text-gray-400 hover:text-gray-300 border-b-2 border-gray-800"
+      }`}
+    >
+      {children}
+    </button>
+  );
+}
+
 export default function PeccoSK180Page() {
+  const [activeTab, setActiveTab] = useState<"twoPartLine" | "fourPartLine">("twoPartLine");
+
   return (
     <div className="container mx-auto py-8 px-4">
       <div className="mb-10">
@@ -15,286 +37,308 @@ export default function PeccoSK180Page() {
       </div>
 
       <div className="space-y-12">
-        {/* 2-Part Line Configuration */}
+        {/* Line Configuration Tabs */}
         <section>
-          <h2 className="text-2xl font-bold text-white mb-6">
-            <span className="mr-2 text-highlight">2-Part Line</span>
-            Configuration
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-black">
-              <thead>
-                <tr className="border-b border-gray-700">
-                  <th className="py-3 px-4 text-left text-white sticky left-0 bg-black z-10 min-w-[160px]">Hook Radius</th>
-                  <th className="py-3 px-4 text-left text-white min-w-[200px]">2-Part Line Max Capacity</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">80 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">90 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">95 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">101 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">105 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">110 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">120 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">130 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">135 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">140 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">150 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">160 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">168 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">180 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">185 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">190 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">196 ft</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-800 hover:bg-gray-900">
-                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">196 ft (59.7m)</td>
-                  <td className="py-3 px-4 text-gray-300">13,800 lbs - 81 ft (6,250 kg - 24.7m)</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">12,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">11,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">10,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">10,320 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">9,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">8,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">8,000 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">7,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">7,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">6,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">6,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">5,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">5,400 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">5,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">5,100 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">4,900 lbs</td>
-                </tr>
-                <tr className="border-b border-gray-800 hover:bg-gray-900">
-                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">185 ft (56.4m)</td>
-                  <td className="py-3 px-4 text-gray-300">13,800 lbs - 95 ft (6,250 kg - 29.0m)</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">12,900 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">12,420 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">11,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">10,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">9,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">9,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">8,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">8,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">7,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">7,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">6,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">6,400 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                </tr>
-                <tr className="border-b border-gray-800 hover:bg-gray-900">
-                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">168 ft (51.2m)</td>
-                  <td className="py-3 px-4 text-gray-300">13,800 lbs - 106 ft (6,250 kg - 32.3m)</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">12,100 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">11,000 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">10,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">10,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">9,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">9,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">8,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">8,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                </tr>
-                <tr className="border-b border-gray-800 hover:bg-gray-900">
-                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">135 ft (41.1m)</td>
-                  <td className="py-3 px-4 text-gray-300">13,800 lbs - 110 ft (6,250 kg - 33.5m)</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">12,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">11,500 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">11,000 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                </tr>
-                <tr className="border-b border-gray-800 hover:bg-gray-900">
-                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">101 ft (30.8m)</td>
-                  <td className="py-3 px-4 text-gray-300">13,800 lbs - 101 ft (6,250 kg)</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                </tr>
-              </tbody>
-            </table>
+          <h2 className="text-2xl font-bold text-white mb-6">Line Configurations</h2>
+          
+          <div className="mb-6">
+            <div className="flex border-b border-gray-700">
+              <TabButton 
+                isActive={activeTab === "twoPartLine"} 
+                onClick={() => setActiveTab("twoPartLine")}
+              >
+                2-Part Line
+              </TabButton>
+              <TabButton 
+                isActive={activeTab === "fourPartLine"} 
+                onClick={() => setActiveTab("fourPartLine")}
+              >
+                4-Part Line
+              </TabButton>
+            </div>
           </div>
-          <div className="mt-2 text-sm text-gray-400">
-            <span className="text-highlight font-medium">Note:</span> Empty cells indicate configurations that are not available or not recommended for operation.
-          </div>
-        </section>
 
-        {/* 4-Part Line Configuration */}
-        <section>
-          <h2 className="text-2xl font-bold text-white mb-6">
-            <span className="mr-2 text-highlight">4-Part Line</span>
-            Configuration
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-black">
-              <thead>
-                <tr className="border-b border-gray-700">
-                  <th className="py-3 px-4 text-left text-white sticky left-0 bg-black z-10 min-w-[160px]">Hook Radius</th>
-                  <th className="py-3 px-4 text-left text-white min-w-[200px]">4-Part Line Max Capacity</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">60 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">70 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">80 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">90 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">101 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">110 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">120 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">130 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">135 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">140 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">150 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">160 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">168 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">180 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">185 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">190 ft</th>
-                  <th className="py-3 px-4 text-center text-white min-w-[90px]">196 ft</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-800 hover:bg-gray-900">
-                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">196 ft (59.7m)</td>
-                  <td className="py-3 px-4 text-gray-300">27,600 lbs - 43 ft (12,500 kg - 13.2m)</td>
-                  <td className="py-3 px-4 text-center text-gray-300">19,060 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">15,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,400 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">11,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">10,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">9,100 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">8,100 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">7,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">7,000 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">6,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">6,100 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">5,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">5,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">4,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">4,500 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">4,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">4,200 lbs</td>
-                </tr>
-                <tr className="border-b border-gray-800 hover:bg-gray-900">
-                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">185 ft (56.4m)</td>
-                  <td className="py-3 px-4 text-gray-300">27,600 lbs - 51 ft (12,500 kg - 15.5m)</td>
-                  <td className="py-3 px-4 text-center text-gray-300">22,720 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">18,900 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">16,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">14,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">12,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">11,000 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">9,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">9,000 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">8,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">8,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">7,500 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">7,000 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">6,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">5,900 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">5,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                </tr>
-                <tr className="border-b border-gray-800 hover:bg-gray-900">
-                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">168 ft (51.2m)</td>
-                  <td className="py-3 px-4 text-gray-300">27,600 lbs - 57 ft (12,500 kg - 17.2m)</td>
-                  <td className="py-3 px-4 text-center text-gray-300">25,750 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">21,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">18,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">16,100 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">14,100 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">12,700 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">11,400 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">10,400 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">9,900 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">9,400 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">8,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">7,900 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">7,500 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                </tr>
-                <tr className="border-b border-gray-800 hover:bg-gray-900">
-                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">135 ft (41.1m)</td>
-                  <td className="py-3 px-4 text-gray-300">27,600 lbs - 58.5 ft (12,500 kg - 17.8m)</td>
-                  <td className="py-3 px-4 text-center text-gray-300">26,750 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">22,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">19,300 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">16,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">14,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">13,200 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">11,900 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">10,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">10,400 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                </tr>
-                <tr className="border-b border-gray-800 hover:bg-gray-900">
-                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">101 ft (30.8m)</td>
-                  <td className="py-3 px-4 text-gray-300">27,150 lbs - 59 ft (12,500 kg - 18.0m)</td>
-                  <td className="py-3 px-4 text-center text-gray-300">27,150 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">22,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">19,600 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">17,000 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300">14,800 lbs</td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="mt-2 text-sm text-gray-400">
-            <span className="text-highlight font-medium">Note:</span> Empty cells indicate configurations that are not available or not recommended for operation.
+          {/* Tab Content */}
+          <div className="mt-4">
+            {/* 2-Part Line Content */}
+            {activeTab === "twoPartLine" && (
+              <div>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse bg-black">
+                    <thead>
+                      <tr className="border-b border-gray-700">
+                        <th className="py-3 px-4 text-left text-white sticky left-0 bg-black z-10 min-w-[160px]">Hook Radius</th>
+                        <th className="py-3 px-4 text-left text-white min-w-[200px]">2-Part Line Max Capacity</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">80 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">90 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">95 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">101 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">105 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">110 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">120 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">130 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">135 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">140 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">150 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">160 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">168 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">180 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">185 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">190 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">196 ft</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-800 hover:bg-gray-900">
+                        <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">196 ft (59.7m)</td>
+                        <td className="py-3 px-4 text-gray-300">13,800 lbs - 81 ft (6,250 kg - 24.7m)</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">12,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">11,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">10,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">10,320 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">9,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">8,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">8,000 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">7,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">7,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">6,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">6,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">5,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">5,400 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">5,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">5,100 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">4,900 lbs</td>
+                      </tr>
+                      <tr className="border-b border-gray-800 hover:bg-gray-900">
+                        <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">185 ft (56.4m)</td>
+                        <td className="py-3 px-4 text-gray-300">13,800 lbs - 95 ft (6,250 kg - 29.0m)</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">12,900 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">12,420 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">11,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">10,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">9,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">9,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">8,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">8,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">7,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">7,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">6,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">6,400 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                      </tr>
+                      <tr className="border-b border-gray-800 hover:bg-gray-900">
+                        <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">168 ft (51.2m)</td>
+                        <td className="py-3 px-4 text-gray-300">13,800 lbs - 106 ft (6,250 kg - 32.3m)</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">12,100 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">11,000 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">10,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">10,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">9,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">9,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">8,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">8,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                      </tr>
+                      <tr className="border-b border-gray-800 hover:bg-gray-900">
+                        <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">135 ft (41.1m)</td>
+                        <td className="py-3 px-4 text-gray-300">13,800 lbs - 110 ft (6,250 kg - 33.5m)</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">12,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">11,500 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">11,000 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                      </tr>
+                      <tr className="border-b border-gray-800 hover:bg-gray-900">
+                        <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">101 ft (30.8m)</td>
+                        <td className="py-3 px-4 text-gray-300">13,800 lbs - 101 ft (6,250 kg)</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="mt-2 text-sm text-gray-400">
+                  <span className="text-highlight font-medium">Note:</span> Empty cells indicate configurations that are not available or not recommended for operation.
+                </div>
+              </div>
+            )}
+
+            {/* 4-Part Line Content */}
+            {activeTab === "fourPartLine" && (
+              <div>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse bg-black">
+                    <thead>
+                      <tr className="border-b border-gray-700">
+                        <th className="py-3 px-4 text-left text-white sticky left-0 bg-black z-10 min-w-[160px]">Hook Radius</th>
+                        <th className="py-3 px-4 text-left text-white min-w-[200px]">4-Part Line Max Capacity</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">60 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">70 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">80 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">90 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">101 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">110 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">120 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">130 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">135 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">140 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">150 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">160 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">168 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">180 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">185 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">190 ft</th>
+                        <th className="py-3 px-4 text-center text-white min-w-[90px]">196 ft</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-gray-800 hover:bg-gray-900">
+                        <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">196 ft (59.7m)</td>
+                        <td className="py-3 px-4 text-gray-300">27,600 lbs - 43 ft (12,500 kg - 13.2m)</td>
+                        <td className="py-3 px-4 text-center text-gray-300">19,060 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">15,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,400 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">11,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">10,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">9,100 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">8,100 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">7,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">7,000 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">6,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">6,100 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">5,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">5,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">4,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">4,500 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">4,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">4,200 lbs</td>
+                      </tr>
+                      <tr className="border-b border-gray-800 hover:bg-gray-900">
+                        <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">185 ft (56.4m)</td>
+                        <td className="py-3 px-4 text-gray-300">27,600 lbs - 51 ft (12,500 kg - 15.5m)</td>
+                        <td className="py-3 px-4 text-center text-gray-300">22,720 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">18,900 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">16,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">14,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">12,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">11,000 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">9,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">9,000 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">8,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">8,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">7,500 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">7,000 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">6,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">5,900 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">5,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                      </tr>
+                      <tr className="border-b border-gray-800 hover:bg-gray-900">
+                        <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">168 ft (51.2m)</td>
+                        <td className="py-3 px-4 text-gray-300">27,600 lbs - 57 ft (12,500 kg - 17.2m)</td>
+                        <td className="py-3 px-4 text-center text-gray-300">25,750 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">21,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">18,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">16,100 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">14,100 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">12,700 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">11,400 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">10,400 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">9,900 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">9,400 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">8,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">7,900 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">7,500 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                      </tr>
+                      <tr className="border-b border-gray-800 hover:bg-gray-900">
+                        <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">135 ft (41.1m)</td>
+                        <td className="py-3 px-4 text-gray-300">27,600 lbs - 58.5 ft (12,500 kg - 17.8m)</td>
+                        <td className="py-3 px-4 text-center text-gray-300">26,750 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">22,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">19,300 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">16,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">14,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">13,200 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">11,900 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">10,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">10,400 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                      </tr>
+                      <tr className="border-b border-gray-800 hover:bg-gray-900">
+                        <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">101 ft (30.8m)</td>
+                        <td className="py-3 px-4 text-gray-300">27,150 lbs - 59 ft (12,500 kg - 18.0m)</td>
+                        <td className="py-3 px-4 text-center text-gray-300">27,150 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">22,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">19,600 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">17,000 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300">14,800 lbs</td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                        <td className="py-3 px-4 text-center text-gray-300"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="mt-2 text-sm text-gray-400">
+                  <span className="text-highlight font-medium">Note:</span> Empty cells indicate configurations that are not available or not recommended for operation.
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
