@@ -10,12 +10,9 @@ import {
   Title,
   Tooltip,
   Legend,
-  ChartOptions,
-  RadialLinearScale,
-  ArcElement,
-  PolarAreaController
+  ChartOptions
 } from 'chart.js';
-import { Line, PolarArea } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
 // Register ChartJS components
 ChartJS.register(
@@ -25,10 +22,7 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend,
-  RadialLinearScale,
-  ArcElement,
-  PolarAreaController
+  Legend
 );
 
 // Define the 2-Part line load capacity data for 196 ft jib
@@ -192,163 +186,4 @@ const LoadCapacityChart: React.FC<LoadCapacityChartProps> = ({ configuration }) 
   );
 };
 
-// Polar Area Chart for Capacity Distribution
-const PolarAreaCapacityChart: React.FC<LoadCapacityChartProps> = ({ configuration }) => {
-  // Select the appropriate data based on the configuration
-  const loadCapacityData = configuration === 'twoPartLine' ? twoPartLineData : fourPartLineData;
-  
-  // Get a subset of the data points to make the polar chart clearer
-  // Sort the data by radius (ascending) so smaller radii are in the inner circles
-  const polarData = configuration === 'twoPartLine' 
-    ? [
-        { radiusFt: 80, radiusM: 24.4, capacityLbs: 13800, capacityKg: 6250 },
-        { radiusFt: 101, radiusM: 30.8, capacityLbs: 10800, capacityKg: 4900 },
-        { radiusFt: 120, radiusM: 36.6, capacityLbs: 8700, capacityKg: 3950 },
-        { radiusFt: 150, radiusM: 45.7, capacityLbs: 6700, capacityKg: 3040 },
-        { radiusFt: 180, radiusM: 54.9, capacityLbs: 5400, capacityKg: 2450 },
-        { radiusFt: 196, radiusM: 59.7, capacityLbs: 4900, capacityKg: 2220 }
-      ]
-    : [
-        { radiusFt: 60, radiusM: 18.3, capacityLbs: 27600, capacityKg: 12500 },
-        { radiusFt: 80, radiusM: 24.4, capacityLbs: 19060, capacityKg: 8645 },
-        { radiusFt: 101, radiusM: 30.8, capacityLbs: 13400, capacityKg: 6080 },
-        { radiusFt: 120, radiusM: 36.6, capacityLbs: 10200, capacityKg: 4625 },
-        { radiusFt: 150, radiusM: 45.7, capacityLbs: 7300, capacityKg: 3310 },
-        { radiusFt: 196, radiusM: 59.7, capacityLbs: 4200, capacityKg: 1905 }
-      ];
-
-  // Generate contrasting colors with better visibility
-  const generateBackgroundColors = (count: number) => {
-    // Use a more vibrant, high-contrast color palette
-    const colors = [
-      'rgba(83, 192, 63, 0.9)',   // Bright green (highlight color)
-      'rgba(255, 177, 0, 0.85)',  // Amber
-      'rgba(255, 82, 82, 0.85)',  // Red
-      'rgba(77, 171, 247, 0.85)', // Blue
-      'rgba(156, 39, 176, 0.85)', // Purple
-      'rgba(255, 152, 0, 0.85)'   // Orange
-    ];
-    
-    // Return only the colors we need
-    return colors.slice(0, count);
-  };
-
-  // Chart options
-  const options: ChartOptions<'polarArea'> = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: 'right' as const,
-        labels: {
-          color: '#FFFFFF',
-          font: {
-            size: 12
-          },
-          // Format the legend labels to include radius and capacity
-          generateLabels: function(chart) {
-            const datasets = chart.data.datasets;
-            return chart.data.labels?.map((label, i) => {
-              const meta = chart.getDatasetMeta(0);
-              const style = meta.controller.getStyle(i, false);
-              const dataPoint = polarData[i];
-              return {
-                text: `${dataPoint.radiusFt} ft (${dataPoint.radiusM} m) - ${dataPoint.capacityLbs.toLocaleString()} lbs`,
-                fillStyle: style.backgroundColor,
-                strokeStyle: style.borderColor,
-                lineWidth: style.borderWidth,
-                hidden: !chart.getDataVisibility(i),
-                index: i
-              };
-            }) || [];
-          }
-        }
-      },
-      title: {
-        display: true,
-        text: `Pecco SK 180 (${configuration === 'twoPartLine' ? '2-Part' : '4-Part'} Line) Capacity at Radius`,
-        color: '#FFFFFF',
-        font: {
-          size: 18,
-          weight: 'bold'
-        },
-        padding: {
-          top: 10,
-          bottom: 20
-        }
-      },
-      tooltip: {
-        callbacks: {
-          label: (context) => {
-            const index = context.dataIndex;
-            const dataPoint = polarData[index];
-            return [
-              `Radius: ${dataPoint.radiusFt} ft (${dataPoint.radiusM} m)`,
-              `Capacity: ${dataPoint.capacityLbs.toLocaleString()} lbs (${dataPoint.capacityKg.toLocaleString()} kg)`
-            ];
-          },
-          title: (context) => {
-            return `Zone ${context[0].dataIndex + 1}`;
-          }
-        }
-      }
-    },
-    scales: {
-      r: {
-        grid: {
-          color: 'rgba(255, 255, 255, 0.3)'  // Brighter grid lines
-        },
-        ticks: {
-          color: 'rgba(255, 255, 255, 0.9)', // Brighter tick labels
-          backdropColor: 'rgba(0, 0, 0, 0.7)', // Dark backdrop for better contrast
-          font: {
-            size: 11,
-            weight: 'bold'
-          }
-        },
-        angleLines: {
-          color: 'rgba(255, 255, 255, 0.4)'  // Brighter angle lines
-        },
-        pointLabels: {
-          color: '#FFFFFF',
-          font: {
-            size: 12,
-            weight: 'bold'
-          }
-        },
-        startAngle: -90, // Start at top
-      }
-    }
-  };
-
-  // Chart data
-  const data = {
-    // Label by radius for each segment
-    labels: polarData.map(item => `${item.radiusFt} ft`),
-    datasets: [
-      {
-        label: 'Capacity by Radius',
-        // Use actual capacity values
-        data: polarData.map(item => item.capacityLbs),
-        backgroundColor: generateBackgroundColors(polarData.length),
-        borderColor: '#FFFFFF',
-        borderWidth: 2
-      }
-    ]
-  };
-
-  return (
-    <div className="bg-gray-900 p-6 rounded-lg">
-      <div className="h-[400px] w-full">
-        <PolarArea options={options} data={data} />
-      </div>
-      <div className="mt-4 text-sm text-gray-200">
-        <span className="text-highlight font-medium">Chart Guide:</span> Inner rings represent shorter radii with higher capacity, 
-        outer rings represent longer radii with lower capacity. Each segment shows lifting capacity at the specified radius.
-      </div>
-    </div>
-  );
-};
-
-export { LoadCapacityChart, PolarAreaCapacityChart };
 export default LoadCapacityChart; 
