@@ -1,5 +1,6 @@
 import React from 'react';
 import CraneTables from '../components/CraneTables';
+import Liebherr81kCapacityChart from '../components/Liebherr81kCapacityChart';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -123,6 +124,52 @@ export default function Liebherr81kPage() {
           at different boom lengths and operating radii. Use the tabs to switch between different configurations.
         </p>
         <CraneTables />
+      </div>
+
+      {/* Load Capacity Charts Section */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-white mb-4">Load Capacity Charts</h2>
+        <p className="text-gray-400 mb-6">
+          These charts visualize the load capacity of the Liebherr 81k at different jib radii.
+          The diagrams show how the maximum load capacity decreases as the jib radius increases,
+          helping operators determine safe operating limits for specific configurations.
+        </p>
+        
+        {/* Load-Plus Configuration Chart */}
+        <div className="mb-10">
+          <h3 className="text-xl font-bold text-highlight mb-4">Load-Plus Configuration</h3>
+          <Liebherr81kCapacityChart configuration="loadPlus" />
+          <div className="mt-4 text-sm text-gray-400">
+            <span className="text-highlight font-medium">Note:</span> This chart represents the Liebherr 81k in Load-Plus configuration.
+            The Load-Plus configuration enhances the standard lifting capacity by using additional counterweights and
+            specialized boom configurations. This setup provides up to 20% more lifting capacity compared to the standard
+            LM1 configuration, making it ideal for heavy lifting operations.
+          </div>
+        </div>
+        
+        {/* LM1 Configuration Chart */}
+        <div className="mb-10">
+          <h3 className="text-xl font-bold text-highlight mb-4">LM1 Configuration</h3>
+          <Liebherr81kCapacityChart configuration="lm1" />
+          <div className="mt-4 text-sm text-gray-400">
+            <span className="text-highlight font-medium">Note:</span> This chart represents the Liebherr 81k in LM1 configuration.
+            It shows the relationship between jib radius (from 12.0 m to 48.0 m) and maximum lifting capacity,
+            demonstrating how capacity decreases as the hook moves further from the mast. The LM1 configuration provides
+            balanced performance for most everyday lifting operations.
+          </div>
+        </div>
+        
+        {/* 30° Jib Angle Chart */}
+        <div className="mb-10">
+          <h3 className="text-xl font-bold text-highlight mb-4">30° Jib Angle Configuration</h3>
+          <Liebherr81kCapacityChart configuration="jibAngle" />
+          <div className="mt-4 text-sm text-gray-400">
+            <span className="text-highlight font-medium">Note:</span> This chart represents the Liebherr 81k with the jib angled at 30°.
+            When the jib is angled at 30 degrees, the crane achieves an increased hook height of up to 40.4 meters.
+            This configuration maintains good lifting capacity while allowing the crane to reach over obstacles or work
+            in height-restricted areas.
+          </div>
+        </div>
       </div>
 
       {/* Operational Configurations */}
