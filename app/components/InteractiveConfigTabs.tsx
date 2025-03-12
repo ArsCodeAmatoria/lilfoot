@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InteractiveRadiusVisualizer from './InteractiveRadiusVisualizer';
 
 // Keep the data definitions but we won't display them in a table
@@ -61,27 +61,51 @@ const jibAngleData = [
 ];
 
 const InteractiveConfigTabs: React.FC = () => {
+  // Use a more specific approach to handle client-side rendering
   const [activeTab, setActiveTab] = useState<'loadPlus' | 'lm1' | 'jibAngle'>('loadPlus');
+  const [isClient, setIsClient] = useState(false);
+  
+  // This useEffect will only run on the client after hydration
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  
+  // Tab change handler
+  const handleTabChange = (tab: 'loadPlus' | 'lm1' | 'jibAngle') => {
+    setActiveTab(tab);
+  };
+  
+  // If not yet on client, show a simplified version to avoid hydration mismatch
+  if (!isClient) {
+    return (
+      <div className="bg-black rounded-lg shadow-lg overflow-hidden p-6">
+        <p className="text-gray-400">Loading interactive visualizer...</p>
+      </div>
+    );
+  }
   
   return (
     <div className="bg-black rounded-lg shadow-lg overflow-hidden">
       <div className="border-b border-gray-800">
-        <div className="flex" id="tabGroup">
+        <div className="flex flex-wrap" id="tabGroup">
           <button 
             className={`px-6 py-3 text-white font-medium border-b-2 ${activeTab === 'loadPlus' ? 'border-highlight bg-gray-900' : 'border-transparent'}`}
-            onClick={() => setActiveTab('loadPlus')}
+            onClick={() => handleTabChange('loadPlus')}
+            type="button"
           >
             Load-Plus Configuration
           </button>
           <button 
             className={`px-6 py-3 text-white font-medium border-b-2 ${activeTab === 'lm1' ? 'border-highlight bg-gray-900' : 'border-transparent'}`}
-            onClick={() => setActiveTab('lm1')}
+            onClick={() => handleTabChange('lm1')}
+            type="button"
           >
             LM1 Configuration
           </button>
           <button 
             className={`px-6 py-3 text-white font-medium border-b-2 ${activeTab === 'jibAngle' ? 'border-highlight bg-gray-900' : 'border-transparent'}`}
-            onClick={() => setActiveTab('jibAngle')}
+            onClick={() => handleTabChange('jibAngle')}
+            type="button"
           >
             30° Jib Angle Configuration
           </button>
