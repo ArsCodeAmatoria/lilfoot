@@ -1,6 +1,7 @@
 import React from 'react';
 import CraneTables from '../components/CraneTables';
 import Liebherr81kCapacityChart from '../components/Liebherr81kCapacityChart';
+import SpeedLoadCapacityChart from '../components/SpeedLoadCapacityChart';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -231,6 +232,77 @@ export default function Liebherr81kPage() {
               <li>Stable foundation monitoring</li>
               <li>Visibility aids and warning systems</li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Driving Units and Speed Information */}
+      <div className="bg-black p-6 rounded-lg shadow-lg mb-8">
+        <h2 className="text-xl font-bold text-white mb-4">Driving Units Specifications</h2>
+        
+        <div className="overflow-x-auto mb-6">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-gray-700">
+                <th className="py-3 px-4 text-left text-white">Driving Unit</th>
+                <th className="py-3 px-4 text-left text-white">Speed</th>
+                <th className="py-3 px-4 text-left text-white">Power (kW FU)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gray-800 hover:bg-gray-900">
+                <td className="py-3 px-4 text-gray-300 font-medium">Rotation</td>
+                <td className="py-3 px-4 text-gray-300">0 - 0.8 U/min</td>
+                <td className="py-3 px-4 text-gray-300">5.0 kW FU</td>
+              </tr>
+              <tr className="border-b border-gray-800 hover:bg-gray-900">
+                <td className="py-3 px-4 text-gray-300 font-medium">Trolley</td>
+                <td className="py-3 px-4 text-gray-300">0 - 60.0 m/min</td>
+                <td className="py-3 px-4 text-gray-300">3.0 kW FU</td>
+              </tr>
+              <tr className="border-b border-gray-800 hover:bg-gray-900">
+                <td className="py-3 px-4 text-gray-300 font-medium">Trolley (Slow)</td>
+                <td className="py-3 px-4 text-gray-300">0 - 25.0 m/min</td>
+                <td className="py-3 px-4 text-gray-300">2 x 2.2 kW FU</td>
+              </tr>
+              <tr className="border-b border-gray-800 hover:bg-gray-900">
+                <td className="py-3 px-4 text-gray-300 font-medium">Jib Luffing</td>
+                <td className="py-3 px-4 text-gray-300">0 - 45°, 110 sec.</td>
+                <td className="py-3 px-4 text-gray-300">3.0 kW FU</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div className="text-sm text-gray-400 mb-6">
+          <span className="text-highlight font-medium">Power Requirements:</span> 380-480V, 50/60Hz, 22.0 kVA FU
+        </div>
+      </div>
+
+      {/* Speed vs Load Capacity Section */}
+      <div className="bg-black p-6 rounded-lg shadow-lg mb-8">
+        <h2 className="text-xl font-bold text-white mb-4">Speed vs Load Capacity</h2>
+        <p className="text-gray-400 mb-6">
+          This chart illustrates the relationship between load capacity and hoisting speed for the Liebherr 81k.
+          As the load increases, the maximum hoisting speed decreases proportionally to maintain safe operation.
+        </p>
+        
+        <SpeedLoadCapacityChart />
+        
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-gray-900 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold text-highlight mb-2">Maximum Lifting Capacity</h3>
+            <p className="text-gray-400">
+              At the maximum load capacity of 6000 kg, the crane operates at a reduced speed of 12.7 m/min
+              to ensure safe lifting and precise control of heavy loads.
+            </p>
+          </div>
+          <div className="bg-gray-900 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold text-highlight mb-2">Maximum Hoisting Speed</h3>
+            <p className="text-gray-400">
+              With lighter loads of around 400 kg, the crane can operate at speeds up to 76.1 m/min,
+              significantly improving operational efficiency for lighter materials.
+            </p>
           </div>
         </div>
       </div>
