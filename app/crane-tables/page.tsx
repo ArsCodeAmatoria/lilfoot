@@ -342,7 +342,6 @@ export default function Liebherr81kPage() {
             title="Liebherr Tower Cranes Technical Specifications"
             description="Complete technical data, dimensions, load charts, and operating parameters for Liebherr tower cranes including the 81k model."
             pdfPath="/pdfs/liebherr-tower-cranes-spec-14fb54 (1).pdf"
-            thumbnailPath="/images/pdf-thumbnails/liebherr-tower-cranes-thumbnail.png"
             fileSize="4.2 MB"
           />
         </div>
