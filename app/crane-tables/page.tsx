@@ -333,8 +333,8 @@ export default function Liebherr81kPage() {
       <div className="mt-8">
         <h2 className="text-2xl font-bold text-white mb-4">Technical Documentation</h2>
         <p className="text-gray-400 mb-6">
-          Download detailed technical specifications and operating manuals for the Liebherr 81k self-erecting tower crane.
-          These documents provide comprehensive information for planning, operation, and maintenance.
+          Download detailed technical specifications for the Liebherr 81k self-erecting tower crane.
+          This document provides comprehensive information for planning, operation, and maintenance.
         </p>
         
         <div className="grid grid-cols-1 gap-6">
@@ -343,13 +343,6 @@ export default function Liebherr81kPage() {
             description="Complete technical data, dimensions, load charts, and operating parameters for Liebherr tower cranes including the 81k model."
             pdfPath="/pdfs/liebherr-tower-cranes-spec-14fb54 (1).pdf"
             thumbnailPath="/images/pdf-thumbnails/liebherr-tower-cranes-thumbnail.png"
-            fileSize="4.2 MB"
-          />
-          
-          <PdfDownload 
-            title="Liebherr 81k Operation & Safety Manual"
-            description="Detailed operation instructions, safety guidelines, and maintenance procedures for the Liebherr 81k self-erecting tower crane."
-            pdfPath="/pdfs/liebherr-tower-cranes-spec-14fb54 (1).pdf"
             fileSize="4.2 MB"
           />
         </div>

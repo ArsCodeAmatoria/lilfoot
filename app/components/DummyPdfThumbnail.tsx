@@ -2,8 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 
-// This component creates a canvas with a PDF-like thumbnail
-// It's used for demonstration purposes only
+// This component creates a canvas with a PDF-like thumbnail resembling the Liebherr document
 const DummyPdfThumbnail: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   
@@ -18,63 +17,85 @@ const DummyPdfThumbnail: React.FC = () => {
     canvas.width = 595;
     canvas.height = 842;
     
-    // Background color
+    // Background color - white for document
     ctx.fillStyle = '#FFFFFF';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    // Header bar
-    ctx.fillStyle = '#FFD700'; // Gold color
-    ctx.fillRect(0, 0, canvas.width, 60);
+    // Yellow header bar (Liebherr brand color)
+    ctx.fillStyle = '#FFD700'; // Gold/yellow
+    ctx.fillRect(0, 0, canvas.width, 120);
     
-    // Logo placeholder
+    // Liebherr logo placeholder
     ctx.fillStyle = '#000000';
-    ctx.fillRect(30, 15, 100, 30);
+    ctx.fillRect(30, 30, 150, 60);
     ctx.fillStyle = '#FFFFFF';
-    ctx.font = 'bold 14px Arial';
-    ctx.fillText('LIEBHERR', 45, 35);
-    
-    // Title
-    ctx.fillStyle = '#000000';
     ctx.font = 'bold 24px Arial';
-    ctx.fillText('Liebherr 81k', 30, 100);
-    ctx.font = 'bold 18px Arial';
-    ctx.fillText('Self-Erecting Tower Crane', 30, 130);
+    ctx.fillText('LIEBHERR', 45, 70);
     
-    // Content lines
-    ctx.fillStyle = '#666666';
-    ctx.fillRect(30, 160, 535, 1);
-    
-    // Specifications heading
+    // Document Title
     ctx.fillStyle = '#000000';
-    ctx.font = 'bold 16px Arial';
-    ctx.fillText('Technical Specifications', 30, 190);
+    ctx.font = 'bold 28px Arial';
+    ctx.fillText('Tower Cranes', 30, 180);
+    ctx.font = 'bold 22px Arial';
+    ctx.fillText('Technical Specifications', 30, 215);
     
-    // Specifications content
-    ctx.font = '14px Arial';
+    // Crane image placeholder
+    ctx.fillStyle = '#F5F5F5';
+    ctx.fillRect(30, 250, 535, 300);
+    
+    // Draw a simple crane silhouette
+    ctx.strokeStyle = '#333333';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    
+    // Tower
+    ctx.moveTo(297, 550);
+    ctx.lineTo(297, 350);
+    
+    // Jib
+    ctx.moveTo(297, 350);
+    ctx.lineTo(500, 380);
+    
+    // Counter jib
+    ctx.moveTo(297, 350);
+    ctx.lineTo(150, 370);
+    
+    // Cabin
+    ctx.moveTo(280, 380);
+    ctx.lineTo(280, 400);
+    ctx.lineTo(315, 400);
+    ctx.lineTo(315, 380);
+    ctx.lineTo(280, 380);
+    
+    ctx.stroke();
+    
+    // Draw text for crane model
+    ctx.fillStyle = '#000000';
+    ctx.font = 'bold 18px Arial';
+    ctx.fillText('81k Self-Erecting Crane', 225, 580);
+    
+    // Model information
+    ctx.font = '16px Arial';
     const specs = [
-      'Max. Lifting Capacity: 6,000 kg',
-      'Max. Jib Length: 45 meters',
-      'Max. Hook Height: 40.4 meters',
-      'Tower Height: 21.3 - 26.0 meters'
+      'Maximum Capacity: 6,000 kg',
+      'Maximum Radius: 45 m',
+      'Maximum Hook Height: 40.4 m'
     ];
     
     specs.forEach((spec, index) => {
-      ctx.fillText(spec, 50, 220 + (index * 25));
+      ctx.fillText(spec, 50, 630 + (index * 25));
     });
     
-    // Image placeholder
-    ctx.fillStyle = '#EEEEEE';
-    ctx.fillRect(30, 350, 535, 250);
-    ctx.fillStyle = '#AAAAAA';
-    ctx.font = 'italic 16px Arial';
-    ctx.fillText('Crane Image', 250, 475);
+    // Yellow footer
+    ctx.fillStyle = '#FFD700'; // Gold/yellow
+    ctx.fillRect(0, canvas.height - 80, canvas.width, 80);
     
-    // Footer
-    ctx.fillStyle = '#FFD700'; // Gold color
-    ctx.fillRect(0, canvas.height - 40, canvas.width, 40);
+    // Footer text
     ctx.fillStyle = '#000000';
+    ctx.font = '14px Arial';
+    ctx.fillText('Liebherr-Werk Biberach GmbH', 30, canvas.height - 45);
     ctx.font = '12px Arial';
-    ctx.fillText('Copyright © 2023 Liebherr Group. All rights reserved.', 160, canvas.height - 18);
+    ctx.fillText('www.liebherr.com', 30, canvas.height - 25);
     
   }, []);
   
