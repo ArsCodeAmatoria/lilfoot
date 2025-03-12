@@ -346,10 +346,10 @@ export default function PeccoSK180Page() {
           </p>
           <LoadCapacityChart />
           <div className="mt-4 text-sm text-gray-400">
-            <span className="text-highlight font-medium">Note:</span> The chart represents 2-Part Line configuration capacity. 
-            Always refer to the full load charts above when planning lifts. The chart shows the relationship between jib radius and 
-            maximum lifting capacity, demonstrating the crane's operational range. Notice the steep drop in capacity as the jib 
-            extends further from the mast.
+            <span className="text-highlight font-medium">Note:</span> The chart represents the 196 ft jib length with 2-Part Line configuration. 
+            It shows the relationship between jib radius (from 80 ft to 196 ft) and maximum lifting capacity, 
+            demonstrating how capacity decreases as the hook moves further from the mast. Always refer to the full load charts 
+            above when planning lifts, as capacity varies with different jib lengths.
           </div>
         </section>
 

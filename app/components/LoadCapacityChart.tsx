@@ -25,19 +25,18 @@ ChartJS.register(
   Legend
 );
 
-// Define the load capacity data
+// Define the load capacity data - using values from the 196 ft jib configuration
 const loadCapacityData = [
-  { radiusFt: 40, radiusM: 12.2, capacityLbs: 13800, capacityKg: 6250 },
-  { radiusFt: 50, radiusM: 15.2, capacityLbs: 12000, capacityKg: 5440 },
-  { radiusFt: 60, radiusM: 18.3, capacityLbs: 10000, capacityKg: 4540 },
-  { radiusFt: 70, radiusM: 21.3, capacityLbs: 8000, capacityKg: 3630 },
-  { radiusFt: 80, radiusM: 24.4, capacityLbs: 6000, capacityKg: 2720 },
-  { radiusFt: 90, radiusM: 27.4, capacityLbs: 4000, capacityKg: 1810 },
-  { radiusFt: 101, radiusM: 30.8, capacityLbs: 2000, capacityKg: 905 },
-  { radiusFt: 110, radiusM: 33.5, capacityLbs: 11000, capacityKg: 5000 },
-  { radiusFt: 120, radiusM: 36.6, capacityLbs: 8200, capacityKg: 3700 },
-  { radiusFt: 135, radiusM: 41.1, capacityLbs: 6400, capacityKg: 2900 },
-  { radiusFt: 150, radiusM: 45.7, capacityLbs: 4900, capacityKg: 2200 },
+  { radiusFt: 80, radiusM: 24.4, capacityLbs: 13800, capacityKg: 6250 },
+  { radiusFt: 90, radiusM: 27.4, capacityLbs: 12300, capacityKg: 5580 },
+  { radiusFt: 101, radiusM: 30.8, capacityLbs: 10800, capacityKg: 4900 },
+  { radiusFt: 110, radiusM: 33.5, capacityLbs: 9700, capacityKg: 4400 },
+  { radiusFt: 120, radiusM: 36.6, capacityLbs: 8700, capacityKg: 3950 },
+  { radiusFt: 135, radiusM: 41.1, capacityLbs: 7700, capacityKg: 3490 },
+  { radiusFt: 150, radiusM: 45.7, capacityLbs: 6700, capacityKg: 3040 },
+  { radiusFt: 168, radiusM: 51.2, capacityLbs: 5800, capacityKg: 2630 },
+  { radiusFt: 180, radiusM: 54.9, capacityLbs: 5400, capacityKg: 2450 },
+  { radiusFt: 196, radiusM: 59.7, capacityLbs: 4900, capacityKg: 2220 },
 ];
 
 const LoadCapacityChart: React.FC = () => {
@@ -57,7 +56,7 @@ const LoadCapacityChart: React.FC = () => {
       },
       title: {
         display: true,
-        text: 'Pecco Tower Crane SK 180 (2-Part Line) Load Chart',
+        text: 'Pecco SK 180 - 196 ft Jib (2-Part Line) Load Chart',
         color: '#FFFFFF',
         font: {
           size: 18,
