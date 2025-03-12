@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import LoadCapacityChart from "../components/LoadCapacityChart";
 
 // Tab Button Component
 function TabButton({ isActive, onClick, children }: { isActive: boolean, onClick: () => void, children: React.ReactNode }) {
@@ -332,6 +333,23 @@ export default function PeccoSK180Page() {
                 </div>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Load Capacity Chart */}
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-6">Load Capacity Chart</h2>
+          <p className="text-gray-400 mb-6">
+            This chart visualizes the load capacity of the Pecco SK 180 tower crane at different jib radii. 
+            The diagram shows how the maximum load capacity decreases as the jib radius increases, helping 
+            operators determine safe operating limits for specific configurations.
+          </p>
+          <LoadCapacityChart />
+          <div className="mt-4 text-sm text-gray-400">
+            <span className="text-highlight font-medium">Note:</span> The chart represents 2-Part Line configuration capacity. 
+            Always refer to the full load charts above when planning lifts. The chart shows the relationship between jib radius and 
+            maximum lifting capacity, demonstrating the crane's operational range. Notice the steep drop in capacity as the jib 
+            extends further from the mast.
           </div>
         </section>
 
