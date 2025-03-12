@@ -85,7 +85,7 @@ export default function Liebherr81kPage() {
                 className="object-cover"
               />
             </div>
-            <ul className="space-y-3 mb-6">
+            <ul className="space-y-3">
               <li className="flex justify-between">
                 <span className="text-gray-400">Length:</span>
                 <span className="text-white font-medium">15.3 meters</span>
@@ -103,15 +103,54 @@ export default function Liebherr81kPage() {
                 <span className="text-white font-medium">24,800 kg</span>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
 
-            <h3 className="text-lg font-semibold text-highlight mb-2">Key Features</h3>
-            <ul className="list-disc list-inside text-gray-400 space-y-1">
-              <li>Quick and efficient assembly without auxiliary crane</li>
-              <li>Compact transport dimensions for versatile site access</li>
-              <li>Variable jib configurations including 30° angle</li>
-              <li>Remote control operation with safety features</li>
-              <li>Energy-efficient electric drive system</li>
-            </ul>
+      {/* Key Features Section */}
+      <div className="bg-black p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-bold text-white mb-6">Key Features</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-gray-900 p-4 rounded-lg border-l-4 border-highlight">
+            <h3 className="text-lg font-semibold text-white mb-2">Quick Assembly</h3>
+            <p className="text-gray-400">
+              Efficient self-erection system without requiring an auxiliary crane, reducing setup time to approximately 20 minutes.
+            </p>
+          </div>
+          
+          <div className="bg-gray-900 p-4 rounded-lg border-l-4 border-highlight">
+            <h3 className="text-lg font-semibold text-white mb-2">Compact Transport</h3>
+            <p className="text-gray-400">
+              Optimized dimensions of 15.3 × 2.5 × 3.9 meters for versatile site access, even in confined urban areas.
+            </p>
+          </div>
+          
+          <div className="bg-gray-900 p-4 rounded-lg border-l-4 border-highlight">
+            <h3 className="text-lg font-semibold text-white mb-2">Variable Configurations</h3>
+            <p className="text-gray-400">
+              Adjustable jib configurations including 30° angle, providing enhanced vertical reach up to 40.4 meters.
+            </p>
+          </div>
+          
+          <div className="bg-gray-900 p-4 rounded-lg border-l-4 border-highlight">
+            <h3 className="text-lg font-semibold text-white mb-2">Remote Operation</h3>
+            <p className="text-gray-400">
+              Comprehensive remote control system with integrated safety features for precise and secure operation.
+            </p>
+          </div>
+          
+          <div className="bg-gray-900 p-4 rounded-lg border-l-4 border-highlight">
+            <h3 className="text-lg font-semibold text-white mb-2">Energy Efficiency</h3>
+            <p className="text-gray-400">
+              Advanced electric drive system optimized for reduced power consumption while maintaining high performance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-900 p-4 rounded-lg border-l-4 border-highlight">
+            <h3 className="text-lg font-semibold text-white mb-2">Adaptable Performance</h3>
+            <p className="text-gray-400">
+              Multiple operational modes with Load-Plus and LM1 configurations to adapt to different lifting requirements.
+            </p>
           </div>
         </div>
       </div>
