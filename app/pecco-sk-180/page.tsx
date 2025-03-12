@@ -149,7 +149,6 @@ export default function PeccoSK180Page() {
                   <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
                 </tr>
               </tbody>
             </table>
@@ -293,7 +292,6 @@ export default function PeccoSK180Page() {
                   <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
                   <td className="py-3 px-4 text-center text-gray-300"></td>
-                  <td className="py-3 px-4 text-center text-gray-300"></td>
                 </tr>
               </tbody>
             </table>
@@ -354,6 +352,61 @@ export default function PeccoSK180Page() {
                 must be in weather vane mode.
               </li>
             </ul>
+          </div>
+        </section>
+
+        {/* Hoist Speed and Capacity Table */}
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-6">Hoist Speed and Capacity</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse bg-black">
+              <thead>
+                <tr className="border-b border-gray-700">
+                  <th rowSpan={2} className="py-3 px-4 text-left text-white sticky left-0 bg-black z-10 min-w-[80px] align-bottom">Gear</th>
+                  <th colSpan={2} className="py-3 px-4 text-center text-highlight font-bold border-b border-gray-700">2-Part Line</th>
+                  <th colSpan={2} className="py-3 px-4 text-center text-highlight font-bold border-b border-gray-700">4-Part Line</th>
+                </tr>
+                <tr className="border-b border-gray-700">
+                  <th className="py-3 px-4 text-left text-white min-w-[180px]">Capacity</th>
+                  <th className="py-3 px-4 text-left text-white min-w-[180px]">Speed</th>
+                  <th className="py-3 px-4 text-left text-white min-w-[180px]">Capacity</th>
+                  <th className="py-3 px-4 text-left text-white min-w-[180px]">Speed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-800 hover:bg-gray-900">
+                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">1</td>
+                  <td className="py-3 px-4 text-gray-300">Up to 13,800 lbs (6,250 kg)</td>
+                  <td className="py-3 px-4 text-gray-300">112 fpm (34 m/min)</td>
+                  <td className="py-3 px-4 text-gray-300">Up to 27,600 lbs (12,500 kg)</td>
+                  <td className="py-3 px-4 text-gray-300">56 fpm (17 m/min)</td>
+                </tr>
+                <tr className="border-b border-gray-800 hover:bg-gray-900">
+                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">2</td>
+                  <td className="py-3 px-4 text-gray-300">Up to 13,800 lbs (6,250 kg)</td>
+                  <td className="py-3 px-4 text-gray-300">178 fpm (54 m/min)</td>
+                  <td className="py-3 px-4 text-gray-300">Up to 27,600 lbs (12,500 kg)</td>
+                  <td className="py-3 px-4 text-gray-300">89 fpm (27 m/min)</td>
+                </tr>
+                <tr className="border-b border-gray-800 hover:bg-gray-900">
+                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">3</td>
+                  <td className="py-3 px-4 text-gray-300">Up to 9,260 lbs (4,200 kg)</td>
+                  <td className="py-3 px-4 text-gray-300">282 fpm (86 m/min)</td>
+                  <td className="py-3 px-4 text-gray-300">Up to 18,520 lbs (8,400 kg)</td>
+                  <td className="py-3 px-4 text-gray-300">141 fpm (43 m/min)</td>
+                </tr>
+                <tr className="border-b border-gray-800 hover:bg-gray-900">
+                  <td className="py-3 px-4 text-white font-medium sticky left-0 bg-black z-10">4</td>
+                  <td className="py-3 px-4 text-gray-300">Up to 5,500 lbs (2,500 kg)</td>
+                  <td className="py-3 px-4 text-gray-300">440 fpm (134 m/min)</td>
+                  <td className="py-3 px-4 text-gray-300">Up to 11,000 lbs (5,000 kg)</td>
+                  <td className="py-3 px-4 text-gray-300">220 fpm (67 m/min)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-2 text-sm text-gray-400">
+            <span className="text-highlight font-medium">Note:</span> Line speed varies based on the gear selected and decreases as the load increases. Always operate within the specified capacity limits.
           </div>
         </section>
 
