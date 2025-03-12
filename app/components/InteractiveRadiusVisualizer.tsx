@@ -66,6 +66,9 @@ interface InteractiveRadiusVisualizerProps {
 }
 
 const InteractiveRadiusVisualizer: React.FC<InteractiveRadiusVisualizerProps> = ({ configuration }) => {
+  // Track mounted state to avoid hydration issues
+  const [mounted, setMounted] = useState(false);
+  
   // Get data for current configuration
   const getData = () => {
     switch (configuration) {
@@ -86,12 +89,21 @@ const InteractiveRadiusVisualizer: React.FC<InteractiveRadiusVisualizerProps> = 
   const minRadius = currentData[0].radius;
   const maxRadius = currentData[currentData.length - 1].radius;
   
-  // State for the slider value
-  const [radius, setRadius] = useState(minRadius);
-  const [capacityKg, setCapacityKg] = useState(currentData[0].capacityKg);
+  // Initialize state with default values to prevent hydration mismatch
+  const [radius, setRadius] = useState<number | null>(null);
+  const [capacityKg, setCapacityKg] = useState<number | null>(null);
+  
+  // Initialize state after mount to prevent hydration issues
+  useEffect(() => {
+    setMounted(true);
+    setRadius(minRadius);
+    setCapacityKg(currentData[0].capacityKg);
+  }, [minRadius, currentData]);
   
   // Update capacity when radius changes
   useEffect(() => {
+    if (radius === null) return;
+    
     // Find the closest data points to the current radius
     let lowerIndex = 0;
     let upperIndex = 0;
@@ -121,6 +133,15 @@ const InteractiveRadiusVisualizer: React.FC<InteractiveRadiusVisualizerProps> = 
       setCapacityKg(Math.round(interpolatedCapacity));
     }
   }, [radius, currentData]);
+  
+  // Don't render anything complex during SSR to prevent hydration mismatch
+  if (!mounted || radius === null || capacityKg === null) {
+    return (
+      <div className="bg-gray-900 p-6 rounded-lg mb-6">
+        <p className="text-gray-400">Loading visualizer data...</p>
+      </div>
+    );
+  }
   
   // Format capacity in pounds
   const capacityLbs = Math.round(capacityKg * 2.205);

@@ -60,98 +60,125 @@ const jibAngleData = [
   { radius: 38.6, capacity: 1400 }
 ];
 
+type TabType = 'loadPlus' | 'lm1' | 'jibAngle';
+
 const InteractiveConfigTabs: React.FC = () => {
-  // Use a more specific approach to handle client-side rendering
-  const [activeTab, setActiveTab] = useState<'loadPlus' | 'lm1' | 'jibAngle'>('loadPlus');
-  const [isClient, setIsClient] = useState(false);
+  // Track mounted state to avoid hydration issues
+  const [mounted, setMounted] = useState(false);
+  // Start with no tab active (will be set after mounting)
+  const [activeTab, setActiveTab] = useState<TabType | null>(null);
   
-  // This useEffect will only run on the client after hydration
+  // Set initial state after component mounts to avoid hydration mismatch
   useEffect(() => {
-    setIsClient(true);
+    setMounted(true);
+    setActiveTab('loadPlus');
   }, []);
   
-  // Tab change handler
-  const handleTabChange = (tab: 'loadPlus' | 'lm1' | 'jibAngle') => {
-    setActiveTab(tab);
-  };
-  
-  // If not yet on client, show a simplified version to avoid hydration mismatch
-  if (!isClient) {
+  // Don't render anything complex during SSR to avoid hydration mismatch
+  if (!mounted) {
     return (
       <div className="bg-black rounded-lg shadow-lg overflow-hidden p-6">
-        <p className="text-gray-400">Loading interactive visualizer...</p>
+        <p className="text-gray-400">Loading visualizer...</p>
       </div>
     );
   }
-  
-  return (
-    <div className="bg-black rounded-lg shadow-lg overflow-hidden">
-      <div className="border-b border-gray-800">
-        <div className="flex flex-wrap" id="tabGroup">
-          <button 
-            className={`px-6 py-3 text-white font-medium border-b-2 ${activeTab === 'loadPlus' ? 'border-highlight bg-gray-900' : 'border-transparent'}`}
-            onClick={() => handleTabChange('loadPlus')}
-            type="button"
-          >
-            Load-Plus Configuration
-          </button>
-          <button 
-            className={`px-6 py-3 text-white font-medium border-b-2 ${activeTab === 'lm1' ? 'border-highlight bg-gray-900' : 'border-transparent'}`}
-            onClick={() => handleTabChange('lm1')}
-            type="button"
-          >
-            LM1 Configuration
-          </button>
-          <button 
-            className={`px-6 py-3 text-white font-medium border-b-2 ${activeTab === 'jibAngle' ? 'border-highlight bg-gray-900' : 'border-transparent'}`}
-            onClick={() => handleTabChange('jibAngle')}
-            type="button"
-          >
-            30° Jib Angle Configuration
-          </button>
-        </div>
-      </div>
-      
-      {/* Tab content */}
-      <div className="p-6">
-        {/* Load-Plus Configuration */}
-        {activeTab === 'loadPlus' && (
+
+  // Render the content for the active tab
+  const renderTabContent = () => {
+    switch(activeTab) {
+      case 'loadPlus':
+        return (
           <div>
             <h3 className="text-xl font-bold text-white mb-4">Load-Plus Configuration</h3>
             <p className="text-gray-400 mb-6">
               The Load-Plus configuration provides enhanced lifting capacity with additional counterweights.
               This setup offers up to 20% more capacity compared to the standard LM1 configuration.
             </p>
-            
             <InteractiveRadiusVisualizer configuration="loadPlus" />
           </div>
-        )}
-        
-        {/* LM1 Configuration */}
-        {activeTab === 'lm1' && (
+        );
+      
+      case 'lm1':
+        return (
           <div>
             <h3 className="text-xl font-bold text-white mb-4">LM1 Configuration</h3>
             <p className="text-gray-400 mb-6">
               The LM1 configuration is the standard setup with normal counterweights,
               optimized for everyday lifting tasks with balanced performance.
             </p>
-            
             <InteractiveRadiusVisualizer configuration="lm1" />
           </div>
-        )}
-        
-        {/* 30° Jib Angle Configuration */}
-        {activeTab === 'jibAngle' && (
+        );
+      
+      case 'jibAngle':
+        return (
           <div>
             <h3 className="text-xl font-bold text-white mb-4">30° Jib Angle Configuration</h3>
             <p className="text-gray-400 mb-6">
               With the jib angled at 30°, the crane achieves increased hook height up to 40.4 meters,
               ideal for reaching over obstacles or working in height-restricted areas.
             </p>
-            
             <InteractiveRadiusVisualizer configuration="jibAngle" />
           </div>
-        )}
+        );
+      
+      default:
+        return <div className="text-gray-400">Select a configuration</div>;
+    }
+  };
+  
+  return (
+    <div className="bg-black rounded-lg shadow-lg overflow-hidden">
+      {/* Tab buttons */}
+      <div className="border-b border-gray-800">
+        <nav className="flex flex-wrap" role="tablist">
+          <button
+            role="tab"
+            aria-selected={activeTab === 'loadPlus'}
+            aria-controls="loadPlusPanel"
+            id="loadPlusTab"
+            className={`px-6 py-3 text-white font-medium border-b-2 outline-none ${
+              activeTab === 'loadPlus' ? 'border-highlight bg-gray-900' : 'border-transparent'
+            }`}
+            onClick={() => setActiveTab('loadPlus')}
+            type="button"
+          >
+            Load-Plus Configuration
+          </button>
+          
+          <button
+            role="tab"
+            aria-selected={activeTab === 'lm1'}
+            aria-controls="lm1Panel"
+            id="lm1Tab"
+            className={`px-6 py-3 text-white font-medium border-b-2 outline-none ${
+              activeTab === 'lm1' ? 'border-highlight bg-gray-900' : 'border-transparent'
+            }`}
+            onClick={() => setActiveTab('lm1')}
+            type="button"
+          >
+            LM1 Configuration
+          </button>
+          
+          <button
+            role="tab"
+            aria-selected={activeTab === 'jibAngle'}
+            aria-controls="jibAnglePanel"
+            id="jibAngleTab"
+            className={`px-6 py-3 text-white font-medium border-b-2 outline-none ${
+              activeTab === 'jibAngle' ? 'border-highlight bg-gray-900' : 'border-transparent'
+            }`}
+            onClick={() => setActiveTab('jibAngle')}
+            type="button"
+          >
+            30° Jib Angle Configuration
+          </button>
+        </nav>
+      </div>
+      
+      {/* Tab content */}
+      <div className="p-6" role="tabpanel">
+        {renderTabContent()}
       </div>
     </div>
   );
