@@ -2,11 +2,6 @@
 
 import { useState } from "react";
 
-export const metadata = {
-  title: 'Pecco SK 180 Tower Crane | Littlefoot',
-  description: 'Load charts and specifications for the Pecco SK 180 tower crane with 2-Part and 4-Part line configurations'
-};
-
 // Tab Button Component
 function TabButton({ isActive, onClick, children }: { isActive: boolean, onClick: () => void, children: React.ReactNode }) {
   return (
@@ -189,7 +184,6 @@ export default function PeccoSK180Page() {
                         <td className="py-3 px-4 text-center text-gray-300"></td>
                         <td className="py-3 px-4 text-center text-gray-300"></td>
                         <td className="py-3 px-4 text-center text-gray-300"></td>
-                        <td className="py-3 px-4 text-center text-gray-300"></td>
                       </tr>
                     </tbody>
                   </table>
@@ -321,7 +315,6 @@ export default function PeccoSK180Page() {
                         <td className="py-3 px-4 text-center text-gray-300">19,600 lbs</td>
                         <td className="py-3 px-4 text-center text-gray-300">17,000 lbs</td>
                         <td className="py-3 px-4 text-center text-gray-300">14,800 lbs</td>
-                        <td className="py-3 px-4 text-center text-gray-300"></td>
                         <td className="py-3 px-4 text-center text-gray-300"></td>
                         <td className="py-3 px-4 text-center text-gray-300"></td>
                         <td className="py-3 px-4 text-center text-gray-300"></td>
