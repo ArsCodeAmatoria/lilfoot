@@ -73,6 +73,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Tower Crane Charts',
+    items: [
+      {
+        name: 'Pecco SK 180',
+        slug: 'pecco-sk-180',
+        description:
+          'Load charts and specifications for the Pecco SK 180 tower crane with 2-Part and 4-Part line configurations',
+      },
+    ],
+  },
+  {
     name: 'Practice Exams',
     items: [
       {
