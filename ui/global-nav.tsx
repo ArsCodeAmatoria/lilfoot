@@ -79,7 +79,7 @@ export function GlobalNav() {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-gray-300 transition-colors flex items-center"
                 >
-                  <span>Site by Bigfoot Crane for </span>
+                  <span>Site by Bigfoot Crane </span>
                   <span className="font-['Shadows_Into_Light_Two'] ml-1">lilfoot</span>
                   <ExternalLink size={12} className="ml-1 inline-block" />
                 </a>
