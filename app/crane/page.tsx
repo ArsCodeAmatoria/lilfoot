@@ -5,7 +5,7 @@ import CraneLoadVisualizer from '../components/CraneLoadVisualizer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Crane Specifications | Littlefoot',
+  title: 'Crane Specifications | lilfoot',
   description:
     'Interactive chart displaying crane specifications and lifting capacity data.',
 };

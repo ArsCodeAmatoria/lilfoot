@@ -1,7 +1,7 @@
 import ExamInterface from './ExamInterface';
 
 export const metadata = {
-  title: 'Red Seal Tower Crane Operator Practice Exam | Littlefoot',
+  title: 'Red Seal Tower Crane Operator Practice Exam | lilfoot',
   description: 'Prepare for your Red Seal Tower Crane Operator certification with this interactive practice exam. Test your knowledge with real-world questions based on the official exam format.'
 };
 

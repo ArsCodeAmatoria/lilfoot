@@ -4,11 +4,12 @@ import Liebherr81kCapacityChart from '../components/Liebherr81kCapacityChart';
 import SpeedLoadCapacityChart from '../components/SpeedLoadCapacityChart';
 import PdfDownload from '../components/PdfDownload';
 import InteractiveRadiusVisualizer from '../components/InteractiveRadiusVisualizer';
+import InteractiveConfigTabs from '../components/InteractiveConfigTabs';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Liebherr 81k Self-Erecting Crane | Littlefoot',
+  title: 'Liebherr 81k Self-Erecting Crane | lilfoot',
   description: 'Detailed specifications and load tables for the Liebherr 81k self-erecting tower crane.',
 };
 
@@ -197,21 +198,12 @@ export default function Liebherr81kPage() {
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-white mb-4">Interactive Load Capacity Visualizer</h2>
         <p className="text-gray-400 mb-6">
-          Use the slider below to interactively explore how the Liebherr 81k's lifting capacity changes with jib radius.
-          This interactive tool helps operators understand the relationship between reach and lifting power
-          for different crane configurations.
+          Use the tabs below to explore how the Liebherr 81k's lifting capacity changes with jib radius
+          across different configurations. The interactive visualizer helps operators understand the 
+          relationship between reach and lifting power for optimal crane operation.
         </p>
         
-        <div className="space-y-6">
-          {/* Load-Plus Configuration Visualizer */}
-          <InteractiveRadiusVisualizer configuration="loadPlus" />
-          
-          {/* LM1 Configuration Visualizer */}
-          <InteractiveRadiusVisualizer configuration="lm1" />
-          
-          {/* 30° Jib Angle Configuration Visualizer */}
-          <InteractiveRadiusVisualizer configuration="jibAngle" />
-        </div>
+        <InteractiveConfigTabs />
       </div>
 
       {/* Load Capacity Charts Section */}

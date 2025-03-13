@@ -1,4 +1,5 @@
 {
+  "name": "lilfoot",
   "private": true,
   "packageManager": "pnpm@8.2.0",
   "scripts": {

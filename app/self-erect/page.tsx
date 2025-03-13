@@ -3,7 +3,7 @@ import SelfErectCraneCharts from '../components/SelfErectCraneCharts';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Liebherr 81k Self-Erect Crane | Littlefoot',
+  title: 'Liebherr 81k Self-Erect Crane | lilfoot',
   description:
     'Specifications and load charts for the Liebherr 81k self-erecting tower crane with Load-Plus LM 1 and 30 degree configurations.',
 };

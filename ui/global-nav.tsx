@@ -24,8 +24,8 @@ export function GlobalNav() {
             <PawPrint size={24} color="#53C03F" />
           </div>
 
-          <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">
-            Littlefoot
+          <h3 className="font-['Shadows_Into_Light_Two'] text-xl tracking-wide text-gray-400 group-hover:text-gray-50">
+            lilfoot
           </h3>
         </Link>
       </div>
@@ -72,7 +72,7 @@ export function GlobalNav() {
           {/* Bigfoot Crane Attribution */}
           <div className="mt-auto pt-4 border-t border-gray-800">
             <div className="px-3 py-2 text-xs text-gray-500">
-              <p className="mb-2">© {new Date().getFullYear()} Littlefoot</p>
+              <p className="mb-2">© {new Date().getFullYear()} lilfoot</p>
               <div>
                 <a 
                   href="https://bigfootcrane.com/"

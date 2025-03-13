@@ -3,20 +3,29 @@ import { AddressBar } from '#/ui/address-bar';
 import Byline from '#/ui/byline';
 import { GlobalNav } from '#/ui/global-nav';
 import { Metadata } from 'next';
+import { Shadows_Into_Light_Two } from 'next/font/google';
+
+// Initialize the Shadows Into Light Two font
+const shadowsIntoLightTwo = Shadows_Into_Light_Two({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-shadows-into-light',
+});
 
 export const metadata: Metadata = {
   title: {
-    default: 'Littlefoot',
-    template: '%s | Littlefoot',
+    default: 'lilfoot',
+    template: '%s | lilfoot',
   },
-  metadataBase: new URL('https://app-router.vercel.app'),
+  metadataBase: new URL('https://lilfoot.org'),
   description:
     'A playground to explore new Next.js App Router features such as nested layouts, instant loading states, streaming, and component level data fetching.',
   openGraph: {
-    title: 'Littlefoot',
+    title: 'lilfoot',
     description:
       'A playground to explore new Next.js App Router features such as nested layouts, instant loading states, streaming, and component level data fetching.',
-    images: [`/api/og?title=Littlefoot`],
+    images: [`/api/og?title=lilfoot`],
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,7 +38,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="[color-scheme:dark]">
+    <html lang="en" className={`[color-scheme:dark] ${shadowsIntoLightTwo.variable}`}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="overflow-y-scroll bg-gray-1100 bg-[url('/grid.svg')] pb-36">
         <GlobalNav />
 
