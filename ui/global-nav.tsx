@@ -20,11 +20,11 @@ export function GlobalNav() {
           className="group flex w-full items-center gap-x-2.5"
           onClick={close}
         >
-          <div className="h-7 w-7 flex items-center justify-center">
-            <PawPrint size={24} color="#53C03F" />
+          <div className="h-8 w-8 flex items-center justify-center">
+            <PawPrint size={30} color="#53C03F" />
           </div>
 
-          <h3 className="font-['Shadows_Into_Light_Two'] text-xl tracking-wide text-gray-400 group-hover:text-gray-50">
+          <h3 className="font-['Shadows_Into_Light_Two'] text-2xl tracking-wide text-gray-400 group-hover:text-gray-50">
             lilfoot
           </h3>
         </Link>

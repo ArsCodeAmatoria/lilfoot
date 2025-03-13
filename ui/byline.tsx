@@ -16,8 +16,8 @@ export default function Byline() {
               Bigfoot Crane
             </a>
             <span> for </span>
-            <span className="font-['Shadows_Into_Light_Two']">lilfoot</span>
-            <PawPrint size={16} className="text-highlight ml-1" />
+            <span className="font-['Shadows_Into_Light_Two'] text-lg">lilfoot</span>
+            <PawPrint size={20} className="text-highlight ml-1" />
           </div>
         </div>
       </div>
