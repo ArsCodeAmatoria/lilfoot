@@ -8,14 +8,17 @@ export default function Page() {
     <div className="space-y-12">
       {/* Hero Section */}
       <div className="relative overflow-hidden rounded-lg bg-gray-950 shadow-xl">
-        <div className="absolute inset-0 opacity-30 z-0">
-          <Image 
-            src="/images/liebherr81k.jpg" 
-            alt="Tower Crane" 
-            fill 
-            className="object-cover"
-            priority
-          />
+        <div className="absolute inset-0 z-0">
+          <div className="relative w-full h-full">
+            <Image 
+              src="/images/liebherr81k.jpg" 
+              alt="Tower Crane" 
+              className="object-cover opacity-30"
+              fill
+              sizes="100vw"
+              priority
+            />
+          </div>
         </div>
         <div className="relative z-10 px-6 py-16 sm:px-8 sm:py-20 lg:py-24 flex flex-col items-center text-center">
           <div className="inline-flex items-center mb-4">
@@ -25,7 +28,7 @@ export default function Page() {
             </h1>
           </div>
           <p className="mt-4 max-w-2xl text-xl md:text-2xl text-gray-300 font-light">
-            Tower Crane Training & Resources
+            Crane and Rigging Exam Practice Resources
           </p>
           <p className="mt-4 max-w-2xl text-md md:text-lg text-gray-400">
             Interactive tools, charts, and practice exams for tower crane operators
