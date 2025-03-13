@@ -72,23 +72,17 @@ export function GlobalNav() {
           {/* Footer Attribution */}
           <div className="mt-auto pt-4 border-t border-gray-800">
             <div className="px-3 py-2 text-xs text-gray-500">
-              <p className="mb-3 text-gray-400">
-                Discover how proper crane operator training directly improves safety metrics, operational efficiency, and your bottom line through data-driven insights.
-              </p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <span className="text-gray-400">Crig safe • </span>
-                  <a 
-                    href="https://bigfootcrane.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-gray-300 transition-colors flex items-center"
-                  >
-                    <span>Site by Bigfoot Crane for </span>
-                    <span className="font-['Shadows_Into_Light_Two'] ml-1">lilfoot</span>
-                    <ExternalLink size={12} className="ml-1 inline-block" />
-                  </a>
-                </div>
+              <div className="flex items-center">
+                <a 
+                  href="https://bigfootcrane.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-gray-300 transition-colors flex items-center"
+                >
+                  <span>Site by Bigfoot Crane for </span>
+                  <span className="font-['Shadows_Into_Light_Two'] ml-1">lilfoot</span>
+                  <ExternalLink size={12} className="ml-1 inline-block" />
+                </a>
               </div>
             </div>
           </div>
