@@ -11,7 +11,7 @@ export default function Byline() {
             target="_blank"
             rel="noreferrer"
           >
-            <span>Site by Bigfoot Crane for </span>
+            <span>Made by Bigfoot Crane for </span>
             <span className="font-['Shadows_Into_Light_Two']">lilfoot</span>
             <PawPrint size={16} className="text-highlight ml-1" />
           </a>
