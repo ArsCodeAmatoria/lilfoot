@@ -189,7 +189,7 @@ export const demos: { name: string; items: Item[] }[] = [
     items: [
       {
         name: 'Liebherr 81k',
-        slug: 'self-erect-tower/liebherr-81k',
+        slug: 'crane-tables',
         description:
           'Detailed specifications and load tables for the Liebherr 81k self-erecting tower crane',
       },
