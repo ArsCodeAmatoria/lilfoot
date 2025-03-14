@@ -81,6 +81,18 @@ export const demos: { name: string; items: Item[] }[] = [
         description:
           'Interactive practice exam for Red Seal Tower Crane Operator certification with detailed feedback',
       },
+      {
+        name: 'Rigging Basic',
+        slug: 'practice-exams/rigging-basic',
+        description:
+          'Coming soon: Basic rigging practice exam covering fundamental lifting operations and equipment safety',
+      },
+      {
+        name: 'Rigging Advanced',
+        slug: 'practice-exams/rigging-advanced',
+        description:
+          'Coming soon: Advanced rigging practice exam for complex lifts, load calculations, and critical safety procedures',
+      },
     ],
   },
   {
