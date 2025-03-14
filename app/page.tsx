@@ -8,6 +8,7 @@ import {
   Award,
   Calculator,
   ClipboardCheck,
+  ChevronRight,
 } from 'lucide-react';
 
 export default function Page() {
@@ -78,7 +79,7 @@ export default function Page() {
               href="/practice-exams/40-tonnes-and-under"
               className="inline-flex items-center font-medium text-green-500 hover:text-green-400"
             >
-              View exams <span className="ml-1">→</span>
+              View exams <ChevronRight size={16} className="ml-1" />
             </Link>
           </div>
 
@@ -95,7 +96,7 @@ export default function Page() {
               href="/tower-crane/pecco-sk-180"
               className="inline-flex items-center font-medium text-green-500 hover:text-green-400"
             >
-              View charts <span className="ml-1">→</span>
+              View charts <ChevronRight size={16} className="ml-1" />
             </Link>
           </div>
 
@@ -112,7 +113,7 @@ export default function Page() {
               href="/rigging-charts/basic"
               className="inline-flex items-center font-medium text-green-500 hover:text-green-400"
             >
-              View resources <span className="ml-1">→</span>
+              View resources <ChevronRight size={16} className="ml-1" />
             </Link>
           </div>
         </div>
@@ -139,21 +140,7 @@ export default function Page() {
                       <span className="text-gray-300 group-hover:text-green-500">
                         {item.name}
                       </span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-green-500 opacity-0 transition-opacity group-hover:opacity-100"
-                      >
-                        <path d="M5 12h14"></path>
-                        <path d="m12 5 7 7-7 7"></path>
-                      </svg>
+                      <ChevronRight size={16} className="text-green-500 opacity-0 transition-opacity group-hover:opacity-100" />
                     </Link>
                   ))}
                   {section.items.length > 4 && (

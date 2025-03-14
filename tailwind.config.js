@@ -1,13 +1,13 @@
-import colors from 'tailwindcss/colors';
-import type { Config } from 'tailwindcss';
 // Custom local plugins
 const localPlugins = require('./custom-tailwind-plugins/empty-plugins');
 
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './ui/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   future: {
     hoverOnlyWhenSupported: true,
@@ -17,7 +17,19 @@ export default {
     extend: {
       // https://vercel.com/design/color
       colors: {
-        gray: colors.zinc,
+        gray: {
+          50: '#fafafa',
+          100: '#f4f4f5',
+          200: '#e4e4e7',
+          300: '#d4d4d8',
+          400: '#a1a1aa',
+          500: '#71717a',
+          600: '#52525b',
+          700: '#3f3f46',
+          800: '#27272a',
+          900: '#18181b',
+          950: '#09090b',
+        },
         'gray-1000': 'rgb(17,17,19)',
         'gray-1100': 'rgb(10,10,11)',
         vercel: {
@@ -29,7 +41,7 @@ export default {
         },
         highlight: '#53C03F',
       },
-      backgroundImage: ({ theme }: { theme: any }) => ({
+      backgroundImage: ({ theme }) => ({
         'vc-border-gradient': `radial-gradient(at left top, ${theme(
           'colors.gray.500',
         )}, 50px, ${theme('colors.gray.800')} 50%)`,
@@ -94,4 +106,4 @@ export default {
     localPlugins.typography,
     localPlugins.forms,
   ],
-} satisfies Config;
+}; 
