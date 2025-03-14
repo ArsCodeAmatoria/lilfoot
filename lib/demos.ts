@@ -21,16 +21,16 @@ export const demos: { name: string; items: Item[] }[] = [
           'Interactive practice exam for Red Seal Mobile Crane Operator certification with 10 sample questions',
       },
       {
-        name: '40t and Under',
+        name: '40 Tonnes and Under',
         slug: 'practice-exams/40t-and-under',
         description:
-          'Coming soon: Practice exam for operators of cranes with lifting capacity of 40 tons and under',
+          'Coming soon: Practice exam for operators of cranes with lifting capacity of 40 tonnes and under',
       },
       {
-        name: '80t and Under',
+        name: '80 Tonnes and Under',
         slug: 'practice-exams/80t-and-under',
         description:
-          'Coming soon: Practice exam for operators of cranes with lifting capacity of 80 tons and under',
+          'Coming soon: Practice exam for operators of cranes with lifting capacity of 80 tonnes and under',
       },
       {
         name: 'Folding Boom',

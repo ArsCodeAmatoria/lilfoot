@@ -2,9 +2,10 @@ import React from 'react';
 import { Timer, Construction } from 'lucide-react';
 
 export const metadata = {
-  title: '40t and Under Practice Exam | Crane Operator Certification | lilfoot',
+  title:
+    '40 Tonnes and Under Practice Exam | Crane Operator Certification | lilfoot',
   description:
-    'Practice exam for crane operators specializing in 40t and under capacity cranes.',
+    'Practice exam for crane operators specializing in 40 tonnes and under capacity cranes.',
 };
 
 export default function FortyTonAndUnderExamPage() {
@@ -12,11 +13,11 @@ export default function FortyTonAndUnderExamPage() {
     <div className="text-white">
       <div className="mb-8">
         <h1 className="mb-4 text-3xl font-bold text-white">
-          40t and Under Crane Operator Practice Exam
+          40 Tonnes and Under Crane Operator Practice Exam
         </h1>
         <p className="max-w-3xl text-gray-400">
           A comprehensive practice exam specifically designed for operators of
-          smaller capacity cranes up to 40 tons. Test your knowledge of
+          smaller capacity cranes up to 40 tonnes. Test your knowledge of
           operation procedures, safety protocols, and technical specifications
           relevant to this category of equipment.
         </p>
@@ -28,9 +29,10 @@ export default function FortyTonAndUnderExamPage() {
         </div>
         <h2 className="mb-4 text-center text-2xl font-bold">Coming Soon</h2>
         <p className="max-w-xl text-center text-gray-400">
-          We're currently developing this specialized practice exam for 40t and
-          under crane operators. Our team is working to ensure accurate,
-          relevant, and challenging questions that reflect real-world scenarios.
+          We're currently developing this specialized practice exam for 40
+          tonnes and under crane operators. Our team is working to ensure
+          accurate, relevant, and challenging questions that reflect real-world
+          scenarios.
         </p>
         <div className="mt-6 flex items-center text-gray-500">
           <Timer size={20} className="mr-2" />
@@ -48,7 +50,7 @@ export default function FortyTonAndUnderExamPage() {
             </li>
             <li className="flex">
               <span className="mr-2 font-bold text-highlight">•</span>
-              Load calculation scenarios specific to 40t and under cranes
+              Load calculation scenarios specific to 40 tonnes and under cranes
             </li>
             <li className="flex">
               <span className="mr-2 font-bold text-highlight">•</span>
