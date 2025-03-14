@@ -72,10 +72,40 @@ export const demos: { name: string; items: Item[] }[] = [
           'Coming soon: Specifications and load charts for the Liebherr 53k self-erecting tower crane',
       },
       {
+        name: 'Liebherr 81K.1',
+        slug: 'self-erect-tower/liebherr-81k-1',
+        description:
+          'Coming soon: Specifications and load charts for the Liebherr 81K.1 self-erecting tower crane',
+      },
+      {
         name: 'Liebherr 125k',
         slug: 'self-erect-tower/liebherr-125k',
         description:
           'Coming soon: Specifications and load charts for the Liebherr 125k self-erecting tower crane',
+      },
+      {
+        name: 'Konig K 45 T',
+        slug: 'self-erect-tower/konig-k-45-t',
+        description:
+          'Coming soon: Specifications and load charts for the Konig K 45 T self-erecting tower crane',
+      },
+      {
+        name: 'Konig K 60',
+        slug: 'self-erect-tower/konig-k60',
+        description:
+          'Coming soon: Specifications and load charts for the Konig K60 self-erecting tower crane',
+      },
+      {
+        name: 'Konig K 72',
+        slug: 'self-erect-tower/konig-k-72',
+        description:
+          'Coming soon: Specifications and load charts for the Konig K 72 self-erecting tower crane',
+      },
+      {
+        name: 'Konig K1035TKH',
+        slug: 'self-erect-tower/konig-k1035tkh',
+        description:
+          'Coming soon: Specifications and load charts for the Konig K1035TKH self-erecting tower crane',
       },
       {
         name: 'Potain HD40A',
@@ -90,28 +120,22 @@ export const demos: { name: string; items: Item[] }[] = [
           'Coming soon: Specifications and load charts for the Potain GTMR 331C self-erecting tower crane',
       },
       {
-        name: 'Konig K1035TKH',
-        slug: 'self-erect-tower/konig-k1035tkh',
+        name: 'Potain HDT-80',
+        slug: 'self-erect-tower/potain-hdt-80',
         description:
-          'Coming soon: Specifications and load charts for the Konig K1035TKH self-erecting tower crane',
-      },
-      {
-        name: 'Konig K60',
-        slug: 'self-erect-tower/konig-k60',
-        description:
-          'Coming soon: Specifications and load charts for the Konig K60 self-erecting tower crane',
-      },
-      {
-        name: 'Terex Peiner SMK 308',
-        slug: 'self-erect-tower/terex-peiner-smk-308',
-        description:
-          'Coming soon: Specifications and load charts for the Terex Peiner SMK 308 self-erecting tower crane',
+          'Coming soon: Specifications and load charts for the Potain HDT-80 self-erecting tower crane',
       },
       {
         name: 'San Marco SMH 420',
         slug: 'self-erect-tower/san-marco-smh-420',
         description:
           'Coming soon: Specifications and load charts for the San Marco SMH 420 self-erecting tower crane',
+      },
+      {
+        name: 'Terex Peiner SMK 308',
+        slug: 'self-erect-tower/terex-peiner-smk-308',
+        description:
+          'Coming soon: Specifications and load charts for the Terex Peiner SMK 308 self-erecting tower crane',
       },
     ],
   },
