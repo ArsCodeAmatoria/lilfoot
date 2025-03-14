@@ -2,15 +2,6 @@ import React from 'react';
 import { FileText, Maximize, Weight, Ruler, Zap, PackageCheck } from 'lucide-react';
 import PdfDownload from '../../components/PdfDownload';
 import Image from 'next/image';
-import {
-  Table,
-  TableHeader,
-  TableBody,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableCaption,
-} from '#/components/ui/table';
 
 export const metadata = {
   title: 'Liebherr 125 EC-B 6 Specifications | Tower Cranes | lilfoot',
@@ -259,92 +250,163 @@ export default function Liebherr125ECB6Page() {
         
         {/* LM1 Load Chart Table */}
         <div className="mb-6">
-          <h3 className="text-lg font-semibold text-white mb-3">LM1 Load Chart (Standard Configuration)</h3>
-          <Table>
-            <TableCaption>Maximum load capacities in kg for Liebherr 125 EC-B 6 with standard configuration</TableCaption>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="bg-gray-800 text-center">Radius (m)</TableHead>
-                <TableHead className="bg-gray-800 text-center">Capacity (kg)</TableHead>
-                <TableHead className="bg-gray-800 text-center">Jib Config</TableHead>
-                <TableHead className="bg-gray-800 text-center">Notes</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              <TableRow>
-                <TableCell className="text-center">15.0</TableCell>
-                <TableCell className="text-center font-bold">6,000</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">Maximum capacity</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">17.5</TableCell>
-                <TableCell className="text-center font-bold">5,300</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">-</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">20.0</TableCell>
-                <TableCell className="text-center font-bold">4,500</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">-</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">22.5</TableCell>
-                <TableCell className="text-center font-bold">3,950</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">-</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">25.0</TableCell>
-                <TableCell className="text-center font-bold">3,450</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">-</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">30.0</TableCell>
-                <TableCell className="text-center font-bold">2,800</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">-</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">35.0</TableCell>
-                <TableCell className="text-center font-bold">2,350</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">-</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">40.0</TableCell>
-                <TableCell className="text-center font-bold">2,050</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">-</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">45.0</TableCell>
-                <TableCell className="text-center font-bold">1,800</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">-</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">50.0</TableCell>
-                <TableCell className="text-center font-bold">1,600</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">-</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">55.0</TableCell>
-                <TableCell className="text-center font-bold">1,450</TableCell>
-                <TableCell className="text-center">Standard</TableCell>
-                <TableCell className="text-center">-</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="text-center">58.5</TableCell>
-                <TableCell className="text-center font-bold">1,350</TableCell>
-                <TableCell className="text-center">Max radius</TableCell>
-                <TableCell className="text-center">Maximum jib length</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
+          <h3 className="text-xl font-bold text-white mb-3">LM1 Load Chart (Standard Configuration)</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr>
+                  <th className="px-4 py-3 font-semibold text-gray-300 bg-gray-900 border border-gray-800 sticky left-0 z-10">
+                    Radius (m)
+                  </th>
+                  <th className="px-4 py-3 font-semibold text-gray-300 bg-gray-900 border border-gray-800 text-center">
+                    Capacity (kg)
+                  </th>
+                  <th className="px-4 py-3 font-semibold text-gray-300 bg-gray-900 border border-gray-800 text-center">
+                    Configuration
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-800">
+                <tr className="bg-gray-900/30">
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    15.0
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    6,000
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Maximum capacity
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    17.5
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    5,300
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Standard
+                  </td>
+                </tr>
+                <tr className="bg-gray-900/30">
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    20.0
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    4,500
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Standard
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    22.5
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    3,950
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Standard
+                  </td>
+                </tr>
+                <tr className="bg-gray-900/30">
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    25.0
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    3,450
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Standard
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    30.0
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    2,800
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Standard
+                  </td>
+                </tr>
+                <tr className="bg-gray-900/30">
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    35.0
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    2,350
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Standard
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    40.0
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    2,050
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Standard
+                  </td>
+                </tr>
+                <tr className="bg-gray-900/30">
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    45.0
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    1,800
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Standard
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    50.0
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    1,600
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Standard
+                  </td>
+                </tr>
+                <tr className="bg-gray-900/30">
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    55.0
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    1,450
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Standard
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
+                    58.5
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
+                    1,350
+                  </td>
+                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
+                    Maximum jib length
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="text-gray-400 text-sm mt-3">
+            <p>
+              <span className="text-highlight font-medium">Note:</span> The LM1 table displays standard lifting capacities (in kg) for the Liebherr 125 EC-B 6 at different working radii. Maximum capacity of 6,000 kg is available at the minimum radius of 15.0m.
+            </p>
+          </div>
         </div>
 
         <div className="bg-gray-900 p-4 rounded-lg mb-6">
