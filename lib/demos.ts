@@ -22,13 +22,13 @@ export const demos: { name: string; items: Item[] }[] = [
       },
       {
         name: '40 Tonnes and Under',
-        slug: 'practice-exams/40t-and-under',
+        slug: 'practice-exams/40-tonnes-and-under',
         description:
           'Coming soon: Practice exam for operators of cranes with lifting capacity of 40 tonnes and under',
       },
       {
         name: '80 Tonnes and Under',
-        slug: 'practice-exams/80t-and-under',
+        slug: 'practice-exams/80-tonnes-and-under',
         description:
           'Coming soon: Practice exam for operators of cranes with lifting capacity of 80 tonnes and under',
       },
