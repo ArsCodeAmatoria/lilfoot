@@ -128,7 +128,7 @@ function GlobalNavItem({
       <div className="flex items-center justify-between">
         <span>{item.name}</span>
         {isNewItem && (
-          <span className="ml-2 rounded-md bg-amber-600 bg-opacity-20 px-1.5 py-0.5 text-xs font-medium text-amber-500">
+          <span className="ml-2 rounded-md bg-yellow-400 bg-opacity-25 px-1.5 py-0.5 text-xs font-medium text-yellow-300">
             New
           </span>
         )}
