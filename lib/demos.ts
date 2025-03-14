@@ -17,6 +17,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Mobile Crane',
+    items: [
+      {
+        name: 'Liebherr LTM 1200',
+        slug: 'mobile-crane/liebherr-ltm-1200',
+        description:
+          'Coming soon: Specifications and load charts for the Liebherr LTM 1200 mobile crane',
+      },
+    ],
+  },
+  {
     name: 'Tower Crane Charts',
     items: [
       {
