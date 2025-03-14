@@ -13,7 +13,7 @@ const nextConfig = {
   },
   // Increase resource limits for development
   experimental: {
-    workerThreads: true,
+    workerThreads: false,
   },
 };
 
