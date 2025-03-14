@@ -163,6 +163,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Luffing Crane Charts',
+    items: [
+      {
+        name: 'Liebherr Luffing HC-L',
+        slug: 'luffing-crane/liebherr-hc-l',
+        description:
+          'Coming soon: Specifications and load charts for the Liebherr HC-L luffing crane series',
+      },
+    ],
+  },
+  {
     name: 'Folding Boom Charts',
     items: [
       {
