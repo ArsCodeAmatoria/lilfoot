@@ -15,6 +15,12 @@ export const demos: { name: string; items: Item[] }[] = [
           'Interactive practice exam for Red Seal Tower Crane Operator certification with detailed feedback',
       },
       {
+        name: 'Red Seal Practice Exam (Mobile)',
+        slug: 'practice-exams/mobile-red-seal',
+        description:
+          'Interactive practice exam for Red Seal Mobile Crane Operator certification with 10 sample questions',
+      },
+      {
         name: 'Rigging Basic',
         slug: 'practice-exams/rigging-basic',
         description:
