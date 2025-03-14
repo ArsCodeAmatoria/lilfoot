@@ -193,6 +193,43 @@ export default function DimensionsPage() {
     },
   ];
 
+  // New obtuse triangle formulas
+  const obtuseTriangleFormulas = [
+    {
+      name: '120-30-30 Triangle',
+      formula: 'Angles: 120° + 30° + 30° = 180°',
+      variables: {
+        '120°': 'Obtuse angle',
+        '30°': 'Each base angle',
+      } as Record<string, string>,
+    },
+    {
+      name: 'Law of Cosines (for side a)',
+      formula: 'a² = 2b² - 2b²cos(120°)',
+      variables: {
+        a: 'Base length',
+        b: 'Equal sides length',
+        'cos(120°)': '-0.5 (negative value)',
+      } as Record<string, string>,
+    },
+    {
+      name: 'Simplified Relation',
+      formula: 'a² = 2b² - 2b²(-0.5) = 2b² + b² = 3b²',
+      variables: {
+        a: 'Base length',
+        b: 'Equal sides length',
+      } as Record<string, string>,
+    },
+    {
+      name: 'Relation between a and b',
+      formula: 'a = b√3',
+      variables: {
+        a: 'Base length',
+        b: 'Equal sides length',
+      } as Record<string, string>,
+    },
+  ];
+
   return (
     <div className="space-y-8">
       <div className="mb-8">
@@ -240,6 +277,13 @@ export default function DimensionsPage() {
         formulas={specialTriangleFormulas}
       >
         <ShapeVisualizer type="specialTriangle" />
+      </FormulaDisplay>
+
+      <FormulaDisplay
+        title="120-30-30 Obtuse Triangle"
+        formulas={obtuseTriangleFormulas}
+      >
+        <ShapeVisualizer type="obtuseTriangle" />
       </FormulaDisplay>
 
       {/* Basic Shapes Section */}

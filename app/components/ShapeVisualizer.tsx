@@ -12,7 +12,8 @@ interface ShapeVisualizerProps {
     | 'rightTriangle'
     | 'isoscelesTriangle'
     | 'equilateralTriangle'
-    | 'specialTriangle';
+    | 'specialTriangle'
+    | 'obtuseTriangle';
   highlightColor?: string;
   accentColor?: string;
 }
@@ -790,6 +791,131 @@ export default function ShapeVisualizer({
               fill="white"
             >
               x : √3x : 2x
+            </text>
+          </svg>
+        );
+
+      case 'obtuseTriangle':
+        // Create an isosceles triangle with angles 120°, 30°, 30°
+        const otWidth = 180;
+        const otHeight = 80;
+        const otX = center - otWidth / 2;
+        const otY = center + otHeight / 2;
+
+        // The apex needs to be on the opposite side from the base to create the 120° angle
+        const otApexX = center;
+        const otApexY = otY - otHeight * 1.5;
+
+        return (
+          <svg
+            width={size}
+            height={size}
+            viewBox={`0 0 ${size} ${size}`}
+            className="max-w-full"
+          >
+            {/* Draw the obtuse triangle */}
+            <polygon
+              points={`${otX},${otY} ${otX + otWidth},${otY} ${otApexX},${otApexY}`}
+              stroke={baseColor}
+              strokeWidth={strokeWidth}
+              fill="none"
+            />
+
+            {/* Draw angle markers */}
+            {/* 120° angle at the top */}
+            <path
+              d={`M${otApexX - 20},${otApexY + 10} A 20 20 0 0 0 ${otApexX + 20},${otApexY + 10}`}
+              stroke={baseColor}
+              strokeWidth={1.5}
+              fill="none"
+            />
+
+            {/* 30° angles at the bottom */}
+            <path
+              d={`M${otX + 20},${otY} A 20 20 0 0 1 ${otX + 20},${otY - 10}`}
+              stroke={baseColor}
+              strokeWidth={1.5}
+              fill="none"
+            />
+
+            <path
+              d={`M${otX + otWidth - 20},${otY} A 20 20 0 0 0 ${otX + otWidth - 20},${otY - 10}`}
+              stroke={baseColor}
+              strokeWidth={1.5}
+              fill="none"
+            />
+
+            {/* Angle labels */}
+            <text
+              x={otApexX}
+              y={otApexY + 25}
+              textAnchor="middle"
+              fontSize="14"
+              fill="white"
+            >
+              120°
+            </text>
+
+            <text
+              x={otX + 15}
+              y={otY - 15}
+              textAnchor="middle"
+              fontSize="14"
+              fill="white"
+            >
+              30°
+            </text>
+
+            <text
+              x={otX + otWidth - 15}
+              y={otY - 15}
+              textAnchor="middle"
+              fontSize="14"
+              fill="white"
+            >
+              30°
+            </text>
+
+            {/* Label the sides */}
+            <text
+              x={center}
+              y={otY + 20}
+              textAnchor="middle"
+              fontSize="14"
+              fill="white"
+            >
+              a
+            </text>
+
+            <text
+              x={center - otWidth / 4 - 5}
+              y={center}
+              textAnchor="middle"
+              fontSize="14"
+              fill="white"
+            >
+              b
+            </text>
+
+            <text
+              x={center + otWidth / 4 + 5}
+              y={center}
+              textAnchor="middle"
+              fontSize="14"
+              fill="white"
+            >
+              b
+            </text>
+
+            {/* Law of cosines for this triangle */}
+            <text
+              x={center}
+              y={center - 40}
+              textAnchor="middle"
+              fontSize="16"
+              fill="white"
+            >
+              a² = 2b² - 2b²cos(120°)
             </text>
           </svg>
         );
