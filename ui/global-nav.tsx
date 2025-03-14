@@ -128,7 +128,13 @@ function GlobalNavItem({
       <div className="flex items-center justify-between">
         <span>{item.name}</span>
         {isNewItem && (
-          <span className="ml-2 rounded-md bg-yellow-400 bg-opacity-25 px-1.5 py-0.5 text-xs font-medium text-yellow-300">
+          <span
+            className="ml-2 rounded-md px-1.5 py-0.5 text-xs font-medium"
+            style={{
+              backgroundColor: 'rgba(255, 0, 127, 0.2)',
+              color: '#ff007f',
+            }}
+          >
             New
           </span>
         )}
