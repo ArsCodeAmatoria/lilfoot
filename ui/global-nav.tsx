@@ -45,12 +45,12 @@ export function GlobalNav() {
       </button>
 
       <div
-        className={clsx('overflow-y-auto lg:static lg:block', {
+        className={clsx('h-full overflow-y-auto lg:static lg:block', {
           'fixed inset-x-0 bottom-0 top-14 mt-px bg-black': isOpen,
           hidden: !isOpen,
         })}
       >
-        <nav className="flex h-full flex-col space-y-6 px-2 pb-4 pt-5">
+        <nav className="flex h-full flex-col space-y-6 px-2 pb-28 pt-5">
           <div className="flex-grow">
             {demos.map((section) => {
               return (
