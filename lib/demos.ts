@@ -47,6 +47,18 @@ export const demos: { name: string; items: Item[] }[] = [
         description:
           'Detailed specifications and load tables for the Liebherr 81k self-erecting tower crane',
       },
+      {
+        name: 'Liebherr 53k',
+        slug: 'self-erect-tower/liebherr-53k',
+        description:
+          'Coming soon: Specifications and load charts for the Liebherr 53k self-erecting tower crane',
+      },
+      {
+        name: 'Liebherr 125k',
+        slug: 'self-erect-tower/liebherr-125k',
+        description:
+          'Coming soon: Specifications and load charts for the Liebherr 125k self-erecting tower crane',
+      },
     ],
   },
   {
