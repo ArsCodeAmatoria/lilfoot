@@ -80,6 +80,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Power Lines',
+    items: [
+      {
+        name: 'Limits of Approach',
+        slug: 'power-lines/limits-of-approach',
+        description:
+          'Coming soon: Guidelines and regulations for safe working distances from power lines for crane operations',
+      },
+    ],
+  },
+  {
     name: 'Math',
     items: [
       {
