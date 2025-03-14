@@ -54,6 +54,60 @@ export const demos: { name: string; items: Item[] }[] = [
         description:
           'Load charts and specifications for the Pecco SK 180 tower crane with 2-Part and 4-Part line configurations',
       },
+      {
+        name: 'Comansa LC-5211',
+        slug: 'tower-crane/comansa-lc-5211',
+        description:
+          'Coming soon: Specifications and load charts for the Comansa LC-5211 tower crane',
+      },
+      {
+        name: 'Liebherr 100LC',
+        slug: 'tower-crane/liebherr-100lc',
+        description:
+          'Coming soon: Specifications and load charts for the Liebherr 100LC tower crane',
+      },
+      {
+        name: 'Liebherr 125 EC-B 6',
+        slug: 'tower-crane/liebherr-125-ec-b-6',
+        description:
+          'Coming soon: Specifications and load charts for the Liebherr 125 EC-B 6 tower crane',
+      },
+      {
+        name: 'Liebherr 172 EC-B 8',
+        slug: 'tower-crane/liebherr-172-ec-b-8',
+        description:
+          'Coming soon: Specifications and load charts for the Liebherr 172 EC-B 8 tower crane',
+      },
+      {
+        name: 'Pecco SK 200',
+        slug: 'tower-crane/pecco-sk-200',
+        description:
+          'Coming soon: Specifications and load charts for the Pecco SK 200 tower crane',
+      },
+      {
+        name: 'Pecco SK 225',
+        slug: 'tower-crane/pecco-sk-225',
+        description:
+          'Coming soon: Specifications and load charts for the Pecco SK 225 tower crane',
+      },
+      {
+        name: 'Potain MDT-178',
+        slug: 'tower-crane/potain-mdt-178',
+        description:
+          'Coming soon: Specifications and load charts for the Potain MDT-178 tower crane',
+      },
+      {
+        name: 'San Marco SMT 550',
+        slug: 'tower-crane/san-marco-smt-550',
+        description:
+          'Coming soon: Specifications and load charts for the San Marco SMT 550 tower crane',
+      },
+      {
+        name: 'Terex SK 415-20',
+        slug: 'tower-crane/terex-sk-415-20',
+        description:
+          'Coming soon: Specifications and load charts for the Terex SK 415-20 tower crane',
+      },
     ],
   },
   {
