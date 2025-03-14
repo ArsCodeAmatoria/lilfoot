@@ -6,24 +6,25 @@ export type Item = {
 
 export const demos: { name: string; items: Item[] }[] = [
   {
-    name: 'Math',
+    name: 'Practice Exams',
     items: [
       {
-        name: 'Dimensions',
-        slug: 'dimensions',
+        name: 'Red Seal Practice Exam (Tower)',
+        slug: 'red-seal-exam',
         description:
-          'Geometric formulas for area, volume, and perimeter of common shapes',
+          'Interactive practice exam for Red Seal Tower Crane Operator certification with detailed feedback',
       },
-    ],
-  },
-  {
-    name: 'Misc',
-    items: [
       {
-        name: 'Crosby Charts',
-        slug: 'misc/crosby-charts',
+        name: 'Rigging Basic',
+        slug: 'practice-exams/rigging-basic',
         description:
-          'Coming soon: Rigging specifications and capacity charts for Crosby shackles, hooks, and other hardware',
+          'Coming soon: Basic rigging practice exam covering fundamental lifting operations and equipment safety',
+      },
+      {
+        name: 'Rigging Advanced',
+        slug: 'practice-exams/rigging-advanced',
+        description:
+          'Coming soon: Advanced rigging practice exam for complex lifts, load calculations, and critical safety procedures',
       },
     ],
   },
@@ -73,25 +74,24 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
-    name: 'Practice Exams',
+    name: 'Math',
     items: [
       {
-        name: 'Red Seal Practice Exam (Tower)',
-        slug: 'red-seal-exam',
+        name: 'Dimensions',
+        slug: 'dimensions',
         description:
-          'Interactive practice exam for Red Seal Tower Crane Operator certification with detailed feedback',
+          'Geometric formulas for area, volume, and perimeter of common shapes',
       },
+    ],
+  },
+  {
+    name: 'Misc',
+    items: [
       {
-        name: 'Rigging Basic',
-        slug: 'practice-exams/rigging-basic',
+        name: 'Crosby Charts',
+        slug: 'misc/crosby-charts',
         description:
-          'Coming soon: Basic rigging practice exam covering fundamental lifting operations and equipment safety',
-      },
-      {
-        name: 'Rigging Advanced',
-        slug: 'practice-exams/rigging-advanced',
-        description:
-          'Coming soon: Advanced rigging practice exam for complex lifts, load calculations, and critical safety procedures',
+          'Coming soon: Rigging specifications and capacity charts for Crosby shackles, hooks, and other hardware',
       },
     ],
   },
