@@ -74,25 +74,28 @@ export function GlobalNav() {
           </div>
 
           {/* Footer Attribution */}
-          <div className="fixed bottom-0 left-0 w-64 border-t border-gray-800 bg-gray-950 pt-4">
-            <div className="px-3 py-2 text-xs">
-              <div className="flex flex-col space-y-2">
-                <div className="flex items-center justify-center">
-                  <span className="font-['Shadows_Into_Light_Two'] text-lg text-highlight">
-                    lilfoot
-                  </span>
-                  <span className="ml-1">🐾</span>
-                  <span className="ml-1 text-gray-400">2025</span>
+          <div className="fixed bottom-0 left-0 w-64 border-t border-gray-800 bg-gray-950 py-4">
+            <div className="px-4 text-xs">
+              <div className="flex flex-col space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <span className="font-['Shadows_Into_Light_Two'] text-base text-highlight">
+                      lilfoot
+                    </span>
+                    <PawPrint size={14} className="ml-1 text-highlight" />
+                  </div>
+                  <span className="text-gray-500">© 2025</span>
                 </div>
-                <div className="text-center">
+
+                <div className="border-t border-gray-800 pt-3 text-[11px] text-gray-400">
                   <a
                     href="https://bigfootcrane.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center text-gray-400 transition-colors hover:text-highlight"
+                    className="flex items-center transition-colors hover:text-highlight"
                   >
-                    <span>Made by Bigfoot Crane</span>
-                    <ExternalLink size={12} className="ml-1 inline-block" />
+                    <span>Made by Bigfoot Crane Company</span>
+                    <ExternalLink size={10} className="ml-1 inline-block" />
                   </a>
                 </div>
               </div>
