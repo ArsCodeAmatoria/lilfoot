@@ -122,6 +122,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Stiff Boom Crane Charts',
+    items: [
+      {
+        name: 'National Crane 500E2',
+        slug: 'stiff-boom/national-crane-500e2',
+        description:
+          'Coming soon: Specifications and load charts for the National Crane 500E2 stiff boom crane',
+      },
+    ],
+  },
+  {
     name: 'Self Erect Tower Charts',
     items: [
       {
