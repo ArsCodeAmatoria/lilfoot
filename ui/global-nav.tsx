@@ -88,15 +88,9 @@ export function GlobalNav() {
                 </div>
 
                 <div className="border-t border-gray-800 pt-3 text-[11px] text-gray-400">
-                  <a
-                    href="https://bigfootcrane.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center transition-colors hover:text-highlight"
-                  >
-                    <span>Made by Bigfoot Crane Company</span>
-                    <ExternalLink size={10} className="ml-1 inline-block" />
-                  </a>
+                  <div className="flex items-center">
+                    <span>An Open Resource for Crane Operators</span>
+                  </div>
                 </div>
               </div>
             </div>

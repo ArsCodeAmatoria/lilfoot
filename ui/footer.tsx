@@ -23,18 +23,23 @@ export default function Footer({
       </style>
 
       <div className="mb-6 border-t border-gray-700 pt-6">
-        <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center">
+        <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
           <div className="max-w-2xl">
             <p className="text-sm text-gray-400">
-              Discover how proper crane operator training directly improves safety metrics, operational efficiency, and your bottom line through data-driven insights.{' '}
-              <a href="https://crigsafe-app.vercel.app/" className="text-highlight hover:underline" target="_blank" rel="noopener noreferrer">
+              Discover how proper crane operator training directly improves
+              safety metrics, operational efficiency, and your bottom line
+              through data-driven insights.{' '}
+              <a
+                href="https://crigsafe-app.vercel.app/"
+                className="text-highlight hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Crigsafe
               </a>
             </p>
           </div>
-          <div className="text-sm text-gray-500">
-            Site by Bigfoot Crane
-          </div>
+          <div className="text-sm text-gray-500">© 2025 lilfoot</div>
         </div>
       </div>
 
