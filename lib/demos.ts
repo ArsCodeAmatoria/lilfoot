@@ -133,7 +133,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Liebherr 125 EC-B 6',
         slug: 'tower-crane/liebherr-125-ec-b-6',
         description:
-          'Coming soon: Specifications and load charts for the Liebherr 125 EC-B 6 tower crane',
+          'NEW: Detailed specifications and load charts for the Liebherr 125 EC-B 6 tower crane',
       },
       {
         name: 'Liebherr 172 EC-B 8',
