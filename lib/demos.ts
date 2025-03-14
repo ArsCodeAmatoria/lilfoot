@@ -111,6 +111,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Folding Boom Charts',
+    items: [
+      {
+        name: 'Palfinger PK 480 TEC',
+        slug: 'folding-boom/palfinger-pk-480-tec',
+        description:
+          'Coming soon: Specifications and load charts for the Palfinger PK 480 TEC folding boom crane',
+      },
+    ],
+  },
+  {
     name: 'Self Erect Tower Charts',
     items: [
       {
