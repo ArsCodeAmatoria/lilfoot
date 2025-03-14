@@ -6,6 +6,16 @@ export type Item = {
 
 export const demos: { name: string; items: Item[] }[] = [
   {
+    name: 'Math',
+    items: [
+      {
+        name: 'Dimensions',
+        slug: 'dimensions',
+        description: 'Geometric formulas for area, volume, and perimeter of common shapes',
+      },
+    ],
+  },
+  {
     name: 'Layouts',
     items: [
       {
