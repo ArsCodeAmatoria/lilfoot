@@ -17,7 +17,7 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
-    name: 'Mobile Crane',
+    name: 'Mobile Crane Charts',
     items: [
       {
         name: 'Liebherr LTM 1200',
