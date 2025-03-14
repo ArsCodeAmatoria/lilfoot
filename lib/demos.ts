@@ -46,6 +46,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Rough Terrain Crane Charts',
+    items: [
+      {
+        name: 'Linkbelt RTC8065',
+        slug: 'rough-terrain/linkbelt-rtc8065',
+        description:
+          'Coming soon: Specifications and load charts for the Linkbelt RTC8065 rough terrain crane',
+      },
+    ],
+  },
+  {
     name: 'Tower Crane Charts',
     items: [
       {
