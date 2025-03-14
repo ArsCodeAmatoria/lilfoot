@@ -38,8 +38,7 @@ export default function Page() {
             Crane and Rigging Exam Practice Resources
           </p>
           <p className="text-md mt-4 max-w-2xl text-gray-400 md:text-lg">
-            Interactive tools, charts, and practice exams for tower crane
-            operators
+            Interactive tools, charts, and practice exams for crane operators
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
