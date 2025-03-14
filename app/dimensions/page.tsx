@@ -105,6 +105,94 @@ export default function DimensionsPage() {
     },
   ];
 
+  // New triangle formulas
+  const rightTriangleFormulas = [
+    {
+      name: 'Pythagorean Theorem',
+      formula: 'a² + b² = c²',
+      variables: {
+        a: 'Base length',
+        b: 'Height length',
+        c: 'Hypotenuse length',
+      } as Record<string, string>,
+    },
+    {
+      name: 'Area of a Right Triangle',
+      formula: 'A = (1/2)ab',
+      variables: {
+        A: 'Area',
+        a: 'Base length',
+        b: 'Height length',
+      } as Record<string, string>,
+    },
+  ];
+
+  const isoscelesTriangleFormulas = [
+    {
+      name: '45° Right Triangle',
+      formula: 'c = a√2',
+      variables: {
+        a: 'Equal sides length (legs)',
+        c: 'Hypotenuse length',
+      } as Record<string, string>,
+    },
+    {
+      name: 'Area of 45° Right Triangle',
+      formula: 'A = (1/2)a²',
+      variables: {
+        A: 'Area',
+        a: 'Equal sides length (legs)',
+      } as Record<string, string>,
+    },
+  ];
+
+  const equilateralTriangleFormulas = [
+    {
+      name: 'Area of Equilateral Triangle',
+      formula: 'A = (√3/4)a²',
+      variables: {
+        A: 'Area',
+        a: 'Side length',
+      } as Record<string, string>,
+    },
+    {
+      name: 'Height of Equilateral Triangle',
+      formula: 'h = (√3/2)a',
+      variables: {
+        h: 'Height',
+        a: 'Side length',
+      } as Record<string, string>,
+    },
+    {
+      name: 'All Angles',
+      formula: '∠A = ∠B = ∠C = 60°',
+      variables: {
+        '∠A, ∠B, ∠C': 'All angles equal 60 degrees',
+      } as Record<string, string>,
+    },
+  ];
+
+  const specialTriangleFormulas = [
+    {
+      name: '30-60-90 Triangle Side Ratios',
+      formula: 'a : b : c = 1 : √3 : 2',
+      variables: {
+        a: 'Side opposite to 30° angle',
+        b: 'Side opposite to 60° angle',
+        c: 'Side opposite to 90° angle (hypotenuse)',
+      } as Record<string, string>,
+    },
+    {
+      name: 'Side Relationships',
+      formula: 'b = a√3, c = 2a',
+      variables: {
+        a: 'Shortest side',
+        b: 'Middle side',
+        c: 'Hypotenuse',
+      } as Record<string, string>,
+    },
+  ];
+
   return (
     <div className="space-y-8">
       <div className="mb-8">
@@ -114,6 +202,51 @@ export default function DimensionsPage() {
         <p className="text-gray-300">
           Common formulas for calculating areas, volumes, and perimeters of
           geometric shapes.
+        </p>
+      </div>
+
+      {/* Triangle Sections */}
+      <div className="my-8">
+        <h2 className="mb-4 text-2xl font-bold text-white">Triangles</h2>
+        <p className="mb-6 text-gray-300">
+          Triangles are one of the most fundamental shapes in geometry with
+          various properties based on their angles and sides.
+        </p>
+      </div>
+
+      <FormulaDisplay
+        title="Right Triangle (Pythagorean Theorem)"
+        formulas={rightTriangleFormulas}
+      >
+        <ShapeVisualizer type="rightTriangle" />
+      </FormulaDisplay>
+
+      <FormulaDisplay
+        title="45° Right Triangle"
+        formulas={isoscelesTriangleFormulas}
+      >
+        <ShapeVisualizer type="isoscelesTriangle" />
+      </FormulaDisplay>
+
+      <FormulaDisplay
+        title="Equilateral Triangle (60°)"
+        formulas={equilateralTriangleFormulas}
+      >
+        <ShapeVisualizer type="equilateralTriangle" />
+      </FormulaDisplay>
+
+      <FormulaDisplay
+        title="30-60-90 Triangle"
+        formulas={specialTriangleFormulas}
+      >
+        <ShapeVisualizer type="specialTriangle" />
+      </FormulaDisplay>
+
+      {/* Basic Shapes Section */}
+      <div className="my-8">
+        <h2 className="mb-4 text-2xl font-bold text-white">Basic Shapes</h2>
+        <p className="mb-6 text-gray-300">
+          Common formulas for basic 2D and 3D geometric shapes.
         </p>
       </div>
 
