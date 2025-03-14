@@ -76,12 +76,6 @@ export const demos: { name: string; items: Item[] }[] = [
     name: 'Components',
     items: [
       {
-        name: 'Client Context',
-        slug: 'context',
-        description:
-          'Pass context between Client Components that cross Server/Client Component boundary',
-      },
-      {
         name: 'Crane Chart',
         slug: 'crane',
         description:
