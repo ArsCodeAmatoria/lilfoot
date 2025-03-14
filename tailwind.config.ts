@@ -1,5 +1,7 @@
 import colors from 'tailwindcss/colors';
-import { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss';
+// Custom local plugins
+const localPlugins = require('./custom-tailwind-plugins/empty-plugins');
 
 export default {
   content: [
@@ -27,7 +29,7 @@ export default {
         },
         highlight: '#53C03F',
       },
-      backgroundImage: ({ theme }) => ({
+      backgroundImage: ({ theme }: { theme: any }) => ({
         'vc-border-gradient': `radial-gradient(at left top, ${theme(
           'colors.gray.500',
         )}, 50px, ${theme('colors.gray.800')} 50%)`,
@@ -87,5 +89,9 @@ export default {
       }),
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+  plugins: [
+    // Using local plugins for development
+    localPlugins.typography,
+    localPlugins.forms,
+  ],
 } satisfies Config;
