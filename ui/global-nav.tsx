@@ -111,6 +111,7 @@ function GlobalNavItem({
   const segment = useSelectedLayoutSegment();
   const isActive = item.slug === segment;
   const isComingSoon = item.description?.includes('Coming soon');
+  const isNewItem = item.slug === 'practice-exams/mobile-red-seal';
 
   return (
     <Link
@@ -126,7 +127,12 @@ function GlobalNavItem({
     >
       <div className="flex items-center justify-between">
         <span>{item.name}</span>
-        {isComingSoon && (
+        {isNewItem && (
+          <span className="ml-2 rounded-md bg-pink-500 bg-opacity-20 px-1.5 py-0.5 text-xs font-medium text-pink-400">
+            New
+          </span>
+        )}
+        {isComingSoon && !isNewItem && (
           <span className="ml-2 rounded-md bg-highlight bg-opacity-20 px-1.5 py-0.5 text-xs font-medium text-highlight">
             Soon
           </span>
