@@ -1,5 +1,6 @@
 import React from 'react';
-import { Timer, Construction } from 'lucide-react';
+import { Timer, Construction, FileText } from 'lucide-react';
+import PdfDownload from '../../components/PdfDownload';
 
 export const metadata = {
   title: 'Liebherr 125 EC-B 6 Specifications | Tower Cranes | lilfoot',
@@ -35,6 +36,26 @@ export default function Liebherr125ECB6Page() {
         <div className="mt-6 flex items-center text-gray-500">
           <Timer size={20} className="mr-2" />
           <span>Estimated completion: Q2 2025</span>
+        </div>
+      </div>
+
+      {/* Technical Documentation Section */}
+      <div className="mb-8">
+        <h2 className="mb-4 text-2xl font-bold flex items-center">
+          <FileText className="mr-2 text-highlight" size={24} />
+          Technical Documentation
+        </h2>
+        <p className="mb-4 text-gray-400">
+          While we prepare our comprehensive content, you can download the official Liebherr 125 EC-B 6
+          specifications and load charts document below:
+        </p>
+        <div className="mt-4">
+          <PdfDownload
+            title="Liebherr 125 EC-B 6 Specifications"
+            description="Official technical data, dimensions, load charts, and operating parameters for the Liebherr 125 EC-B 6 tower crane."
+            pdfPath="/pdfs/125-EC-B-6.pdf"
+            fileSize="2.1 MB"
+          />
         </div>
       </div>
 
