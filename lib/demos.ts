@@ -59,6 +59,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'NCCCO Exams',
+    items: [
+      {
+        name: 'CCO Tower Crane Operator',
+        slug: 'nccco-exams/tower-crane-operator',
+        description:
+          'Coming soon: Preparation resources for the NCCCO Tower Crane Operator certification exam',
+      },
+    ],
+  },
+  {
     name: 'Mobile Crane Charts',
     items: [
       {
