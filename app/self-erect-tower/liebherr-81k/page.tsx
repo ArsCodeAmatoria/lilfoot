@@ -1,10 +1,10 @@
 import React from 'react';
-import CraneTables from '../components/CraneTables';
-import Liebherr81kCapacityChart from '../components/Liebherr81kCapacityChart';
-import SpeedLoadCapacityChart from '../components/SpeedLoadCapacityChart';
-import PdfDownload from '../components/PdfDownload';
-import InteractiveRadiusVisualizer from '../components/InteractiveRadiusVisualizer';
-import InteractiveConfigTabs from '../components/InteractiveConfigTabs';
+import CraneTables from '../../components/CraneTables';
+import Liebherr81kCapacityChart from '../../components/Liebherr81kCapacityChart';
+import SpeedLoadCapacityChart from '../../components/SpeedLoadCapacityChart';
+import PdfDownload from '../../components/PdfDownload';
+import InteractiveRadiusVisualizer from '../../components/InteractiveRadiusVisualizer';
+import InteractiveConfigTabs from '../../components/InteractiveConfigTabs';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
