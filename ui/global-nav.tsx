@@ -110,6 +110,7 @@ function GlobalNavItem({
 }) {
   const segment = useSelectedLayoutSegment();
   const isActive = item.slug === segment;
+  const isComingSoon = item.description?.includes('Coming soon');
 
   return (
     <Link
@@ -123,7 +124,14 @@ function GlobalNavItem({
         },
       )}
     >
-      {item.name}
+      <div className="flex items-center justify-between">
+        <span>{item.name}</span>
+        {isComingSoon && (
+          <span className="ml-2 rounded-md bg-highlight bg-opacity-20 px-1.5 py-0.5 text-xs font-medium text-highlight">
+            Soon
+          </span>
+        )}
+      </div>
     </Link>
   );
 }
