@@ -17,6 +17,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Misc',
+    items: [
+      {
+        name: 'Crosby Charts',
+        slug: 'misc/crosby-charts',
+        description:
+          'Coming soon: Rigging specifications and capacity charts for Crosby shackles, hooks, and other hardware',
+      },
+    ],
+  },
+  {
     name: 'Mobile Crane Charts',
     items: [
       {
@@ -92,17 +103,6 @@ export const demos: { name: string; items: Item[] }[] = [
         slug: 'three-demo',
         description:
           'Interactive 3D particle system using Three.js buffer geometry draw range',
-      },
-    ],
-  },
-  {
-    name: 'Misc',
-    items: [
-      {
-        name: 'Crosby Charts',
-        slug: 'misc/crosby-charts',
-        description:
-          'Coming soon: Rigging specifications and capacity charts for Crosby shackles, hooks, and other hardware',
       },
     ],
   },

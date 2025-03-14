@@ -50,7 +50,7 @@ export function GlobalNav() {
           hidden: !isOpen,
         })}
       >
-        <nav className="flex h-full flex-col space-y-6 px-2 pb-40 pt-5">
+        <nav className="flex h-full flex-col space-y-6 px-2 pb-6 pt-5">
           <div className="flex-grow">
             {demos.map((section) => {
               return (
@@ -74,7 +74,7 @@ export function GlobalNav() {
           </div>
 
           {/* Footer Attribution */}
-          <div className="fixed bottom-0 left-0 w-64 border-t border-gray-800 bg-gray-950 py-4">
+          <div className="mt-auto w-full border-t border-gray-800 bg-gray-950 py-4">
             <div className="px-4 text-xs">
               <div className="flex flex-col space-y-3">
                 <div className="flex items-center justify-between">
