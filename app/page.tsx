@@ -130,26 +130,44 @@ export default function Page() {
                 <h3 className="mb-3 text-lg font-medium text-white">
                   {section.name}
                 </h3>
-                <ul className="space-y-2">
+                <div className="grid grid-cols-1 gap-1.5">
                   {section.items.slice(0, 4).map((item) => (
-                    <li key={item.slug}>
-                      <Link
-                        href={`/${item.slug}`}
-                        className="flex items-center text-gray-400 hover:text-green-500"
-                      >
-                        <span className="mr-2 text-green-600">•</span>
+                    <Link
+                      key={item.slug}
+                      href={`/${item.slug}`}
+                      className="group flex items-center justify-between rounded-md p-2 transition-colors hover:bg-gray-800"
+                    >
+                      <span className="text-gray-300 group-hover:text-green-500">
                         {item.name}
-                      </Link>
-                    </li>
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-green-500 opacity-0 transition-opacity group-hover:opacity-100"
+                      >
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </Link>
                   ))}
                   {section.items.length > 4 && (
-                    <li className="pt-1">
-                      <span className="text-sm text-gray-500">
-                        +{section.items.length - 4} more
-                      </span>
-                    </li>
+                    <div className="mt-1 px-2">
+                      <Link
+                        href={`/all-categories#${section.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="text-sm text-gray-500 transition-colors hover:text-green-500"
+                      >
+                        +{section.items.length - 4} more items →
+                      </Link>
+                    </div>
                   )}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
