@@ -2,6 +2,15 @@ import React from 'react';
 import { FileText, Maximize, Weight, Ruler, Zap, PackageCheck } from 'lucide-react';
 import PdfDownload from '../../components/PdfDownload';
 import Image from 'next/image';
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from '#/components/ui/table';
 
 export const metadata = {
   title: 'Liebherr 125 EC-B 6 Specifications | Tower Cranes | lilfoot',
@@ -247,6 +256,97 @@ export default function Liebherr125ECB6Page() {
           The hoisting gear provides smooth acceleration and precise control, while the jib design ensures
           stability even at maximum reach.
         </p>
+        
+        {/* LM1 Load Chart Table */}
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold text-white mb-3">LM1 Load Chart (Standard Configuration)</h3>
+          <Table>
+            <TableCaption>Maximum load capacities in kg for Liebherr 125 EC-B 6 with standard configuration</TableCaption>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="bg-gray-800 text-center">Radius (m)</TableHead>
+                <TableHead className="bg-gray-800 text-center">Capacity (kg)</TableHead>
+                <TableHead className="bg-gray-800 text-center">Jib Config</TableHead>
+                <TableHead className="bg-gray-800 text-center">Notes</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell className="text-center">15.0</TableCell>
+                <TableCell className="text-center font-bold">6,000</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">Maximum capacity</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">17.5</TableCell>
+                <TableCell className="text-center font-bold">5,300</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">-</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">20.0</TableCell>
+                <TableCell className="text-center font-bold">4,500</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">-</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">22.5</TableCell>
+                <TableCell className="text-center font-bold">3,950</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">-</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">25.0</TableCell>
+                <TableCell className="text-center font-bold">3,450</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">-</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">30.0</TableCell>
+                <TableCell className="text-center font-bold">2,800</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">-</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">35.0</TableCell>
+                <TableCell className="text-center font-bold">2,350</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">-</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">40.0</TableCell>
+                <TableCell className="text-center font-bold">2,050</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">-</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">45.0</TableCell>
+                <TableCell className="text-center font-bold">1,800</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">-</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">50.0</TableCell>
+                <TableCell className="text-center font-bold">1,600</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">-</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">55.0</TableCell>
+                <TableCell className="text-center font-bold">1,450</TableCell>
+                <TableCell className="text-center">Standard</TableCell>
+                <TableCell className="text-center">-</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="text-center">58.5</TableCell>
+                <TableCell className="text-center font-bold">1,350</TableCell>
+                <TableCell className="text-center">Max radius</TableCell>
+                <TableCell className="text-center">Maximum jib length</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </div>
+
         <div className="bg-gray-900 p-4 rounded-lg mb-6">
           <h3 className="text-lg font-semibold text-white mb-3">Load Capacity at Various Radii</h3>
           <ul className="space-y-2">
