@@ -2,6 +2,15 @@ import React from 'react';
 import { FileText, Maximize, Weight, Ruler, Zap, PackageCheck } from 'lucide-react';
 import PdfDownload from '../../components/PdfDownload';
 import Image from 'next/image';
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from '#/components/ui/table';
 
 export const metadata = {
   title: 'Liebherr 125 EC-B 6 Specifications | Tower Cranes | lilfoot',
@@ -248,163 +257,369 @@ export default function Liebherr125ECB6Page() {
           stability even at maximum reach.
         </p>
         
-        {/* LM1 Load Chart Table */}
+        {/* Load-Plus Table */}
         <div className="mb-6">
-          <h3 className="text-xl font-bold text-white mb-3">LM1 Load Chart (Standard Configuration)</h3>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr>
-                  <th className="px-4 py-3 font-semibold text-gray-300 bg-gray-900 border border-gray-800 sticky left-0 z-10">
-                    Radius (m)
-                  </th>
-                  <th className="px-4 py-3 font-semibold text-gray-300 bg-gray-900 border border-gray-800 text-center">
-                    Capacity (kg)
-                  </th>
-                  <th className="px-4 py-3 font-semibold text-gray-300 bg-gray-900 border border-gray-800 text-center">
-                    Configuration
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-800">
-                <tr className="bg-gray-900/30">
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    15.0
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    6,000
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Maximum capacity
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    17.5
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    5,300
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Standard
-                  </td>
-                </tr>
-                <tr className="bg-gray-900/30">
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    20.0
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    4,500
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Standard
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    22.5
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    3,950
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Standard
-                  </td>
-                </tr>
-                <tr className="bg-gray-900/30">
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    25.0
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    3,450
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Standard
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    30.0
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    2,800
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Standard
-                  </td>
-                </tr>
-                <tr className="bg-gray-900/30">
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    35.0
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    2,350
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Standard
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    40.0
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    2,050
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Standard
-                  </td>
-                </tr>
-                <tr className="bg-gray-900/30">
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    45.0
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    1,800
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Standard
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    50.0
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    1,600
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Standard
-                  </td>
-                </tr>
-                <tr className="bg-gray-900/30">
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    55.0
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    1,450
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Standard
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 text-white border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">
-                    58.5
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center font-bold">
-                    1,350
-                  </td>
-                  <td className="px-4 py-3 text-white border border-gray-800 text-center">
-                    Maximum jib length
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <h3 className="text-xl font-bold text-white mb-3">Load-Plus Configuration Capacity Chart</h3>
+          <div>
+            <Table>
+              <TableCaption>Load-Plus capacity chart for Liebherr 125 EC-B 6 showing capacities in tons at different heights and radiuses</TableCaption>
+              <TableHeader className="bg-gray-900">
+                <TableRow>
+                  <TableHead className="border border-gray-800 sticky left-0 z-20 bg-gray-900">Height (m)</TableHead>
+                  <TableHead className="border border-gray-800 sticky left-[81px] z-20 bg-gray-900">Radius (r)</TableHead>
+                  <TableHead className="border border-gray-800 sticky left-[162px] z-20 bg-gray-900">Parameter (t)</TableHead>
+                  <TableHead className="border border-gray-800 text-center">20.0m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">22.5m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">25.0m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">27.5m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">30.0m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">32.5m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">35.0m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">37.5m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">40.0m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">42.5m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">45.0m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">47.5m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">50.0m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">52.5m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">55.0m</TableHead>
+                  <TableHead className="border border-gray-800 text-center">58.0m</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow className="bg-gray-900/30">
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">58.0</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=59.6</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.47</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.84</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.32</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.90</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.54</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.24</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.97</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.74</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.54</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.37</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.21</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.06</TableCell>
+                  <TableCell className="border border-gray-800 text-center">1.93</TableCell>
+                  <TableCell className="border border-gray-800 text-center">1.82</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">1.60</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">55.0</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=56.6</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.63</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.99</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.47</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.04</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.67</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.36</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.09</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.86</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.65</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.47</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.30</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.16</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.03</TableCell>
+                  <TableCell className="border border-gray-800 text-center">1.91</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">1.80</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-900/30">
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">52.5</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=54.1</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.84</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.18</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.64</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.20</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.82</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.50</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.22</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.98</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.77</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.58</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.41</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.26</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.12</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">2.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">50.0</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=51.6</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.37</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.81</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.34</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.95</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.62</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.33</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.08</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.86</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.67</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.49</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.34</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">2.20</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-900/30">
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">47.5</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=49.1</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.48</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.91</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.44</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.04</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.70</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.41</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.16</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.93</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.73</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.56</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">2.40</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">45.0</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=46.6</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.67</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.08</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.59</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.18</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.83</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.53</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.27</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.03</TableCell>
+                  <TableCell className="border border-gray-800 text-center">2.83</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">2.65</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-900/30">
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">42.5</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=44.1</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.94</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.30</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.77</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.33</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.95</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.63</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.35</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.11</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">2.90</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">40.0</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=41.6</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.94</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.33</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.82</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.39</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.03</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.71</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.44</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">3.20</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-900/30">
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">37.5</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=39.1</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.94</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.33</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.82</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.40</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.03</TableCell>
+                  <TableCell className="border border-gray-800 text-center">3.72</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">3.45</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">35.0</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=36.6</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.94</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.32</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.81</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.38</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.01</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">3.70</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-900/30">
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">32.5</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=34.1</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.94</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.34</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.83</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.41</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">4.05</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">30.0</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=31.6</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.94</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.33</TableCell>
+                  <TableCell className="border border-gray-800 text-center">4.82</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">4.40</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-900/30">
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">27.5</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=29.1</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.94</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.34</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">4.85</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">25.0</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=26.6</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">5.95</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">5.40</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow className="bg-gray-900/30">
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">22.5</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=24.1</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">20.0</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=21.6</TableCell>
+                  <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
+                  <TableCell className="border border-gray-800 text-center font-bold">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
           </div>
           <div className="text-gray-400 text-sm mt-3">
+            <p className="mb-2">
+              <span className="text-highlight font-medium">Note:</span> The Load-Plus table shows maximum lifting capacities (in tons) for the Liebherr 125 EC-B 6 at different heights and radiuses.
+            </p>
             <p>
-              <span className="text-highlight font-medium">Note:</span> The LM1 table displays standard lifting capacities (in kg) for the Liebherr 125 EC-B 6 at different working radii. Maximum capacity of 6,000 kg is available at the minimum radius of 15.0m.
+              <span className="font-medium">Bold values</span> indicate the maximum lifting capacity at each configuration row. Missing values indicate configurations that are not available or not recommended for operation.
             </p>
           </div>
         </div>
