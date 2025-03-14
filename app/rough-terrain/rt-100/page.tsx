@@ -2,9 +2,9 @@ import React from 'react';
 import { Timer, Construction } from 'lucide-react';
 
 export const metadata = {
-  title: 'RT 100 Specifications | Rough Terrain Cranes | lilfoot',
+  title: 'Terex RT 100 Specifications | Rough Terrain Cranes | lilfoot',
   description:
-    'Load charts and specifications for the RT 100 rough terrain crane.',
+    'Load charts and specifications for the Terex RT 100 rough terrain crane.',
 };
 
 export default function RT100Page() {
@@ -12,10 +12,10 @@ export default function RT100Page() {
     <div className="text-white">
       <div className="mb-8">
         <h1 className="mb-4 text-3xl font-bold text-white">
-          RT 100 Rough Terrain Crane
+          Terex RT 100 Rough Terrain Crane
         </h1>
         <p className="max-w-3xl text-gray-400">
-          The RT 100 is a powerful rough terrain crane designed for robust
+          The Terex RT 100 is a powerful rough terrain crane designed for robust
           performance in challenging work environments. With excellent stability
           and lifting capabilities, this crane is ideal for construction,
           infrastructure, and industrial projects. This page will provide
@@ -30,9 +30,9 @@ export default function RT100Page() {
         </div>
         <h2 className="mb-4 text-center text-2xl font-bold">Coming Soon</h2>
         <p className="max-w-xl text-center text-gray-400">
-          We're currently developing comprehensive content for the RT 100 rough
-          terrain crane. Our team is working to provide accurate and detailed
-          specifications and load charts.
+          We're currently developing comprehensive content for the Terex RT 100
+          rough terrain crane. Our team is working to provide accurate and
+          detailed specifications and load charts.
         </p>
         <div className="mt-6 flex items-center text-gray-500">
           <Timer size={20} className="mr-2" />
