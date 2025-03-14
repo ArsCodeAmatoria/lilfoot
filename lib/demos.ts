@@ -57,6 +57,17 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'All Terrain Crane Charts',
+    items: [
+      {
+        name: '40t Terex Demag',
+        slug: 'all-terrain/terex-demag-40t',
+        description:
+          'Coming soon: Specifications and load charts for the 40t Terex Demag all terrain crane',
+      },
+    ],
+  },
+  {
     name: 'Tower Crane Charts',
     items: [
       {
