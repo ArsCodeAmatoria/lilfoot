@@ -216,6 +216,23 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
+    name: 'Rigging Charts',
+    items: [
+      {
+        name: 'Basic Rigging Charts',
+        slug: 'rigging-charts/basic',
+        description:
+          'Coming soon: Essential rigging charts, load calculations, and guidelines for fundamental rigging operations',
+      },
+      {
+        name: 'Advanced Rigging Charts',
+        slug: 'rigging-charts/advanced',
+        description:
+          'Coming soon: Specialized rigging charts, complex load calculations, and detailed guidelines for advanced rigging operations',
+      },
+    ],
+  },
+  {
     name: 'Power Lines',
     items: [
       {
