@@ -50,7 +50,7 @@ export function GlobalNav() {
           hidden: !isOpen,
         })}
       >
-        <nav className="flex h-full flex-col space-y-6 px-2 pb-28 pt-5">
+        <nav className="flex h-full flex-col space-y-6 px-2 pb-40 pt-5">
           <div className="flex-grow">
             {demos.map((section) => {
               return (
