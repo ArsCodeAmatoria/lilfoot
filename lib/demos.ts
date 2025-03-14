@@ -17,32 +17,6 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
-    name: 'Data Fetching',
-    items: [
-      {
-        name: 'Streaming with Suspense',
-        slug: 'streaming',
-        description:
-          'Streaming data fetching from the server with React Suspense',
-      },
-      {
-        name: 'Static Data',
-        slug: 'ssg',
-        description: 'Generate static pages',
-      },
-      {
-        name: 'Dynamic Data',
-        slug: 'ssr',
-        description: 'Server-render pages',
-      },
-      {
-        name: 'Incremental Static Regeneration',
-        slug: 'isr',
-        description: 'Get the best of both worlds between static & dynamic',
-      },
-    ],
-  },
-  {
     name: 'Tower Crane Charts',
     items: [
       {
