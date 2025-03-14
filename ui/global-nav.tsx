@@ -20,7 +20,7 @@ export function GlobalNav() {
           className="group flex w-full items-center gap-x-2.5"
           onClick={close}
         >
-          <div className="h-8 w-8 flex items-center justify-center">
+          <div className="flex h-8 w-8 items-center justify-center">
             <PawPrint size={30} color="#53C03F" />
           </div>
 
@@ -50,7 +50,7 @@ export function GlobalNav() {
           hidden: !isOpen,
         })}
       >
-        <nav className="flex flex-col h-full space-y-6 px-2 pt-5 pb-4">
+        <nav className="flex h-full flex-col space-y-6 px-2 pb-4 pt-5">
           <div className="flex-grow">
             {demos.map((section) => {
               return (
@@ -61,28 +61,40 @@ export function GlobalNav() {
 
                   <div className="space-y-1">
                     {section.items.map((item) => (
-                      <GlobalNavItem key={item.slug} item={item} close={close} />
+                      <GlobalNavItem
+                        key={item.slug}
+                        item={item}
+                        close={close}
+                      />
                     ))}
                   </div>
                 </div>
               );
             })}
           </div>
-          
+
           {/* Footer Attribution */}
-          <div className="mt-auto pt-4 border-t border-gray-800">
-            <div className="px-3 py-2 text-xs text-gray-500">
-              <div className="flex items-center">
-                <a 
-                  href="https://bigfootcrane.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-gray-300 transition-colors flex items-center"
-                >
-                  <span>Site by Bigfoot Crane </span>
-                  <span className="font-['Shadows_Into_Light_Two'] ml-1">lilfoot</span>
-                  <ExternalLink size={12} className="ml-1 inline-block" />
-                </a>
+          <div className="fixed bottom-0 left-0 w-64 border-t border-gray-800 bg-gray-950 pt-4">
+            <div className="px-3 py-2 text-xs">
+              <div className="flex flex-col space-y-2">
+                <div className="flex items-center justify-center">
+                  <span className="font-['Shadows_Into_Light_Two'] text-lg text-highlight">
+                    lilfoot
+                  </span>
+                  <span className="ml-1">🐾</span>
+                  <span className="ml-1 text-gray-400">2025</span>
+                </div>
+                <div className="text-center">
+                  <a
+                    href="https://bigfootcrane.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center text-gray-400 transition-colors hover:text-highlight"
+                  >
+                    <span>Made by Bigfoot Crane</span>
+                    <ExternalLink size={12} className="ml-1 inline-block" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
