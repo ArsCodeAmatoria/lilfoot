@@ -11,27 +11,8 @@ export const demos: { name: string; items: Item[] }[] = [
       {
         name: 'Dimensions',
         slug: 'dimensions',
-        description: 'Geometric formulas for area, volume, and perimeter of common shapes',
-      },
-    ],
-  },
-  {
-    name: 'Layouts',
-    items: [
-      {
-        name: 'Nested Layouts',
-        slug: 'layouts',
-        description: 'Create UI that is shared across routes',
-      },
-      {
-        name: 'Grouped Layouts',
-        slug: 'route-groups',
-        description: 'Organize routes without affecting URL paths',
-      },
-      {
-        name: 'Parallel Routes',
-        slug: 'parallel-routes',
-        description: 'Render multiple pages in the same layout',
+        description:
+          'Geometric formulas for area, volume, and perimeter of common shapes',
       },
     ],
   },
