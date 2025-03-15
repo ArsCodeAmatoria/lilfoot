@@ -80,7 +80,7 @@ export default function ExamInterface() {
         }
 
         stats[category].total += 1;
-        if (selectedAnswers[index] === question.correctAnswer) {
+        if (isCorrectAnswer(selectedAnswers[index], question.correctAnswer)) {
           stats[category].correct += 1;
         }
       });
@@ -88,6 +88,16 @@ export default function ExamInterface() {
       setCategoryStats(stats);
     }
   }, [examMode, currentExamQuestions]);
+
+  // Helper function to check if an answer is correct (supporting multiple correct answers)
+  const isCorrectAnswer = (selectedAnswer: number, correctAnswer: number | number[]) => {
+    if (Array.isArray(correctAnswer)) {
+      // For multiple-choice questions with multiple correct answers
+      return correctAnswer.includes(selectedAnswer);
+    }
+    // For single select questions
+    return selectedAnswer === correctAnswer;
+  };
 
   // Handle selecting an answer
   const handleAnswerSelect = (answerIndex: number) => {
@@ -142,7 +152,7 @@ export default function ExamInterface() {
   const calculateScore = () => {
     let correctCount = 0;
     selectedAnswers.forEach((answer, index) => {
-      if (answer === currentExamQuestions[index].correctAnswer) {
+      if (isCorrectAnswer(answer, currentExamQuestions[index].correctAnswer)) {
         correctCount++;
       }
     });
@@ -299,7 +309,7 @@ export default function ExamInterface() {
                     }
                     className={`cursor-pointer rounded-lg border p-4 transition-colors ${
                       examMode === 'review'
-                        ? index === currentQuestion.correctAnswer
+                        ? isCorrectAnswer(index, currentQuestion.correctAnswer)
                           ? 'border-green-700 bg-green-900/30'
                           : selectedAnswers[currentQuestionIndex] === index
                             ? 'border-red-700 bg-red-900/30'

@@ -5,7 +5,7 @@ export interface Question {
   id: number;
   question: string;
   options: string[];
-  correctAnswer: number; // index of the correct answer in options array
+  correctAnswer: number | number[]; // index of the correct answer(s) in options array
   explanation: string;
   category: string;
 }
@@ -380,8 +380,8 @@ export const examQuestions: Question[] = [
       "Twist of more than 10%",
       "All of the above"
     ],
-    correctAnswer: 3,
-    explanation: "All of these criteria warrant hook rejection: 10% loss in cross-sectional area indicates wear, 15% stretch in throat opening shows overloading, and a 10% twist indicates improper use or damage.",
+    correctAnswer: [0, 1],
+    explanation: "According to regulations, a hook must be rejected if it shows a 10% loss in cross-sectional area (indicating wear) or a 15% stretch in throat opening (showing overloading). These are critical safety criteria for hook inspection.",
     category: "Rigging"
   },
   {

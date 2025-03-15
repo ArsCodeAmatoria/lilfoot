@@ -120,13 +120,23 @@ export default function ExamInterface() {
 
       stats[category].total += 1;
 
-      if (selectedAnswers[index] === question.correctAnswer) {
+      if (isCorrectAnswer(selectedAnswers[index], question.correctAnswer)) {
         stats[category].correct += 1;
       }
     });
 
     setCategoryStats(stats);
     return stats;
+  };
+
+  // Helper function to check if an answer is correct (supporting multiple correct answers)
+  const isCorrectAnswer = (selectedAnswer: number, correctAnswer: number | number[]) => {
+    if (Array.isArray(correctAnswer)) {
+      // For multiple-choice questions with multiple correct answers
+      return correctAnswer.includes(selectedAnswer);
+    }
+    // For single select questions
+    return selectedAnswer === correctAnswer;
   };
 
   // Reset the exam to start over
@@ -235,7 +245,7 @@ export default function ExamInterface() {
                     }
                     className={`cursor-pointer rounded-lg p-4 transition-all ${
                       examMode === 'review'
-                        ? index === currentQuestion.correctAnswer
+                        ? isCorrectAnswer(index, currentQuestion.correctAnswer)
                           ? 'border-2 border-green-500 bg-green-900/30'
                           : selectedAnswers[currentQuestionIndex] === index
                             ? 'border-2 border-red-500 bg-red-900/30'
@@ -327,7 +337,7 @@ export default function ExamInterface() {
 
       case 'results':
         const totalCorrect = selectedAnswers.filter(
-          (answer, index) => answer === examQuestions[index].correctAnswer,
+          (answer, index) => isCorrectAnswer(answer, examQuestions[index].correctAnswer),
         ).length;
 
         const percentageCorrect = Math.round(
