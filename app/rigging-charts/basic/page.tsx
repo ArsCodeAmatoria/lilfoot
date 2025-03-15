@@ -1,5 +1,6 @@
 import React from 'react';
-import { Timer, Construction } from 'lucide-react';
+import { Info } from 'lucide-react';
+import WireRopeSlingTableWrapper from '#/app/components/WireRopeSlingTableWrapper';
 
 export const metadata = {
   title: 'Basic Rigging Charts | Rigging Charts | lilfoot',
@@ -15,28 +16,18 @@ export default function BasicRiggingChartsPage() {
           Basic Rigging Charts
         </h1>
         <p className="max-w-3xl text-gray-400">
-          This page will provide essential rigging charts, load calculations,
+          This page provides essential rigging charts, load calculations,
           and guidelines for fundamental rigging operations. Perfect for
           beginners and as a refresher for experienced professionals.
         </p>
       </div>
 
-      <div className="mb-8 flex flex-col items-center justify-center rounded-lg bg-gray-900 p-8">
-        <div className="mb-6 rounded-full bg-gray-950 p-6">
-          <Construction size={80} className="text-highlight" />
-        </div>
-        <h2 className="mb-4 text-center text-2xl font-bold">Coming Soon</h2>
-        <p className="max-w-xl text-center text-gray-400">
-          We're currently developing comprehensive content for Basic Rigging
-          Charts. Our team is working to provide accurate and detailed
-          information to help you conduct safe and efficient lifting operations.
-        </p>
-        <div className="mt-6 flex items-center text-gray-500">
-          <Timer size={20} className="mr-2" />
-          <span>Estimated completion: Q2 2025</span>
-        </div>
+      {/* Wire Rope Slings Table Section */}
+      <div className="mb-10 p-6 bg-gray-950 rounded-lg border border-gray-800">
+        <WireRopeSlingTableWrapper />
       </div>
 
+      {/* What to Expect and Key Topics sections */}
       <div className="grid gap-6 md:grid-cols-2">
         <div className="rounded-lg bg-gray-900 p-6">
           <h3 className="mb-4 text-xl font-bold">What to Expect</h3>
@@ -80,6 +71,21 @@ export default function BasicRiggingChartsPage() {
               Standard industry safety factors
             </li>
           </ul>
+        </div>
+      </div>
+
+      {/* Information Notice */}
+      <div className="mt-8 p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+        <div className="flex items-start gap-3">
+          <Info className="text-highlight mt-1 flex-shrink-0" />
+          <div>
+            <h3 className="font-semibold text-white mb-2">Safety Notice</h3>
+            <p className="text-gray-400 text-sm">
+              The working load limits provided on this page are for reference only. Always refer to manufacturer specifications
+              and conduct proper inspections before using any rigging equipment. These values assume new, undamaged equipment
+              used under normal service conditions.
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -296,7 +296,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Basic Rigging Charts',
         slug: 'rigging-charts/basic',
         description:
-          'Coming soon: Essential rigging charts, load calculations, and guidelines for fundamental rigging operations',
+          'Essential rigging charts, load calculations, and guidelines for fundamental rigging operations',
       },
       {
         name: 'Advanced Rigging Charts',
