@@ -1,5 +1,6 @@
 import React from 'react';
 import { Timer, Construction } from 'lucide-react';
+import PdfDownload from '../../components/PdfDownload';
 
 export const metadata = {
   title: 'Potain HD40A Specifications | Self-Erect Tower Cranes | lilfoot',
@@ -20,6 +21,20 @@ export default function PotainHD40APage() {
           comprehensive specifications, load charts, and operational guidelines
           for crane operators.
         </p>
+      </div>
+
+      <div className="mb-8 rounded-lg bg-gray-900 p-8">
+        <h2 className="mb-6 text-2xl font-bold">Documentation</h2>
+        <p className="mb-6 text-gray-400">
+          Download the official Potain HD40A specifications and technical data sheet below.
+          This document includes essential information for planning, operation, and maintenance.
+        </p>
+        <PdfDownload 
+          title="Potain HD40A Technical Specifications"
+          description="Official technical data, dimensions, load charts, and operating parameters for the Potain HD40A self-erecting tower crane."
+          pdfPath="/pdfs/potain-hd-40-a.pdf"
+          fileSize="3.8 MB"
+        />
       </div>
 
       <div className="mb-8 flex flex-col items-center justify-center rounded-lg bg-gray-900 p-8">
