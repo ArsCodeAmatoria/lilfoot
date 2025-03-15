@@ -11,6 +11,17 @@ import {
   TableRow
 } from "#/components/ui/table";
 
+// Define a type for the weights object to include index signature
+type PipeWeights = {
+  [key: string]: string;
+};
+
+// Define a type for the pipe data
+type PipeData = {
+  diameter: string;
+  weights: PipeWeights;
+};
+
 const SteelPipeWeightsTable = () => {
   // Column headers for wall thickness
   const wallThicknessHeaders = [
@@ -19,7 +30,7 @@ const SteelPipeWeightsTable = () => {
   ];
 
   // Steel pipe data by diameter and wall thickness
-  const pipeWeightsData = [
+  const pipeWeightsData: PipeData[] = [
     { 
       diameter: "½", 
       weights: {
