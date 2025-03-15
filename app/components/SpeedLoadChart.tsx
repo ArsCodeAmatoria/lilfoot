@@ -25,7 +25,7 @@ ChartJS.register(
 );
 
 interface SpeedLoadChartProps {
-  unitType: "18kW" | "30kW";
+  unitType: "18kW" | "30kW" | "45kW" | "60kW";
 }
 
 const SpeedLoadChart: React.FC<SpeedLoadChartProps> = ({ unitType }) => {
@@ -42,6 +42,18 @@ const SpeedLoadChart: React.FC<SpeedLoadChartProps> = ({ unitType }) => {
       loadPoints: [6.00, 0.50],
       speedPoints: [26, 123],
       color: "#3b82f6" // Blue color
+    },
+    "45kW": {
+      title: "Speed vs Load Capacity - 45 kW FU",
+      loadPoints: [20.00, 5.50],
+      speedPoints: [25, 90],
+      color: "#f59e0b" // Amber color
+    },
+    "60kW": {
+      title: "Speed vs Load Capacity - 60 kW FU",
+      loadPoints: [20.00, 6.50],
+      speedPoints: [30, 115],
+      color: "#ec4899" // Pink color
     }
   };
 
