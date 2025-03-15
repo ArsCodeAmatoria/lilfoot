@@ -34,8 +34,8 @@ export const examQuestions: Question[] = [
       "7 meters (23 feet)",
       "10 meters (33 feet)"
     ],
-    correctAnswer: 1,
-    explanation: "Safety regulations typically require a minimum distance of 4.6 meters (15 feet) from power lines rated at 750V-75kV. This distance increases with higher voltage lines.",
+    correctAnswer: 0,
+    explanation: "Safety regulations typically require a minimum distance of 3 meters (10 feet) from power lines rated at 750V-75kV. This distance increases with higher voltage lines.",
     category: "Common Occupational Skills"
   },
   {
