@@ -15,30 +15,6 @@ export const demos: { name: string; items: Item[] }[] = [
           'Interactive practice exam for Red Seal Tower Crane Operator certification with detailed feedback',
       },
       {
-        name: 'Red Seal Practice Exam (Mobile)',
-        slug: 'practice-exams/mobile-red-seal',
-        description:
-          'Interactive practice exam for Red Seal Mobile Crane Operator certification with 10 sample questions',
-      },
-      {
-        name: '40 Tonnes and Under',
-        slug: 'practice-exams/40-tonnes-and-under',
-        description:
-          'Coming soon: Practice exam for operators of cranes with lifting capacity of 40 tonnes and under',
-      },
-      {
-        name: '80 Tonnes and Under',
-        slug: 'practice-exams/80-tonnes-and-under',
-        description:
-          'Coming soon: Practice exam for operators of cranes with lifting capacity of 80 tonnes and under',
-      },
-      {
-        name: 'Folding Boom',
-        slug: 'practice-exams/folding-boom',
-        description:
-          'Coming soon: Specialized practice exam for operators of folding boom and articulating cranes',
-      },
-      {
         name: 'Self Erect Tower Crane',
         slug: 'practice-exams/self-erect-tower',
         description:
