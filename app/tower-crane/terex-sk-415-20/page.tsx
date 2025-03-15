@@ -12,6 +12,7 @@ import {
   TableCaption,
 } from '#/components/ui/table';
 import DrivingUnitsSectionWrapper from '../../components/DrivingUnitsSectionWrapper';
+import TerexLoadDiagramWrapper from '../../components/TerexLoadDiagramWrapper';
 
 export const metadata = {
   title: 'Terex SK 415-20 Specifications | Tower Cranes | lilfoot',
@@ -268,8 +269,11 @@ export default function TerexSK41520Page() {
           stability even at maximum reach.
         </p>
         
+        {/* Add the new load diagram chart component via the client wrapper */}
+        <TerexLoadDiagramWrapper />
+        
         {/* Load Chart Table */}
-        <div className="mb-6">
+        <div className="mb-6 mt-8">
           <h3 className="text-xl font-bold text-white mb-3">Load Capacity Chart</h3>
           <div>
             <Table>
