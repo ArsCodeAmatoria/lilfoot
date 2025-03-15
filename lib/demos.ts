@@ -15,6 +15,12 @@ export const demos: { name: string; items: Item[] }[] = [
           'Interactive practice exam for Red Seal Tower Crane Operator certification with detailed feedback',
       },
       {
+        name: 'CCO Tower Crane Operator',
+        slug: 'nccco-exams/tower-crane-operator',
+        description:
+          'Coming soon: Preparation resources for the NCCCO Tower Crane Operator certification exam',
+      },
+      {
         name: 'Self Erect Tower Crane',
         slug: 'practice-exams/self-erect-tower',
         description:
@@ -31,17 +37,6 @@ export const demos: { name: string; items: Item[] }[] = [
         slug: 'practice-exams/rigging-advanced',
         description:
           'Coming soon: Advanced rigging practice exam for complex lifts, load calculations, and critical safety procedures',
-      },
-    ],
-  },
-  {
-    name: 'NCCCO Exams',
-    items: [
-      {
-        name: 'CCO Tower Crane Operator',
-        slug: 'nccco-exams/tower-crane-operator',
-        description:
-          'Coming soon: Preparation resources for the NCCCO Tower Crane Operator certification exam',
       },
     ],
   },
