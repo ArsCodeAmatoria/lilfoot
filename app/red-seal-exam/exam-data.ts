@@ -243,15 +243,15 @@ export const examQuestions: Question[] = [
   },
   {
     id: 18,
-    question: "What would be the approximate weight of a concrete bucket containing 1 cubic meter of concrete?",
+    question: "What would be the approximate total weight of a concrete bucket (200 kg empty) containing 1 cubic meter of concrete?",
     options: [
       "1,000 kg (2,200 lbs)",
-      "2,400 kg (5,300 lbs)",
+      "2,600 kg (5,730 lbs)",
       "3,600 kg (7,900 lbs)",
       "5,000 kg (11,000 lbs)"
     ],
     correctAnswer: 1,
-    explanation: "Concrete weighs approximately 2,400 kg per cubic meter (150 lbs per cubic foot), so a bucket containing 1 cubic meter would weigh approximately 2,400 kg plus the weight of the bucket itself.",
+    explanation: "Concrete weighs approximately 2,400 kg per cubic meter (150 lbs per cubic foot). When added to the empty bucket weight of 200 kg, the total weight is approximately 2,600 kg (5,730 lbs).",
     category: "Hoisting Fundamentals"
   },
   {
