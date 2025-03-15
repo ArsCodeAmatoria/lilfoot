@@ -46,45 +46,6 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
-    name: 'Mobile Crane Charts',
-    items: [
-      {
-        name: 'Liebherr LTM 1200',
-        slug: 'mobile-crane/liebherr-ltm-1200',
-        description:
-          'Coming soon: Specifications and load charts for the Liebherr LTM 1200 mobile crane',
-      },
-    ],
-  },
-  {
-    name: 'Rough Terrain Crane Charts',
-    items: [
-      {
-        name: 'Linkbelt RTC8065',
-        slug: 'rough-terrain/linkbelt-rtc8065',
-        description:
-          'Coming soon: Specifications and load charts for the Linkbelt RTC8065 rough terrain crane',
-      },
-      {
-        name: 'Terex RT 100',
-        slug: 'rough-terrain/rt-100',
-        description:
-          'Coming soon: Specifications and load charts for the Terex RT 100 rough terrain crane',
-      },
-    ],
-  },
-  {
-    name: 'All Terrain Crane Charts',
-    items: [
-      {
-        name: '40t Terex Demag',
-        slug: 'all-terrain/terex-demag-40t',
-        description:
-          'Coming soon: Specifications and load charts for the 40t Terex Demag all terrain crane',
-      },
-    ],
-  },
-  {
     name: 'Tower Crane Charts',
     items: [
       {
@@ -157,28 +118,6 @@ export const demos: { name: string; items: Item[] }[] = [
         slug: 'luffing-crane/liebherr-hc-l',
         description:
           'Coming soon: Specifications and load charts for the Liebherr HC-L luffing crane series',
-      },
-    ],
-  },
-  {
-    name: 'Folding Boom Charts',
-    items: [
-      {
-        name: 'Palfinger PK 480 TEC',
-        slug: 'folding-boom/palfinger-pk-480-tec',
-        description:
-          'Coming soon: Specifications and load charts for the Palfinger PK 480 TEC folding boom crane',
-      },
-    ],
-  },
-  {
-    name: 'Stiff Boom Crane Charts',
-    items: [
-      {
-        name: 'National Crane 500E2',
-        slug: 'stiff-boom/national-crane-500e2',
-        description:
-          'Coming soon: Specifications and load charts for the National Crane 500E2 stiff boom crane',
       },
     ],
   },
