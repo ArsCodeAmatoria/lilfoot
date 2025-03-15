@@ -9,6 +9,8 @@ import {
   Calculator,
   ClipboardCheck,
   ChevronRight,
+  Cable,
+  Ruler,
 } from 'lucide-react';
 
 export default function Page() {
@@ -36,23 +38,23 @@ export default function Page() {
             </h1>
           </div>
           <p className="mt-4 max-w-2xl text-xl font-light text-gray-300 md:text-2xl">
-            Crane and Rigging Exam Practice Resources
+            Tower Crane & Rigging Resources
           </p>
           <p className="text-md mt-4 max-w-2xl text-gray-400 md:text-lg">
-            Interactive tools, charts, and practice exams for crane operators
+            Interactive charts, specs, and practice exams for tower crane operators
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/red-seal-exam"
               className="text-md rounded-md bg-green-600 px-6 py-3 font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
             >
-              Practice Exam
+              Red Seal Practice Exam
             </Link>
             <Link
-              href="/crane-tables"
+              href="/tower-crane/terex-sk-415-20"
               className="text-md rounded-md bg-gray-800 px-6 py-3 font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-800"
             >
-              Crane Tables
+              Tower Crane Specs
             </Link>
           </div>
         </div>
@@ -61,7 +63,7 @@ export default function Page() {
       {/* Featured Resources Section */}
       <div className="space-y-8">
         <h2 className="text-2xl font-semibold text-gray-200">
-          Crane Operator Resources
+          Tower Crane & Rigging Resources
         </h2>
 
         {/* Feature Cards */}
@@ -70,16 +72,16 @@ export default function Page() {
             <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gray-800">
               <BookOpen size={28} className="text-green-500" />
             </div>
-            <h3 className="mb-3 text-xl font-semibold">Practice Exams</h3>
+            <h3 className="mb-3 text-xl font-semibold">Tower Crane Exams</h3>
             <p className="mb-4 flex-grow text-gray-400">
-              Prepare for your certification with our comprehensive practice
+              Prepare for your tower crane certification with our comprehensive practice
               exams designed to simulate real testing conditions.
             </p>
             <Link
-              href="/practice-exams/40-tonnes-and-under"
+              href="/red-seal-exam"
               className="inline-flex items-center font-medium text-green-500 hover:text-green-400"
             >
-              View exams <ChevronRight size={16} className="ml-1" />
+              Red Seal Exam <ChevronRight size={16} className="ml-1" />
             </Link>
           </div>
 
@@ -87,13 +89,13 @@ export default function Page() {
             <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gray-800">
               <HardHat size={28} className="text-green-500" />
             </div>
-            <h3 className="mb-3 text-xl font-semibold">Load Charts</h3>
+            <h3 className="mb-3 text-xl font-semibold">Tower Crane Charts</h3>
             <p className="mb-4 flex-grow text-gray-400">
-              Access detailed specifications and load charts for a wide range of
-              crane types including tower, mobile, and rough terrain.
+              Access detailed specifications and load charts for various tower crane
+              models including Liebherr, Terex, Pecco, and more.
             </p>
             <Link
-              href="/tower-crane/pecco-sk-180"
+              href="/tower-crane/liebherr-125-ec-b-6"
               className="inline-flex items-center font-medium text-green-500 hover:text-green-400"
             >
               View charts <ChevronRight size={16} className="ml-1" />
@@ -102,18 +104,17 @@ export default function Page() {
 
           <div className="flex h-full flex-col rounded-lg bg-gray-900 p-6 transition-transform hover:translate-y-[-5px]">
             <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gray-800">
-              <Calculator size={28} className="text-green-500" />
+              <Cable size={28} className="text-green-500" />
             </div>
-            <h3 className="mb-3 text-xl font-semibold">Technical Resources</h3>
+            <h3 className="mb-3 text-xl font-semibold">Rigging Resources</h3>
             <p className="mb-4 flex-grow text-gray-400">
-              From rigging charts to power line approach limits, find all the
-              technical information you need for safe crane operations.
+              Essential rigging references including wire rope slings, chain slings, and material weights for safe and efficient crane operations.
             </p>
             <Link
-              href="/rigging-charts/basic"
+              href="/wire-rope-slings"
               className="inline-flex items-center font-medium text-green-500 hover:text-green-400"
             >
-              View resources <ChevronRight size={16} className="ml-1" />
+              View rigging charts <ChevronRight size={16} className="ml-1" />
             </Link>
           </div>
         </div>
@@ -125,7 +126,7 @@ export default function Page() {
           </h2>
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {demos.slice(0, 8).map((section) => (
+            {demos.slice(0, 6).map((section) => (
               <div key={section.name} className="rounded-lg bg-gray-900 p-5">
                 <h3 className="mb-3 text-lg font-medium text-white">
                   {section.name}
