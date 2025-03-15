@@ -1,6 +1,8 @@
 import React from 'react';
 import { Info } from 'lucide-react';
 import WireRopeSlingTableWrapper from '#/app/components/WireRopeSlingTableWrapper';
+import NylonWebSlingTableWrapper from '#/app/components/NylonWebSlingTableWrapper';
+import ChainSlingTableWrapper from '#/app/components/ChainSlingTableWrapper';
 
 export const metadata = {
   title: 'Basic Rigging Charts | Rigging Charts | lilfoot',
@@ -25,6 +27,16 @@ export default function BasicRiggingChartsPage() {
       {/* Wire Rope Slings Table Section */}
       <div className="mb-10 p-6 bg-gray-950 rounded-lg border border-gray-800">
         <WireRopeSlingTableWrapper />
+      </div>
+
+      {/* Nylon Web Slings Table Section */}
+      <div className="mb-10 p-6 bg-gray-950 rounded-lg border border-gray-800">
+        <NylonWebSlingTableWrapper />
+      </div>
+
+      {/* Chain Slings Table Section */}
+      <div className="mb-10 p-6 bg-gray-950 rounded-lg border border-gray-800">
+        <ChainSlingTableWrapper />
       </div>
 
       {/* What to Expect and Key Topics sections */}
