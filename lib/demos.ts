@@ -313,7 +313,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Limits of Approach',
         slug: 'power-lines/limits-of-approach',
         description:
-          'Coming soon: Guidelines and regulations for safe working distances from power lines for crane operations',
+          'Guidelines and regulations for safe working distances from power lines for crane operations',
       },
     ],
   },

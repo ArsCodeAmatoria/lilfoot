@@ -3,6 +3,7 @@ import { Info } from 'lucide-react';
 import WireRopeSlingTableWrapper from '#/app/components/WireRopeSlingTableWrapper';
 import NylonWebSlingTableWrapper from '#/app/components/NylonWebSlingTableWrapper';
 import ChainSlingTableWrapper from '#/app/components/ChainSlingTableWrapper';
+import ReductionFactorTableWrapper from '#/app/components/ReductionFactorTableWrapper';
 
 export const metadata = {
   title: 'Basic Rigging Charts | Rigging Charts | lilfoot',
@@ -37,6 +38,11 @@ export default function BasicRiggingChartsPage() {
       {/* Chain Slings Table Section */}
       <div className="mb-10 p-6 bg-gray-950 rounded-lg border border-gray-800">
         <ChainSlingTableWrapper />
+      </div>
+
+      {/* Reduction Factor & Tension Factor Table Section */}
+      <div className="mb-10 p-6 bg-gray-950 rounded-lg border border-gray-800">
+        <ReductionFactorTableWrapper />
       </div>
 
       {/* What to Expect and Key Topics sections */}
