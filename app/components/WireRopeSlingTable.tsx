@@ -12,77 +12,6 @@ import {
 } from "#/components/ui/table";
 import { AlertTriangle } from 'lucide-react';
 
-// Icons for different hitch types
-const HitchIcons = () => {
-  return (
-    <div className="grid grid-cols-7 gap-2 mb-4">
-      <div className="flex flex-col items-center justify-center">
-        <div className="mb-2 p-2 bg-gray-900 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8 text-highlight">
-            <rect x="7" y="4" width="10" height="16" rx="2" />
-            <line x1="12" y1="2" x2="12" y2="6" />
-          </svg>
-        </div>
-        <span className="text-xs text-center text-gray-400 mt-1">Single Vertical</span>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="mb-2 p-2 bg-gray-900 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8 text-highlight">
-            <path d="M7 6 C 7 14 17 14 17 6" />
-            <line x1="12" y1="2" x2="12" y2="6" />
-          </svg>
-        </div>
-        <span className="text-xs text-center text-gray-400 mt-1">Single Choker</span>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="mb-2 p-2 bg-gray-900 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8 text-highlight">
-            <path d="M12 4 L 5 18 L 19 18 Z" />
-            <line x1="12" y1="2" x2="12" y2="4" />
-          </svg>
-        </div>
-        <span className="text-xs text-center text-gray-400 mt-1">Single Basket</span>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="mb-2 p-2 bg-gray-900 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8 text-highlight">
-            <path d="M12 5 L 6 18 M 12 5 L 18 18" />
-            <line x1="12" y1="2" x2="12" y2="5" />
-            <line x1="6" y1="18" x2="18" y2="18" />
-          </svg>
-        </div>
-        <span className="text-xs text-center text-gray-400 mt-1">2-Leg 60°</span>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="mb-2 p-2 bg-gray-900 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8 text-highlight">
-            <path d="M12 5 L 5 18 M 12 5 L 19 18" />
-            <line x1="12" y1="2" x2="12" y2="5" />
-            <line x1="5" y1="18" x2="19" y2="18" />
-          </svg>
-        </div>
-        <span className="text-xs text-center text-gray-400 mt-1">2-Leg 45°</span>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="mb-2 p-2 bg-gray-900 rounded-full">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-8 h-8 text-highlight">
-            <path d="M12 5 L 3 18 M 12 5 L 21 18" />
-            <line x1="12" y1="2" x2="12" y2="5" />
-            <line x1="3" y1="18" x2="21" y2="18" />
-          </svg>
-        </div>
-        <span className="text-xs text-center text-gray-400 mt-1">2-Leg 30°</span>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <div className="mb-2 p-2 bg-gray-900 rounded-full flex items-center justify-center">
-          <span className="text-sm font-bold text-highlight">WLL</span>
-        </div>
-        <span className="text-xs text-center text-gray-400 mt-1">Working Load Limit</span>
-      </div>
-    </div>
-  );
-};
-
 const WireRopeSlingTable = () => {
   // Table data
   const tableData = [
@@ -106,9 +35,6 @@ const WireRopeSlingTable = () => {
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-white">Wire Rope Slings - Working Load Limit (lbs)</h2>
-      
-      {/* Hitch icons */}
-      <HitchIcons />
       
       {/* Table */}
       <div className="overflow-x-auto rounded-md">
