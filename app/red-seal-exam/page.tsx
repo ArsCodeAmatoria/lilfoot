@@ -3,7 +3,7 @@ import ExamInterface from './ExamInterface';
 export const metadata = {
   title: 'Red Seal Tower Crane Operator Practice Exam | lilfoot',
   description:
-    'Prepare for your Red Seal Tower Crane Operator certification with this interactive practice exam. Test your knowledge with 10 randomly selected questions based on the official exam format.',
+    'Prepare for your Red Seal Tower Crane Operator certification with this interactive practice exam. Test your knowledge with 10 randomly selected questions from our extensive question bank based on the official exam format.',
 };
 
 export default function RedSealExamPage() {
@@ -17,7 +17,7 @@ export default function RedSealExamPage() {
           Prepare for your Red Seal Tower Crane Operator certification with this
           interactive practice exam. This exam simulates the format and content
           of the official Red Seal certification test with 10 randomly selected
-          questions to help you assess your readiness and identify areas for
+          questions from our extensive question bank to help you assess your readiness and identify areas for
           improvement.
         </p>
       </div>
@@ -45,7 +45,7 @@ export default function RedSealExamPage() {
           </p>
           <p>
             This practice exam offers 10 randomly selected questions from our
-            question bank, providing realistic scenarios and immediate feedback
+            large question bank of over 50 questions, providing realistic scenarios and immediate feedback
             on your performance. Each time you take the exam, you'll get a
             different set of questions, allowing you to practice with varied
             content. It is recommended to study all relevant materials and gain
