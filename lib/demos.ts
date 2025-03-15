@@ -169,7 +169,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Terex SK 415-20',
         slug: 'tower-crane/terex-sk-415-20',
         description:
-          'Coming soon: Specifications and load charts for the Terex SK 415-20 tower crane',
+          'Detailed specifications and load charts for the Terex SK 415-20 tower crane',
       },
     ],
   },
