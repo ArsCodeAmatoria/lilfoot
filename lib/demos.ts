@@ -321,10 +321,16 @@ export const demos: { name: string; items: Item[] }[] = [
     name: 'Math',
     items: [
       {
-        name: 'Dimensions',
-        slug: 'dimensions',
+        name: 'Weights of Materials',
+        slug: 'math/weights',
         description:
-          'Geometric formulas for area, volume, and perimeter of common shapes',
+          'Reference tables for weights of common construction materials and steel pipe weights',
+      },
+      {
+        name: 'Geometric Dimensions',
+        slug: 'math/dimensions',
+        description:
+          'Common formulas for calculating areas, volumes, and perimeters of geometric shapes',
       },
     ],
   },

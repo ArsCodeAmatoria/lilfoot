@@ -1,5 +1,11 @@
-import FormulaDisplay from '../components/FormulaDisplay';
-import ShapeVisualizer from '../components/ShapeVisualizer';
+import FormulaDisplay from '../../components/FormulaDisplay';
+import ShapeVisualizer from '../../components/ShapeVisualizer';
+
+export const metadata = {
+  title: 'Geometric Dimensions | Math | lilfoot',
+  description:
+    'Common formulas for calculating areas, volumes, and perimeters of geometric shapes',
+};
 
 export default function DimensionsPage() {
   // Define all our geometric formulas
@@ -315,4 +321,4 @@ export default function DimensionsPage() {
       </FormulaDisplay>
     </div>
   );
-}
+} 
