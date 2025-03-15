@@ -1,0 +1,2 @@
+s/<LoadCapacityChart.*title="Speed vs Load Capacity - 18 kW FU".*loadPoints=\[.*\].*speedPoints=\[.*\].*color=".*".*\/>/<DrivingUnitCharts unitType="18kW" \/>/
+s/<LoadCapacityChart.*title="Speed vs Load Capacity - 30 kW FU".*loadPoints=\[.*\].*speedPoints=\[.*\].*color=".*".*\/>/<DrivingUnitCharts unitType="30kW" \/>/

@@ -346,19 +346,25 @@ export const demos: { name: string; items: Item[] }[] = [
     ],
   },
   {
-    name: 'Components',
+    name: 'Material Information',
     items: [
       {
-        name: 'Crane Chart',
-        slug: 'crane',
+        name: 'Material Weights',
+        slug: 'material-weights',
         description:
-          'Interactive chart displaying crane specifications and lifting capacity data',
+          'Reference table of common material weights for load calculation',
       },
       {
-        name: '3D Buffer Demo',
-        slug: 'three-demo',
+        name: 'Steel Pipe Weights',
+        slug: 'steel-pipe-weights',
         description:
-          'Interactive 3D particle system using Three.js buffer geometry draw range',
+          'Weight charts for steel pipes of various dimensions',
+      },
+      {
+        name: 'Wire Rope Slings',
+        slug: 'wire-rope-slings',
+        description:
+          'Working load limit charts for wire rope slings in various configurations',
       },
     ],
   },
