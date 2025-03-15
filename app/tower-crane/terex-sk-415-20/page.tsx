@@ -11,7 +11,7 @@ import {
   TableCell,
   TableCaption,
 } from '#/components/ui/table';
-import DrivingUnitsSectionWrapper from '../../components/DrivingUnitsSectionWrapper';
+import TerexDrivingUnitsSectionWrapper from '../../components/TerexDrivingUnitsSectionWrapper';
 import TerexLoadDiagramWrapper from '../../components/TerexLoadDiagramWrapper';
 
 export const metadata = {
@@ -258,85 +258,20 @@ export default function TerexSK41520Page() {
       </div>
 
       {/* Performance Data Section */}
-      <div>
-        <h2 className="text-xl font-bold text-white mb-4 flex items-center">
-          <Zap className="mr-2 text-highlight" size={24} />
-          Performance Data
-        </h2>
-        <p className="text-gray-400 mb-6">
-          The Terex SK 415-20 offers exceptional performance with its variable frequency drive system.
-          The hoisting gear provides smooth acceleration and precise control, while the jib design ensures
-          stability even at maximum reach.
-        </p>
-        
-        {/* Add the new load diagram chart component via the client wrapper */}
-        <TerexLoadDiagramWrapper />
-        
-        {/* Load Chart Table */}
-        <div className="mb-6 mt-8">
-          <h3 className="text-xl font-bold text-white mb-3">Load Capacity Chart</h3>
-          <div>
-            <Table>
-              <TableCaption>Load capacity chart for Terex SK 415-20 showing capacities in tons at different radiuses</TableCaption>
-              <TableHeader className="bg-gray-900">
-                <TableRow>
-                  <TableHead className="border border-gray-800 sticky left-0 z-20 bg-gray-900">Radius (m)</TableHead>
-                  <TableHead className="border border-gray-800 text-center">Capacity (t)</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow className="bg-gray-900/30">
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">18.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">20.00</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">20.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">18.75</TableCell>
-                </TableRow>
-                <TableRow className="bg-gray-900/30">
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">25.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">14.80</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">30.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">12.15</TableCell>
-                </TableRow>
-                <TableRow className="bg-gray-900/30">
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">35.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">10.25</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">40.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">8.85</TableCell>
-                </TableRow>
-                <TableRow className="bg-gray-900/30">
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">45.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">7.70</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">50.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">6.75</TableCell>
-                </TableRow>
-                <TableRow className="bg-gray-900/30">
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">55.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">5.20</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">60.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">4.10</TableCell>
-                </TableRow>
-                <TableRow className="bg-gray-900/30">
-                  <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">65.0</TableCell>
-                  <TableCell className="border border-gray-800 text-center">3.20</TableCell>
-                </TableRow>
-              </TableBody>
-            </Table>
+      <section id="performance-data" className="py-8">
+        <div className="container mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-6">Performance Data</h2>
+          
+          {/* Load Diagram Chart added via the client wrapper */}
+          <div className="mb-10">
+            <h3 className="text-xl text-white mb-4">Load Diagram Chart</h3>
+            <TerexLoadDiagramWrapper />
           </div>
+          
+          {/* Driving Units Section */}
+          <TerexDrivingUnitsSectionWrapper />
         </div>
-      </div>
-      
-      {/* Driving Units Section */}
-      <DrivingUnitsSectionWrapper />
+      </section>
       
       {/* Additional Information */}
       <div className="bg-black p-6 rounded-lg shadow-lg">

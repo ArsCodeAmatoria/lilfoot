@@ -11,7 +11,18 @@ import {
   TableCell,
   TableCaption,
 } from '#/components/ui/table';
-import DrivingUnitsSectionWrapper from '../../components/DrivingUnitsSectionWrapper';
+import LiebherrDrivingUnitsSectionWrapper from '../../components/LiebherrDrivingUnitsSectionWrapper';
+import { Button } from '#/components/ui/button';
+import { Metadata } from 'next';
+import { FileIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
+import ProductBanner from '../../components/ProductBanner';
+import MaintenanceSection from '../../components/MaintenanceSection';
+import OperatingConditionsSection from '../../components/OperatingConditionsSection';
+import LoadCapacityTable from '../../components/LoadCapacityTable';
+import LM1LoadCapacityTable from '../../components/LM1LoadCapacityTable';
+import InfoGrid from '../../components/InfoGrid';
+import CraneCarousel from '../../components/CraneCarousel';
 
 export const metadata = {
   title: 'Liebherr 125 EC-B 6 Specifications | Tower Cranes | lilfoot',
@@ -471,6 +482,8 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">35.0</TableCell>
@@ -483,6 +496,7 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">4.14</TableCell>
                   <TableCell className="border border-gray-800 text-center">3.79</TableCell>
                   <TableCell className="border border-gray-800 text-center font-bold">3.50</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
@@ -519,6 +533,9 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">30.0</TableCell>
@@ -529,6 +546,8 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">5.02</TableCell>
                   <TableCell className="border border-gray-800 text-center">4.55</TableCell>
                   <TableCell className="border border-gray-800 text-center font-bold">4.15</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
@@ -569,6 +588,8 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">25.0</TableCell>
@@ -577,6 +598,8 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">6.00</TableCell>
                   <TableCell className="border border-gray-800 text-center">5.63</TableCell>
                   <TableCell className="border border-gray-800 text-center font-bold">5.10</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
@@ -616,12 +639,16 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">20.0</TableCell>
                   <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=21.6</TableCell>
                   <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
                   <TableCell className="border border-gray-800 text-center font-bold">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
@@ -872,6 +899,8 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">35.0</TableCell>
@@ -884,6 +913,8 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">4.14</TableCell>
                   <TableCell className="border border-gray-800 text-center">3.79</TableCell>
                   <TableCell className="border border-gray-800 text-center font-bold">3.50</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
@@ -922,6 +953,9 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">30.0</TableCell>
@@ -932,6 +966,7 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">5.02</TableCell>
                   <TableCell className="border border-gray-800 text-center">4.55</TableCell>
                   <TableCell className="border border-gray-800 text-center font-bold">4.15</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
@@ -974,6 +1009,8 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">25.0</TableCell>
@@ -982,6 +1019,8 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">6.00</TableCell>
                   <TableCell className="border border-gray-800 text-center">5.63</TableCell>
                   <TableCell className="border border-gray-800 text-center font-bold">5.10</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
@@ -1023,12 +1062,15 @@ export default function Liebherr125ECB6Page() {
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="border border-gray-800 font-medium sticky left-0 z-10 bg-inherit">20.0</TableCell>
                   <TableCell className="border border-gray-800 font-medium sticky left-[81px] z-10 bg-inherit">r=21.6</TableCell>
                   <TableCell className="border border-gray-800 font-medium sticky left-[162px] z-10 bg-inherit">6</TableCell>
                   <TableCell className="border border-gray-800 text-center font-bold">6.00</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
+                  <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
                   <TableCell className="border border-gray-800 text-center">-</TableCell>
@@ -1091,7 +1133,7 @@ export default function Liebherr125ECB6Page() {
         </div>
         
         {/* Driving Units Section */}
-        <DrivingUnitsSectionWrapper />
+        <LiebherrDrivingUnitsSectionWrapper />
       </div>
 
       {/* Technical Documentation Section */}
