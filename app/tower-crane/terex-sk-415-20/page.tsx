@@ -13,6 +13,7 @@ import {
 } from '#/components/ui/table';
 import TerexDrivingUnitsSectionWrapper from '../../components/TerexDrivingUnitsSectionWrapper';
 import TerexLoadDiagramWrapper from '../../components/TerexLoadDiagramWrapper';
+import TerexLoadDiagram229Wrapper from '../../components/TerexLoadDiagram229Wrapper';
 
 export const metadata = {
   title: 'Terex SK 415-20 Specifications | Tower Cranes | lilfoot',
@@ -262,10 +263,16 @@ export default function TerexSK41520Page() {
         <div className="container mx-auto">
           <h2 className="text-2xl font-bold text-white mb-6">Performance Data</h2>
           
-          {/* Load Diagram Chart added via the client wrapper */}
+          {/* 246.1 ft Configuration Load Diagram Chart */}
           <div className="mb-10">
-            <h3 className="text-xl text-white mb-4">Load Diagram Chart</h3>
+            <h3 className="text-xl text-white mb-4">246.1 ft Configuration - Load Diagram Chart</h3>
             <TerexLoadDiagramWrapper />
+          </div>
+          
+          {/* 229.7 ft Configuration Load Diagram Chart */}
+          <div className="mb-10">
+            <h3 className="text-xl text-white mb-4">229.7 ft Configuration - Load Diagram Chart</h3>
+            <TerexLoadDiagram229Wrapper />
           </div>
           
           {/* Driving Units Section */}
