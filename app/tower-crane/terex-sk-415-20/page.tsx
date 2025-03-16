@@ -11,7 +11,6 @@ import {
   TableCell,
   TableCaption,
 } from '#/components/ui/table';
-import TerexDrivingUnitsSectionWrapper from '../../components/TerexDrivingUnitsSectionWrapper';
 import TerexLoadDiagramWrapper from '../../components/TerexLoadDiagramWrapper';
 import TerexLoadDiagram229Wrapper from '../../components/TerexLoadDiagram229Wrapper';
 
@@ -274,9 +273,6 @@ export default function TerexSK41520Page() {
             <h3 className="text-xl text-white mb-4">229.7 ft Configuration - Load Diagram Chart</h3>
             <TerexLoadDiagram229Wrapper />
           </div>
-          
-          {/* Driving Units Section */}
-          <TerexDrivingUnitsSectionWrapper />
         </div>
       </section>
       
