@@ -177,20 +177,20 @@ const TerexLoadDiagramChart = () => {
                 {/* Main tower */}
                 <rect x="185" y="150" width="30" height="100" className="fill-gray-800 stroke-gray-700" />
                 
-                {/* Boom */}
-                <line x1="200" y1="150" x2="350" y2="80" className="stroke-yellow-500 stroke-2" />
+                {/* Boom - now flat/horizontal */}
+                <line x1="200" y1="150" x2="350" y2="150" className="stroke-yellow-500 stroke-2" />
                 
                 {/* Counter weight */}
-                <line x1="200" y1="150" x2="50" y2="120" className="stroke-yellow-500 stroke-2" />
+                <line x1="200" y1="150" x2="50" y2="150" className="stroke-yellow-500 stroke-2" />
                 
                 {/* Hook and line */}
-                <line x1="300" y1="100" x2="300" y2="180" className="stroke-white stroke-1" strokeDasharray="5,5" />
+                <line x1="300" y1="150" x2="300" y2="180" className="stroke-white stroke-1" strokeDasharray="5,5" />
                 <circle cx="300" cy="185" r="5" className="fill-white stroke-white" />
                 
                 {/* Measurements */}
-                <text x="220" y="100" fill="#ef4444" fontSize="12">73.2 ft</text>
+                <text x="220" y="140" fill="#ef4444" fontSize="12">73.2 ft</text>
                 <text x="210" y="180" fill="#ef4444" fontSize="12">33.1 ft</text>
-                <text x="320" y="70" fill="#ef4444" fontSize="12">242.8 ft to 246.1 ft</text>
+                <text x="320" y="140" fill="#ef4444" fontSize="12">242.8 ft to 246.1 ft</text>
                 <text x="290" y="200" fill="#ef4444" fontSize="12">5,512 lbs - 7,055 lbs</text>
               </svg>
             </div>
