@@ -16,6 +16,7 @@ import TerexLoadDiagram229Wrapper from '../../components/TerexLoadDiagram229Wrap
 import CraneLoadDiagram210Wrapper from '../../components/CraneLoadDiagram210Wrapper';
 import CraneLoadDiagram196Wrapper from '../../components/CraneLoadDiagram196Wrapper';
 import CraneLoadDiagram180Wrapper from '../../components/CraneLoadDiagram180Wrapper';
+import CraneLoadDiagram164Wrapper from '../../components/CraneLoadDiagram164Wrapper';
 
 export const metadata = {
   title: 'Terex SK 415-20 Specifications | Tower Cranes | lilfoot',
@@ -293,6 +294,12 @@ export default function TerexSK41520Page() {
           <div className="mb-10">
             <h3 className="text-xl text-white mb-4">177.2-180.5 ft Configuration - Load Diagram Chart</h3>
             <CraneLoadDiagram180Wrapper />
+          </div>
+
+          {/* 160.8-164.1 ft Configuration Load Diagram Chart */}
+          <div className="mb-10">
+            <h3 className="text-xl text-white mb-4">160.8-164.1 ft Configuration - Load Diagram Chart</h3>
+            <CraneLoadDiagram164Wrapper />
           </div>
         </div>
       </section>
