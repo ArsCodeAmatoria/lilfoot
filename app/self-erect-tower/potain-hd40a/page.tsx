@@ -25,13 +25,12 @@ export default function PotainHD40APage() {
         </p>
       </div>
 
-      <div className="mb-8 overflow-hidden rounded-lg">
+      <div className="mb-8 overflow-hidden rounded-lg relative aspect-video">
         <Image
           src="/images/potain-hd-40-a.png"
           alt="Potain HD40A Self-Erecting Tower Crane"
-          width={1200}
-          height={800}
-          className="w-full object-cover"
+          fill
+          className="object-cover"
           priority
         />
       </div>
