@@ -16,31 +16,17 @@ const loadData = {
   }
 };
 
-const translations = {
-  title: [
-    'Courbes de charges',
-    'Lastkurven',
-    'Load diagrams',
-    'Curvas de cargas',
-    'Curve di carico',
-    'Curva de cargas'
-  ]
-};
-
 export default function PotainHD40ALoadDiagram() {
   return (
     <div className="space-y-8">
-      {/* Multilingual Title */}
-      <div className="flex flex-col space-y-2 border-l-4 border-highlight pl-4">
-        {translations.title.map((text, index) => (
-          <h3
-            key={index}
-            className="text-lg font-bold text-white"
-            style={{ fontFamily: 'system-ui' }}
-          >
-            {text}
-          </h3>
-        ))}
+      {/* Title */}
+      <div className="border-l-4 border-highlight pl-4">
+        <h3
+          className="text-lg font-bold text-white"
+          style={{ fontFamily: 'system-ui' }}
+        >
+          Load diagrams
+        </h3>
       </div>
 
       {/* Load Diagrams */}

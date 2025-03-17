@@ -2,17 +2,6 @@ import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../components/ui/table';
 import { FaArrowsAltV, FaArrowsAltH, FaRedo } from 'react-icons/fa';
 
-const translations = {
-  title: [
-    'Mécanismes',
-    'Antriebe',
-    'Mechanisms',
-    'Mecanismos',
-    'Meccanismi',
-    'Mecanismos'
-  ]
-};
-
 const mechanismsData = {
   mechanisms: [
     {
@@ -108,17 +97,14 @@ export default function PotainHD40AMechanismsChart() {
 
   return (
     <div className="space-y-8">
-      {/* Multilingual Title */}
-      <div className="flex flex-col space-y-2 border-l-4 border-highlight pl-4">
-        {translations.title.map((text, index) => (
-          <h3
-            key={index}
-            className="text-lg font-bold text-white"
-            style={{ fontFamily: 'system-ui' }}
-          >
-            {text}
-          </h3>
-        ))}
+      {/* Title */}
+      <div className="border-l-4 border-highlight pl-4">
+        <h3
+          className="text-lg font-bold text-white"
+          style={{ fontFamily: 'system-ui' }}
+        >
+          Mechanisms
+        </h3>
       </div>
 
       {/* Mechanisms Table */}
