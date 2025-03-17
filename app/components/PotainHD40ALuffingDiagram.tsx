@@ -12,31 +12,14 @@ const loadData = {
   }
 };
 
-const translations = {
-  title: [
-    'Flèche relevée',
-    'Ausleger in Steilstellung',
-    'Luffing jib',
-    'Flecha izada',
-    'Braccio impennato',
-    'Lança inclinada'
-  ]
-};
-
 export default function PotainHD40ALuffingDiagram() {
   return (
     <div className="space-y-8">
-      {/* Multilingual Title */}
-      <div className="flex flex-col space-y-2 border-l-4 border-highlight pl-4">
-        {translations.title.map((text, index) => (
-          <h3
-            key={index}
-            className="text-lg font-bold text-white"
-            style={{ fontFamily: 'system-ui' }}
-          >
-            {text}
-          </h3>
-        ))}
+      {/* Title */}
+      <div className="border-l-4 border-highlight pl-4">
+        <h3 className="text-lg font-bold text-white" style={{ fontFamily: 'system-ui' }}>
+          Luffing jib
+        </h3>
       </div>
 
       {/* Luffing Jib Diagrams */}
@@ -194,34 +177,47 @@ export default function PotainHD40ALuffingDiagram() {
         </div>
       </div>
 
-      {/* Load Table */}
+      {/* Load Table - Horizontal Layout */}
       <div className="overflow-x-auto rounded-lg bg-gray-900">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="text-white">Distance (m)</TableHead>
-              <TableHead className="text-white">18° Config (kg)</TableHead>
-              <TableHead className="text-white">11° Config (kg)</TableHead>
+              <TableHead className="text-white">Configuration</TableHead>
+              {/* Use the 11° configuration distances array as it has more entries */}
+              {loadData[11].distances.map((distance) => (
+                <TableHead key={distance} className="text-white text-center">
+                  {distance}m
+                </TableHead>
+              ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {loadData[18].distances.map((distance, index) => (
-              <TableRow key={distance}>
-                <TableCell className="font-medium text-white">
-                  {distance}
-                </TableCell>
-                <TableCell
-                  className="bg-[#F7E4AF] bg-opacity-10 text-white"
+            <TableRow>
+              <TableCell className="font-medium text-white">
+                18° Config (kg)
+              </TableCell>
+              {loadData[11].distances.map((_, index) => (
+                <TableCell 
+                  key={index} 
+                  className="bg-[#F7E4AF] bg-opacity-10 text-white text-center"
                 >
-                  {loadData[18].loads[index] || '-'}
+                  {index < loadData[18].loads.length ? loadData[18].loads[index] : '-'}
                 </TableCell>
-                <TableCell
-                  className="bg-[#F7E4AF] bg-opacity-10 text-white"
+              ))}
+            </TableRow>
+            <TableRow>
+              <TableCell className="font-medium text-white">
+                11° Config (kg)
+              </TableCell>
+              {loadData[11].loads.map((load, index) => (
+                <TableCell 
+                  key={index} 
+                  className="bg-[#F7E4AF] bg-opacity-10 text-white text-center"
                 >
-                  {loadData[11].loads[index] || '-'}
+                  {load}
                 </TableCell>
-              </TableRow>
-            ))}
+              ))}
+            </TableRow>
           </TableBody>
         </Table>
       </div>

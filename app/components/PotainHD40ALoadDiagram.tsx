@@ -217,40 +217,59 @@ export default function PotainHD40ALoadDiagram() {
         </div>
       </div>
 
-      {/* Load Table */}
+      {/* Load Table - Horizontal Layout */}
       <div className="overflow-x-auto rounded-lg bg-gray-900">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="text-white">Distance (m)</TableHead>
-              <TableHead className="text-white">35m Config (kg)</TableHead>
-              <TableHead className="text-white">31m Config (kg)</TableHead>
-              <TableHead className="text-white">Adjustable (kg)</TableHead>
+              <TableHead className="text-white">Configuration</TableHead>
+              {loadData[35].distances.map((distance) => (
+                <TableHead key={distance} className="text-white text-center">
+                  {distance}m
+                </TableHead>
+              ))}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {loadData[35].distances.map((distance, index) => (
-              <TableRow key={distance}>
-                <TableCell className="font-medium text-white">
-                  {distance}
-                </TableCell>
-                <TableCell
-                  className="bg-[#F7E4AF] bg-opacity-10 text-white"
+            <TableRow>
+              <TableCell className="font-medium text-white">
+                35m Config (kg)
+              </TableCell>
+              {loadData[35].loads.map((load, index) => (
+                <TableCell 
+                  key={index} 
+                  className="bg-[#F7E4AF] bg-opacity-10 text-white text-center"
                 >
-                  {loadData[35].loads[index] || '-'}
+                  {load}
                 </TableCell>
-                <TableCell
-                  className="bg-[#F7E4AF] bg-opacity-10 text-white"
+              ))}
+            </TableRow>
+            <TableRow>
+              <TableCell className="font-medium text-white">
+                31m Config (kg)
+              </TableCell>
+              {loadData[35].distances.map((_, index) => (
+                <TableCell 
+                  key={index} 
+                  className="bg-[#F7E4AF] bg-opacity-10 text-white text-center"
                 >
-                  {loadData[31].loads[index] || '-'}
+                  {index < loadData[31].loads.length ? loadData[31].loads[index] : '-'}
                 </TableCell>
-                <TableCell
-                  className="bg-[#F7E4AF] bg-opacity-10 text-white"
+              ))}
+            </TableRow>
+            <TableRow>
+              <TableCell className="font-medium text-white">
+                Adjustable (kg)
+              </TableCell>
+              {loadData[35].distances.map((_, index) => (
+                <TableCell 
+                  key={index} 
+                  className="bg-[#F7E4AF] bg-opacity-10 text-white text-center"
                 >
-                  {loadData.adjustable.loads[index] || '-'}
+                  {index < loadData.adjustable.loads.length ? loadData.adjustable.loads[index] : '-'}
                 </TableCell>
-              </TableRow>
-            ))}
+              ))}
+            </TableRow>
           </TableBody>
         </Table>
       </div>
