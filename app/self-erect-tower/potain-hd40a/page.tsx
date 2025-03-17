@@ -4,6 +4,7 @@ import PdfDownload from '../../components/PdfDownload';
 import Image from 'next/image';
 import PotainHD40ALoadDiagram from '../../components/PotainHD40ALoadDiagram';
 import PotainHD40ALuffingDiagram from '../../components/PotainHD40ALuffingDiagram';
+import PotainHD40AMechanismsChart from '../../components/PotainHD40AMechanismsChart';
 
 export const metadata = {
   title: 'Potain HD40A Specifications | Self-Erect Tower Cranes | lilfoot',
@@ -43,6 +44,7 @@ export default function PotainHD40APage() {
       <div className="space-y-8">
         <PotainHD40ALoadDiagram />
         <PotainHD40ALuffingDiagram />
+        <PotainHD40AMechanismsChart />
       </div>
 
       <div className="rounded-lg bg-black p-8">
