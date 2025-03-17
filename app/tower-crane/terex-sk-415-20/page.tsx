@@ -17,6 +17,9 @@ import CraneLoadDiagram210Wrapper from '../../components/CraneLoadDiagram210Wrap
 import CraneLoadDiagram196Wrapper from '../../components/CraneLoadDiagram196Wrapper';
 import CraneLoadDiagram180Wrapper from '../../components/CraneLoadDiagram180Wrapper';
 import CraneLoadDiagram164Wrapper from '../../components/CraneLoadDiagram164Wrapper';
+import CraneLoadDiagram147Wrapper from '../../components/CraneLoadDiagram147Wrapper';
+import CraneLoadDiagram131Wrapper from '../../components/CraneLoadDiagram131Wrapper';
+import CraneLoadDiagram114Wrapper from '../../components/CraneLoadDiagram114Wrapper';
 
 export const metadata = {
   title: 'Terex SK 415-20 Specifications | Tower Cranes | lilfoot',
@@ -300,6 +303,24 @@ export default function TerexSK41520Page() {
           <div className="mb-10">
             <h3 className="text-xl text-white mb-4">160.8-164.1 ft Configuration - Load Diagram Chart</h3>
             <CraneLoadDiagram164Wrapper />
+          </div>
+
+          {/* 144.4-147.6 ft Configuration Load Diagram Chart */}
+          <div className="mb-10">
+            <h3 className="text-xl text-white mb-4">144.4-147.6 ft Configuration - Load Diagram Chart</h3>
+            <CraneLoadDiagram147Wrapper />
+          </div>
+
+          {/* 128-131.2 ft Configuration Load Diagram Chart */}
+          <div className="mb-10">
+            <h3 className="text-xl text-white mb-4">128-131.2 ft Configuration - Load Diagram Chart</h3>
+            <CraneLoadDiagram131Wrapper />
+          </div>
+
+          {/* 111.6-114.8 ft Configuration Load Diagram Chart */}
+          <div className="mb-10">
+            <h3 className="text-xl text-white mb-4">111.6-114.8 ft Configuration - Load Diagram Chart</h3>
+            <CraneLoadDiagram114Wrapper />
           </div>
         </div>
       </section>
