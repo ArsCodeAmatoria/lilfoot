@@ -21,7 +21,7 @@ import CraneLoadDiagram147Wrapper from '../../components/CraneLoadDiagram147Wrap
 import CraneLoadDiagram131Wrapper from '../../components/CraneLoadDiagram131Wrapper';
 import CraneLoadDiagram114Wrapper from '../../components/CraneLoadDiagram114Wrapper';
 import TerexHoistingSpecs from '../../components/TerexHoistingSpecs';
-import TerexSpeedSpecs from '../../components/TerexSpeedSpecs';
+import TerexSpeedSpecsWrapper from '../../components/TerexSpeedSpecsWrapper';
 
 export const metadata = {
   title: 'Terex SK 415-20 Specifications | Tower Cranes | lilfoot',
@@ -131,7 +131,7 @@ export default function TerexSK41520Page() {
         <TerexHoistingSpecs />
 
         {/* Hoisting Speed and Additional Specifications */}
-        <TerexSpeedSpecs />
+        <TerexSpeedSpecsWrapper />
 
         {/* Technical Specifications Table */}
         <div className="overflow-x-auto">
