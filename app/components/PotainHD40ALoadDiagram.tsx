@@ -31,11 +31,11 @@ export default function PotainHD40ALoadDiagram() {
   return (
     <div className="space-y-8">
       {/* Multilingual Title */}
-      <div className="flex flex-col space-y-2 border-l-4 border-blue-500 pl-4">
+      <div className="flex flex-col space-y-2 border-l-4 border-highlight pl-4">
         {translations.title.map((text, index) => (
           <h3
             key={index}
-            className="text-lg font-bold text-blue-500"
+            className="text-lg font-bold text-white"
             style={{ fontFamily: 'system-ui' }}
           >
             {text}
@@ -47,7 +47,7 @@ export default function PotainHD40ALoadDiagram() {
       <div className="grid gap-8 md:grid-cols-3">
         {/* 35m Diagram */}
         <div className="rounded-lg bg-gray-900 p-6">
-          <h4 className="mb-4 text-xl font-bold text-blue-400">35m Configuration</h4>
+          <h4 className="mb-4 text-xl font-bold text-white">35m Configuration</h4>
           <div className="relative h-64 w-full">
             <svg
               viewBox="0 0 400 300"
@@ -107,7 +107,7 @@ export default function PotainHD40ALoadDiagram() {
 
         {/* 31m Diagram */}
         <div className="rounded-lg bg-gray-900 p-6">
-          <h4 className="mb-4 text-xl font-bold text-blue-400">31m Configuration</h4>
+          <h4 className="mb-4 text-xl font-bold text-white">31m Configuration</h4>
           <div className="relative h-64 w-full">
             <svg
               viewBox="0 0 400 300"
@@ -163,7 +163,7 @@ export default function PotainHD40ALoadDiagram() {
 
         {/* Adjustable Diagram */}
         <div className="rounded-lg bg-gray-900 p-6">
-          <h4 className="mb-4 text-xl font-bold text-blue-400">
+          <h4 className="mb-4 text-xl font-bold text-white">
             Adjustable Configuration
           </h4>
           <div className="relative h-64 w-full">
@@ -236,30 +236,30 @@ export default function PotainHD40ALoadDiagram() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="text-blue-400">Distance (m)</TableHead>
-              <TableHead className="text-blue-400">35m Config (kg)</TableHead>
-              <TableHead className="text-blue-400">31m Config (kg)</TableHead>
-              <TableHead className="text-blue-400">Adjustable (kg)</TableHead>
+              <TableHead className="text-white">Distance (m)</TableHead>
+              <TableHead className="text-white">35m Config (kg)</TableHead>
+              <TableHead className="text-white">31m Config (kg)</TableHead>
+              <TableHead className="text-white">Adjustable (kg)</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {loadData[35].distances.map((distance, index) => (
               <TableRow key={distance}>
-                <TableCell className="font-medium text-blue-400">
+                <TableCell className="font-medium text-white">
                   {distance}
                 </TableCell>
                 <TableCell
-                  className="bg-[#F7E4AF] bg-opacity-10 text-blue-400"
+                  className="bg-[#F7E4AF] bg-opacity-10 text-white"
                 >
                   {loadData[35].loads[index] || '-'}
                 </TableCell>
                 <TableCell
-                  className="bg-[#F7E4AF] bg-opacity-10 text-blue-400"
+                  className="bg-[#F7E4AF] bg-opacity-10 text-white"
                 >
                   {loadData[31].loads[index] || '-'}
                 </TableCell>
                 <TableCell
-                  className="bg-[#F7E4AF] bg-opacity-10 text-blue-400"
+                  className="bg-[#F7E4AF] bg-opacity-10 text-white"
                 >
                   {loadData.adjustable.loads[index] || '-'}
                 </TableCell>

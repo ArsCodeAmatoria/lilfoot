@@ -27,11 +27,11 @@ export default function PotainHD40ALuffingDiagram() {
   return (
     <div className="space-y-8">
       {/* Multilingual Title */}
-      <div className="flex flex-col space-y-2 border-l-4 border-blue-500 pl-4">
+      <div className="flex flex-col space-y-2 border-l-4 border-highlight pl-4">
         {translations.title.map((text, index) => (
           <h3
             key={index}
-            className="text-lg font-bold text-blue-500"
+            className="text-lg font-bold text-white"
             style={{ fontFamily: 'system-ui' }}
           >
             {text}
@@ -43,7 +43,7 @@ export default function PotainHD40ALuffingDiagram() {
       <div className="grid gap-8 md:grid-cols-2">
         {/* 18° Diagram */}
         <div className="rounded-lg bg-gray-900 p-6">
-          <h4 className="mb-4 text-xl font-bold text-blue-400">18° Configuration</h4>
+          <h4 className="mb-4 text-xl font-bold text-white">18° Configuration</h4>
           <div className="relative h-64 w-full">
             <svg
               viewBox="0 0 400 300"
@@ -119,7 +119,7 @@ export default function PotainHD40ALuffingDiagram() {
 
         {/* 11° Diagram */}
         <div className="rounded-lg bg-gray-900 p-6">
-          <h4 className="mb-4 text-xl font-bold text-blue-400">11° Configuration</h4>
+          <h4 className="mb-4 text-xl font-bold text-white">11° Configuration</h4>
           <div className="relative h-64 w-full">
             <svg
               viewBox="0 0 400 300"
@@ -199,24 +199,24 @@ export default function PotainHD40ALuffingDiagram() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="text-blue-400">Distance (m)</TableHead>
-              <TableHead className="text-blue-400">18° Config (kg)</TableHead>
-              <TableHead className="text-blue-400">11° Config (kg)</TableHead>
+              <TableHead className="text-white">Distance (m)</TableHead>
+              <TableHead className="text-white">18° Config (kg)</TableHead>
+              <TableHead className="text-white">11° Config (kg)</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {loadData[18].distances.map((distance, index) => (
               <TableRow key={distance}>
-                <TableCell className="font-medium text-blue-400">
+                <TableCell className="font-medium text-white">
                   {distance}
                 </TableCell>
                 <TableCell
-                  className="bg-[#F7E4AF] bg-opacity-10 text-blue-400"
+                  className="bg-[#F7E4AF] bg-opacity-10 text-white"
                 >
                   {loadData[18].loads[index] || '-'}
                 </TableCell>
                 <TableCell
-                  className="bg-[#F7E4AF] bg-opacity-10 text-blue-400"
+                  className="bg-[#F7E4AF] bg-opacity-10 text-white"
                 >
                   {loadData[11].loads[index] || '-'}
                 </TableCell>
