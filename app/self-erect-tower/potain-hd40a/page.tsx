@@ -45,8 +45,8 @@ export default function PotainHD40APage() {
         <PotainHD40ALuffingDiagram />
       </div>
 
-      <div className="rounded-lg bg-gray-900 p-8">
-        <h2 className="mb-6 text-2xl font-bold">Documentation</h2>
+      <div className="rounded-lg bg-black p-8">
+        <h2 className="mb-6 text-2xl font-bold text-white">Documentation</h2>
         <p className="mb-6 text-gray-400">
           Download the official Potain HD40A specifications and technical data sheet below.
           This document includes essential information for planning, operation, and maintenance.
