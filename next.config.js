@@ -13,11 +13,15 @@ const nextConfig = {
         hostname: 'localhost',
       },
     ],
+    unoptimized: true
   },
   // Increase resource limits for development
   experimental: {
     workerThreads: false,
   },
+  // Ensure static files are served correctly
+  assetPrefix: '',
+  trailingSlash: false,
 };
 
 module.exports = nextConfig;
