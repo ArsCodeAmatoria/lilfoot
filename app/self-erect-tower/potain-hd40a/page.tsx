@@ -1,6 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
+import { FileText } from 'lucide-react';
 import PdfDownload from '../../components/PdfDownload';
+import Image from 'next/image';
 import PotainHD40ALoadDiagram from '../../components/PotainHD40ALoadDiagram';
 import PotainHD40ALuffingDiagram from '../../components/PotainHD40ALuffingDiagram';
 
@@ -12,38 +13,39 @@ export const metadata = {
 
 export default function PotainHD40APage() {
   return (
-    <div className="text-white">
-      <div className="mb-8">
-        <h1 className="mb-4 text-3xl font-bold text-white">
-          Potain HD40A Self-Erect Tower Crane
-        </h1>
-        <p className="max-w-3xl text-gray-400">
-          The Potain HD40A is a versatile self-erecting tower crane designed for 
-          residential construction, small commercial projects, and renovation work. 
-          With its compact footprint and rapid deployment capabilities, it offers 
-          an ideal solution for confined urban job sites.
-        </p>
+    <div className="text-white space-y-8">
+      {/* Header Section */}
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="w-full md:w-2/3">
+          <h1 className="mb-4 text-3xl font-bold text-white">
+            Potain HD40A Self-Erect Tower Crane
+          </h1>
+          <p className="text-gray-400 mb-6">
+            The Potain HD40A is a versatile self-erecting tower crane designed for 
+            residential construction, small commercial projects, and renovation work. 
+            With its compact footprint and rapid deployment capabilities, it offers 
+            an ideal solution for confined urban job sites.
+          </p>
+        </div>
+        <div className="w-full md:w-1/3">
+          <div className="relative aspect-video rounded-lg overflow-hidden">
+            <Image 
+              src="/images/potain-hd-40-a.png"
+              alt="Potain HD40A Self-Erecting Tower Crane"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
       </div>
 
-      <div className="mb-8 overflow-hidden rounded-lg relative aspect-video">
-        <Image
-          src="/images/potain-hd-40-a.png"
-          alt="Potain HD40A Self-Erecting Tower Crane"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
-      <div className="mb-8">
+      <div className="space-y-8">
         <PotainHD40ALoadDiagram />
-      </div>
-
-      <div className="mb-8">
         <PotainHD40ALuffingDiagram />
       </div>
 
-      <div className="mb-8 rounded-lg bg-gray-900 p-8">
+      <div className="rounded-lg bg-gray-900 p-8">
         <h2 className="mb-6 text-2xl font-bold">Documentation</h2>
         <p className="mb-6 text-gray-400">
           Download the official Potain HD40A specifications and technical data sheet below.
