@@ -171,7 +171,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Potain HD40A',
         slug: 'self-erect-tower/potain-hd40a',
         description:
-          'Coming soon: Specifications and load charts for the Potain HD40A self-erecting tower crane',
+          'Detailed specifications and load charts for the Potain HD40A self-erecting tower crane',
       },
       {
         name: 'Potain GTMR 331C',
