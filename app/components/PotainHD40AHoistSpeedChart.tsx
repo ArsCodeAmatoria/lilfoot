@@ -5,15 +5,15 @@ const hoistData = {
   standardHoist: {
     name: "Standard Hoist",
     twoPart: [
-      { gear: "1st Gear", speed: "10.7 m/min", weight: "2,000 kg" },
-      { gear: "2nd Gear", speed: "32.3 m/min", weight: "2,000 kg" },
-      { gear: "3rd Gear", speed: "65.0 m/min", weight: "1,000 kg" },
+      { gear: "1st Gear", speed: "35 ft/min", weight: "4,409 lbs" },
+      { gear: "2nd Gear", speed: "106 ft/min", weight: "4,409 lbs" },
+      { gear: "3rd Gear", speed: "213 ft/min", weight: "2,205 lbs" },
       { gear: "4th Gear", speed: "-", weight: "-" }
     ],
     fourPart: [
-      { gear: "1st Gear", speed: "5.5 m/min", weight: "4,000 kg" },
-      { gear: "2nd Gear", speed: "16.2 m/min", weight: "4,000 kg" },
-      { gear: "3rd Gear", speed: "32.3 m/min", weight: "2,000 kg" },
+      { gear: "1st Gear", speed: "18 ft/min", weight: "8,818 lbs" },
+      { gear: "2nd Gear", speed: "53 ft/min", weight: "8,818 lbs" },
+      { gear: "3rd Gear", speed: "106 ft/min", weight: "4,409 lbs" },
       { gear: "4th Gear", speed: "-", weight: "-" }
     ],
     motorPower: { hp: "15", kw: "11" }
@@ -21,22 +21,22 @@ const hoistData = {
   optionalHoist: {
     name: "15 LVF 10 (Optional Hoist)",
     twoPart: [
-      { gear: "1st Gear", speed: "9.1 m/min", weight: "2,000 kg" },
-      { gear: "2nd Gear", speed: "30.5 m/min", weight: "2,000 kg" },
-      { gear: "3rd Gear", speed: "61.0 m/min", weight: "1,000 kg" },
+      { gear: "1st Gear", speed: "30 ft/min", weight: "4,409 lbs" },
+      { gear: "2nd Gear", speed: "100 ft/min", weight: "4,409 lbs" },
+      { gear: "3rd Gear", speed: "200 ft/min", weight: "2,205 lbs" },
       { gear: "4th Gear", speed: "-", weight: "-" }
     ],
     fourPart: [
-      { gear: "1st Gear", speed: "4.6 m/min", weight: "4,000 kg" },
-      { gear: "2nd Gear", speed: "15.2 m/min", weight: "4,000 kg" },
-      { gear: "3rd Gear", speed: "30.5 m/min", weight: "2,000 kg" },
+      { gear: "1st Gear", speed: "15 ft/min", weight: "8,818 lbs" },
+      { gear: "2nd Gear", speed: "50 ft/min", weight: "8,818 lbs" },
+      { gear: "3rd Gear", speed: "100 ft/min", weight: "4,409 lbs" },
       { gear: "4th Gear", speed: "-", weight: "-" }
     ],
     motorPower: { hp: "15", kw: "11" }
   },
   trolley: {
     name: "Trolley",
-    speed: "21 to 42 m/min",
+    speed: "69 to 138 ft/min",
     motorPower: { hp: "2", kw: "1.5" }
   },
   swing: {
@@ -52,7 +52,7 @@ export default function PotainHD40AHoistSpeedChart() {
       {/* Title */}
       <div className="border-l-4 border-highlight pl-4">
         <h3 className="text-lg font-bold text-white" style={{ fontFamily: 'system-ui' }}>
-          Hoist Speed vs Weight Chart (Metric)
+          Hoist Speed vs Weight Chart
         </h3>
       </div>
 
@@ -183,7 +183,7 @@ export default function PotainHD40AHoistSpeedChart() {
 
       {/* Power Requirements Footnote */}
       <div className="text-sm text-gray-400 bg-gray-900 p-4 rounded-lg">
-        <p className="mb-2"><span className="font-semibold">Power Requirements:</span> 400V (+6% or -10%) 50Hz, 3-phase service with ground.</p>
+        <p className="mb-2"><span className="font-semibold">Power Requirements:</span> 480V (+6% or -10%) 60Hz, 3-phase service with ground.</p>
         <p className="mb-1"><span className="font-semibold">Amperage for 15 LVF 10:</span> 29 Amp.</p>
         <p className="mb-1"><span className="font-semibold">Amperage for 15 RPC 10:</span> 29 Amp.</p>
       </div>
