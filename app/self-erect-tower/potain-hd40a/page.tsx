@@ -27,7 +27,7 @@ export default function PotainHD40APage() {
 
       <div className="mb-8 overflow-hidden rounded-lg">
         <Image
-          src="/images/potain-hd-40-a.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_URL || ''}/images/potain-hd-40-a.png`}
           alt="Potain HD40A Self-Erecting Tower Crane"
           width={1200}
           height={800}
@@ -53,7 +53,7 @@ export default function PotainHD40APage() {
         <PdfDownload 
           title="Potain HD40A Technical Specifications"
           description="Official technical data, dimensions, load charts, and operating parameters for the Potain HD40A self-erecting tower crane."
-          pdfPath="/pdfs/potain-hd-40-a.pdf"
+          pdfPath={`${process.env.NEXT_PUBLIC_BASE_URL || ''}/pdfs/potain-hd-40-a.pdf`}
           fileSize="3.8 MB"
         />
       </div>
