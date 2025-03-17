@@ -135,7 +135,7 @@ export default function DimensionsPage() {
 
   const isoscelesTriangleFormulas = [
     {
-      name: '45° Right Triangle',
+      name: '45 degree sling angle',
       formula: 'c = a√2',
       variables: {
         a: 'Equal sides length (legs)',
@@ -178,31 +178,10 @@ export default function DimensionsPage() {
     },
   ];
 
-  const specialTriangleFormulas = [
-    {
-      name: '30-60-90 Triangle Side Ratios',
-      formula: 'a : b : c = 1 : √3 : 2',
-      variables: {
-        a: 'Side opposite to 30° angle',
-        b: 'Side opposite to 60° angle',
-        c: 'Side opposite to 90° angle (hypotenuse)',
-      } as Record<string, string>,
-    },
-    {
-      name: 'Side Relationships',
-      formula: 'b = a√3, c = 2a',
-      variables: {
-        a: 'Shortest side',
-        b: 'Middle side',
-        c: 'Hypotenuse',
-      } as Record<string, string>,
-    },
-  ];
-
   // New obtuse triangle formulas
   const obtuseTriangleFormulas = [
     {
-      name: '120-30-30 Triangle',
+      name: '30 degree sling angle',
       formula: 'Angles: 120° + 30° + 30° = 180°',
       variables: {
         '120°': 'Obtuse angle',
@@ -265,7 +244,7 @@ export default function DimensionsPage() {
       </FormulaDisplay>
 
       <FormulaDisplay
-        title="45° Right Triangle"
+        title="45 degree sling angle"
         formulas={isoscelesTriangleFormulas}
       >
         <ShapeVisualizer type="isoscelesTriangle" />
@@ -279,14 +258,7 @@ export default function DimensionsPage() {
       </FormulaDisplay>
 
       <FormulaDisplay
-        title="30-60-90 Triangle"
-        formulas={specialTriangleFormulas}
-      >
-        <ShapeVisualizer type="specialTriangle" />
-      </FormulaDisplay>
-
-      <FormulaDisplay
-        title="120-30-30 Obtuse Triangle"
+        title="30 degree sling angle"
         formulas={obtuseTriangleFormulas}
       >
         <ShapeVisualizer type="obtuseTriangle" />

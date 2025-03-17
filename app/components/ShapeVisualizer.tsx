@@ -12,7 +12,6 @@ interface ShapeVisualizerProps {
     | 'rightTriangle'
     | 'isoscelesTriangle'
     | 'equilateralTriangle'
-    | 'specialTriangle'
     | 'obtuseTriangle';
   highlightColor?: string;
   accentColor?: string;
@@ -686,115 +685,6 @@ export default function ShapeVisualizer({
           </svg>
         );
 
-      case 'specialTriangle':
-        const stBase = 160;
-        const stHeight = 90;
-        const stX = (size - stBase) / 2;
-        const stY = center + stHeight / 2;
-
-        return (
-          <svg
-            width={size}
-            height={size}
-            viewBox={`0 0 ${size} ${size}`}
-            className="max-w-full"
-          >
-            {/* Draw the 30-60-90 triangle */}
-            <polygon
-              points={`${stX},${stY} ${stX + stBase},${stY} ${stX},${stY - stHeight}`}
-              stroke={baseColor}
-              strokeWidth={strokeWidth}
-              fill="none"
-            />
-
-            {/* Draw the right angle marker */}
-            <path
-              d={`M${stX + 20},${stY} L${stX + 20},${stY - 20} L${stX},${stY - 20}`}
-              stroke={baseColor}
-              strokeWidth={1.5}
-              fill="none"
-            />
-
-            {/* Draw angle markers */}
-            <path
-              d={`M${stX + stBase - 20},${stY} A 20 20 0 0 0 ${stX + stBase - 20},${stY - 10}`}
-              stroke={baseColor}
-              strokeWidth={1.5}
-              fill="none"
-            />
-
-            <path
-              d={`M${stX + 10},${stY - stHeight + 10} A 20 20 0 0 1 ${stX + 20},${stY - stHeight}`}
-              stroke={baseColor}
-              strokeWidth={1.5}
-              fill="none"
-            />
-
-            {/* Angle labels */}
-            <text
-              x={stX + stBase - 25}
-              y={stY - 25}
-              textAnchor="middle"
-              fontSize="14"
-              fill="white"
-            >
-              30°
-            </text>
-
-            <text
-              x={stX + 25}
-              y={stY - stHeight + 25}
-              textAnchor="middle"
-              fontSize="14"
-              fill="white"
-            >
-              60°
-            </text>
-
-            {/* Label the sides */}
-            <text
-              x={stX + stBase / 2}
-              y={stY + 20}
-              textAnchor="middle"
-              fontSize="14"
-              fill="white"
-            >
-              2x
-            </text>
-
-            <text
-              x={stX - 15}
-              y={stY - stHeight / 2}
-              textAnchor="middle"
-              fontSize="14"
-              fill="white"
-            >
-              √3x
-            </text>
-
-            <text
-              x={stX + stBase / 2 - 25}
-              y={stY - stHeight / 2}
-              textAnchor="middle"
-              fontSize="14"
-              fill="white"
-            >
-              x
-            </text>
-
-            {/* Ratio formula */}
-            <text
-              x={center}
-              y={center - 40}
-              textAnchor="middle"
-              fontSize="16"
-              fill="white"
-            >
-              x : √3x : 2x
-            </text>
-          </svg>
-        );
-
       case 'obtuseTriangle':
         // Create an isosceles triangle with angles 120°, 30°, 30°
         const otWidth = 180;
@@ -921,7 +811,7 @@ export default function ShapeVisualizer({
         );
 
       default:
-        return <div className="text-red-500">Unknown shape type</div>;
+        return null;
     }
   };
 
