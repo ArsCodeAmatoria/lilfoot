@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import PdfDownload from '../../components/PdfDownload';
+import PotainHD40ALoadDiagram from '../../components/PotainHD40ALoadDiagram';
 
 export const metadata = {
   title: 'Potain HD40A Specifications | Self-Erect Tower Cranes | lilfoot',
@@ -32,6 +33,10 @@ export default function PotainHD40APage() {
           className="w-full object-cover"
           priority
         />
+      </div>
+
+      <div className="mb-8">
+        <PotainHD40ALoadDiagram />
       </div>
 
       <div className="mb-8 rounded-lg bg-gray-900 p-8">
