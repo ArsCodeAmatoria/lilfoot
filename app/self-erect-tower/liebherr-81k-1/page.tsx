@@ -204,12 +204,12 @@ export default function Liebherr81K1Page() {
         <h2 className="mb-4 text-xl font-bold text-white">
           LM-1 Configuration Detailed Data
         </h2>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto relative">
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="bg-gray-900">
-                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Height (m)</th>
-                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Load Capacity (m/kg)</th>
+                <th className="sticky left-0 z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Height (m)</th>
+                <th className="sticky left-[80px] z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Load Capacity (m/kg)</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">12.0m</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">15.0m</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">18.0m</th>
@@ -230,8 +230,8 @@ export default function Liebherr81K1Page() {
             </thead>
             <tbody className="divide-y divide-gray-800">
               <tr className="bg-gray-900/30 hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">48.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 12.0 <span className="font-bold">6000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-900/30 px-2 py-3 text-white font-medium whitespace-nowrap">48.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-900/30 px-2 py-3 text-white whitespace-nowrap">3.0 – 12.0 <span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">4620</td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">3730</td>
@@ -250,8 +250,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">1100</span></td>
               </tr>
               <tr className="hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">45.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 13.3 <span className="font-bold">6000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-800/20 px-2 py-3 text-white font-medium whitespace-nowrap">45.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-800/20 px-2 py-3 text-white whitespace-nowrap">3.0 – 13.3 <span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">5220</td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">4230</td>
@@ -270,8 +270,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
               </tr>
               <tr className="bg-gray-900/30 hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">42.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 14.1 <span className="font-bold">6000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-900/30 px-2 py-3 text-white font-medium whitespace-nowrap">42.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-900/30 px-2 py-3 text-white whitespace-nowrap">3.0 – 14.1 <span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">5570</td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">4520</td>
@@ -290,8 +290,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
               </tr>
               <tr className="hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">37.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 15.1 <span className="font-bold">6000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-800/20 px-2 py-3 text-white font-medium whitespace-nowrap">37.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-800/20 px-2 py-3 text-white whitespace-nowrap">3.0 – 15.1 <span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">4930</td>
@@ -310,8 +310,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
               </tr>
               <tr className="bg-gray-900/30 hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">31.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 16.3 <span className="font-bold">6000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-900/30 px-2 py-3 text-white font-medium whitespace-nowrap">31.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-900/30 px-2 py-3 text-white whitespace-nowrap">3.0 – 16.3 <span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">5370</td>
@@ -343,12 +343,12 @@ export default function Liebherr81K1Page() {
         <h2 className="mb-4 text-xl font-bold text-white">
           Load-Plus Configuration Detailed Data
         </h2>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto relative">
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="bg-gray-900">
-                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Height (m)</th>
-                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Load Capacity (m/kg)</th>
+                <th className="sticky left-0 z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Height (m)</th>
+                <th className="sticky left-[80px] z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Load Capacity (m/kg)</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">12.0m</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">15.0m</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">18.0m</th>
@@ -369,8 +369,8 @@ export default function Liebherr81K1Page() {
             </thead>
             <tbody className="divide-y divide-gray-800">
               <tr className="bg-gray-900/30 hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">48.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 12.0 <span className="font-bold">6000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-900/30 px-2 py-3 text-white font-medium whitespace-nowrap">48.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-900/30 px-2 py-3 text-white whitespace-nowrap">3.0 – 12.0 <span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">4830</td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">4030</td>
@@ -389,8 +389,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">1350</span></td>
               </tr>
               <tr className="hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">45.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 13.3 <span className="font-bold">6000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-800/20 px-2 py-3 text-white font-medium whitespace-nowrap">45.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-800/20 px-2 py-3 text-white whitespace-nowrap">3.0 – 13.3 <span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">5360</td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">4500</td>
@@ -409,8 +409,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
               </tr>
               <tr className="bg-gray-900/30 hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">42.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 14.1 <span className="font-bold">6000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-900/30 px-2 py-3 text-white font-medium whitespace-nowrap">42.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-900/30 px-2 py-3 text-white whitespace-nowrap">3.0 – 14.1 <span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">5640</td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">4710</td>
@@ -429,8 +429,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
               </tr>
               <tr className="hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">37.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 15.1 <span className="font-bold">6000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-800/20 px-2 py-3 text-white font-medium whitespace-nowrap">37.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-800/20 px-2 py-3 text-white whitespace-nowrap">3.0 – 15.1 <span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">5040</td>
@@ -449,8 +449,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
               </tr>
               <tr className="bg-gray-900/30 hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">31.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 16.3 <span className="font-bold">6000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-900/30 px-2 py-3 text-white font-medium whitespace-nowrap">31.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-900/30 px-2 py-3 text-white whitespace-nowrap">3.0 – 16.3 <span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">5470</td>
@@ -482,12 +482,12 @@ export default function Liebherr81K1Page() {
         <h2 className="mb-4 text-xl font-bold text-white">
           30° Elevated Jib Configuration Detailed Data
         </h2>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto relative">
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="bg-gray-900">
-                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Height (m)</th>
-                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Load Capacity (m/kg)</th>
+                <th className="sticky left-0 z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Height (m)</th>
+                <th className="sticky left-[80px] z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Load Capacity (m/kg)</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">12.0m</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">14.0m</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">16.0m</th>
@@ -508,8 +508,8 @@ export default function Liebherr81K1Page() {
             </thead>
             <tbody className="divide-y divide-gray-800">
               <tr className="bg-gray-900/30 hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">45.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 15.8 <span className="font-bold">3000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-900/30 px-2 py-3 text-white font-medium whitespace-nowrap">45.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-900/30 px-2 py-3 text-white whitespace-nowrap">3.0 – 15.8 <span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap">2970</td>
@@ -528,8 +528,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">1400</span></td>
               </tr>
               <tr className="hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">42.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 17.7 <span className="font-bold">3000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-800/20 px-2 py-3 text-white font-medium whitespace-nowrap">42.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-800/20 px-2 py-3 text-white whitespace-nowrap">3.0 – 17.7 <span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
@@ -548,8 +548,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
               </tr>
               <tr className="bg-gray-900/30 hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">37.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 21.2 <span className="font-bold">3000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-900/30 px-2 py-3 text-white font-medium whitespace-nowrap">37.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-900/30 px-2 py-3 text-white whitespace-nowrap">3.0 – 21.2 <span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
@@ -568,8 +568,8 @@ export default function Liebherr81K1Page() {
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
               </tr>
               <tr className="hover:bg-gray-900/50">
-                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">31.0</td>
-                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 25.3 <span className="font-bold">3000</span></td>
+                <td className="sticky left-0 z-10 bg-gray-800/20 px-2 py-3 text-white font-medium whitespace-nowrap">31.0</td>
+                <td className="sticky left-[80px] z-10 bg-gray-800/20 px-2 py-3 text-white whitespace-nowrap">3.0 – 25.3 <span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
                 <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">3000</span></td>
