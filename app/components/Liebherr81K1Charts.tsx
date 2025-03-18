@@ -20,8 +20,8 @@ const craneData = {
     power: '400V, 32A',
   },
   loadCharts: {
-    // Load-Plus LM 1 configuration (standard jib)
-    loadPlusLM1: [
+    // LM-1 configuration (standard configuration)
+    "LM1": [
       { radius: 2.8, capacity: 6000 }, // kg
       { radius: 3.3, capacity: 6000 },
       { radius: 4.0, capacity: 6000 },
@@ -49,8 +49,8 @@ const craneData = {
       { radius: 42.0, capacity: 900 },
       { radius: 45.0, capacity: 750 },
     ],
-    // 30 degree jib configuration
-    "30Degree": [
+    // Load-Plus configuration
+    "LoadPlus": [
       { radius: 2.8, capacity: 4500 }, // kg
       { radius: 3.3, capacity: 4500 },
       { radius: 4.0, capacity: 4500 },
@@ -88,7 +88,7 @@ interface Liebherr81K1ChartsProps {
 const Liebherr81K1Charts: React.FC<Liebherr81K1ChartsProps> = ({
   highlightColor = '#53C03F',
 }) => {
-  const [activeTab, setActiveTab] = useState<'loadPlusLM1' | '30Degree'>('loadPlusLM1');
+  const [activeTab, setActiveTab] = useState<'LM1' | 'LoadPlus'>('LM1');
   const [isClient, setIsClient] = useState(false);
   const chartRef = useRef<HTMLDivElement>(null);
 
@@ -203,25 +203,25 @@ const Liebherr81K1Charts: React.FC<Liebherr81K1ChartsProps> = ({
         <div className="flex">
           <button
             className={`px-4 py-3 text-sm font-medium ${
-              activeTab === 'loadPlusLM1'
+              activeTab === 'LM1'
                 ? `border-b-2 text-white border-${highlightColor.replace('#', '')}`
                 : 'text-gray-400'
             }`}
-            style={activeTab === 'loadPlusLM1' ? { borderColor: highlightColor } : {}}
-            onClick={() => setActiveTab('loadPlusLM1')}
+            style={activeTab === 'LM1' ? { borderColor: highlightColor } : {}}
+            onClick={() => setActiveTab('LM1')}
           >
-            Load-Plus LM 1 Configuration
+            LM-1 Configuration
           </button>
           <button
             className={`px-4 py-3 text-sm font-medium ${
-              activeTab === '30Degree'
+              activeTab === 'LoadPlus'
                 ? `border-b-2 text-white border-${highlightColor.replace('#', '')}`
                 : 'text-gray-400'
             }`}
-            style={activeTab === '30Degree' ? { borderColor: highlightColor } : {}}
-            onClick={() => setActiveTab('30Degree')}
+            style={activeTab === 'LoadPlus' ? { borderColor: highlightColor } : {}}
+            onClick={() => setActiveTab('LoadPlus')}
           >
-            30° Jib Configuration
+            Load-Plus Configuration
           </button>
         </div>
       </div>
