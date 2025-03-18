@@ -199,6 +199,145 @@ export default function Liebherr81K1Page() {
         </table>
       </div>
 
+      {/* LM1 Detailed Table */}
+      <div className="mb-8 rounded-lg bg-black p-4 shadow-lg overflow-auto">
+        <h2 className="mb-4 text-xl font-bold text-white">
+          LM-1 Configuration Detailed Data
+        </h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-sm">
+            <thead>
+              <tr className="bg-gray-900">
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Height (m)</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Load Capacity (m/kg)</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">12.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">15.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">18.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">21.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">23.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">25.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">27.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">29.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">31.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">33.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">35.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">37.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">40.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">42.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">45.0m</th>
+                <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">48.0m</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-800">
+              <tr className="bg-gray-900/30 hover:bg-gray-900/50">
+                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">48.0</td>
+                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 12.0 <span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">4620</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3730</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3110</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2790</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2530</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2300</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2110</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1940</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1800</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1670</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1550</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1410</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1320</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1200</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">1100</span></td>
+              </tr>
+              <tr className="hover:bg-gray-900/50">
+                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">45.0</td>
+                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 13.3 <span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">5220</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">4230</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3540</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3180</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2890</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2640</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2420</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2230</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2070</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1920</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1800</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1630</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1530</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">1400</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+              </tr>
+              <tr className="bg-gray-900/30 hover:bg-gray-900/50">
+                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">42.0</td>
+                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 14.1 <span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">5570</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">4520</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3790</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3410</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3090</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2820</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2590</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2400</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2220</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2070</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1930</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">1750</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">1650</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+              </tr>
+              <tr className="hover:bg-gray-900/50">
+                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">37.0</td>
+                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 15.1 <span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">4930</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">4150</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3740</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3400</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3110</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2870</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2650</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2460</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">2300</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">2150</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+              </tr>
+              <tr className="bg-gray-900/30 hover:bg-gray-900/50">
+                <td className="px-2 py-3 text-white font-medium whitespace-nowrap">31.0</td>
+                <td className="px-2 py-3 text-white whitespace-nowrap">3.0 – 16.3 <span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">6000</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">5370</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">4520</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">4080</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3710</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3400</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap">3130</td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"><span className="font-bold">2900</span></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+                <td className="px-2 py-3 text-white text-center whitespace-nowrap"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 text-sm text-gray-400">
+          Values in <span className="font-bold">bold</span> represent maximum capacity at the specified radius.
+          All values are shown in kilograms (kg).
+        </p>
+      </div>
+
       {/* Load-Plus Detailed Table */}
       <div className="mb-8 rounded-lg bg-black p-4 shadow-lg overflow-auto">
         <h2 className="mb-4 text-xl font-bold text-white">
