@@ -2,6 +2,7 @@ import React from 'react';
 import { FileText } from 'lucide-react';
 import PdfDownload from '../../components/PdfDownload';
 import Liebherr81K1Charts from '../../components/Liebherr81K1Charts';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Liebherr 81K.1 Specifications | Self-Erect Tower Cranes | lilfoot',
@@ -16,6 +17,16 @@ export default function Liebherr81K1Page() {
         <h1 className="mb-4 text-3xl font-bold text-white">
           Liebherr 81K.1 Self-Erect Tower Crane
         </h1>
+        <div className="mb-6 rounded-lg overflow-hidden">
+          <Image
+            src="/images/liebherr-81k-1.jpg"
+            alt="Liebherr 81K.1 Self-Erecting Tower Crane"
+            width={1200}
+            height={675}
+            className="w-full object-cover"
+            priority
+          />
+        </div>
         <p className="mb-6 text-gray-400">
           The Liebherr 81K.1 is an upgraded version of the popular 81K model,
           offering enhanced features and improved performance. With a reach of up to 45 meters
