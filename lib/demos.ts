@@ -135,7 +135,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Liebherr 81K.1',
         slug: 'self-erect-tower/liebherr-81k-1',
         description:
-          'Coming soon: Specifications and load charts for the Liebherr 81K.1 self-erecting tower crane',
+          'Detailed specifications and load charts for the Liebherr 81K.1 self-erecting tower crane',
       },
       {
         name: 'Liebherr 125k',
