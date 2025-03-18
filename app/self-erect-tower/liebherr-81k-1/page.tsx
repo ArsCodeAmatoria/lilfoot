@@ -31,6 +31,21 @@ export default function Liebherr81K1Page() {
         <Liebherr81K1Charts highlightColor="#53C03F" />
       </div>
 
+      {/* Video Section */}
+      <div className="mb-8 rounded-lg bg-black p-4 shadow-lg">
+        <h2 className="mb-4 text-xl font-bold text-white">Crane in Action</h2>
+        <div className="aspect-video w-full overflow-hidden rounded-lg">
+          <iframe
+            className="h-full w-full"
+            src="https://www.youtube.com/embed/XWXguLtVj0Y"
+            title="Liebherr 81K.1 Self-Erecting Tower Crane"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <p className="mt-3 text-gray-400">Watch the Liebherr 81K.1 self-erecting tower crane in operation, demonstrating its versatility and capabilities on the construction site.</p>
+      </div>
+
       {/* Additional Information */}
       <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="rounded-lg bg-black p-4 shadow-lg">
