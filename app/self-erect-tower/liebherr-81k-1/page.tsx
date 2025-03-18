@@ -21,7 +21,8 @@ export default function Liebherr81K1Page() {
           offering enhanced features and improved performance. With a reach of up to 45 meters
           and a maximum capacity of 6 tons in the Load-Plus configuration, it provides excellent 
           lifting capabilities for a wide range of construction projects. The crane can operate in 
-          either the standard LM-1 mode or the enhanced Load-Plus mode depending on project requirements.
+          three distinct configurations: the standard LM-1 mode, the enhanced Load-Plus mode for higher 
+          capacity, or the 30° elevated jib configuration for reaching over obstacles.
         </p>
       </div>
 
@@ -130,6 +131,9 @@ export default function Liebherr81K1Page() {
               <th className="px-4 py-3 font-semibold text-gray-300">
                 Load-Plus
               </th>
+              <th className="px-4 py-3 font-semibold text-gray-300">
+                30° Jib
+              </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-800">
@@ -137,11 +141,13 @@ export default function Liebherr81K1Page() {
               <td className="px-4 py-3 text-white">Maximum Capacity</td>
               <td className="px-4 py-3 text-white">4.5 tons</td>
               <td className="px-4 py-3 text-white">6.0 tons</td>
+              <td className="px-4 py-3 text-white">4.0 tons</td>
             </tr>
             <tr>
               <td className="px-4 py-3 text-white">Maximum Hook Height</td>
               <td className="px-4 py-3 text-white">26.0 m</td>
               <td className="px-4 py-3 text-white">40.4 m</td>
+              <td className="px-4 py-3 text-white">38.0 m</td>
             </tr>
             <tr className="bg-gray-900/30">
               <td className="px-4 py-3 text-white">
@@ -149,6 +155,7 @@ export default function Liebherr81K1Page() {
               </td>
               <td className="px-4 py-3 text-white">550 kg</td>
               <td className="px-4 py-3 text-white">750 kg</td>
+              <td className="px-4 py-3 text-white">500 kg</td>
             </tr>
             <tr>
               <td className="px-4 py-3 text-white">Best Use Case</td>
@@ -157,6 +164,9 @@ export default function Liebherr81K1Page() {
               </td>
               <td className="px-4 py-3 text-white">
                 Projects requiring higher lifting capacity
+              </td>
+              <td className="px-4 py-3 text-white">
+                Height-critical applications and working over obstacles
               </td>
             </tr>
           </tbody>
@@ -182,8 +192,8 @@ export default function Liebherr81K1Page() {
         <h2 className="mb-2 text-xl font-bold text-white">About This Data</h2>
         <p className="text-gray-400">
           The load charts shown here represent the lifting capacities of the
-          Liebherr 81K.1 self-erecting crane in both the standard LM-1 and
-          Load-Plus configurations. These values are based on manufacturer
+          Liebherr 81K.1 self-erecting crane in three configurations: the standard LM-1,
+          Load-Plus, and 30° elevated jib. These values are based on manufacturer
           specifications and may vary depending on specific conditions such as
           wind speed, ground conditions, and precise configuration.
         </p>

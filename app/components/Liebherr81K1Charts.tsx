@@ -78,6 +78,35 @@ const craneData = {
       { radius: 42.0, capacity: 650 },
       { radius: 45.0, capacity: 550 },
     ],
+    // 30° Jib configuration
+    "30Degree": [
+      { radius: 2.5, capacity: 4000 }, // kg
+      { radius: 3.0, capacity: 4000 },
+      { radius: 4.0, capacity: 4000 },
+      { radius: 5.0, capacity: 4000 },
+      { radius: 6.0, capacity: 4000 },
+      { radius: 7.0, capacity: 4000 },
+      { radius: 8.0, capacity: 3800 },
+      { radius: 9.0, capacity: 3500 },
+      { radius: 10.0, capacity: 3200 },
+      { radius: 12.0, capacity: 2800 },
+      { radius: 14.0, capacity: 2400 },
+      { radius: 16.0, capacity: 2000 },
+      { radius: 18.0, capacity: 1800 },
+      { radius: 20.0, capacity: 1600 },
+      { radius: 22.0, capacity: 1400 },
+      { radius: 24.0, capacity: 1300 },
+      { radius: 26.0, capacity: 1200 },
+      { radius: 28.0, capacity: 1100 },
+      { radius: 30.0, capacity: 1000 },
+      { radius: 32.0, capacity: 900 },
+      { radius: 34.0, capacity: 800 },
+      { radius: 36.0, capacity: 750 },
+      { radius: 38.0, capacity: 700 },
+      { radius: 40.0, capacity: 650 },
+      { radius: 42.0, capacity: 600 },
+      { radius: 45.0, capacity: 500 },
+    ],
   }
 };
 
@@ -88,7 +117,7 @@ interface Liebherr81K1ChartsProps {
 const Liebherr81K1Charts: React.FC<Liebherr81K1ChartsProps> = ({
   highlightColor = '#53C03F',
 }) => {
-  const [activeTab, setActiveTab] = useState<'LM1' | 'LoadPlus'>('LM1');
+  const [activeTab, setActiveTab] = useState<'LM1' | 'LoadPlus' | '30Degree'>('LM1');
   const [isClient, setIsClient] = useState(false);
   const chartRef = useRef<HTMLDivElement>(null);
 
@@ -222,6 +251,17 @@ const Liebherr81K1Charts: React.FC<Liebherr81K1ChartsProps> = ({
             onClick={() => setActiveTab('LoadPlus')}
           >
             Load-Plus Configuration
+          </button>
+          <button
+            className={`px-4 py-3 text-sm font-medium ${
+              activeTab === '30Degree'
+                ? `border-b-2 text-white border-${highlightColor.replace('#', '')}`
+                : 'text-gray-400'
+            }`}
+            style={activeTab === '30Degree' ? { borderColor: highlightColor } : {}}
+            onClick={() => setActiveTab('30Degree')}
+          >
+            30° Jib Configuration
           </button>
         </div>
       </div>
