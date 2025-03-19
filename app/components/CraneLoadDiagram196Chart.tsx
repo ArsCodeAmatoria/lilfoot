@@ -59,11 +59,11 @@ const CraneLoadDiagram196Chart = () => {
       {
         label: '2-Part Line (lbs)',
         data: twoPartLineData,
-        borderColor: '#ef4444', // Red color
-        backgroundColor: 'rgba(239, 68, 68, 0.2)',
+        borderColor: '#53C03F', // Changed from red to highlight color
+        backgroundColor: 'rgba(83, 192, 63, 0.2)', // Highlight color with alpha
         tension: 0.4, // For curved lines
         borderWidth: 2,
-        pointBackgroundColor: '#ef4444',
+        pointBackgroundColor: '#53C03F', // Highlight color
         pointBorderColor: '#fff',
         pointRadius: 4,
         pointHoverRadius: 6,
@@ -71,7 +71,7 @@ const CraneLoadDiagram196Chart = () => {
       {
         label: '4-Part Line (lbs)',
         data: fourPartLineData,
-        borderColor: '#3b82f6', // Blue color
+        borderColor: '#3b82f6', // Blue color remains for contrast
         backgroundColor: 'rgba(59, 130, 246, 0.2)',
         tension: 0.4, // For curved lines
         borderWidth: 2,
@@ -151,7 +151,7 @@ const CraneLoadDiagram196Chart = () => {
   return (
     <div className="space-y-8">
       {/* Crane specifications and illustrations */}
-      <div className="bg-black p-6 rounded-lg">
+      <div className="bg-black p-6 rounded-lg border border-gray-800">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Crane illustration */}
           <div className="w-full md:w-1/2 flex justify-center">
@@ -180,10 +180,10 @@ const CraneLoadDiagram196Chart = () => {
                 <circle cx="300" cy="185" r="5" className="fill-white stroke-white" />
                 
                 {/* Measurements */}
-                <text x="220" y="140" fill="#ef4444" fontSize="12">139.1 ft</text>
-                <text x="210" y="180" fill="#ef4444" fontSize="12">33.1 ft</text>
-                <text x="320" y="140" fill="#ef4444" fontSize="12">193.6 ft to 196.9 ft</text>
-                <text x="290" y="200" fill="#ef4444" fontSize="12">12,787 lbs - 14,330 lbs</text>
+                <text x="220" y="140" fill="#53C03F" fontSize="12">139.1 ft</text>
+                <text x="210" y="180" fill="#53C03F" fontSize="12">33.1 ft</text>
+                <text x="320" y="140" fill="#53C03F" fontSize="12">193.6 ft to 196.9 ft</text>
+                <text x="290" y="200" fill="#53C03F" fontSize="12">12,787 lbs - 14,330 lbs</text>
               </svg>
             </div>
           </div>
@@ -206,19 +206,19 @@ const CraneLoadDiagram196Chart = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <span className="text-gray-400">Boom Length:</span>
-                <span className="font-bold text-red-500">139.1 ft</span>
+                <span className="font-bold text-highlight">139.1 ft</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-gray-400">Height:</span>
-                <span className="font-bold text-red-500">33.1 ft</span>
+                <span className="font-bold text-highlight">33.1 ft</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-gray-400">Jib Endpoint:</span>
-                <span className="font-bold text-red-500">193.6 ft to 196.9 ft</span>
+                <span className="font-bold text-highlight">193.6 ft to 196.9 ft</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-gray-400">Load Capacities:</span>
-                <span className="font-bold text-red-500">12,787 lbs and 14,330 lbs</span>
+                <span className="font-bold text-highlight">12,787 lbs - 14,330 lbs</span>
               </div>
             </div>
           </div>
@@ -226,25 +226,25 @@ const CraneLoadDiagram196Chart = () => {
       </div>
       
       {/* Chart */}
-      <div className="bg-gray-900 p-4 rounded-lg">
+      <div className="bg-black p-6 rounded-lg border border-gray-800">
         <div className="h-80">
           <Line options={options} data={chartData} />
         </div>
       </div>
       
       {/* Load capacity table */}
-      <div>
-        <h3 className="text-xl font-bold text-white mb-4">Load Capacity Table (193.6-196.9 ft Configuration)</h3>
+      <div className="bg-black p-6 rounded-lg border border-gray-800">
+        <h3 className="text-xl font-bold text-white mb-4">Load Capacity Table (193.6-196.9 ft)</h3>
         <div className="overflow-x-auto rounded-md">
           <Table className="border-collapse">
-            <TableCaption>Load capacity chart for Terex SK 415-20 showing capacities in pounds at different distances</TableCaption>
+            <TableCaption>Load capacity chart showing capacities in pounds at different distances</TableCaption>
             <TableHeader className="bg-gray-900">
               <TableRow>
                 <TableHead className="border border-gray-800 sticky left-0 z-10 bg-gray-900">Distance (ft)</TableHead>
                 {distances.map((distance, index) => (
                   <TableHead key={index} className="border border-gray-800 text-center">
                     {index === 8 || index === 9 ? 
-                      <span className="font-bold text-red-500">{distance}</span> : distance}
+                      <span className="font-bold text-highlight">{distance}</span> : distance}
                   </TableHead>
                 ))}
               </TableRow>
@@ -257,7 +257,7 @@ const CraneLoadDiagram196Chart = () => {
                 {twoPartLineData.map((value, index) => (
                   <TableCell key={index} className="border border-gray-800 text-center">
                     {index === 8 || index === 9 ? 
-                      <span className="font-bold text-red-500">{value.toLocaleString()}</span> : 
+                      <span className="font-bold text-highlight">{value.toLocaleString()}</span> : 
                       value.toLocaleString()}
                   </TableCell>
                 ))}
@@ -269,7 +269,7 @@ const CraneLoadDiagram196Chart = () => {
                 {fourPartLineData.map((value, index) => (
                   <TableCell key={index} className="border border-gray-800 text-center">
                     {index === 8 || index === 9 ? 
-                      <span className="font-bold text-red-500">{value.toLocaleString()}</span> : 
+                      <span className="font-bold text-highlight">{value.toLocaleString()}</span> : 
                       value.toLocaleString()}
                   </TableCell>
                 ))}

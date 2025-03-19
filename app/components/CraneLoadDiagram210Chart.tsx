@@ -59,11 +59,11 @@ const CraneLoadDiagram210Chart = () => {
       {
         label: '2-Part Line (lbs)',
         data: twoPartLineData,
-        borderColor: '#ef4444', // Red color
-        backgroundColor: 'rgba(239, 68, 68, 0.2)',
+        borderColor: '#53C03F', // Changed from red to highlight color
+        backgroundColor: 'rgba(83, 192, 63, 0.2)', // Highlight color with alpha
         tension: 0.4, // For curved lines
         borderWidth: 2,
-        pointBackgroundColor: '#ef4444',
+        pointBackgroundColor: '#53C03F', // Highlight color
         pointBorderColor: '#fff',
         pointRadius: 4,
         pointHoverRadius: 6,
@@ -71,7 +71,7 @@ const CraneLoadDiagram210Chart = () => {
       {
         label: '4-Part Line (lbs)',
         data: fourPartLineData,
-        borderColor: '#3b82f6', // Blue color
+        borderColor: '#3b82f6', // Blue color remains for contrast
         backgroundColor: 'rgba(59, 130, 246, 0.2)',
         tension: 0.4, // For curved lines
         borderWidth: 2,
@@ -151,7 +151,7 @@ const CraneLoadDiagram210Chart = () => {
   return (
     <div className="space-y-8">
       {/* Crane specifications and illustrations */}
-      <div className="bg-black p-6 rounded-lg">
+      <div className="bg-black p-6 rounded-lg border border-gray-800">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Crane illustration */}
           <div className="w-full md:w-1/2 flex justify-center">
@@ -180,10 +180,10 @@ const CraneLoadDiagram210Chart = () => {
                 <circle cx="300" cy="185" r="5" className="fill-white stroke-white" />
                 
                 {/* Measurements */}
-                <text x="220" y="140" fill="#ef4444" fontSize="12">128.6 ft</text>
-                <text x="210" y="180" fill="#ef4444" fontSize="12">33.1 ft</text>
-                <text x="320" y="140" fill="#ef4444" fontSize="12">210 ft to 213.3 ft</text>
-                <text x="290" y="200" fill="#ef4444" fontSize="12">10,141 lbs - 11,685 lbs</text>
+                <text x="220" y="140" fill="#53C03F" fontSize="12">128.6 ft</text>
+                <text x="210" y="180" fill="#53C03F" fontSize="12">33.1 ft</text>
+                <text x="320" y="140" fill="#53C03F" fontSize="12">210 ft to 213.3 ft</text>
+                <text x="290" y="200" fill="#53C03F" fontSize="12">10,141 lbs - 11,685 lbs</text>
               </svg>
             </div>
           </div>
@@ -206,19 +206,19 @@ const CraneLoadDiagram210Chart = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <span className="text-gray-400">Boom Length:</span>
-                <span className="font-bold text-red-500">128.6 ft</span>
+                <span className="font-bold text-highlight">128.6 ft</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-gray-400">Height:</span>
-                <span className="font-bold text-red-500">33.1 ft</span>
+                <span className="font-bold text-highlight">33.1 ft</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-gray-400">Jib Endpoint:</span>
-                <span className="font-bold text-red-500">210 ft to 213.3 ft</span>
+                <span className="font-bold text-highlight">210 ft to 213.3 ft</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-gray-400">Load Capacities:</span>
-                <span className="font-bold text-red-500">10,141 lbs and 11,685 lbs</span>
+                <span className="font-bold text-highlight">10,141 lbs and 11,685 lbs</span>
               </div>
             </div>
           </div>
@@ -226,14 +226,14 @@ const CraneLoadDiagram210Chart = () => {
       </div>
       
       {/* Chart */}
-      <div className="bg-gray-900 p-4 rounded-lg">
+      <div className="bg-black p-6 rounded-lg border border-gray-800">
         <div className="h-80">
           <Line options={options} data={chartData} />
         </div>
       </div>
       
       {/* Load capacity table */}
-      <div>
+      <div className="bg-black p-6 rounded-lg border border-gray-800">
         <h3 className="text-xl font-bold text-white mb-4">Load Capacity Table (210-213.3 ft Configuration)</h3>
         <div className="overflow-x-auto rounded-md">
           <Table className="border-collapse">
@@ -244,7 +244,7 @@ const CraneLoadDiagram210Chart = () => {
                 {distances.map((distance, index) => (
                   <TableHead key={index} className="border border-gray-800 text-center">
                     {index === 9 || index === 10 ? 
-                      <span className="font-bold text-red-500">{distance}</span> : distance}
+                      <span className="font-bold text-highlight">{distance}</span> : distance}
                   </TableHead>
                 ))}
               </TableRow>
@@ -257,7 +257,7 @@ const CraneLoadDiagram210Chart = () => {
                 {twoPartLineData.map((value, index) => (
                   <TableCell key={index} className="border border-gray-800 text-center">
                     {index === 9 || index === 10 ? 
-                      <span className="font-bold text-red-500">{value.toLocaleString()}</span> : 
+                      <span className="font-bold text-highlight">{value.toLocaleString()}</span> : 
                       value.toLocaleString()}
                   </TableCell>
                 ))}
@@ -269,7 +269,7 @@ const CraneLoadDiagram210Chart = () => {
                 {fourPartLineData.map((value, index) => (
                   <TableCell key={index} className="border border-gray-800 text-center">
                     {index === 9 || index === 10 ? 
-                      <span className="font-bold text-red-500">{value.toLocaleString()}</span> : 
+                      <span className="font-bold text-highlight">{value.toLocaleString()}</span> : 
                       value.toLocaleString()}
                   </TableCell>
                 ))}

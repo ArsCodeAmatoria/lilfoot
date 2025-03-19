@@ -59,11 +59,11 @@ const TerexLoadDiagram229Chart = () => {
       {
         label: '2-Part Line (lbs)',
         data: twoPartLineData,
-        borderColor: '#ef4444', // Red color
-        backgroundColor: 'rgba(239, 68, 68, 0.2)',
+        borderColor: '#53C03F', // Changed from red to highlight color
+        backgroundColor: 'rgba(83, 192, 63, 0.2)', // Highlight color with alpha
         tension: 0.4, // For curved lines
         borderWidth: 2,
-        pointBackgroundColor: '#ef4444',
+        pointBackgroundColor: '#53C03F', // Highlight color
         pointBorderColor: '#fff',
         pointRadius: 4,
         pointHoverRadius: 6,
@@ -71,7 +71,7 @@ const TerexLoadDiagram229Chart = () => {
       {
         label: '4-Part Line (lbs)',
         data: fourPartLineData,
-        borderColor: '#3b82f6', // Blue color
+        borderColor: '#3b82f6', // Blue color remains for contrast
         backgroundColor: 'rgba(59, 130, 246, 0.2)',
         tension: 0.4, // For curved lines
         borderWidth: 2,

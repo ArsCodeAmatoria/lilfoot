@@ -37,13 +37,13 @@ export default function TerexSK41520Page() {
       <div className="flex flex-col md:flex-row gap-6">
         <div className="w-full md:w-2/3">
           <h1 className="mb-4 text-3xl font-bold text-white">
-            Terex SK 415-20 Tower Crane
+            Terex <span className="text-highlight">SK 415-20</span> Tower Crane
           </h1>
           <p className="text-gray-400 mb-6">
             The Terex SK 415-20 is a heavy-duty tower crane with exceptional
             lifting capacity, designed for major infrastructure and high-rise
-            construction projects. With its impressive 20-tonne maximum lifting capacity
-            and 415 meter-tonne capacity rating, it's ideal for demanding construction
+            construction projects. With its impressive <span className="text-highlight">20-tonne maximum lifting capacity</span>
+            and <span className="text-highlight">415 meter-tonne capacity rating</span>, it's ideal for demanding construction
             applications requiring significant lifting power.
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function TerexSK41520Page() {
 
       {/* Key Specifications */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-black p-5 rounded-lg shadow-lg">
+        <div className="bg-black p-5 rounded-lg shadow-lg border border-gray-800">
           <div className="flex items-center mb-3">
             <Maximize className="text-highlight mr-3" size={22} />
             <h3 className="text-lg font-semibold">Maximum Capacity</h3>
@@ -70,7 +70,7 @@ export default function TerexSK41520Page() {
           <p className="text-gray-400 text-sm mt-1">At minimum working radius of 18.0m</p>
         </div>
         
-        <div className="bg-black p-5 rounded-lg shadow-lg">
+        <div className="bg-black p-5 rounded-lg shadow-lg border border-gray-800">
           <div className="flex items-center mb-3">
             <Ruler className="text-highlight mr-3" size={22} />
             <h3 className="text-lg font-semibold">Maximum Jib Length</h3>
@@ -79,7 +79,7 @@ export default function TerexSK41520Page() {
           <p className="text-gray-400 text-sm mt-1">With capacity of 3,200 kg at max radius</p>
         </div>
         
-        <div className="bg-black p-5 rounded-lg shadow-lg">
+        <div className="bg-black p-5 rounded-lg shadow-lg border border-gray-800">
           <div className="flex items-center mb-3">
             <Weight className="text-highlight mr-3" size={22} />
             <h3 className="text-lg font-semibold">Hook Height</h3>
@@ -90,7 +90,7 @@ export default function TerexSK41520Page() {
       </div>
 
       {/* PDF Download Section */}
-      <div className="mb-4">
+      <div className="mb-4 bg-black p-6 rounded-lg shadow-lg border border-gray-800">
         <h2 className="text-xl font-bold text-white mb-4 flex items-center">
           <FileText className="mr-2 text-highlight" size={24} />
           Documentation
@@ -104,7 +104,7 @@ export default function TerexSK41520Page() {
       </div>
 
       {/* Crane Overview Section */}
-      <div className="bg-black p-6 rounded-lg shadow-lg">
+      <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800">
         <h2 className="text-xl font-bold text-white mb-4">Crane Overview</h2>
         <p className="text-gray-400 mb-4">
           The Terex SK 415-20 is a powerful hammerhead tower crane designed for heavy lifting 
@@ -138,7 +138,7 @@ export default function TerexSK41520Page() {
         <TerexSpeedSpecsWrapper />
 
         {/* Technical Specifications Table */}
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto bg-black p-6 rounded-lg shadow-lg border border-gray-800">
           <table className="w-full border-collapse">
             <thead>
               <tr className="bg-gray-900 border-b border-gray-800">
@@ -194,7 +194,7 @@ export default function TerexSK41520Page() {
       </div>
 
       {/* Key Features Grid */}
-      <div>
+      <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800">
         <h2 className="text-xl font-bold text-white mb-4">Key Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-gray-900 p-4 rounded-lg border-l-4 border-highlight">
@@ -248,7 +248,7 @@ export default function TerexSK41520Page() {
       </div>
 
       {/* Applications Section */}
-      <div className="bg-black p-6 rounded-lg shadow-lg">
+      <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800">
         <h2 className="text-xl font-bold text-white mb-4">Applications</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-gray-900 p-4 rounded-lg">
@@ -280,64 +280,55 @@ export default function TerexSK41520Page() {
         <div className="container mx-auto">
           <h2 className="text-2xl font-bold text-white mb-6">Performance Data</h2>
           
-          {/* 246.1 ft Configuration Load Diagram Chart */}
-          <div className="mb-10">
-            <h3 className="text-xl text-white mb-4">246.1 ft Configuration - Load Diagram Chart</h3>
+          <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800 mb-10">
+            <h3 className="text-xl text-white mb-4"><span className="text-highlight">246.1 ft</span> Configuration - Load Diagram Chart</h3>
             <TerexLoadDiagramWrapper />
           </div>
           
-          {/* 229.7 ft Configuration Load Diagram Chart */}
-          <div className="mb-10">
-            <h3 className="text-xl text-white mb-4">229.7 ft Configuration - Load Diagram Chart</h3>
+          <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800 mb-10">
+            <h3 className="text-xl text-white mb-4"><span className="text-highlight">229.7 ft</span> Configuration - Load Diagram Chart</h3>
             <TerexLoadDiagram229Wrapper />
           </div>
           
-          {/* 210-213.3 ft Configuration Load Diagram Chart */}
-          <div className="mb-10">
-            <h3 className="text-xl text-white mb-4">210-213.3 ft Configuration - Load Diagram Chart</h3>
+          <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800 mb-10">
+            <h3 className="text-xl text-white mb-4"><span className="text-highlight">209.6-212.9 ft</span> Configuration - Load Diagram Chart</h3>
             <CraneLoadDiagram210Wrapper />
           </div>
           
-          {/* 193.6-196.9 ft Configuration Load Diagram Chart */}
-          <div className="mb-10">
-            <h3 className="text-xl text-white mb-4">193.6-196.9 ft Configuration - Load Diagram Chart</h3>
+          <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800 mb-10">
+            <h3 className="text-xl text-white mb-4"><span className="text-highlight">193.6-196.9 ft</span> Configuration - Load Diagram Chart</h3>
             <CraneLoadDiagram196Wrapper />
           </div>
           
-          {/* 177.2-180.5 ft Configuration Load Diagram Chart */}
-          <div className="mb-10">
-            <h3 className="text-xl text-white mb-4">177.2-180.5 ft Configuration - Load Diagram Chart</h3>
+          <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800 mb-10">
+            <h3 className="text-xl text-white mb-4"><span className="text-highlight">177.2-180.5 ft</span> Configuration - Load Diagram Chart</h3>
             <CraneLoadDiagram180Wrapper />
           </div>
 
-          {/* 160.8-164.1 ft Configuration Load Diagram Chart */}
-          <div className="mb-10">
-            <h3 className="text-xl text-white mb-4">160.8-164.1 ft Configuration - Load Diagram Chart</h3>
+          <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800 mb-10">
+            <h3 className="text-xl text-white mb-4"><span className="text-highlight">160.8-164.1 ft</span> Configuration - Load Diagram Chart</h3>
             <CraneLoadDiagram164Wrapper />
           </div>
 
-          {/* 144.4-147.6 ft Configuration Load Diagram Chart */}
-          <div className="mb-10">
-            <h3 className="text-xl text-white mb-4">144.4-147.6 ft Configuration - Load Diagram Chart</h3>
+          <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800 mb-10">
+            <h3 className="text-xl text-white mb-4"><span className="text-highlight">144.4-147.6 ft</span> Configuration - Load Diagram Chart</h3>
             <CraneLoadDiagram147Wrapper />
           </div>
 
-          {/* 128-131.2 ft Configuration Load Diagram Chart */}
-          <div className="mb-10">
-            <h3 className="text-xl text-white mb-4">128-131.2 ft Configuration - Load Diagram Chart</h3>
+          <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800 mb-10">
+            <h3 className="text-xl text-white mb-4"><span className="text-highlight">128-131.2 ft</span> Configuration - Load Diagram Chart</h3>
             <CraneLoadDiagram131Wrapper />
           </div>
 
-          {/* 111.6-114.8 ft Configuration Load Diagram Chart */}
-          <div className="mb-10">
-            <h3 className="text-xl text-white mb-4">111.6-114.8 ft Configuration - Load Diagram Chart</h3>
+          <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800 mb-10">
+            <h3 className="text-xl text-white mb-4"><span className="text-highlight">111.6-114.8 ft</span> Configuration - Load Diagram Chart</h3>
             <CraneLoadDiagram114Wrapper />
           </div>
         </div>
       </section>
       
       {/* Additional Information */}
-      <div className="bg-black p-6 rounded-lg shadow-lg">
+      <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800">
         <h2 className="text-xl font-bold text-white mb-4">Additional Information</h2>
         <p className="text-gray-400 mb-4">
           The Terex SK 415-20 tower crane requires proper foundation preparation and anchoring according 
