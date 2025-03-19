@@ -19,7 +19,7 @@ const SpeedLoadChart = dynamic(
 
 const TerexDrivingUnitSection: React.FC = () => {
   return (
-    <div className="bg-black p-6 rounded-lg shadow-lg">
+    <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800">
       <h3 className="text-xl font-semibold text-white mb-4">Driving Units Performance</h3>
       <p className="text-gray-400 mb-6">
         The Terex SK 415-20 is available with different frequency-controlled hoist gear options, 
@@ -28,8 +28,8 @@ const TerexDrivingUnitSection: React.FC = () => {
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         {/* 45 kW FU Driving Unit */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-white">45 kW FU Driving Unit</h4>
+        <div className="space-y-4 bg-gray-900/30 p-4 rounded-lg border border-gray-800">
+          <h4 className="text-lg font-semibold text-highlight">45 kW FU Driving Unit</h4>
           <div className="overflow-x-auto">
             <Table className="w-full">
               <TableHeader>
@@ -60,8 +60,8 @@ const TerexDrivingUnitSection: React.FC = () => {
         </div>
         
         {/* 60 kW FU Driving Unit */}
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold text-white">60 kW FU Driving Unit</h4>
+        <div className="space-y-4 bg-gray-900/30 p-4 rounded-lg border border-gray-800">
+          <h4 className="text-lg font-semibold text-highlight">60 kW FU Driving Unit</h4>
           <div className="overflow-x-auto">
             <Table className="w-full">
               <TableHeader>
@@ -94,26 +94,26 @@ const TerexDrivingUnitSection: React.FC = () => {
       
       {/* Additional Driving Units */}
       <div className="mt-8">
-        <h4 className="text-lg font-semibold text-white mb-3">Additional Driving Unit Options</h4>
+        <h4 className="text-lg font-semibold text-highlight mb-3">Additional Driving Unit Options</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="bg-gray-900 p-4 rounded-lg">
-            <h5 className="text-base font-medium text-white mb-2">30 kW FU Driving Unit</h5>
+          <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+            <h5 className="text-base font-medium text-highlight mb-2">30 kW FU Driving Unit</h5>
             <ul className="text-gray-400 text-sm space-y-1">
               <li>• Max Power: 30 kW</li>
               <li>• Max Speed: 75 m/min</li>
               <li>• Max Capacity: 15.00 t</li>
             </ul>
           </div>
-          <div className="bg-gray-900 p-4 rounded-lg">
-            <h5 className="text-base font-medium text-white mb-2">75 kW FU Driving Unit</h5>
+          <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+            <h5 className="text-base font-medium text-highlight mb-2">75 kW FU Driving Unit</h5>
             <ul className="text-gray-400 text-sm space-y-1">
               <li>• Max Power: 75 kW</li>
               <li>• Max Speed: 130 m/min</li>
               <li>• Max Capacity: 20.00 t</li>
             </ul>
           </div>
-          <div className="bg-gray-900 p-4 rounded-lg">
-            <h5 className="text-base font-medium text-white mb-2">90 kW FU Driving Unit</h5>
+          <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+            <h5 className="text-base font-medium text-highlight mb-2">90 kW FU Driving Unit</h5>
             <ul className="text-gray-400 text-sm space-y-1">
               <li>• Max Power: 90 kW</li>
               <li>• Max Speed: 150 m/min</li>

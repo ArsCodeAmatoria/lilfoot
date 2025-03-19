@@ -6,9 +6,9 @@ const TerexHoistingSpecs = () => {
   return (
     <div className="space-y-8">
       {/* Power Supply Section */}
-      <Card>
+      <Card className="border border-gray-800 bg-black">
         <CardHeader>
-          <CardTitle className="text-red-600 font-bold">
+          <CardTitle className="text-highlight font-bold">
             Power Supply | Alimentation électrique | Stromversorgung
           </CardTitle>
         </CardHeader>
@@ -44,9 +44,9 @@ const TerexHoistingSpecs = () => {
       </Card>
 
       {/* Hoisting Table Section */}
-      <Card>
+      <Card className="border border-gray-800 bg-black">
         <CardHeader>
-          <CardTitle className="text-red-600 font-bold">
+          <CardTitle className="text-highlight font-bold">
             Hoisting | Levage | Heben
           </CardTitle>
         </CardHeader>

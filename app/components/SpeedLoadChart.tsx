@@ -47,7 +47,7 @@ const SpeedLoadChart: React.FC<SpeedLoadChartProps> = ({ unitType }) => {
       title: "Speed vs Load Capacity - 45 kW FU",
       loadPoints: [20.00, 5.50],
       speedPoints: [25, 90],
-      color: "#f59e0b" // Amber color
+      color: "#53C03F" // Highlight color
     },
     "60kW": {
       title: "Speed vs Load Capacity - 60 kW FU",
