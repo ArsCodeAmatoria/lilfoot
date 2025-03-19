@@ -218,7 +218,7 @@ const CraneLoadDiagram147Chart = () => {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-gray-400">Load Capacities:</span>
-                <span className="font-bold text-highlight">22,487 lbs and 22,046 lbs</span>
+                <span className="font-bold text-highlight">22,487 lbs - 22,046 lbs</span>
               </div>
             </div>
           </div>
@@ -226,18 +226,18 @@ const CraneLoadDiagram147Chart = () => {
       </div>
       
       {/* Chart */}
-      <div className="bg-gray-900 p-4 rounded-lg">
+      <div className="bg-black p-6 rounded-lg border border-gray-800">
         <div className="h-80">
           <Line options={options} data={chartData} />
         </div>
       </div>
       
       {/* Load capacity table */}
-      <div>
-        <h3 className="text-xl font-bold text-white mb-4">Load Capacity Table (144.4-147.6 ft Configuration)</h3>
+      <div className="bg-black p-6 rounded-lg border border-gray-800">
+        <h3 className="text-xl font-bold text-white mb-4">Load Capacity Table (144.4-147.6 ft)</h3>
         <div className="overflow-x-auto rounded-md">
           <Table className="border-collapse">
-            <TableCaption>Load capacity chart for Terex SK 415-20 showing capacities in pounds at different distances</TableCaption>
+            <TableCaption>Load capacity chart showing capacities in pounds at different distances</TableCaption>
             <TableHeader className="bg-gray-900">
               <TableRow>
                 <TableHead className="border border-gray-800 sticky left-0 z-10 bg-gray-900">Distance (ft)</TableHead>

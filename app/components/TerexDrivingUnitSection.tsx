@@ -34,24 +34,24 @@ const TerexDrivingUnitSection: React.FC = () => {
             <Table className="w-full">
               <TableHeader>
                 <TableRow className="bg-gray-900">
-                  <TableHead className="text-gray-400 font-medium">Power</TableHead>
-                  <TableHead className="text-gray-400 font-medium">Max kVA</TableHead>
-                  <TableHead className="text-gray-400 font-medium">Max Layers</TableHead>
-                  <TableHead className="text-gray-400 font-medium">Speed (m/min)</TableHead>
-                  <TableHead className="text-gray-400 font-medium">Load Capacity (t)</TableHead>
+                  <TableHead className="text-gray-400 font-medium border border-gray-800">Power</TableHead>
+                  <TableHead className="text-gray-400 font-medium border border-gray-800">Max kVA</TableHead>
+                  <TableHead className="text-gray-400 font-medium border border-gray-800">Max Layers</TableHead>
+                  <TableHead className="text-gray-400 font-medium border border-gray-800">Speed (m/min)</TableHead>
+                  <TableHead className="text-gray-400 font-medium border border-gray-800">Load Capacity (t)</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 <TableRow className="border-b border-gray-800">
-                  <TableCell rowSpan={2} className="font-medium">45 kW FU</TableCell>
-                  <TableCell rowSpan={2}>65.0 kVA</TableCell>
-                  <TableCell rowSpan={2}>8 Layers</TableCell>
-                  <TableCell>0 - 25</TableCell>
-                  <TableCell>20.00 t</TableCell>
+                  <TableCell rowSpan={2} className="font-medium border border-gray-800">45 kW FU</TableCell>
+                  <TableCell rowSpan={2} className="border border-gray-800">65.0 kVA</TableCell>
+                  <TableCell rowSpan={2} className="border border-gray-800">8 Layers</TableCell>
+                  <TableCell className="border border-gray-800">0 - 25</TableCell>
+                  <TableCell className="border border-gray-800">20.00 t</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>0 - 90</TableCell>
-                  <TableCell>5.50 t</TableCell>
+                  <TableCell className="border border-gray-800">0 - 90</TableCell>
+                  <TableCell className="border border-gray-800">5.50 t</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -66,24 +66,24 @@ const TerexDrivingUnitSection: React.FC = () => {
             <Table className="w-full">
               <TableHeader>
                 <TableRow className="bg-gray-900">
-                  <TableHead className="text-gray-400 font-medium">Power</TableHead>
-                  <TableHead className="text-gray-400 font-medium">Max kVA</TableHead>
-                  <TableHead className="text-gray-400 font-medium">Max Layers</TableHead>
-                  <TableHead className="text-gray-400 font-medium">Speed (m/min)</TableHead>
-                  <TableHead className="text-gray-400 font-medium">Load Capacity (t)</TableHead>
+                  <TableHead className="text-gray-400 font-medium border border-gray-800">Power</TableHead>
+                  <TableHead className="text-gray-400 font-medium border border-gray-800">Max kVA</TableHead>
+                  <TableHead className="text-gray-400 font-medium border border-gray-800">Max Layers</TableHead>
+                  <TableHead className="text-gray-400 font-medium border border-gray-800">Speed (m/min)</TableHead>
+                  <TableHead className="text-gray-400 font-medium border border-gray-800">Load Capacity (t)</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 <TableRow className="border-b border-gray-800">
-                  <TableCell rowSpan={2} className="font-medium">60 kW FU</TableCell>
-                  <TableCell rowSpan={2}>85.0 kVA</TableCell>
-                  <TableCell rowSpan={2}>8 Layers</TableCell>
-                  <TableCell>0 - 30</TableCell>
-                  <TableCell>20.00 t</TableCell>
+                  <TableCell rowSpan={2} className="font-medium border border-gray-800">60 kW FU</TableCell>
+                  <TableCell rowSpan={2} className="border border-gray-800">85.0 kVA</TableCell>
+                  <TableCell rowSpan={2} className="border border-gray-800">8 Layers</TableCell>
+                  <TableCell className="border border-gray-800">0 - 30</TableCell>
+                  <TableCell className="border border-gray-800">20.00 t</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>0 - 115</TableCell>
-                  <TableCell>6.50 t</TableCell>
+                  <TableCell className="border border-gray-800">0 - 115</TableCell>
+                  <TableCell className="border border-gray-800">6.50 t</TableCell>
                 </TableRow>
               </TableBody>
             </Table>

@@ -162,7 +162,7 @@ const SpeedLoadChart: React.FC<SpeedLoadChartProps> = ({ unitType }) => {
   };
 
   return (
-    <div className="w-full h-64 bg-gray-800 rounded-lg p-2">
+    <div className="w-full h-64 bg-gray-800 rounded-lg p-2 border border-gray-800">
       <Line options={options} data={chartData} />
     </div>
   );

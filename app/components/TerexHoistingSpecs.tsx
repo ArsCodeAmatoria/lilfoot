@@ -55,85 +55,85 @@ const TerexHoistingSpecs = () => {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-[200px]">Crane Model</TableHead>
-                  <TableHead>Load (lbs)</TableHead>
-                  <TableHead>Speed (ft/min)</TableHead>
-                  <TableHead>Power (kW)</TableHead>
+                  <TableHead className="w-[200px] border border-gray-800">Crane Model</TableHead>
+                  <TableHead className="border border-gray-800">Load (lbs)</TableHead>
+                  <TableHead className="border border-gray-800">Speed (ft/min)</TableHead>
+                  <TableHead className="border border-gray-800">Power (kW)</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {/* SR WB 66-100/4F */}
                 <TableRow>
-                  <TableCell className="font-semibold" rowSpan={8}>SR WB 66-100/4F</TableCell>
-                  <TableCell>5,512 🔗 2-Part</TableCell>
-                  <TableCell>0 ➝ 440</TableCell>
-                  <TableCell rowSpan={4}>66 kW</TableCell>
+                  <TableCell className="font-semibold border border-gray-800" rowSpan={8}>SR WB 66-100/4F</TableCell>
+                  <TableCell className="border border-gray-800">5,512 🔗 2-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 440</TableCell>
+                  <TableCell className="border border-gray-800" rowSpan={4}>66 kW</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>9,259 🔗 2-Part</TableCell>
-                  <TableCell>0 ➝ 275</TableCell>
+                  <TableCell className="border border-gray-800">9,259 🔗 2-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 275</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>15,653 🔗 2-Part</TableCell>
-                  <TableCell>0 ➝ 177</TableCell>
+                  <TableCell className="border border-gray-800">15,653 🔗 2-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 177</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>22,046 🔗 2-Part</TableCell>
-                  <TableCell>0 ➝ 110</TableCell>
+                  <TableCell className="border border-gray-800">22,046 🔗 2-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 110</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>11,023 🔗 4-Part</TableCell>
-                  <TableCell>0 ➝ 220</TableCell>
-                  <TableCell rowSpan={4}></TableCell>
+                  <TableCell className="border border-gray-800">11,023 🔗 4-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 220</TableCell>
+                  <TableCell className="border border-gray-800" rowSpan={4}></TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>18,519 🔗 4-Part</TableCell>
-                  <TableCell>0 ➝ 138</TableCell>
+                  <TableCell className="border border-gray-800">18,519 🔗 4-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 138</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>31,306 🔗 4-Part</TableCell>
-                  <TableCell>0 ➝ 89</TableCell>
+                  <TableCell className="border border-gray-800">31,306 🔗 4-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 89</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>44,092 🔗 4-Part</TableCell>
-                  <TableCell>0 ➝ 55</TableCell>
+                  <TableCell className="border border-gray-800">44,092 🔗 4-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 55</TableCell>
                 </TableRow>
 
                 {/* SR WB 102-100/4F */}
                 <TableRow>
-                  <TableCell className="font-semibold" rowSpan={8}>SR WB 102-100/4F</TableCell>
-                  <TableCell>6,173 🔗 2-Part</TableCell>
-                  <TableCell>0 ➝ 525</TableCell>
-                  <TableCell rowSpan={4}>102 kW</TableCell>
+                  <TableCell className="font-semibold border border-gray-800" rowSpan={8}>SR WB 102-100/4F</TableCell>
+                  <TableCell className="border border-gray-800">6,173 🔗 2-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 525</TableCell>
+                  <TableCell className="border border-gray-800" rowSpan={4}>102 kW</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>10,582 🔗 2-Part</TableCell>
-                  <TableCell>0 ➝ 328.1</TableCell>
+                  <TableCell className="border border-gray-800">10,582 🔗 2-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 328.1</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>17,637 🔗 2-Part</TableCell>
-                  <TableCell>0 ➝ 206.7</TableCell>
+                  <TableCell className="border border-gray-800">17,637 🔗 2-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 206.7</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>22,046 🔗 2-Part</TableCell>
-                  <TableCell>0 ➝ 131.2</TableCell>
+                  <TableCell className="border border-gray-800">22,046 🔗 2-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 131.2</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>12,346 🔗 4-Part</TableCell>
-                  <TableCell>0 ➝ 262.5</TableCell>
-                  <TableCell rowSpan={4}></TableCell>
+                  <TableCell className="border border-gray-800">12,346 🔗 4-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 262.5</TableCell>
+                  <TableCell className="border border-gray-800" rowSpan={4}></TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>21,164 🔗 4-Part</TableCell>
-                  <TableCell>0 ➝ 196.9</TableCell>
+                  <TableCell className="border border-gray-800">21,164 🔗 4-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 196.9</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>35,274 🔗 4-Part</TableCell>
-                  <TableCell>0 ➝ 101.7</TableCell>
+                  <TableCell className="border border-gray-800">35,274 🔗 4-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 101.7</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>44,092 🔗 4-Part</TableCell>
-                  <TableCell>0 ➝ 65.6</TableCell>
+                  <TableCell className="border border-gray-800">44,092 🔗 4-Part</TableCell>
+                  <TableCell className="border border-gray-800">0 ➝ 65.6</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
