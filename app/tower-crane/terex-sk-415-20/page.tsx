@@ -23,6 +23,7 @@ import CraneLoadDiagram114Wrapper from '../../components/CraneLoadDiagram114Wrap
 import TerexHoistingSpecs from '../../components/TerexHoistingSpecs';
 import TerexSpeedSpecsWrapper from '../../components/TerexSpeedSpecsWrapper';
 import TerexTowerConfigs from '../../components/TerexTowerConfigs';
+import { Card, CardHeader, CardTitle, CardContent } from '#/components/ui/card';
 
 export const metadata = {
   title: 'Terex SK 415-20 Specifications | Tower Cranes | lilfoot',
@@ -251,28 +252,208 @@ export default function TerexSK41520Page() {
       <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800">
         <h2 className="text-xl font-bold text-white mb-4">Applications</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-gray-900 p-4 rounded-lg">
+          <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
             <h3 className="text-lg font-semibold text-highlight mb-2">High-Rise Construction</h3>
             <p className="text-gray-400">
               Ideal for constructing skyscrapers and tall buildings where significant lifting capacity
               and height are required for structural elements and materials.
             </p>
           </div>
-          <div className="bg-gray-900 p-4 rounded-lg">
+          <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
             <h3 className="text-lg font-semibold text-highlight mb-2">Infrastructure Projects</h3>
             <p className="text-gray-400">
               Perfect for bridges, dams, power plants, and other large-scale infrastructure projects
               requiring heavy lifting capabilities and precise placement.
             </p>
           </div>
-          <div className="bg-gray-900 p-4 rounded-lg">
+          <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
             <h3 className="text-lg font-semibold text-highlight mb-2">Industrial Construction</h3>
             <p className="text-gray-400">
-              Suitable for industrial facilities, refineries, and manufacturing plants where heavy
-              equipment and structural components need to be precisely positioned.
+              Suitable for manufacturing facilities, refineries, and industrial complexes where
+              heavy machinery and equipment need to be installed with precision.
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Tower Section */}
+      <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800">
+        <Card className="border border-gray-800 bg-black">
+          <CardHeader>
+            <CardTitle className="text-highlight font-bold">
+              TOWER | Tour | Torre | Torre
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                  <h3 className="text-lg font-semibold text-highlight mb-2">Tower Height</h3>
+                  <ul className="text-gray-300 space-y-2">
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Base Height: 33.1 ft (10.1 m)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Standard Height: 164.1 ft (50 m)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Maximum Free Standing: 213.3 ft (65 m)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Maximum Anchored: 246.1 ft (75 m)</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                  <h3 className="text-lg font-semibold text-highlight mb-2">Tower Components</h3>
+                  <ul className="text-gray-300 space-y-2">
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Standard Mast Section: 9.8 ft (3 m)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Tower Width: 6.6 ft (2 m)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Climbing Cage: Integrated hydraulic system</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Anchoring: Multiple tie-in options</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Standard Configurations Section */}
+      <TerexTowerConfigs />
+
+      {/* Turn (Slewing) Section */}
+      <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800">
+        <Card className="border border-gray-800 bg-black">
+          <CardHeader>
+            <CardTitle className="text-highlight font-bold">
+              TURN | Tour | Giro | Rotazione
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                  <h3 className="text-lg font-semibold text-highlight mb-2">Slewing System</h3>
+                  <ul className="text-gray-300 space-y-2">
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Drive Type: Electric slewing gear</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Speed Range: 0 - 0.7 rpm</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Motor Power: 2 × 5.0 kW</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Control: Frequency-controlled</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                  <h3 className="text-lg font-semibold text-highlight mb-2">Slewing Specifications</h3>
+                  <ul className="text-gray-300 space-y-2">
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Slewing Radius: 360° continuous</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Slewing Bearing: Ball bearing slew ring</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Braking System: Automatic/manual</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Wind Operation Limit: 45 mph (72 km/h)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Jib Section */}
+      <div className="bg-black p-6 rounded-lg shadow-lg border border-gray-800">
+        <Card className="border border-gray-800 bg-black">
+          <CardHeader>
+            <CardTitle className="text-highlight font-bold">
+              JIB | Flèche | Pluma | Braccio
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                  <h3 className="text-lg font-semibold text-highlight mb-2">Jib Specifications</h3>
+                  <ul className="text-gray-300 space-y-2">
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Maximum Length: 213.3 ft (65 m)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Minimum Length: 114.8 ft (35 m)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Standard Jib Segment: 16.4 ft (5 m)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Jib Tip Capacity: 3,200 kg at 65 m</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                  <h3 className="text-lg font-semibold text-highlight mb-2">Trolley System</h3>
+                  <ul className="text-gray-300 space-y-2">
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Trolley Type: Electric rope-driven</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Trolley Speed: 0 - 60 m/min</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Drive Power: 5.5 kW</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-highlight">•</span>
+                      <span>Control: Frequency-controlled</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Performance Data Section */}
