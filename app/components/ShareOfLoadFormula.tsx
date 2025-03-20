@@ -94,60 +94,87 @@ const ShareOfLoadFormula = () => {
         <CardContent className="pt-6">
           <div className="w-full h-[400px] relative bg-gray-800 rounded-lg border border-gray-700 p-4">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <svg width="300" height="200" viewBox="0 0 300 200" className="overflow-visible">
+              <svg width="300" height="250" viewBox="0 0 300 250" className="overflow-visible">
+                {/* Crane Hook at the top */}
+                <path d="M150,20 C160,20 160,30 160,40 L160,50 C160,60 150,60 150,60 C150,60 140,60 140,50 L140,40 C140,30 140,20 150,20" 
+                      fill="#d1d5db" stroke="#d1d5db" strokeWidth="2" />
+                
+                {/* Main Lifting Line */}
+                <line x1="150" y1="60" x2="150" y2="80" stroke="white" strokeWidth="2" />
+                
+                {/* Lifting/Spreader Beam */}
+                <rect x="60" y="80" width="180" height="10" fill="#888888" stroke="#666666" />
+                
+                {/* Left Vertical Sling - Shorter */}
+                <line x1="80" y1="90" x2="80" y2="110" stroke="red" strokeWidth="2" />
+                <text x="65" y="105" className="text-xs fill-red-400 font-mono">Sling 1</text>
+                
+                {/* Right Vertical Sling - Longer */}
+                <line x1="220" y1="90" x2="220" y2="140" stroke="blue" strokeWidth="2" />
+                <text x="225" y="115" className="text-xs fill-blue-400 font-mono">Sling 2</text>
+                
+                {/* L-Shaped Object */}
                 {/* Horizontal Bar of L */}
-                <rect x="50" y="100" width="200" height="20" fill="#53C03F" />
+                <rect x="50" y="140" width="200" height="20" fill="#53C03F" />
                 
                 {/* Vertical Bar of L */}
-                <rect x="50" y="40" width="20" height="80" fill="#53C03F" />
+                <rect x="50" y="110" width="40" height="30" fill="#53C03F" />
                 
                 {/* Distance Labels */}
-                <line x1="50" y1="140" x2="250" y2="140" stroke="white" strokeDasharray="4 4" />
-                <text x="60" y="155" className="text-xs fill-gray-400">D₁</text>
-                <text x="170" y="155" className="text-xs fill-gray-400">D₂</text>
+                <line x1="50" y1="180" x2="250" y2="180" stroke="white" strokeDasharray="4 4" />
+                <text x="60" y="195" className="text-xs fill-gray-400">D₁</text>
+                <text x="170" y="195" className="text-xs fill-gray-400">D₂</text>
                 
                 {/* Center of Gravity */}
-                <circle cx="130" cy="110" r="5" fill="white" />
-                <text x="120" y="130" className="text-xs fill-white">C.G.</text>
+                <circle cx="130" cy="150" r="5" fill="white" />
+                <text x="120" y="170" className="text-xs fill-white">C.G.</text>
                 
                 {/* Lifting Points */}
                 {/* Point 1 - Red */}
-                <circle cx="60" cy="40" r="6" fill="red" />
-                <text x="55" y="30" className="text-xs font-bold fill-white">1</text>
+                <circle cx="80" cy="110" r="6" fill="red" />
+                <text x="75" y="100" className="text-xs font-bold fill-white">1</text>
+                
+                {/* Load Forces on Point 1 */}
                 <motion.path 
-                  d="M 60 50 L 60 70" 
+                  d="M 80 120 L 80 135" 
                   stroke="red"
                   strokeWidth="2"
                   variants={arrowAnimation}
                   initial="initial"
                   animate="animate"
                 />
-                <path d="M 55 65 L 60 70 L 65 65" fill="none" stroke="red" strokeWidth="2" />
-                <text x="70" y="60" className="text-xs fill-red-400 font-bold">Point 1 Share</text>
+                <path d="M 75 130 L 80 135 L 85 130" fill="none" stroke="red" strokeWidth="2" />
                 
                 {/* Point 2 - Blue */}
-                <circle cx="250" cy="100" r="6" fill="blue" />
-                <text x="245" y="90" className="text-xs font-bold fill-white">2</text>
+                <circle cx="220" cy="140" r="6" fill="blue" />
+                <text x="215" y="130" className="text-xs font-bold fill-white">2</text>
+                
+                {/* Load Forces on Point 2 */}
                 <motion.path 
-                  d="M 250 110 L 250 130" 
+                  d="M 220 150 L 220 165" 
                   stroke="blue"
                   strokeWidth="2"
                   variants={arrowAnimation}
                   initial="initial"
                   animate="animate"
                 />
-                <path d="M 245 125 L 250 130 L 255 125" fill="none" stroke="blue" strokeWidth="2" />
-                <text x="205" y="120" className="text-xs fill-blue-400 font-bold">Point 2 Share</text>
+                <path d="M 215 160 L 220 165 L 225 160" fill="none" stroke="blue" strokeWidth="2" />
+                
+                {/* Point 1 Force Label */}
+                <text x="65" y="125" className="text-xs fill-red-400 font-bold">Point 1 Share</text>
+                
+                {/* Point 2 Force Label */}
+                <text x="225" y="160" className="text-xs fill-blue-400 font-bold">Point 2 Share</text>
                 
                 {/* Total Load Label */}
-                <text x="115" y="95" className="text-xs fill-white">Total Load</text>
+                <text x="115" y="135" className="text-xs fill-white">Total Load</text>
               </svg>
             </div>
           </div>
           <div className="mt-4 px-2">
             <p className="text-sm text-gray-400">
-              This diagram shows an L-shaped object with two lifting points. The share of load at each point
-              is calculated using the distance from the opposite side of the load's center of gravity.
+              This diagram shows an L-shaped object lifted by a spreader beam with two vertical slings of different lengths.
+              The share of load at each point is calculated using the distance from the center of gravity.
             </p>
             <div className="mt-2 flex justify-between">
               <div className="flex items-center">
