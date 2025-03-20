@@ -1,29 +1,29 @@
-# Lilfoot - Tower Crane Training & Resources
+# Lilfoot - Tower Crane & Rigging Resources
 
-A modern web application built with Next.js 15 that provides interactive tools and resources for tower crane operators. This application showcases various Next.js features while delivering practical tools for the crane industry.
+A modern web application built with Next.js 15 that provides specialized resources for tower crane operators and riggers. This application delivers practical tools and reference materials for the tower crane industry.
 
 ## Features
 
-### Training Resources
+### Tower Crane Training Resources
 - **Red Seal Practice Exam**: Interactive practice exam for Red Seal Tower Crane Operator certification with detailed feedback
-- **3D Visualizations**: Interactive 3D demonstrations using Three.js
+- **CCO Tower Crane Operator**: Preparation resources for the NCCCO Tower Crane Operator certification exam
+- **Self-Erect Tower Crane**: Specialized practice exam for operators of self-erecting tower cranes
 
-### Crane Specifications & Charts
-- **Tower Crane Charts**: Load charts and specifications for models like the Pecco SK 180
-- **Self-Erect Tower Charts**: Detailed specifications and load tables for the Liebherr 81k self-erecting tower crane
-- **Interactive Charts**: Dynamic visualization of crane specifications and lifting capacity data
+### Tower Crane Specifications & Charts
+- **Tower Crane Charts**: Load charts and specifications for models like Liebherr 125 EC-B 6, Terex SK 415-20, and Pecco SK 180
+- **Self-Erect Tower Charts**: Detailed specifications and load tables for the Liebherr 81k and other self-erecting tower cranes
+- **Luffing Crane Charts**: Specifications and load charts for luffing crane models
 
-### Technical Demonstrations
-- **Layouts**: Nested layouts, grouped layouts, and parallel routes
-- **Data Fetching**: Streaming with Suspense, static data, dynamic data, and ISR
-- **File Conventions**: Loading UI, error handling, and not found pages
-- **Components**: Client context, hooks, and styling options
+### Rigging Resources
+- **Wire Rope Slings**: Working load limit charts for wire rope slings in various configurations
+- **Material Weights**: Reference tables for weights of common construction materials
+- **Steel Pipe Weights**: Weight charts for steel pipes of various dimensions
+- **Rigging Charts**: Essential rigging charts, load calculations, and guidelines for rigging operations
 
 ## Tech Stack
 
 - **Framework**: Next.js 15 with App Router
 - **Styling**: Tailwind CSS
-- **3D Rendering**: Three.js
 - **Charts**: Chart.js with react-chartjs-2
 - **UI Components**: shadcn/ui
 
@@ -49,7 +49,7 @@ The application is deployed on Vercel. Any changes pushed to the main branch wil
 
 ## Repository
 
-This project is hosted on GitHub at [ArsCodeAmatoria/littlefoot](https://github.com/ArsCodeAmatoria/littlefoot)
+This project is hosted on GitHub at [ArsCodeAmatoria/lilfoot](https://github.com/ArsCodeAmatoria/lilfoot)
 
 ## Documentation
 

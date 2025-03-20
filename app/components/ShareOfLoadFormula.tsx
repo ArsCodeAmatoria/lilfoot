@@ -100,25 +100,25 @@ const ShareOfLoadFormula = () => {
                       fill="#d1d5db" stroke="#d1d5db" strokeWidth="2" />
                 
                 {/* Main Lifting Line */}
-                <line x1="150" y1="60" x2="150" y2="65" stroke="white" strokeWidth="2" />
+                <line x1="150" y1="60" x2="150" y2="80" stroke="white" strokeWidth="2" />
                 
                 {/* Lifting/Spreader Beam */}
-                <rect x="60" y="65" width="180" height="10" fill="#888888" stroke="#666666" />
+                <rect x="70" y="80" width="160" height="8" fill="#888888" stroke="#666666" />
                 
-                {/* Left Vertical Sling - Shorter */}
-                <line x1="80" y1="75" x2="80" y2="100" stroke="red" strokeWidth="2" />
-                <text x="65" y="90" className="text-xs fill-red-400 font-mono">Sling 1</text>
+                {/* Left Sling - Angled */}
+                <line x1="80" y1="88" x2="50" y2="140" stroke="red" strokeWidth="2" />
+                <text x="50" y="115" className="text-xs fill-red-400 font-mono">Sling 1</text>
                 
-                {/* Right Vertical Sling - Longer */}
-                <line x1="220" y1="75" x2="220" y2="140" stroke="blue" strokeWidth="2" />
-                <text x="225" y="110" className="text-xs fill-blue-400 font-mono">Sling 2</text>
+                {/* Right Sling - Angled */}
+                <line x1="220" y1="88" x2="250" y2="140" stroke="blue" strokeWidth="2" />
+                <text x="225" y="115" className="text-xs fill-blue-400 font-mono">Sling 2</text>
                 
                 {/* L-Shaped Object */}
-                {/* Horizontal Bar of L */}
+                {/* Horizontal Bar */}
                 <rect x="50" y="140" width="200" height="20" fill="#53C03F" />
                 
                 {/* Vertical Bar of L */}
-                <rect x="50" y="100" width="40" height="40" fill="#53C03F" />
+                <rect x="50" y="110" width="30" height="30" fill="#53C03F" />
                 
                 {/* Distance Labels */}
                 <line x1="50" y1="180" x2="250" y2="180" stroke="white" strokeDasharray="4 4" />
@@ -131,40 +131,40 @@ const ShareOfLoadFormula = () => {
                 
                 {/* Lifting Points */}
                 {/* Point 1 - Red */}
-                <circle cx="80" cy="100" r="6" fill="red" />
-                <text x="75" y="90" className="text-xs font-bold fill-white">1</text>
+                <circle cx="50" cy="140" r="6" fill="red" />
+                <text x="40" y="130" className="text-xs font-bold fill-white">1</text>
                 
                 {/* Load Forces on Point 1 */}
                 <motion.path 
-                  d="M 80 110 L 80 125" 
+                  d="M 50 150 L 50 165" 
                   stroke="red"
                   strokeWidth="2"
                   variants={arrowAnimation}
                   initial="initial"
                   animate="animate"
                 />
-                <path d="M 75 120 L 80 125 L 85 120" fill="none" stroke="red" strokeWidth="2" />
+                <path d="M 45 160 L 50 165 L 55 160" fill="none" stroke="red" strokeWidth="2" />
                 
                 {/* Point 2 - Blue */}
-                <circle cx="220" cy="140" r="6" fill="blue" />
-                <text x="215" y="130" className="text-xs font-bold fill-white">2</text>
+                <circle cx="250" cy="140" r="6" fill="blue" />
+                <text x="240" y="130" className="text-xs font-bold fill-white">2</text>
                 
                 {/* Load Forces on Point 2 */}
                 <motion.path 
-                  d="M 220 150 L 220 165" 
+                  d="M 250 150 L 250 165" 
                   stroke="blue"
                   strokeWidth="2"
                   variants={arrowAnimation}
                   initial="initial"
                   animate="animate"
                 />
-                <path d="M 215 160 L 220 165 L 225 160" fill="none" stroke="blue" strokeWidth="2" />
+                <path d="M 245 160 L 250 165 L 255 160" fill="none" stroke="blue" strokeWidth="2" />
                 
                 {/* Point 1 Force Label */}
-                <text x="65" y="115" className="text-xs fill-red-400 font-bold">Point 1 Share</text>
+                <text x="30" y="155" className="text-xs fill-red-400 font-bold">Point 1 Share</text>
                 
                 {/* Point 2 Force Label */}
-                <text x="225" y="160" className="text-xs fill-blue-400 font-bold">Point 2 Share</text>
+                <text x="255" y="155" className="text-xs fill-blue-400 font-bold">Point 2 Share</text>
                 
                 {/* Total Load Label */}
                 <text x="115" y="135" className="text-xs fill-white">Total Load</text>
