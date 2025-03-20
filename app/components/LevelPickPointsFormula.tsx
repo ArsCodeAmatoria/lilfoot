@@ -5,7 +5,7 @@ import { motion, Variants } from 'framer-motion';
 import React from 'react';
 
 const LevelPickPointsFormula = () => {
-  // Sample values for demonstration
+  // Sample values for demonstration (keep these for visual diagram)
   const loadWeight = 5000; // lbs
   const d1 = 4; // feet - distance from centerline to pick point 1
   const d2 = 6; // feet - distance from centerline to pick point 2
@@ -60,23 +60,8 @@ const LevelPickPointsFormula = () => {
                   <div className="h-4 w-4 rounded-full bg-red-500 mr-2"></div>
                   <span className="text-white font-medium">Sling 1 (Red)</span>
                 </div>
-                <div className="mt-2 font-mono text-white">
-                  Tension_1 = (Load Weight × D2 × L1) / (H × (D1 + D2))
-                </div>
-                <div className="mt-2 font-mono text-highlight">
-                  Tension_1 = ({loadWeight.toLocaleString()} × {d2} × {l1.toFixed(2)}) / ({h} × ({d1} + {d2}))
-                </div>
-                <div className="mt-1 font-mono text-highlight">
-                  Tension_1 = ({loadWeight.toLocaleString()} × {d2} × {l1.toFixed(2)}) / ({h} × {d1 + d2})
-                </div>
-                <div className="mt-1 font-mono text-highlight">
-                  Tension_1 = {(loadWeight * d2 * l1).toLocaleString()} / {h * (d1 + d2)}
-                </div>
-                <div className="mt-1 font-mono text-highlight font-bold">
-                  Tension_1 = {tension1.toLocaleString()} lbs
-                </div>
-                <div className="mt-2 text-sm text-gray-400">
-                  Angle from vertical: {angle1}°
+                <div className="mt-4 font-mono text-white text-center">
+                  Tension₁ = (Load Weight × D₂ × L₁) / (H × (D₁ + D₂))
                 </div>
               </div>
               
@@ -86,33 +71,29 @@ const LevelPickPointsFormula = () => {
                   <div className="h-4 w-4 rounded-full bg-blue-500 mr-2"></div>
                   <span className="text-white font-medium">Sling 2 (Blue)</span>
                 </div>
-                <div className="mt-2 font-mono text-white">
-                  Tension_2 = (Load Weight × D1 × L2) / (H × (D1 + D2))
-                </div>
-                <div className="mt-2 font-mono text-highlight">
-                  Tension_2 = ({loadWeight.toLocaleString()} × {d1} × {l2.toFixed(2)}) / ({h} × ({d1} + {d2}))
-                </div>
-                <div className="mt-1 font-mono text-highlight">
-                  Tension_2 = ({loadWeight.toLocaleString()} × {d1} × {l2.toFixed(2)}) / ({h} × {d1 + d2})
-                </div>
-                <div className="mt-1 font-mono text-highlight">
-                  Tension_2 = {(loadWeight * d1 * l2).toLocaleString()} / {h * (d1 + d2)}
-                </div>
-                <div className="mt-1 font-mono text-highlight font-bold">
-                  Tension_2 = {tension2.toLocaleString()} lbs
-                </div>
-                <div className="mt-2 text-sm text-gray-400">
-                  Angle from vertical: {angle2}°
+                <div className="mt-4 font-mono text-white text-center">
+                  Tension₂ = (Load Weight × D₁ × L₂) / (H × (D₁ + D₂))
                 </div>
               </div>
             </div>
             
             <div className="p-4 bg-gray-800 rounded-md border border-gray-700">
-              <h4 className="text-sm font-medium text-white mb-2">Note</h4>
-              <p className="text-xs text-gray-400">
-                The formulas account for both the horizontal distance of the pick points and the length of the slings, 
-                which results in different tensions. The tension in a sling is directly proportional to both the 
-                opposing pick point's distance from center and the sling's length.
+              <h4 className="text-sm font-medium text-white mb-2">Key</h4>
+              <ul className="text-xs text-gray-400 space-y-2">
+                <li>
+                  <span className="text-highlight font-medium">D₁, D₂</span>: Horizontal distances from center of gravity to pick points
+                </li>
+                <li>
+                  <span className="text-highlight font-medium">H</span>: Vertical distance from pick points to the lifting hook
+                </li>
+                <li>
+                  <span className="text-highlight font-medium">L₁, L₂</span>: Lengths of slings (can be calculated using the Pythagorean theorem)
+                </li>
+              </ul>
+              <p className="mt-3 text-xs text-gray-400">
+                The formulas account for both the horizontal distance of the pick points and the length of the slings. 
+                The tension in a sling is directly proportional to both the opposing pick point's distance from center 
+                and the sling's length.
               </p>
             </div>
           </div>
@@ -134,15 +115,15 @@ const LevelPickPointsFormula = () => {
                 
                 {/* Sling 1 - Red */}
                 <line x1="170" y1="60" x2="120" y2="160" stroke="red" strokeWidth="2" />
-                <text x="130" y="110" className="text-xs fill-red-400 font-mono">L1 = {l1.toFixed(2)}'</text>
+                <text x="130" y="110" className="text-xs fill-red-400 font-mono">L₁</text>
                 <text x="100" y="130" className="text-xs fill-red-400 font-mono">{angle1}°</text>
-                <text x="100" y="145" className="text-xs fill-red-400 font-mono">{tension1.toLocaleString()} lbs</text>
+                <text x="100" y="145" className="text-xs fill-red-400 font-mono">Tension₁</text>
                 
                 {/* Sling 2 - Blue */}
                 <line x1="170" y1="60" x2="220" y2="160" stroke="blue" strokeWidth="2" />
-                <text x="200" y="110" className="text-xs fill-blue-400 font-mono">L2 = {l2.toFixed(2)}'</text>
+                <text x="200" y="110" className="text-xs fill-blue-400 font-mono">L₂</text>
                 <text x="220" y="130" className="text-xs fill-blue-400 font-mono">{angle2}°</text>
-                <text x="220" y="145" className="text-xs fill-blue-400 font-mono">{tension2.toLocaleString()} lbs</text>
+                <text x="220" y="145" className="text-xs fill-blue-400 font-mono">Tension₂</text>
                 
                 {/* Load */}
                 <rect x="70" y="160" width="200" height="20" fill="#53C03F" />
@@ -160,14 +141,14 @@ const LevelPickPointsFormula = () => {
                 
                 {/* Height label */}
                 <line x1="60" y1="60" x2="60" y2="160" stroke="white" strokeDasharray="4 4" />
-                <text x="40" y="110" className="text-xs fill-gray-400">H = {h}'</text>
+                <text x="40" y="110" className="text-xs fill-gray-400">H</text>
                 
                 {/* D1 and D2 labels */}
                 <line x1="120" y1="200" x2="170" y2="200" stroke="red" strokeDasharray="4 4" />
-                <text x="140" y="215" className="text-xs fill-red-400">D1 = {d1}'</text>
+                <text x="140" y="215" className="text-xs fill-red-400">D₁</text>
                 
                 <line x1="170" y1="200" x2="220" y2="200" stroke="blue" strokeDasharray="4 4" />
-                <text x="185" y="215" className="text-xs fill-blue-400">D2 = {d2}'</text>
+                <text x="185" y="215" className="text-xs fill-blue-400">D₂</text>
                 
                 {/* Load Weight Arrow */}
                 <motion.path 
@@ -179,7 +160,7 @@ const LevelPickPointsFormula = () => {
                   animate="animate"
                 />
                 <path d="M 160 220 L 170 230 L 180 220" fill="none" stroke="white" strokeWidth="3" />
-                <text x="135" y="245" className="text-sm fill-white font-bold">{loadWeight.toLocaleString()} lbs</text>
+                <text x="140" y="245" className="text-sm fill-white font-bold">Load Weight</text>
               </svg>
             </div>
           </div>
@@ -191,15 +172,11 @@ const LevelPickPointsFormula = () => {
             <div className="mt-3 space-y-2">
               <div className="flex items-center">
                 <div className="h-3 w-3 rounded-full bg-red-500 mr-1"></div>
-                <span className="text-xs text-gray-400">Sling 1: {tension1.toLocaleString()} lbs at {angle1}° from vertical</span>
+                <span className="text-xs text-gray-400">Sling 1: Tension based on formula</span>
               </div>
               <div className="flex items-center">
                 <div className="h-3 w-3 rounded-full bg-blue-500 mr-1"></div>
-                <span className="text-xs text-gray-400">Sling 2: {tension2.toLocaleString()} lbs at {angle2}° from vertical</span>
-              </div>
-              <div className="flex items-center">
-                <div className="h-3 w-3 rounded-full bg-white mr-1"></div>
-                <span className="text-xs text-gray-400">Total load weight: {loadWeight.toLocaleString()} lbs</span>
+                <span className="text-xs text-gray-400">Sling 2: Tension based on formula</span>
               </div>
             </div>
           </div>

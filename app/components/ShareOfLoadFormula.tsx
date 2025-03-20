@@ -42,7 +42,7 @@ const ShareOfLoadFormula = () => {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               <h3 className="text-lg font-medium text-white">Formulas</h3>
               <div className="space-y-4">
                 <div className="bg-gray-800 p-4 rounded-md border border-gray-700">
@@ -50,20 +50,8 @@ const ShareOfLoadFormula = () => {
                     <div className="h-4 w-4 rounded-full bg-red-500 mr-2"></div>
                     <span className="text-white font-medium">Point 1's Share</span>
                   </div>
-                  <div className="mt-2 font-mono text-white">
-                    Point 1 = (D2 / (D1 + D2)) × Total Load
-                  </div>
-                  <div className="mt-1 font-mono text-highlight">
-                    Point 1 = ({d2} / ({d1} + {d2})) × {totalLoad.toLocaleString()} lbs
-                  </div>
-                  <div className="mt-1 font-mono text-highlight">
-                    Point 1 = ({d2} / {d1 + d2}) × {totalLoad.toLocaleString()} lbs
-                  </div>
-                  <div className="mt-1 font-mono text-highlight">
-                    Point 1 = {(d2 / (d1 + d2)).toFixed(3)} × {totalLoad.toLocaleString()} lbs
-                  </div>
-                  <div className="mt-1 font-mono text-highlight font-bold">
-                    Point 1 = {point1Share.toLocaleString()} lbs
+                  <div className="mt-4 font-mono text-white text-center">
+                    Point 1 = (D₂ / (D₁ + D₂)) × Total Load
                   </div>
                 </div>
 
@@ -72,23 +60,27 @@ const ShareOfLoadFormula = () => {
                     <div className="h-4 w-4 rounded-full bg-blue-500 mr-2"></div>
                     <span className="text-white font-medium">Point 2's Share</span>
                   </div>
-                  <div className="mt-2 font-mono text-white">
-                    Point 2 = (D1 / (D1 + D2)) × Total Load
-                  </div>
-                  <div className="mt-1 font-mono text-highlight">
-                    Point 2 = ({d1} / ({d1} + {d2})) × {totalLoad.toLocaleString()} lbs
-                  </div>
-                  <div className="mt-1 font-mono text-highlight">
-                    Point 2 = ({d1} / {d1 + d2}) × {totalLoad.toLocaleString()} lbs
-                  </div>
-                  <div className="mt-1 font-mono text-highlight">
-                    Point 2 = {(d1 / (d1 + d2)).toFixed(3)} × {totalLoad.toLocaleString()} lbs
-                  </div>
-                  <div className="mt-1 font-mono text-highlight font-bold">
-                    Point 2 = {point2Share.toLocaleString()} lbs
+                  <div className="mt-4 font-mono text-white text-center">
+                    Point 2 = (D₁ / (D₁ + D₂)) × Total Load
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="p-4 bg-gray-800 rounded-md border border-gray-700">
+              <h4 className="text-sm font-medium text-white mb-2">Key</h4>
+              <ul className="text-xs text-gray-400 space-y-2">
+                <li>
+                  <span className="text-highlight font-medium">D₁, D₂</span>: Distances from the center of gravity to each lifting point
+                </li>
+                <li>
+                  <span className="text-highlight font-medium">Total Load</span>: The entire weight of the object being lifted
+                </li>
+              </ul>
+              <p className="mt-3 text-xs text-gray-400">
+                This formula calculates how load is shared between multiple lifting points. 
+                The farther a point is from the center of gravity, the less load it will bear.
+              </p>
             </div>
           </div>
         </CardContent>
@@ -101,7 +93,6 @@ const ShareOfLoadFormula = () => {
         </CardHeader>
         <CardContent className="pt-6">
           <div className="w-full h-[400px] relative bg-gray-800 rounded-lg border border-gray-700 p-4">
-            {/* L-Shaped Object */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <svg width="300" height="200" viewBox="0 0 300 200" className="overflow-visible">
                 {/* Horizontal Bar of L */}
@@ -112,8 +103,8 @@ const ShareOfLoadFormula = () => {
                 
                 {/* Distance Labels */}
                 <line x1="50" y1="140" x2="250" y2="140" stroke="white" strokeDasharray="4 4" />
-                <text x="60" y="155" className="text-xs fill-gray-400">D1 = 5'</text>
-                <text x="170" y="155" className="text-xs fill-gray-400">D2 = 15'</text>
+                <text x="60" y="155" className="text-xs fill-gray-400">D₁</text>
+                <text x="170" y="155" className="text-xs fill-gray-400">D₂</text>
                 
                 {/* Center of Gravity */}
                 <circle cx="130" cy="110" r="5" fill="white" />
@@ -132,7 +123,7 @@ const ShareOfLoadFormula = () => {
                   animate="animate"
                 />
                 <path d="M 55 65 L 60 70 L 65 65" fill="none" stroke="red" strokeWidth="2" />
-                <text x="70" y="60" className="text-xs fill-red-400 font-bold">{point1Share.toLocaleString()} lbs</text>
+                <text x="70" y="60" className="text-xs fill-red-400 font-bold">Point 1 Share</text>
                 
                 {/* Point 2 - Blue */}
                 <circle cx="250" cy="100" r="6" fill="blue" />
@@ -146,10 +137,10 @@ const ShareOfLoadFormula = () => {
                   animate="animate"
                 />
                 <path d="M 245 125 L 250 130 L 255 125" fill="none" stroke="blue" strokeWidth="2" />
-                <text x="205" y="120" className="text-xs fill-blue-400 font-bold">{point2Share.toLocaleString()} lbs</text>
+                <text x="205" y="120" className="text-xs fill-blue-400 font-bold">Point 2 Share</text>
                 
                 {/* Total Load Label */}
-                <text x="115" y="95" className="text-xs fill-white">Total Load: {totalLoad.toLocaleString()} lbs</text>
+                <text x="115" y="95" className="text-xs fill-white">Total Load</text>
               </svg>
             </div>
           </div>
@@ -161,11 +152,11 @@ const ShareOfLoadFormula = () => {
             <div className="mt-2 flex justify-between">
               <div className="flex items-center">
                 <div className="h-3 w-3 rounded-full bg-red-500 mr-1"></div>
-                <span className="text-xs text-gray-400">Point 1: {point1Share.toLocaleString()} lbs</span>
+                <span className="text-xs text-gray-400">Point 1: Larger share (further from C.G.)</span>
               </div>
               <div className="flex items-center">
                 <div className="h-3 w-3 rounded-full bg-blue-500 mr-1"></div>
-                <span className="text-xs text-gray-400">Point 2: {point2Share.toLocaleString()} lbs</span>
+                <span className="text-xs text-gray-400">Point 2: Smaller share (closer to C.G.)</span>
               </div>
             </div>
           </div>
