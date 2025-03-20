@@ -36,7 +36,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Rigging Advanced',
         slug: 'practice-exams/rigging-advanced',
         description:
-          'Coming soon: Advanced rigging practice exam for complex lifts, load calculations, and critical safety procedures',
+          'Specialized rigging practice exam for complex lifts, load calculations, and critical safety procedures',
       },
     ],
   },
@@ -212,7 +212,7 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'Advanced Rigging Charts',
         slug: 'rigging-charts/advanced',
         description:
-          'Coming soon: Specialized rigging charts, complex load calculations, and detailed guidelines for advanced rigging operations',
+          'Specialized rigging charts, complex load calculations, and detailed guidelines for advanced rigging operations',
       },
     ],
   },
