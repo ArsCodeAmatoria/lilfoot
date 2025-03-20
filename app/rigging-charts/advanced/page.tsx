@@ -2,6 +2,7 @@ import React from 'react';
 import { Calculator, Ruler, BarChart, Construction, ChevronsRight } from 'lucide-react';
 import ShareOfLoadFormula from '../../components/ShareOfLoadFormula';
 import LevelPickPointsFormula from '../../components/LevelPickPointsFormula';
+import DifferentLevelPickPointsFormula from '../../components/DifferentLevelPickPointsFormula';
 import { Card, CardContent, CardHeader, CardTitle } from '#/components/ui/card';
 
 export const metadata = {
@@ -43,6 +44,16 @@ export default function AdvancedRiggingChartsPage() {
           This formula helps riggers calculate the exact tension in each sling based on geometry and load weight.
         </p>
         <LevelPickPointsFormula />
+      </div>
+
+      {/* Different Level Pick Points Formula Section */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-white mb-4">Different Level Pick Points & Different Sling Angles</h2>
+        <p className="max-w-3xl text-gray-400 mb-6">
+          When dealing with stepped loads or loads with pick points at different heights, this formula helps calculate
+          the tension in each sling, taking into account both horizontal and vertical positioning.
+        </p>
+        <DifferentLevelPickPointsFormula />
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
