@@ -1,7 +1,7 @@
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from '#/components/ui/card';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import React from 'react';
 
 const ShareOfLoadFormula = () => {
@@ -13,14 +13,14 @@ const ShareOfLoadFormula = () => {
   const point1Share = Math.round((d2 / (d1 + d2)) * totalLoad); // 7,500 lbs
   const point2Share = Math.round((d1 / (d1 + d2)) * totalLoad); // 2,500 lbs
 
-  const arrowAnimation = {
+  const arrowAnimation: Variants = {
     initial: { y: -5, opacity: 0.2 },
     animate: { 
       y: 0, 
       opacity: 1,
       transition: { 
         repeat: Infinity, 
-        repeatType: "reverse", 
+        repeatType: "reverse" as const, 
         duration: 1.5 
       }
     }
