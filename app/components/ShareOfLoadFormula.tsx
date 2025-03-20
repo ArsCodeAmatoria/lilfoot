@@ -100,18 +100,18 @@ const ShareOfLoadFormula = () => {
                       fill="#d1d5db" stroke="#d1d5db" strokeWidth="2" />
                 
                 {/* Main Lifting Line */}
-                <line x1="150" y1="60" x2="150" y2="80" stroke="white" strokeWidth="2" />
+                <line x1="150" y1="60" x2="150" y2="65" stroke="white" strokeWidth="2" />
                 
                 {/* Lifting/Spreader Beam */}
-                <rect x="60" y="80" width="180" height="10" fill="#888888" stroke="#666666" />
+                <rect x="60" y="65" width="180" height="10" fill="#888888" stroke="#666666" />
                 
                 {/* Left Vertical Sling - Shorter */}
-                <line x1="80" y1="90" x2="80" y2="110" stroke="red" strokeWidth="2" />
-                <text x="65" y="105" className="text-xs fill-red-400 font-mono">Sling 1</text>
+                <line x1="80" y1="75" x2="80" y2="110" stroke="red" strokeWidth="2" />
+                <text x="65" y="95" className="text-xs fill-red-400 font-mono">Sling 1</text>
                 
                 {/* Right Vertical Sling - Longer */}
-                <line x1="220" y1="90" x2="220" y2="140" stroke="blue" strokeWidth="2" />
-                <text x="225" y="115" className="text-xs fill-blue-400 font-mono">Sling 2</text>
+                <line x1="220" y1="75" x2="220" y2="140" stroke="blue" strokeWidth="2" />
+                <text x="225" y="110" className="text-xs fill-blue-400 font-mono">Sling 2</text>
                 
                 {/* L-Shaped Object */}
                 {/* Horizontal Bar of L */}
