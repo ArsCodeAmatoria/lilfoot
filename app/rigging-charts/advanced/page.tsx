@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calculator, Ruler, BarChart, Construction, ChevronsRight } from 'lucide-react';
 import ShareOfLoadFormula from '../../components/ShareOfLoadFormula';
+import LevelPickPointsFormula from '../../components/LevelPickPointsFormula';
 import { Card, CardContent, CardHeader, CardTitle } from '#/components/ui/card';
 
 export const metadata = {
@@ -32,6 +33,16 @@ export default function AdvancedRiggingChartsPage() {
           The Share of Load Formula helps riggers calculate precisely how much weight each lifting point will bear.
         </p>
         <ShareOfLoadFormula />
+      </div>
+
+      {/* Level Pick Points Formula Section */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-white mb-4">Level Pick Points & Different Sling Angles</h2>
+        <p className="max-w-3xl text-gray-400 mb-6">
+          When rigging a load with level pick points but using different sling angles, the tension in each sling will vary.
+          This formula helps riggers calculate the exact tension in each sling based on geometry and load weight.
+        </p>
+        <LevelPickPointsFormula />
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
