@@ -116,13 +116,11 @@ const LevelPickPointsFormula = () => {
                 {/* Sling 1 - Red */}
                 <line x1="170" y1="60" x2="120" y2="160" stroke="red" strokeWidth="2" />
                 <text x="130" y="110" className="text-xs fill-red-400 font-mono">L₁</text>
-                <text x="100" y="130" className="text-xs fill-red-400 font-mono">{angle1}°</text>
                 <text x="100" y="145" className="text-xs fill-red-400 font-mono">Tension₁</text>
                 
                 {/* Sling 2 - Blue */}
                 <line x1="170" y1="60" x2="220" y2="160" stroke="blue" strokeWidth="2" />
                 <text x="200" y="110" className="text-xs fill-blue-400 font-mono">L₂</text>
-                <text x="220" y="130" className="text-xs fill-blue-400 font-mono">{angle2}°</text>
                 <text x="220" y="145" className="text-xs fill-blue-400 font-mono">Tension₂</text>
                 
                 {/* Load */}
