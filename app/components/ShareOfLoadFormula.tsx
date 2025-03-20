@@ -211,28 +211,16 @@ const ShareOfLoadFormula = () => {
                 
                 {/* Left Sling - Angled */}
                 <line x1="180" y1="88" x2="100" y2="190" stroke="red" strokeWidth="2" />
-                <text x="125" y="130" className="text-xs fill-red-400 font-mono">Sling 1</text>
                 
                 {/* Right Sling - Angled */}
                 <line x1="320" y1="88" x2="400" y2="190" stroke="blue" strokeWidth="2" />
-                <text x="340" y="130" className="text-xs fill-blue-400 font-mono">Sling 2</text>
                 
                 {/* Load Object */}
                 <rect x="100" y="190" width="300" height="20" fill="#6B7280" />
                 
-                {/* Distance Labels */}
-                <line x1="100" y1="230" x2="400" y2="230" stroke="white" strokeDasharray="4 4" />
-                <text x="160" y="245" className="text-xs fill-gray-400">D₁</text>
-                <text x="310" y="245" className="text-xs fill-gray-400">D₂</text>
-                
-                {/* Center of Gravity */}
-                <circle cx="250" cy="200" r="5" fill="white" />
-                <text x="240" y="220" className="text-xs fill-white">C.G.</text>
-                
                 {/* Lifting Points */}
                 {/* Point 1 - Red */}
                 <circle cx="100" cy="190" r="6" fill="red" />
-                <text x="90" y="180" className="text-xs font-bold fill-white">1</text>
                 
                 {/* Load Forces on Point 1 */}
                 <motion.path 
@@ -247,7 +235,6 @@ const ShareOfLoadFormula = () => {
                 
                 {/* Point 2 - Blue */}
                 <circle cx="400" cy="190" r="6" fill="blue" />
-                <text x="390" y="180" className="text-xs font-bold fill-white">2</text>
                 
                 {/* Load Forces on Point 2 */}
                 <motion.path 
@@ -259,40 +246,13 @@ const ShareOfLoadFormula = () => {
                   animate="animate"
                 />
                 <path d="M 395 210 L 400 215 L 405 210" fill="none" stroke="blue" strokeWidth="2" />
-                
-                {/* Angle indicators */}
-                <path d="M 180 88 A 15 15 0 0 0 170 100" fill="none" stroke="white" strokeWidth="1" />
-                <text x="155" y="105" className="text-xs fill-white">θ₁</text>
-                
-                <path d="M 320 88 A 15 15 0 0 1 330 100" fill="none" stroke="white" strokeWidth="1" />
-                <text x="335" y="105" className="text-xs fill-white">θ₂</text>
-                
-                {/* Point 1 Force Label */}
-                <text x="60" y="215" className="text-xs fill-red-400 font-bold">Point 1 Share</text>
-                
-                {/* Point 2 Force Label */}
-                <text x="410" y="215" className="text-xs fill-blue-400 font-bold">Point 2 Share</text>
-                
-                {/* Total Load Label */}
-                <text x="235" y="180" className="text-xs fill-white">Total Load</text>
               </svg>
             </div>
           </div>
           <div className="mt-4 px-2">
             <p className="text-sm text-gray-400">
-              This diagram illustrates a lifting scenario with two angled slings forming an obtuse triangle with the hook.
-              The obtuse angle between the slings affects the internal forces in the rigging system.
+              Simple visualization of a load being lifted with angled slings.
             </p>
-            <div className="mt-2 flex justify-between">
-              <div className="flex items-center">
-                <div className="h-3 w-3 rounded-full bg-red-500 mr-1"></div>
-                <span className="text-xs text-gray-400">Point 1: Tension determined by position relative to C.G.</span>
-              </div>
-              <div className="flex items-center">
-                <div className="h-3 w-3 rounded-full bg-blue-500 mr-1"></div>
-                <span className="text-xs text-gray-400">Point 2: Tension determined by position relative to C.G.</span>
-              </div>
-            </div>
           </div>
         </CardContent>
       </Card>
