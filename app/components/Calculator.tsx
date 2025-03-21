@@ -192,7 +192,7 @@ export default function Calculator() {
       {/* Calculator toggle button */}
       <button
         onClick={handleToggleOpen}
-        className="fixed bottom-24 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700"
+        className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700"
         aria-label="Open Calculator"
       >
         <CalculatorIcon size={24} />
@@ -209,8 +209,8 @@ export default function Calculator() {
             }
             exit={{ opacity: 0, y: 100 }}
             className={minimized 
-              ? "fixed bottom-24 right-24 z-50 flex h-14 w-auto items-center rounded-full bg-blue-600 px-4 shadow-xl" 
-              : "fixed bottom-24 right-24 z-50 w-80 rounded-lg bg-gray-900 shadow-xl"
+              ? "fixed bottom-6 left-24 z-50 flex h-14 w-auto items-center rounded-full bg-blue-600 px-4 shadow-xl" 
+              : "fixed bottom-6 left-24 z-50 w-80 rounded-lg bg-gray-900 shadow-xl"
             }
           >
             {minimized ? (

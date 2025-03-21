@@ -63,7 +63,7 @@ const NotePad: React.FC = () => {
     <>
       {/* Toggle Button */}
       <motion.button
-        className="fixed bottom-4 right-24 z-50 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg"
+        className="fixed bottom-6 left-24 z-50 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={toggleOpen}
@@ -78,7 +78,7 @@ const NotePad: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed right-4 bottom-20 z-50 bg-gray-800 border border-gray-700 rounded-lg shadow-2xl overflow-hidden flex flex-col"
+            className="fixed left-44 bottom-6 z-50 bg-gray-800 border border-gray-700 rounded-lg shadow-2xl overflow-hidden flex flex-col"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={
               isMinimized
