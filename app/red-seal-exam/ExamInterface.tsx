@@ -2,8 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { Question, examQuestions, categories } from './exam-data';
+import { useExam } from '../contexts/ExamContext';
 
 export default function ExamInterface() {
+  // State to track if component is mounted (client-side)
+  const [mounted, setMounted] = useState(false);
+  
   // State to hold the 10 questions for the current exam instance
   const [currentExamQuestions, setCurrentExamQuestions] = useState<Question[]>(
     [],
@@ -18,7 +22,71 @@ export default function ExamInterface() {
     [key: string]: { correct: number; total: number };
   }>({});
 
-  // Function to randomly select 10 questions from the 20 available
+  // Use the global exam context
+  const { startExam: startGlobalExam, endExam: endGlobalExam, isExamActive } = useExam();
+
+  // Mark component as mounted
+  useEffect(() => {
+    setMounted(true);
+    
+    // Check if returning from another page with an active exam
+    if (typeof window !== 'undefined') {
+      const savedIndex = sessionStorage.getItem('currentQuestionIndex');
+      if (savedIndex && examMode === 'exam') {
+        const index = parseInt(savedIndex, 10);
+        // Only set if it's a valid index
+        if (!isNaN(index) && index >= 0) {
+          setCurrentQuestionIndex(index);
+          // Clear the stored index to prevent re-using it
+          sessionStorage.removeItem('currentQuestionIndex');
+        }
+      }
+    }
+  }, [examMode]);
+
+  // Check for active exam when landing on the page
+  useEffect(() => {
+    if (!mounted) return;
+    
+    // If landing on the page with an active exam in global state,
+    // but our local state is in intro mode, restore the exam from localStorage
+    if (isExamActive && examMode === 'intro') {
+      if (typeof window !== 'undefined') {
+        const savedExamState = localStorage.getItem('examState');
+        if (savedExamState) {
+          try {
+            const parsedState = JSON.parse(savedExamState);
+            if (parsedState.currentQuestion && parsedState.questionIndex !== undefined) {
+              // Try to restore the exam state
+              // We need the full question set, so we'll need to get it from localStorage
+              if (parsedState.questions) {
+                setCurrentExamQuestions(parsedState.questions);
+                setCurrentQuestionIndex(parsedState.questionIndex);
+                setExamMode('exam');
+                // If there are saved answers, restore them
+                if (parsedState.answers) {
+                  setSelectedAnswers(parsedState.answers);
+                } else {
+                  setSelectedAnswers(Array(10).fill(-1));
+                }
+                // Restore time if available, otherwise set to default
+                if (parsedState.timeRemaining) {
+                  setTimeRemaining(parsedState.timeRemaining);
+                } else {
+                  setTimeRemaining(60 * 60);
+                }
+              }
+            }
+          } catch (e) {
+            // If parsing fails, just continue with a new exam
+            console.error("Error restoring exam state:", e);
+          }
+        }
+      }
+    }
+  }, [mounted, isExamActive, examMode]);
+
+  // Function to randomly select 10 questions from all available
   const selectRandomQuestions = () => {
     // Create a copy of the full question set
     const allQuestions = [...examQuestions];
@@ -42,6 +110,8 @@ export default function ExamInterface() {
 
   // Handle timer during exam
   useEffect(() => {
+    if (!mounted) return;
+    
     let timer: NodeJS.Timeout;
 
     if (examMode === 'exam' && timeRemaining > 0) {
@@ -50,6 +120,7 @@ export default function ExamInterface() {
           if (prev <= 1) {
             clearInterval(timer);
             setExamMode('results');
+            endGlobalExam(); // End the global exam when time runs out
             return 0;
           }
           return prev - 1;
@@ -60,11 +131,14 @@ export default function ExamInterface() {
     return () => {
       if (timer) clearInterval(timer);
     };
-  }, [examMode, timeRemaining]);
+  }, [examMode, timeRemaining, endGlobalExam, mounted]);
 
   // Calculate score and category stats when entering results mode
   useEffect(() => {
+    if (!mounted) return;
+    
     if (examMode === 'results') {
+      endGlobalExam(); // End the global exam when showing results
       const stats: { [key: string]: { correct: number; total: number } } = {};
 
       // Initialize stats for each category
@@ -87,7 +161,19 @@ export default function ExamInterface() {
 
       setCategoryStats(stats);
     }
-  }, [examMode, currentExamQuestions]);
+  }, [examMode, currentExamQuestions, endGlobalExam, mounted]);
+
+  // Update the current question in the global context when it changes
+  useEffect(() => {
+    if (!mounted) return;
+    
+    if (examMode === 'exam' && currentExamQuestions.length > 0) {
+      startGlobalExam(currentExamQuestions, currentQuestionIndex);
+    } else if (examMode !== 'exam' && isExamActive) {
+      // If we're not in exam mode anymore but the global state still shows as active
+      endGlobalExam();
+    }
+  }, [examMode, currentQuestionIndex, currentExamQuestions, startGlobalExam, endGlobalExam, mounted, isExamActive]);
 
   // Helper function to check if an answer is correct (supporting multiple correct answers)
   const isCorrectAnswer = (selectedAnswer: number, correctAnswer: number | number[]) => {
@@ -101,6 +187,8 @@ export default function ExamInterface() {
 
   // Handle selecting an answer
   const handleAnswerSelect = (answerIndex: number) => {
+    if (examMode !== 'exam') return; // Only allow selection in exam mode
+    
     const newSelectedAnswers = [...selectedAnswers];
     newSelectedAnswers[currentQuestionIndex] = answerIndex;
     setSelectedAnswers(newSelectedAnswers);
@@ -112,6 +200,7 @@ export default function ExamInterface() {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       setExamMode('results');
+      endGlobalExam(); // End the global exam when finishing
     }
   };
 
@@ -140,12 +229,14 @@ export default function ExamInterface() {
   // End exam and go to results
   const endExam = () => {
     setExamMode('results');
+    endGlobalExam(); // End the global exam
   };
 
   // Switch to review mode from results
   const reviewExam = () => {
     setExamMode('review');
     setCurrentQuestionIndex(0);
+    endGlobalExam(); // End the global exam when reviewing
   };
 
   // Calculate total score
@@ -171,10 +262,27 @@ export default function ExamInterface() {
     setSelectedAnswers([]);
     setCurrentQuestionIndex(0);
     setCurrentExamQuestions([]);
+    endGlobalExam(); // End the global exam when resetting
   };
 
   // Current question - safely handle when no questions are loaded yet
   const currentQuestion = currentExamQuestions[currentQuestionIndex] || null;
+
+  // Add a message about the ability to navigate away
+  const renderNavigationMessage = () => {
+    if (examMode === 'exam') {
+      return (
+        <div className="mt-4 rounded-lg bg-gray-900 p-3 text-sm text-gray-400">
+          <p>
+            <span className="font-medium text-highlight">New:</span> You can now navigate to other pages while keeping the exam open. 
+            Your current question will appear in a bubble at the bottom right corner.
+            Click on it anytime to return to the exam.
+          </p>
+        </div>
+      );
+    }
+    return null;
+  };
 
   // Render different screens based on exam mode
   const renderContent = () => {
@@ -249,6 +357,9 @@ export default function ExamInterface() {
                   Each time you start a new exam, you'll get a different set of
                   10 questions
                 </li>
+                <li className="text-highlight">
+                  <strong>New:</strong> You can now navigate to other pages while keeping your exam open
+                </li>
               </ul>
             </div>
 
@@ -262,33 +373,23 @@ export default function ExamInterface() {
         );
 
       case 'exam':
-      case 'review':
-        // Safety check in case no questions are loaded
-        if (!currentQuestion)
-          return <div className="text-white">Loading questions...</div>;
+        if (!currentQuestion) return <div>Loading...</div>;
 
         return (
           <div className="overflow-hidden rounded-lg bg-black">
-            {/* Header with timer and question counter */}
-            <div className="flex items-center justify-between bg-gray-900 p-4">
-              <div className="text-white">
-                Question {currentQuestionIndex + 1} of{' '}
-                {currentExamQuestions.length}
-              </div>
-              {examMode === 'exam' && (
-                <div
-                  className={`font-mono text-white ${timeRemaining < 300 ? 'text-red-500' : ''}`}
-                >
-                  Time Remaining: {Math.floor(timeRemaining / 60)}:
-                  {(timeRemaining % 60).toString().padStart(2, '0')}
+            <div className="bg-gray-900 p-4">
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl font-bold text-white">
+                  Practice Exam - Question {currentQuestionIndex + 1}/
+                  {currentExamQuestions.length}
+                </h2>
+                <div className="rounded-md bg-gray-800 px-3 py-1.5 text-white">
+                  <span className="font-mono">{formatTime(timeRemaining)}</span>
                 </div>
-              )}
-              {examMode === 'review' && (
-                <div className="font-semibold text-highlight">Review Mode</div>
-              )}
+              </div>
+              {renderNavigationMessage()}
             </div>
 
-            {/* Question content */}
             <div className="p-6">
               <div className="mb-2">
                 <span className="mb-2 inline-block rounded bg-gray-800 px-2 py-1 text-xs text-gray-300">
@@ -304,19 +405,11 @@ export default function ExamInterface() {
                 {currentQuestion.options.map((option, index) => (
                   <div
                     key={index}
-                    onClick={() =>
-                      examMode === 'exam' && handleAnswerSelect(index)
-                    }
+                    onClick={() => handleAnswerSelect(index)}
                     className={`cursor-pointer rounded-lg border p-4 transition-colors ${
-                      examMode === 'review'
-                        ? isCorrectAnswer(index, currentQuestion.correctAnswer)
-                          ? 'border-green-700 bg-green-900/30'
-                          : selectedAnswers[currentQuestionIndex] === index
-                            ? 'border-red-700 bg-red-900/30'
-                            : 'border-gray-700 bg-gray-900'
-                        : selectedAnswers[currentQuestionIndex] === index
-                          ? 'border-highlight bg-highlight/20'
-                          : 'border-gray-700 bg-gray-900 hover:border-gray-500'
+                      selectedAnswers[currentQuestionIndex] === index
+                        ? 'border-highlight bg-highlight/20'
+                        : 'border-gray-700 bg-gray-900 hover:border-gray-500'
                     }`}
                   >
                     <div className="flex items-start">
@@ -334,16 +427,6 @@ export default function ExamInterface() {
                   </div>
                 ))}
               </div>
-
-              {/* Explanation in review mode */}
-              {examMode === 'review' && (
-                <div className="mt-6 rounded-lg border border-gray-700 bg-gray-900 p-4">
-                  <h4 className="mb-2 font-bold text-highlight">
-                    Explanation:
-                  </h4>
-                  <p className="text-gray-300">{currentQuestion.explanation}</p>
-                </div>
-              )}
 
               {/* Navigation buttons */}
               <div className="mt-8 flex justify-between">
@@ -427,78 +510,245 @@ export default function ExamInterface() {
                 Performance by Category
               </h3>
 
-              {Object.entries(categoryStats).map(([category, stats]) => {
-                const percentage =
-                  stats.total > 0
-                    ? Math.round((stats.correct / stats.total) * 100)
-                    : 0;
-                return (
-                  <div key={category} className="mb-4">
-                    <div className="mb-1 flex items-center justify-between">
-                      <span className="font-medium text-white">{category}</span>
-                      <span
-                        className={`${
-                          percentage >= 70 ? 'text-green-500' : 'text-red-400'
-                        }`}
-                      >
-                        {stats.correct}/{stats.total} (
-                        {stats.total > 0 ? percentage : 0}%)
-                      </span>
-                    </div>
-                    <div className="h-2 w-full rounded-full bg-gray-800">
-                      <div
-                        className={`h-2 rounded-full ${percentage >= 70 ? 'bg-green-500' : 'bg-red-500'}`}
-                        style={{ width: `${percentage}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                );
-              })}
+              <div className="space-y-4">
+                {Object.entries(categoryStats).map(
+                  ([category, { correct, total }]) => {
+                    if (total === 0) return null; // Skip categories with no questions
+                    const percentage = Math.round((correct / total) * 100);
+                    return (
+                      <div key={category} className="rounded-lg bg-gray-900 p-4">
+                        <div className="mb-1 flex items-center justify-between">
+                          <span className="font-medium text-white">
+                            {category}
+                          </span>
+                          <span
+                            className={`${
+                              percentage >= 70
+                                ? 'text-green-400'
+                                : 'text-red-400'
+                            }`}
+                          >
+                            {correct}/{total} ({percentage}%)
+                          </span>
+                        </div>
+                        <div className="h-2 w-full rounded-full bg-gray-800">
+                          <div
+                            className={`h-2 rounded-full ${
+                              percentage >= 70
+                                ? 'bg-green-500'
+                                : 'bg-red-500'
+                            }`}
+                            style={{ width: `${percentage}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    );
+                  },
+                )}
+              </div>
 
-              <div className="mt-8">
-                <h3 className="mb-3 text-xl font-bold text-white">
-                  Next Steps
+              <div className="mt-8 space-y-4">
+                <button
+                  onClick={reviewExam}
+                  className="w-full rounded-lg bg-gray-800 py-3 font-medium text-white transition-colors hover:bg-gray-700"
+                >
+                  Review Answers
+                </button>
+                <button
+                  onClick={resetExam}
+                  className="w-full rounded-lg bg-highlight py-3 font-medium text-white transition-colors hover:bg-green-600"
+                >
+                  Start New Exam
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'review':
+        if (!currentQuestion) return <div>Loading...</div>;
+
+        return (
+          <div className="overflow-hidden rounded-lg bg-black">
+            <div className="bg-gray-900 p-4">
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl font-bold text-white">
+                  Review - Question {currentQuestionIndex + 1}/
+                  {currentExamQuestions.length}
+                </h2>
+                <div className="rounded-md bg-gray-800 px-3 py-1.5 text-sm text-gray-400">
+                  Review Mode
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6">
+              <div className="mb-2">
+                <span className="mb-2 inline-block rounded bg-gray-800 px-2 py-1 text-xs text-gray-300">
+                  {currentQuestion.category}
+                </span>
+                <h3 className="text-xl font-bold text-white">
+                  {currentQuestion.question}
                 </h3>
-                <p className="mb-4 text-gray-400">
-                  {passed ? (
-                    <>
-                      Congratulations on passing the practice exam! While you've
-                      demonstrated good knowledge, review the questions you
-                      missed to further strengthen your understanding.
-                    </>
-                  ) : (
-                    <>
-                      Don't be discouraged. Review the areas where you scored
-                      below 70% and study those topics more thoroughly. Focus
-                      particularly on understanding the explanations for the
-                      questions you missed.
-                    </>
-                  )}
-                </p>
+              </div>
 
-                <div className="mt-6 space-y-3">
+              {/* Answer options with correct/incorrect indicators */}
+              <div className="mt-6 space-y-3">
+                {currentQuestion.options.map((option, index) => {
+                  const isCorrect = isCorrectAnswer(
+                    index,
+                    currentQuestion.correctAnswer,
+                  );
+                  const wasSelected =
+                    selectedAnswers[currentQuestionIndex] === index;
+
+                  return (
+                    <div
+                      key={index}
+                      className={`rounded-lg border p-4 ${
+                        isCorrect
+                          ? 'border-green-700 bg-green-900/30'
+                          : wasSelected
+                            ? 'border-red-700 bg-red-900/30'
+                            : 'border-gray-700 bg-gray-900'
+                      }`}
+                    >
+                      <div className="flex items-start">
+                        <div
+                          className={`mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border ${
+                            isCorrect
+                              ? 'border-green-500 text-green-500'
+                              : wasSelected
+                                ? 'border-red-500 text-red-500'
+                                : 'border-gray-500 text-gray-500'
+                          }`}
+                        >
+                          {['A', 'B', 'C', 'D'][index]}
+                        </div>
+                        <div className="text-white">{option}</div>
+                        {wasSelected && isCorrect && (
+                          <span className="ml-auto rounded-full bg-green-700 px-2 py-0.5 text-xs text-white">
+                            Your Answer ✓
+                          </span>
+                        )}
+                        {wasSelected && !isCorrect && (
+                          <span className="ml-auto rounded-full bg-red-700 px-2 py-0.5 text-xs text-white">
+                            Your Answer ✗
+                          </span>
+                        )}
+                        {!wasSelected && isCorrect && (
+                          <span className="ml-auto rounded-full bg-green-700 px-2 py-0.5 text-xs text-white">
+                            Correct Answer
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Explanation */}
+              <div className="mt-6 rounded-lg border border-gray-700 bg-gray-900 p-4">
+                <h4 className="mb-2 font-bold text-highlight">Explanation:</h4>
+                <p className="text-gray-300">{currentQuestion.explanation}</p>
+              </div>
+
+              {/* Navigation buttons */}
+              <div className="mt-8 flex justify-between">
+                <button
+                  onClick={goToPrevQuestion}
+                  disabled={currentQuestionIndex === 0}
+                  className={`rounded-lg px-6 py-2 font-medium ${
+                    currentQuestionIndex === 0
+                      ? 'cursor-not-allowed bg-gray-800 text-gray-500'
+                      : 'bg-gray-800 text-white hover:bg-gray-700'
+                  }`}
+                >
+                  Previous
+                </button>
+
+                {currentQuestionIndex < currentExamQuestions.length - 1 ? (
                   <button
-                    onClick={reviewExam}
-                    className="w-full rounded-lg bg-highlight py-3 font-bold text-white transition-colors hover:bg-green-600"
+                    onClick={goToNextQuestion}
+                    className="rounded-lg bg-gray-800 px-6 py-2 font-medium text-white hover:bg-gray-700"
                   >
-                    Review Answers
+                    Next
                   </button>
+                ) : (
                   <button
                     onClick={resetExam}
-                    className="w-full rounded-lg bg-gray-800 py-3 font-bold text-white transition-colors hover:bg-gray-700"
+                    className="rounded-lg bg-highlight px-6 py-2 font-medium text-white hover:bg-green-600"
                   >
-                    Return to Start
+                    Start New Exam
                   </button>
-                </div>
+                )}
+              </div>
+            </div>
+
+            {/* Question navigator */}
+            <div className="border-t border-gray-800 bg-gray-900 p-4">
+              <div className="mb-2 text-sm text-gray-400">
+                Question Navigator:
+              </div>
+              <div className="grid grid-cols-10 gap-2">
+                {currentExamQuestions.map((_, index) => {
+                  const isAnswerCorrect = isCorrectAnswer(
+                    selectedAnswers[index],
+                    currentExamQuestions[index].correctAnswer
+                  );
+                  
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => jumpToQuestion(index)}
+                      className={`flex h-8 w-8 items-center justify-center rounded-md text-sm font-medium ${
+                        currentQuestionIndex === index
+                          ? 'bg-highlight text-white'
+                          : isAnswerCorrect
+                            ? 'bg-green-700 text-white'
+                            : 'bg-red-700 text-white'
+                      }`}
+                    >
+                      {index + 1}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>
         );
 
       default:
-        return null;
+        return <div>Loading...</div>;
     }
   };
 
-  return <div className="mx-auto max-w-4xl">{renderContent()}</div>;
+  // Also update the save state effect to save the full exam state
+  useEffect(() => {
+    if (!mounted) return;
+    
+    // Save the full exam state to localStorage when in exam mode
+    if (examMode === 'exam' && currentExamQuestions.length > 0) {
+      if (typeof window !== 'undefined') {
+        const examState = {
+          isExamActive: true,
+          currentQuestion: currentExamQuestions[currentQuestionIndex],
+          questionIndex: currentQuestionIndex,
+          minimized: false,
+          examPath: '/red-seal-exam',
+          questions: currentExamQuestions,
+          answers: selectedAnswers,
+          timeRemaining
+        };
+        localStorage.setItem('examState', JSON.stringify(examState));
+      }
+    }
+  }, [mounted, examMode, currentExamQuestions, currentQuestionIndex, selectedAnswers, timeRemaining]);
+
+  // If not mounted yet (server-side), show a simple loading state
+  if (!mounted) {
+    return <div className="h-40 w-full animate-pulse rounded-lg bg-gray-800"></div>;
+  }
+
+  return renderContent();
 }
