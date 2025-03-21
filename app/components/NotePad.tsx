@@ -10,7 +10,13 @@ const NotePad: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [newNote, setNewNote] = useState('');
+  const [mounted, setMounted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Only render on client side
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleOpen = () => {
     setIsOpen(!isOpen);
@@ -51,6 +57,8 @@ const NotePad: React.FC = () => {
     }
   }, [isOpen, isMinimized]);
 
+  if (!mounted) return null;
+
   return (
     <>
       {/* Toggle Button */}
@@ -70,7 +78,7 @@ const NotePad: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed right-4 bottom-20 z-50 bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col"
+            className="fixed right-4 bottom-20 z-50 bg-gray-800 border border-gray-700 rounded-lg shadow-2xl overflow-hidden flex flex-col"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={
               isMinimized
@@ -81,18 +89,18 @@ const NotePad: React.FC = () => {
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
             {/* Header */}
-            <div className="bg-indigo-600 text-white p-2 flex justify-between items-center">
+            <div className="bg-indigo-800 text-white p-2 flex justify-between items-center">
               <h3 className="font-medium text-sm">NotePad</h3>
               <div className="flex items-center space-x-2">
                 <button 
                   onClick={toggleMinimize} 
-                  className="text-white hover:bg-indigo-500 rounded p-1"
+                  className="text-white hover:bg-indigo-700 rounded p-1"
                 >
                   {isMinimized ? <FaPlus size={12} /> : <FaMinus size={12} />}
                 </button>
                 <button 
                   onClick={toggleOpen} 
-                  className="text-white hover:bg-indigo-500 rounded p-1"
+                  className="text-white hover:bg-indigo-700 rounded p-1"
                 >
                   <FaTimes size={12} />
                 </button>
@@ -111,22 +119,22 @@ const NotePad: React.FC = () => {
                   {/* Notes List */}
                   <div className="flex-grow overflow-y-auto p-3">
                     {notes.length === 0 ? (
-                      <p className="text-gray-500 text-center mt-4">No notes yet</p>
+                      <p className="text-gray-300 text-center mt-4">No notes yet</p>
                     ) : (
                       <ul className="space-y-2">
                         {notes.map((note, index) => (
                           <motion.li
                             key={index}
-                            className="bg-gray-50 p-2 rounded flex justify-between items-start"
+                            className="bg-gray-700 p-2 rounded flex justify-between items-start"
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: 10 }}
                             transition={{ delay: index * 0.05 }}
                           >
-                            <p className="text-sm break-words max-w-[90%]">{note}</p>
+                            <p className="text-sm break-words max-w-[90%] text-white">{note}</p>
                             <button
                               onClick={() => handleDeleteNote(index)}
-                              className="text-red-500 hover:text-red-700 p-1"
+                              className="text-red-400 hover:text-red-300 p-1"
                             >
                               <FaTrash size={12} />
                             </button>
@@ -137,7 +145,7 @@ const NotePad: React.FC = () => {
                   </div>
 
                   {/* Input Form */}
-                  <div className="p-3 border-t border-gray-200">
+                  <div className="p-3 border-t border-gray-700">
                     <form onSubmit={handleAddNote} className="flex space-x-2">
                       <input
                         ref={inputRef}
@@ -145,7 +153,7 @@ const NotePad: React.FC = () => {
                         value={newNote}
                         onChange={(e) => setNewNote(e.target.value)}
                         placeholder="Add a note..."
-                        className="flex-grow border rounded-md px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                        className="flex-grow bg-gray-700 border border-gray-600 rounded-md px-2 py-1 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
                       />
                       <button
                         type="submit"
@@ -159,7 +167,7 @@ const NotePad: React.FC = () => {
                     {notes.length > 0 && (
                       <button
                         onClick={handleClearNotes}
-                        className="text-xs text-red-500 hover:text-red-700 mt-2"
+                        className="text-xs text-red-400 hover:text-red-300 mt-2"
                       >
                         Clear all notes
                       </button>

@@ -12,6 +12,7 @@ export default function Calculator() {
   const [display, setDisplay] = useState('0');
   const [lastOperation, setLastOperation] = useState('');
   const [memory, setMemory] = useState<number | null>(null);
+  const [operator, setOperator] = useState<string | null>(null);
   const [isResultSent, setIsResultSent] = useState(false);
   
   const { addNote } = useNotePad();
@@ -67,6 +68,7 @@ export default function Calculator() {
     setDisplay('0');
     setLastOperation('');
     setMemory(null);
+    setOperator(null);
   };
 
   const handleBackspace = () => {
@@ -84,30 +86,39 @@ export default function Calculator() {
     try {
       const currentValue = parseFloat(display);
       
-      if (op === '=' && memory !== null && lastOperation) {
-        let result: number;
-        
-        switch (lastOperation) {
-          case '+':
-            result = memory + currentValue;
-            break;
-          case '-':
-            result = memory - currentValue;
-            break;
-          case '*':
-            result = memory * currentValue;
-            break;
-          case '/':
-            if (currentValue === 0) throw new Error('Division by zero');
-            result = memory / currentValue;
-            break;
-          default:
-            result = currentValue;
+      if (op === '=') {
+        if (memory !== null && operator) {
+          let result: number;
+          let operationText = '';
+          
+          switch (operator) {
+            case '+':
+              result = memory + currentValue;
+              operationText = `${memory} + ${currentValue} = ${result}`;
+              break;
+            case '-':
+              result = memory - currentValue;
+              operationText = `${memory} - ${currentValue} = ${result}`;
+              break;
+            case '*':
+              result = memory * currentValue;
+              operationText = `${memory} × ${currentValue} = ${result}`;
+              break;
+            case '/':
+              if (currentValue === 0) throw new Error('Division by zero');
+              result = memory / currentValue;
+              operationText = `${memory} ÷ ${currentValue} = ${result}`;
+              break;
+            default:
+              result = currentValue;
+              operationText = `${currentValue}`;
+          }
+          
+          setDisplay(result.toString());
+          setLastOperation(operationText);
+          setMemory(null);
+          setOperator(null);
         }
-        
-        setDisplay(result.toString());
-        setLastOperation(`${op}`);
-        setMemory(null);
       } else if (op === 'sqrt') {
         if (currentValue < 0) throw new Error('Cannot take square root of negative number');
         const result = Math.sqrt(currentValue);
@@ -121,15 +132,46 @@ export default function Calculator() {
         const result = Math.pow(currentValue, 2);
         setDisplay(result.toString());
         setLastOperation(`${currentValue}² = ${result}`);
-      } else if (op !== '=') {
-        setMemory(currentValue);
-        setLastOperation(op);
-        setDisplay('0');
+      } else {
+        // For basic operations (+, -, *, /)
+        if (memory !== null && operator && !lastOperation.includes('=')) {
+          // Chain calculations
+          let result: number;
+          
+          switch (operator) {
+            case '+':
+              result = memory + currentValue;
+              break;
+            case '-':
+              result = memory - currentValue;
+              break;
+            case '*':
+              result = memory * currentValue;
+              break;
+            case '/':
+              if (currentValue === 0) throw new Error('Division by zero');
+              result = memory / currentValue;
+              break;
+            default:
+              result = currentValue;
+          }
+          
+          setMemory(result);
+          setOperator(op);
+          setDisplay('0');
+          setLastOperation(`${result} ${op}`);
+        } else {
+          setMemory(currentValue);
+          setOperator(op);
+          setDisplay('0');
+          setLastOperation(`${currentValue} ${op}`);
+        }
       }
     } catch (error) {
       setDisplay('Error');
       setLastOperation('');
       setMemory(null);
+      setOperator(null);
     }
   };
 
@@ -138,7 +180,7 @@ export default function Calculator() {
     
     let noteText = display;
     if (lastOperation.includes('=')) {
-      noteText = lastOperation + ' ' + display;
+      noteText = lastOperation;
     }
     
     addNote(`Calculation: ${noteText}`);
