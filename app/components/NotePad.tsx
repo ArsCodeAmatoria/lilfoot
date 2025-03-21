@@ -63,7 +63,7 @@ const NotePad: React.FC = () => {
     <>
       {/* Toggle Button */}
       <motion.button
-        className="fixed bottom-6 left-24 z-50 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg"
+        className="fixed top-6 right-24 z-50 bg-highlight hover:bg-green-600 text-white p-3 rounded-full shadow-lg"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={toggleOpen}
@@ -78,29 +78,29 @@ const NotePad: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed left-44 bottom-6 z-50 bg-gray-800 border border-gray-700 rounded-lg shadow-2xl overflow-hidden flex flex-col"
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            className="fixed right-24 top-24 z-50 bg-gray-800 border border-gray-700 rounded-lg shadow-2xl overflow-hidden flex flex-col"
+            initial={{ opacity: 0, scale: 0.8, y: -20 }}
             animate={
               isMinimized
                 ? { opacity: 1, scale: 1, width: '12rem', height: '3rem', y: 0 }
                 : { opacity: 1, scale: 1, width: '20rem', height: '24rem', y: 0 }
             }
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            exit={{ opacity: 0, scale: 0.8, y: -20 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
             {/* Header */}
-            <div className="bg-indigo-800 text-white p-2 flex justify-between items-center">
+            <div className="bg-highlight text-white p-2 flex justify-between items-center">
               <h3 className="font-medium text-sm">NotePad</h3>
               <div className="flex items-center space-x-2">
                 <button 
                   onClick={toggleMinimize} 
-                  className="text-white hover:bg-indigo-700 rounded p-1"
+                  className="text-white hover:bg-green-600 rounded p-1"
                 >
                   {isMinimized ? <FaPlus size={12} /> : <FaMinus size={12} />}
                 </button>
                 <button 
                   onClick={toggleOpen} 
-                  className="text-white hover:bg-indigo-700 rounded p-1"
+                  className="text-white hover:bg-green-600 rounded p-1"
                 >
                   <FaTimes size={12} />
                 </button>
@@ -153,12 +153,12 @@ const NotePad: React.FC = () => {
                         value={newNote}
                         onChange={(e) => setNewNote(e.target.value)}
                         placeholder="Add a note..."
-                        className="flex-grow bg-gray-700 border border-gray-600 rounded-md px-2 py-1 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                        className="flex-grow bg-gray-700 border border-gray-600 rounded-md px-2 py-1 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-highlight"
                       />
                       <button
                         type="submit"
                         disabled={!newNote.trim()}
-                        className="bg-indigo-600 text-white px-3 py-1 rounded-md text-sm disabled:opacity-50"
+                        className="bg-highlight text-white px-3 py-1 rounded-md text-sm disabled:opacity-50"
                       >
                         Add
                       </button>

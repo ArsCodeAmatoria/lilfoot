@@ -192,7 +192,7 @@ export default function Calculator() {
       {/* Calculator toggle button */}
       <button
         onClick={handleToggleOpen}
-        className="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700"
+        className="fixed top-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-highlight text-white shadow-lg hover:bg-green-600"
         aria-label="Open Calculator"
       >
         <CalculatorIcon size={24} />
@@ -202,15 +202,15 @@ export default function Calculator() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={minimized ? { opacity: 0, scale: 0.8, y: 20 } : { opacity: 0, y: 100 }}
+            initial={minimized ? { opacity: 0, scale: 0.8, y: -20 } : { opacity: 0, y: -100 }}
             animate={minimized 
               ? { opacity: 1, scale: 1, y: 0, x: 0, width: 'auto', height: 'auto' } 
               : { opacity: 1, y: 0, x: 0 }
             }
-            exit={{ opacity: 0, y: 100 }}
+            exit={{ opacity: 0, y: -100 }}
             className={minimized 
-              ? "fixed bottom-6 left-24 z-50 flex h-14 w-auto items-center rounded-full bg-blue-600 px-4 shadow-xl" 
-              : "fixed bottom-6 left-24 z-50 w-80 rounded-lg bg-gray-900 shadow-xl"
+              ? "fixed top-6 right-24 z-50 flex h-14 w-auto items-center rounded-full bg-highlight px-4 shadow-xl" 
+              : "fixed top-24 right-6 z-50 w-80 rounded-lg bg-gray-900 shadow-xl"
             }
           >
             {minimized ? (
@@ -219,7 +219,7 @@ export default function Calculator() {
                 <span className="font-mono text-lg">{display}</span>
                 <button
                   onClick={handleToggleMinimize}
-                  className="ml-2 rounded-full p-1 text-white/80 hover:bg-blue-700 hover:text-white"
+                  className="ml-2 rounded-full p-1 text-white/80 hover:bg-green-600 hover:text-white"
                 >
                   <Minimize2 size={18} />
                 </button>
@@ -228,7 +228,7 @@ export default function Calculator() {
               /* Full calculator view */
               <div className="flex flex-col">
                 {/* Header */}
-                <div className="flex items-center justify-between rounded-t-lg bg-blue-800 p-3">
+                <div className="flex items-center justify-between rounded-t-lg bg-highlight p-3">
                   <div className="text-sm font-medium text-white">Calculator</div>
                   <div className="flex space-x-2">
                     <button
@@ -256,7 +256,7 @@ export default function Calculator() {
                     </div>
                     <button
                       onClick={handleSendToNotepad}
-                      className={`ml-2 rounded p-1 ${isResultSent ? 'bg-green-600 text-white' : 'text-white/70 hover:bg-blue-600 hover:text-white'}`}
+                      className={`ml-2 rounded p-1 ${isResultSent ? 'bg-green-600 text-white' : 'text-white/70 hover:bg-highlight hover:text-white'}`}
                       aria-label="Send to Notepad"
                     >
                       {isResultSent ? <Check size={18} /> : <ArrowRight size={18} />}
@@ -316,7 +316,7 @@ export default function Calculator() {
                   </button>
                   <button 
                     onClick={() => handleOperation('/')}
-                    className="rounded bg-blue-700 p-3 text-center font-medium text-white hover:bg-blue-600"
+                    className="rounded bg-highlight p-3 text-center font-medium text-white hover:bg-green-600"
                   >
                     ÷
                   </button>
@@ -342,7 +342,7 @@ export default function Calculator() {
                   </button>
                   <button 
                     onClick={() => handleOperation('*')}
-                    className="rounded bg-blue-700 p-3 text-center font-medium text-white hover:bg-blue-600"
+                    className="rounded bg-highlight p-3 text-center font-medium text-white hover:bg-green-600"
                   >
                     ×
                   </button>
@@ -368,7 +368,7 @@ export default function Calculator() {
                   </button>
                   <button 
                     onClick={() => handleOperation('-')}
-                    className="rounded bg-blue-700 p-3 text-center font-medium text-white hover:bg-blue-600"
+                    className="rounded bg-highlight p-3 text-center font-medium text-white hover:bg-green-600"
                   >
                     -
                   </button>
@@ -394,7 +394,7 @@ export default function Calculator() {
                   </button>
                   <button 
                     onClick={() => handleOperation('+')}
-                    className="rounded bg-blue-700 p-3 text-center font-medium text-white hover:bg-blue-600"
+                    className="rounded bg-highlight p-3 text-center font-medium text-white hover:bg-green-600"
                   >
                     +
                   </button>
@@ -402,7 +402,7 @@ export default function Calculator() {
                   {/* Row 6 - Equals button that spans full width */}
                   <button 
                     onClick={() => handleOperation('=')}
-                    className="col-span-4 rounded bg-green-700 p-3 text-center font-medium text-white hover:bg-green-600"
+                    className="col-span-4 rounded bg-highlight p-3 text-center font-medium text-white hover:bg-green-600"
                   >
                     =
                   </button>
