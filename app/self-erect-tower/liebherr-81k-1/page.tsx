@@ -552,6 +552,179 @@ export default function Liebherr81K1Page() {
         </p>
       </div>
 
+      {/* Driving Units Section */}
+      <div className="mb-8 rounded-lg bg-black p-6 shadow-lg">
+        <h2 className="mb-4 text-xl font-bold text-white">Crane Driving Units</h2>
+        <p className="mb-6 text-gray-400">
+          The Liebherr 81K.1 features state-of-the-art driving units with frequency-controlled motors for smooth operation and precise control.
+        </p>
+        
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {/* Left Panel - Motion & Power */}
+          <div className="rounded-lg bg-gray-900 p-4">
+            <h3 className="mb-3 text-lg font-semibold text-white">Motion & Power</h3>
+            <table className="w-full text-left">
+              <thead>
+                <tr className="border-b border-gray-700">
+                  <th className="py-2 font-semibold text-gray-300">Motion Type</th>
+                  <th className="py-2 font-semibold text-gray-300">Speed / Range</th>
+                  <th className="py-2 font-semibold text-gray-300">Power</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-800">
+                <tr>
+                  <td className="py-3 text-white">
+                    <div className="flex items-center">
+                      <span className="mr-2 rounded-full bg-blue-500 p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                      Slewing
+                    </div>
+                  </td>
+                  <td className="py-3 text-white">0 → 0.8 U/min</td>
+                  <td className="py-3 text-white">5.0 kW FU</td>
+                </tr>
+                <tr>
+                  <td className="py-3 text-white">
+                    <div className="flex items-center">
+                      <span className="mr-2 rounded-full bg-green-500 p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1.01 1.01 0 01-1.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                      Trolley Travel
+                    </div>
+                  </td>
+                  <td className="py-3 text-white">0 → 60.0 m/min</td>
+                  <td className="py-3 text-white">3.0 kW FU</td>
+                </tr>
+                <tr>
+                  <td className="py-3 text-white">
+                    <div className="flex items-center">
+                      <span className="mr-2 rounded-full bg-yellow-500 p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                      Crane Travel
+                    </div>
+                  </td>
+                  <td className="py-3 text-white">0 → 25.0 m/min</td>
+                  <td className="py-3 text-white">2 × 2.2 kW FU</td>
+                </tr>
+                <tr>
+                  <td className="py-3 text-white">
+                    <div className="flex items-center">
+                      <span className="mr-2 rounded-full bg-red-500 p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                      Jib Angle Adjustment (0°–45°)
+                    </div>
+                  </td>
+                  <td className="py-3 text-white">110 sec</td>
+                  <td className="py-3 text-white">3.0 kW FU</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Right Panel - Hoist Performance */}
+          <div className="rounded-lg bg-gray-900 p-4">
+            <h3 className="mb-3 text-lg font-semibold text-white">Hoist Motor & Speed Performance</h3>
+            <p className="mb-4 text-gray-300">Motor Type: 15.0 kW FU</p>
+            
+            <table className="mb-4 w-full text-left">
+              <thead>
+                <tr className="border-b border-gray-700">
+                  <th className="py-2 font-semibold text-gray-300">Step</th>
+                  <th className="py-2 font-semibold text-gray-300">Capacity</th>
+                  <th className="py-2 font-semibold text-gray-300">Speed</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-800">
+                <tr>
+                  <td className="py-3 text-white">Step 1</td>
+                  <td className="py-3 text-white">6000 kg</td>
+                  <td className="py-3 text-white">0 → 12.7 m/min</td>
+                </tr>
+                <tr>
+                  <td className="py-3 text-white">Step 2</td>
+                  <td className="py-3 text-white">400 kg</td>
+                  <td className="py-3 text-white">0 → 76.1 m/min</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div className="mt-6 rounded bg-gray-800 p-4">
+              <h4 className="mb-3 text-sm font-semibold text-gray-300">Performance Curve</h4>
+              <div className="relative h-[200px] w-full">
+                {/* Y-axis */}
+                <div className="absolute bottom-0 left-0 top-0 flex flex-col justify-between border-r border-gray-600 pr-2 text-xs text-gray-400">
+                  <span>6000 kg</span>
+                  <span>4500 kg</span>
+                  <span>3000 kg</span>
+                  <span>1500 kg</span>
+                  <span>0 kg</span>
+                </div>
+                
+                {/* Graph area */}
+                <div className="absolute bottom-0 left-8 right-0 top-0">
+                  {/* X-axis labels */}
+                  <div className="absolute -bottom-6 left-0 right-0 flex justify-between text-xs text-gray-400">
+                    <span>0</span>
+                    <span>20</span>
+                    <span>40</span>
+                    <span>60</span>
+                    <span>80 m/min</span>
+                  </div>
+                  
+                  {/* X-axis line */}
+                  <div className="absolute bottom-0 left-0 right-0 border-t border-gray-600"></div>
+                  
+                  {/* Performance curve */}
+                  <svg className="absolute bottom-0 left-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path
+                      d="M0,0 C5,40 20,75 40,90 C60,97 80,99 100,100"
+                      fill="none"
+                      stroke="#53C03F"
+                      strokeWidth="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Panel - Additional Information */}
+        <div className="mt-6 rounded-lg bg-gray-900 p-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div>
+              <h3 className="mb-2 text-sm font-semibold text-gray-300">BGL</h3>
+              <p className="text-white">C.0.03.0080</p>
+            </div>
+            <div>
+              <h3 className="mb-2 text-sm font-semibold text-gray-300">Power Supply</h3>
+              <ul className="list-inside list-disc text-white">
+                <li>Voltage: 380 V – 480 V</li>
+                <li>Frequency: 50 Hz / 60 Hz</li>
+                <li>Power: 22.0 kVA (FU)</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-4 border-t border-gray-700 pt-4">
+            <p className="text-sm italic text-gray-400">
+              Load-Plus = <span className="text-gray-500">Abweichende Geschwindigkeiten und Betriebsbedingungen.</span>
+              <br />Different speeds and service conditions.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* PDF Download Section */}
       <div className="rounded-lg bg-black p-8">
         <h2 className="mb-6 text-2xl font-bold text-white">Documentation</h2>
