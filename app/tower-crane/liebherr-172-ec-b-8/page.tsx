@@ -313,6 +313,8 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center">-</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
@@ -404,6 +406,56 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.44</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.97</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">5.75</span></td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center">-</td>
+              </tr>
+              <tr className="border-b border-gray-800 hover:bg-gray-900/50">
+                <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">26.9</td>
+                <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=28.4</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–22.9</td>
+                <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.46</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.70</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center">-</td>
+              </tr>
+              <tr className="border-b border-gray-800 hover:bg-gray-900/50">
+                <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">24.4</td>
+                <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=25.9</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–22.9</td>
+                <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.45</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
@@ -607,6 +659,8 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center">-</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
@@ -633,6 +687,7 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center">-</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
@@ -650,6 +705,7 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.08</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.79</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">3.75</span></td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
@@ -698,6 +754,58 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.44</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.97</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">5.75</span></td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center">-</td>
+              </tr>
+              <tr className="border-b border-gray-800 hover:bg-gray-900/50">
+                <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">26.9</td>
+                <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=28.4</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–22.9</td>
+                <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.46</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.70</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center">-</td>
+              </tr>
+              <tr className="border-b border-gray-800 hover:bg-gray-900/50">
+                <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">24.4</td>
+                <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=25.9</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–22.9</td>
+                <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.45</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
