@@ -360,6 +360,8 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center">-</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
@@ -399,6 +401,7 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.44</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.97</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">5.75</span></td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
@@ -649,6 +652,7 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center">-</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
@@ -700,10 +704,264 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center">-</td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+
+      {/* Drive Units Specification */}
+      <div className="rounded-lg bg-gray-900 p-6 shadow-lg mb-8">
+        <h2 className="mb-4 text-2xl font-bold text-white">Drive Unit Specifications</h2>
+        <p className="mb-6 text-gray-400">
+          The Liebherr 172 EC-B 8 is available with two primary hoisting unit options, providing different performance characteristics
+          to match specific project requirements.
+        </p>
+
+        {/* WIW 230 MZ 427 */}
+        <div className="mb-8">
+          <h3 className="text-xl font-bold mb-4 text-white">WIW 230 MZ 427 (24 kW FU)</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <div className="rounded bg-black p-4">
+                <table className="min-w-full">
+                  <tbody className="divide-y divide-gray-800">
+                    <tr>
+                      <td className="py-2 text-gray-400">Power</td>
+                      <td className="py-2 text-right text-white">24 kW FU</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-gray-400">kVA</td>
+                      <td className="py-2 text-right text-white">35.0</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-gray-400">Max. Rope Length</td>
+                      <td className="py-2 text-right text-white">328.0 m</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-gray-400">Lifting Height</td>
+                      <td className="py-2 text-right text-white">113.0 m</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-gray-400">Layers</td>
+                      <td className="py-2 text-right text-white">4</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-gray-400">Control</td>
+                      <td className="py-2 text-right text-white">Stepless (stufenlos), continuously variable</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-4 rounded bg-black p-4">
+                <h4 className="text-white font-semibold mb-2">Hoisting Speeds</h4>
+                <table className="min-w-full">
+                  <thead>
+                    <tr className="border-b border-gray-800">
+                      <th className="py-2 text-left text-gray-400">Load (tonnes)</th>
+                      <th className="py-2 text-right text-gray-400">Speed (m/min)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-800">
+                    <tr>
+                      <td className="py-2 text-white">8.00</td>
+                      <td className="py-2 text-right text-white">0 ➝ 16</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-white">0.50</td>
+                      <td className="py-2 text-right text-white">0 ➝ 86</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="rounded bg-black p-4 flex flex-col justify-center">
+              <h4 className="text-white font-semibold mb-4 text-center">Hoisting Speed vs. Load</h4>
+              <div className="h-64 relative">
+                {/* Y-axis line */}
+                <div className="absolute left-16 top-0 bottom-0 w-0.5 bg-gray-700"></div>
+                {/* X-axis line */}
+                <div className="absolute left-16 right-8 bottom-0 h-0.5 bg-gray-700"></div>
+                
+                {/* Y-axis labels */}
+                <div className="absolute left-0 top-0 text-xs text-gray-400">86 m/min</div>
+                <div className="absolute left-0 bottom-0 text-xs text-gray-400">0 m/min</div>
+                
+                {/* X-axis labels */}
+                <div className="absolute left-12 bottom-[-20px] text-xs text-gray-400">8.0t</div>
+                <div className="absolute right-0 bottom-[-20px] text-xs text-gray-400">0.5t</div>
+                
+                {/* Speed curve */}
+                <svg className="absolute inset-0" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <path 
+                    d="M 20,90 C 30,70 50,20 90,10" 
+                    stroke="#3B82F6" 
+                    strokeWidth="2" 
+                    fill="none"
+                  />
+                </svg>
+                
+                {/* Axis titles */}
+                <div className="absolute left-[-30px] top-1/2 transform -rotate-90 text-xs text-gray-400">Speed</div>
+                <div className="absolute bottom-[-35px] left-1/2 text-xs text-gray-400">Load</div>
+              </div>
+              <p className="text-xs text-gray-400 mt-2 text-center">
+                Hoisting speed increases as load decreases from 8t at minimum speed to 0.5t at maximum speed
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* WIW 260 MZ 423 */}
+        <div className="mb-8">
+          <h3 className="text-xl font-bold mb-4 text-white">WIW 260 MZ 423 (45 kW FU)</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <div className="rounded bg-black p-4">
+                <table className="min-w-full">
+                  <tbody className="divide-y divide-gray-800">
+                    <tr>
+                      <td className="py-2 text-gray-400">Power</td>
+                      <td className="py-2 text-right text-white">45 kW FU</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-gray-400">kVA</td>
+                      <td className="py-2 text-right text-white">54.0</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-gray-400">Max. Rope Length</td>
+                      <td className="py-2 text-right text-white">328.0 m</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-gray-400">Lifting Height</td>
+                      <td className="py-2 text-right text-white">179.0 m</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-gray-400">Layers</td>
+                      <td className="py-2 text-right text-white">6</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-gray-400">Control</td>
+                      <td className="py-2 text-right text-white">Stepless (stufenlos), continuously variable</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-4 rounded bg-black p-4">
+                <h4 className="text-white font-semibold mb-2">Hoisting Speeds</h4>
+                <table className="min-w-full">
+                  <thead>
+                    <tr className="border-b border-gray-800">
+                      <th className="py-2 text-left text-gray-400">Load (tonnes)</th>
+                      <th className="py-2 text-right text-gray-400">Speed (m/min)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-800">
+                    <tr>
+                      <td className="py-2 text-white">8.00</td>
+                      <td className="py-2 text-right text-white">0 ➝ 29</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-white">0.58</td>
+                      <td className="py-2 text-right text-white">0 ➝ 174</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div className="rounded bg-black p-4 flex flex-col justify-center">
+              <h4 className="text-white font-semibold mb-4 text-center">Hoisting Speed vs. Load</h4>
+              <div className="h-64 relative">
+                {/* Y-axis line */}
+                <div className="absolute left-16 top-0 bottom-0 w-0.5 bg-gray-700"></div>
+                {/* X-axis line */}
+                <div className="absolute left-16 right-8 bottom-0 h-0.5 bg-gray-700"></div>
+                
+                {/* Y-axis labels */}
+                <div className="absolute left-0 top-0 text-xs text-gray-400">174 m/min</div>
+                <div className="absolute left-0 bottom-0 text-xs text-gray-400">0 m/min</div>
+                
+                {/* X-axis labels */}
+                <div className="absolute left-12 bottom-[-20px] text-xs text-gray-400">8.0t</div>
+                <div className="absolute right-0 bottom-[-20px] text-xs text-gray-400">0.58t</div>
+                
+                {/* Speed curve */}
+                <svg className="absolute inset-0" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <path 
+                    d="M 20,90 C 30,70 50,20 90,10" 
+                    stroke="#22C55E" 
+                    strokeWidth="2" 
+                    fill="none"
+                  />
+                </svg>
+                
+                {/* Axis titles */}
+                <div className="absolute left-[-30px] top-1/2 transform -rotate-90 text-xs text-gray-400">Speed</div>
+                <div className="absolute bottom-[-35px] left-1/2 text-xs text-gray-400">Load</div>
+              </div>
+              <p className="text-xs text-gray-400 mt-2 text-center">
+                Hoisting speed increases as load decreases from 8t at minimum speed to 0.58t at maximum speed
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Auxiliary Drives */}
+        <div>
+          <h3 className="text-xl font-bold mb-4 text-white">Auxiliary Drives</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rounded bg-black p-4">
+              <h4 className="text-white font-semibold mb-3">Slewing</h4>
+              <table className="min-w-full">
+                <tbody className="divide-y divide-gray-800">
+                  <tr>
+                    <td className="py-2 text-gray-400">Speed</td>
+                    <td className="py-2 text-right text-white">0 ➝ 0.8 U/min</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 text-gray-400">Power</td>
+                    <td className="py-2 text-right text-white">7.5 kW FU</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="rounded bg-black p-4">
+              <h4 className="text-white font-semibold mb-3">Trolley Travel</h4>
+              <table className="min-w-full">
+                <tbody className="divide-y divide-gray-800">
+                  <tr>
+                    <td className="py-2 text-gray-400">Speed</td>
+                    <td className="py-2 text-right text-white">0 ➝ 100.0 m/min</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 text-gray-400">Power</td>
+                    <td className="py-2 text-right text-white">5.5 kW FU</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="rounded bg-black p-4">
+              <h4 className="text-white font-semibold mb-3">Luffing Jib</h4>
+              <table className="min-w-full">
+                <tbody className="divide-y divide-gray-800">
+                  <tr>
+                    <td className="py-2 text-gray-400">Speed</td>
+                    <td className="py-2 text-right text-white">25.0 m/min</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 text-gray-400 align-top">Power Options</td>
+                    <td className="py-2 text-right text-white">
+                      <div>2 × 4.0 kW (16 HC 175)</div>
+                      <div>2 × 5.5 kW (17 HC 200)</div>
+                      <div>2 × 7.5 kW (21 HC 290)</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
 
