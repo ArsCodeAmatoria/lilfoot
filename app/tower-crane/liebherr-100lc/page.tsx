@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, FileText, FileSymlink } from 'lucide-react';
+import LoadCharts from './charts';
 
 export const metadata = {
   title: 'Liebherr 100LC Specifications | Tower Cranes | lilfoot',
@@ -88,7 +89,7 @@ export default function Liebherr100LCPage() {
         </div>
       </div>
 
-      <div className="rounded-lg bg-gray-900 p-6">
+      <div className="rounded-lg bg-gray-900 p-6 mb-8">
         <h3 className="mb-4 text-xl font-bold">Documentation Contents</h3>
         <div className="grid gap-6 md:grid-cols-2">
           <ul className="space-y-3 text-gray-400">
@@ -131,6 +132,10 @@ export default function Liebherr100LCPage() {
             View Complete Documentation
           </a>
         </div>
+      </div>
+
+      <div className="rounded-lg bg-gray-900 p-6">
+        <LoadCharts />
       </div>
     </div>
   );
