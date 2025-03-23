@@ -500,7 +500,7 @@ export default function Liebherr81K1Page() {
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="bg-gray-900">
-                <th className="sticky left-0 z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Height (m)</th>
+                <th className="sticky left-0 z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Reach (m)</th>
                 <th className="sticky left-[80px] z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Load Capacity (m/kg)</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">12.0m</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">15.0m</th>
@@ -624,7 +624,7 @@ export default function Liebherr81K1Page() {
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="bg-gray-900">
-                <th className="sticky left-0 z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Height (m)</th>
+                <th className="sticky left-0 z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Reach (m)</th>
                 <th className="sticky left-[80px] z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Load Capacity (m/kg)</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">12.0m</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">15.0m</th>
@@ -749,7 +749,7 @@ export default function Liebherr81K1Page() {
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="bg-gray-900">
-                <th className="sticky left-0 z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Height (m)</th>
+                <th className="sticky left-0 z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Reach (m)</th>
                 <th className="sticky left-[80px] z-10 bg-gray-900 px-2 py-3 font-semibold text-gray-300 whitespace-nowrap">Load Capacity (m/kg)</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">12.0m</th>
                 <th className="px-2 py-3 font-semibold text-gray-300 whitespace-nowrap text-center">14.0m</th>
