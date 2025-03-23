@@ -1,142 +1,193 @@
-import React from 'react';
+import { Metadata } from 'next';
 import { Download, FileText, FileSymlink } from 'lucide-react';
 import LoadCharts from './charts';
 
-export const metadata = {
-  title: 'Liebherr 100LC Specifications | Tower Cranes | lilfoot',
-  description:
-    'Load charts and specifications for the Liebherr 100LC tower crane.',
+export const metadata: Metadata = {
+  title: 'Liebherr 100LC Tower Crane | LilFoot',
+  description: 'Specifications and load charts for the Liebherr 100LC tower crane.',
 };
 
-export default function Liebherr100LCPage() {
+export default function Liebherr100LC() {
   return (
-    <div className="text-white">
-      <div className="mb-8">
-        <h1 className="mb-4 text-3xl font-bold text-white">
-          Liebherr 100LC Tower Crane
-        </h1>
-        <p className="max-w-3xl text-gray-400">
-          The Liebherr 100LC is a versatile tower crane known for its
-          reliability and performance in medium to large construction projects.
-          This page provides comprehensive specifications, load charts, and
-          operational guidelines for crane operators.
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Liebherr 100LC Tower Crane</h1>
+      
+      {/* Overview Section - Single Column */}
+      <div className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">Overview</h2>
+        <p className="text-gray-300 mb-4">
+          The Liebherr 100LC is a versatile top-slewing tower crane with excellent load capacity and reach capabilities. 
+          Designed for reliability and efficiency, it's widely used in construction projects requiring medium to heavy lifting.
         </p>
+        <p className="text-gray-300 mb-4">
+          With its modular design and robust construction, the 100LC offers exceptional performance, safety, and ease of operation
+          in various construction environments.
+        </p>
+        <div className="bg-gray-800 p-4 rounded-lg">
+          <h3 className="text-xl font-bold mb-2">Key Features</h3>
+          <ul className="list-disc list-inside text-gray-300 space-y-1">
+            <li>Maximum lifting capacity of 6,000 kg</li>
+            <li>Jib length up to 50.0 meters</li>
+            <li>Variable hoisting speeds for precise control</li>
+            <li>Stepless frequency-controlled slewing drive</li>
+            <li>Modern LITRONIC electronic control system</li>
+            <li>Exceptional safety features with overload protection</li>
+          </ul>
+        </div>
       </div>
-
-      <div className="mb-8 rounded-lg bg-gray-900 p-8">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="mb-3 text-xl font-bold">Liebherr 100LC Documentation</h2>
-            <p className="mb-4 text-gray-400">
-              Download the complete specifications and load charts for reference.
-            </p>
+      
+      <div className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">Technical Specifications</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-gray-900 p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold mb-3">Dimensions & Reach</h3>
+            <table className="w-full">
+              <tbody className="divide-y divide-gray-800">
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Max. jib length</td>
+                  <td className="py-2 text-right">50.0 m</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Max. hook height</td>
+                  <td className="py-2 text-right">43.2 m (freestanding)</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Tower sections</td>
+                  <td className="py-2 text-right">1.2 m × 1.2 m</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Slewing radius</td>
+                  <td className="py-2 text-right">2.5 m</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Base spread</td>
+                  <td className="py-2 text-right">4.5 m × 4.5 m</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <a
-            href="/pdfs/100LC.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center rounded-lg bg-highlight px-4 py-2 text-white hover:bg-green-600 transition-colors"
-          >
-            <Download size={18} className="mr-2" />
-            Download PDF
-          </a>
+          
+          <div className="bg-gray-900 p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold mb-3">Lifting Capacity</h3>
+            <table className="w-full">
+              <tbody className="divide-y divide-gray-800">
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Max. capacity</td>
+                  <td className="py-2 text-right">6,000 kg</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Capacity at max. reach</td>
+                  <td className="py-2 text-right">1,600 kg</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Line configuration</td>
+                  <td className="py-2 text-right">2-part & 4-part</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Single hook capacity</td>
+                  <td className="py-2 text-right">3,000 kg</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Dual hook capacity</td>
+                  <td className="py-2 text-right">6,000 kg</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-gray-900 p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold mb-3">Power & Electrical</h3>
+            <table className="w-full">
+              <tbody className="divide-y divide-gray-800">
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Total power</td>
+                  <td className="py-2 text-right">22.0 kW / 22.0 kW FU</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Hoist motor</td>
+                  <td className="py-2 text-right">3.8 / 18.5 / 22.0 kW</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Slewing motor</td>
+                  <td className="py-2 text-right">1 × 7.5 kW</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Trolley motor</td>
+                  <td className="py-2 text-right">0.65 / 2.0 / 3.0 kW</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Power supply</td>
+                  <td className="py-2 text-right">400V/50Hz</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="bg-gray-900 p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold mb-3">Operation & Features</h3>
+            <table className="w-full">
+              <tbody className="divide-y divide-gray-800">
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Control system</td>
+                  <td className="py-2 text-right">LITRONIC</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Slewing speed</td>
+                  <td className="py-2 text-right">0 - 0.8 U/min</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Trolley speed</td>
+                  <td className="py-2 text-right">9.0 / 25.0 / 45.0 m/min</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Travel speed</td>
+                  <td className="py-2 text-right">18.0 / 25.0 m/min</td>
+                </tr>
+                <tr className="text-gray-300">
+                  <td className="py-2 font-semibold">Overload protection</td>
+                  <td className="py-2 text-right">Standard</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-
-      <div className="grid gap-6 md:grid-cols-2 mb-8">
-        <div className="rounded-lg bg-gray-900 p-6">
-          <h3 className="mb-4 text-xl font-bold">Technical Specifications</h3>
-          <ul className="space-y-3 text-gray-400">
-            <li className="flex">
-              <span className="mr-2 font-bold text-highlight">•</span>
-              Maximum lifting capacity: 8,000 kg
-            </li>
-            <li className="flex">
-              <span className="mr-2 font-bold text-highlight">•</span>
-              Maximum jib length: 50 meters
-            </li>
-            <li className="flex">
-              <span className="mr-2 font-bold text-highlight">•</span>
-              Maximum lifting height: 100 meters (with standard tower configuration)
-            </li>
-            <li className="flex">
-              <span className="mr-2 font-bold text-highlight">•</span>
-              Tip load at maximum radius: 2,100 kg
-            </li>
-          </ul>
-        </div>
-
-        <div className="rounded-lg bg-gray-900 p-6">
-          <h3 className="mb-4 text-xl font-bold">Key Features</h3>
-          <ul className="space-y-3 text-gray-400">
-            <li className="flex">
-              <span className="mr-2 font-bold text-highlight">•</span>
-              Optimized for medium to large construction projects
-            </li>
-            <li className="flex">
-              <span className="mr-2 font-bold text-highlight">•</span>
-              Well-balanced lift capacity and reach
-            </li>
-            <li className="flex">
-              <span className="mr-2 font-bold text-highlight">•</span>
-              Renowned Liebherr reliability
-            </li>
-            <li className="flex">
-              <span className="mr-2 font-bold text-highlight">•</span>
-              Advanced safety systems
-            </li>
-          </ul>
+      
+      <div className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">Crane Configuration Options</h2>
+        <div className="bg-gray-900 p-6 rounded-lg shadow-md">
+          <p className="text-gray-300 mb-4">
+            The Liebherr 100LC can be configured in multiple ways to meet the specific requirements of different construction projects:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-lg font-bold mb-2">Foundation Options</h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                <li>Static base (4.5 m × 4.5 m)</li>
+                <li>Cross base with central ballast</li>
+                <li>Rail-mounted undercarriage</li>
+                <li>Fixed anchoring with anchor cross</li>
+                <li>Climbing configuration for high-rise buildings</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-2">Jib Configurations</h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                <li>Standard jib (26.8 m to 50.0 m)</li>
+                <li>Luffing jib option for confined spaces</li>
+                <li>Various trolley configurations</li>
+                <li>Single or dual trolley operation</li>
+                <li>Special adapters for custom applications</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="rounded-lg bg-gray-900 p-6 mb-8">
-        <h3 className="mb-4 text-xl font-bold">Documentation Contents</h3>
-        <div className="grid gap-6 md:grid-cols-2">
-          <ul className="space-y-3 text-gray-400">
-            <li className="flex items-center">
-              <FileSymlink size={20} className="mr-2 text-highlight" />
-              Detailed technical specifications
-            </li>
-            <li className="flex items-center">
-              <FileSymlink size={20} className="mr-2 text-highlight" />
-              Load charts for various configurations
-            </li>
-            <li className="flex items-center">
-              <FileSymlink size={20} className="mr-2 text-highlight" />
-              Working radius information
-            </li>
-          </ul>
-          <ul className="space-y-3 text-gray-400">
-            <li className="flex items-center">
-              <FileSymlink size={20} className="mr-2 text-highlight" />
-              Tower height configurations
-            </li>
-            <li className="flex items-center">
-              <FileSymlink size={20} className="mr-2 text-highlight" />
-              Operational safety guidelines
-            </li>
-            <li className="flex items-center">
-              <FileSymlink size={20} className="mr-2 text-highlight" />
-              Assembly and disassembly procedures
-            </li>
-          </ul>
-        </div>
-        <div className="mt-6 flex justify-center">
-          <a
-            href="/pdfs/100LC.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center rounded-lg border border-highlight px-6 py-3 text-white hover:bg-gray-800 transition-colors"
-          >
-            <FileText size={20} className="mr-2 text-highlight" />
-            View Complete Documentation
-          </a>
-        </div>
-      </div>
-
-      <div className="rounded-lg bg-gray-900 p-6">
-        <LoadCharts />
-      </div>
+      
+      <LoadCharts />
     </div>
   );
 }
