@@ -374,289 +374,293 @@ export default function LoadCharts() {
           Detailed specifications of the crane's motions, power ratings, and hoisting capabilities in various configurations.
         </p>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Panel - Crane Motions & Power */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Crane Motions & Power</h3>
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-gray-900 rounded-lg overflow-hidden">
-                <thead className="bg-gray-800">
-                  <tr>
-                    <th className="px-4 py-3 text-left font-bold">Motion</th>
-                    <th className="px-4 py-3 text-left font-bold">Speed</th>
-                    <th className="px-4 py-3 text-left font-bold">Power</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-800">
-                  <tr className="text-gray-300 hover:bg-gray-800">
-                    <td className="px-4 py-3">Slewing</td>
-                    <td className="px-4 py-3">0 – 0.8 U/min</td>
-                    <td className="px-4 py-3">1 × 7.5 kW FR.tronic-FU</td>
-                  </tr>
-                  <tr className="text-gray-300 hover:bg-gray-800">
-                    <td className="px-4 py-3">Trolley Travel</td>
-                    <td className="px-4 py-3">9.0 / 30.0 / 60.0 m/min</td>
-                    <td className="px-4 py-3">0.65 / 2.0 / 3.0 kW</td>
-                  </tr>
-                  <tr className="text-gray-300 hover:bg-gray-800">
-                    <td className="px-4 py-3">Travel</td>
-                    <td className="px-4 py-3">18.0 / 25.0 m/min</td>
-                    <td className="px-4 py-3">2 × 2.6 kW (100 LC), 2 × 4.0 kW (120 HC)</td>
-                  </tr>
-                  <tr className="text-gray-300 hover:bg-gray-800">
-                    <td className="px-4 py-3">Power Supply</td>
-                    <td className="px-4 py-3">–</td>
-                    <td className="px-4 py-3">22.0 kW / 22.0 kW FU</td>
-                  </tr>
-                  <tr className="text-gray-300 hover:bg-gray-800">
-                    <td className="px-4 py-3">kVA</td>
-                    <td className="px-4 py-3">–</td>
-                    <td className="px-4 py-3">39.0 / 30.0</td>
-                  </tr>
-                </tbody>
-              </table>
+        {/* Left Panel - Crane Motions & Power */}
+        <div className="mb-10">
+          <h3 className="text-xl font-bold mb-4">Crane Motions & Power</h3>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-gray-900 rounded-lg overflow-hidden">
+              <thead className="bg-gray-800">
+                <tr>
+                  <th className="px-4 py-3 text-left font-bold">Motion</th>
+                  <th className="px-4 py-3 text-left font-bold">Speed</th>
+                  <th className="px-4 py-3 text-left font-bold">Power</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-800">
+                <tr className="text-gray-300 hover:bg-gray-800">
+                  <td className="px-4 py-3">Slewing</td>
+                  <td className="px-4 py-3">0 – 0.8 U/min</td>
+                  <td className="px-4 py-3">1 × 7.5 kW FR.tronic-FU</td>
+                </tr>
+                <tr className="text-gray-300 hover:bg-gray-800">
+                  <td className="px-4 py-3">Trolley Travel</td>
+                  <td className="px-4 py-3">9.0 / 30.0 / 60.0 m/min</td>
+                  <td className="px-4 py-3">0.65 / 2.0 / 3.0 kW</td>
+                </tr>
+                <tr className="text-gray-300 hover:bg-gray-800">
+                  <td className="px-4 py-3">Travel</td>
+                  <td className="px-4 py-3">18.0 / 25.0 m/min</td>
+                  <td className="px-4 py-3">2 × 2.6 kW (100 LC), 2 × 4.0 kW (120 HC)</td>
+                </tr>
+                <tr className="text-gray-300 hover:bg-gray-800">
+                  <td className="px-4 py-3">Power Supply</td>
+                  <td className="px-4 py-3">–</td>
+                  <td className="px-4 py-3">22.0 kW / 22.0 kW FU</td>
+                </tr>
+                <tr className="text-gray-300 hover:bg-gray-800">
+                  <td className="px-4 py-3">kVA</td>
+                  <td className="px-4 py-3">–</td>
+                  <td className="px-4 py-3">39.0 / 30.0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        {/* Right Panel - Hoisting Data */}
+        <div>
+          <h3 className="text-xl font-bold mb-4">Hoisting Data</h3>
+          
+          {/* WIW 230 MZ 402 - 85.0m Drum */}
+          <div className="mb-10">
+            <h4 className="font-bold mb-2 text-gray-300">Hoist: WIW 230 MZ 402 – 3.8 / 18.5 / 22.0 kW</h4>
+            <p className="text-gray-400 mb-3">85.0 m LS-Trommel, 3 Layers</p>
+            
+            {/* 2-part line */}
+            <div className="mb-6">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">2</div>
+                <span className="text-gray-300">2-part line</span>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="min-w-full bg-gray-900 rounded-lg overflow-hidden">
+                  <thead className="bg-gray-800">
+                    <tr>
+                      <th className="px-3 py-2 text-left font-bold">Step</th>
+                      <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
+                      <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-800">
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">1</td>
+                      <td className="px-3 py-2">3000</td>
+                      <td className="px-3 py-2">6.0</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">2</td>
+                      <td className="px-3 py-2">3000</td>
+                      <td className="px-3 py-2">27.0</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">3</td>
+                      <td className="px-3 py-2">1800</td>
+                      <td className="px-3 py-2">56.0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            {/* 4-part line */}
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">4</div>
+                <span className="text-gray-300">4-part line</span>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="min-w-full bg-gray-900 rounded-lg overflow-hidden">
+                  <thead className="bg-gray-800">
+                    <tr>
+                      <th className="px-3 py-2 text-left font-bold">Step</th>
+                      <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
+                      <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-800">
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">1</td>
+                      <td className="px-3 py-2">6000</td>
+                      <td className="px-3 py-2">3.0</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">2</td>
+                      <td className="px-3 py-2">6000</td>
+                      <td className="px-3 py-2">13.5</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">3</td>
+                      <td className="px-3 py-2">3700</td>
+                      <td className="px-3 py-2">28.0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           
-          {/* Right Panel - Hoisting Data */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Hoisting Data</h3>
+          {/* WIW 230 MZ 402 - 149.0m Drum */}
+          <div className="mb-10">
+            <h4 className="font-bold mb-2 text-gray-300">Hoist: WIW 230 MZ 402 – 3.8 / 18.5 / 22.0 kW</h4>
+            <p className="text-gray-400 mb-3">149.0 m LS-Trommel, 5 Layers</p>
             
-            {/* WIW 230 MZ 402 - 85.0m Drum */}
+            {/* 2-part line */}
             <div className="mb-6">
-              <h4 className="font-bold mb-2 text-gray-300">Hoist: WIW 230 MZ 402 – 3.8 / 18.5 / 22.0 kW</h4>
-              <p className="text-gray-400 mb-3">85.0 m LS-Trommel, 3 Layers</p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* 2-part line */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">2</div>
-                    <span className="text-gray-300">2-part line</span>
-                  </div>
-                  <table className="w-full bg-gray-900 rounded-lg overflow-hidden">
-                    <thead className="bg-gray-800">
-                      <tr>
-                        <th className="px-3 py-2 text-left font-bold">Step</th>
-                        <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
-                        <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-800">
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">1</td>
-                        <td className="px-3 py-2">3000</td>
-                        <td className="px-3 py-2">6.0</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">2</td>
-                        <td className="px-3 py-2">3000</td>
-                        <td className="px-3 py-2">27.0</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">3</td>
-                        <td className="px-3 py-2">1800</td>
-                        <td className="px-3 py-2">56.0</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                
-                {/* 4-part line */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">4</div>
-                    <span className="text-gray-300">4-part line</span>
-                  </div>
-                  <table className="w-full bg-gray-900 rounded-lg overflow-hidden">
-                    <thead className="bg-gray-800">
-                      <tr>
-                        <th className="px-3 py-2 text-left font-bold">Step</th>
-                        <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
-                        <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-800">
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">1</td>
-                        <td className="px-3 py-2">6000</td>
-                        <td className="px-3 py-2">3.0</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">2</td>
-                        <td className="px-3 py-2">6000</td>
-                        <td className="px-3 py-2">13.5</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">3</td>
-                        <td className="px-3 py-2">3700</td>
-                        <td className="px-3 py-2">28.0</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">2</div>
+                <span className="text-gray-300">2-part line</span>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="min-w-full bg-gray-900 rounded-lg overflow-hidden">
+                  <thead className="bg-gray-800">
+                    <tr>
+                      <th className="px-3 py-2 text-left font-bold">Step</th>
+                      <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
+                      <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-800">
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">1</td>
+                      <td className="px-3 py-2">3000</td>
+                      <td className="px-3 py-2">6.2</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">2</td>
+                      <td className="px-3 py-2">3000</td>
+                      <td className="px-3 py-2">28.0</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">3</td>
+                      <td className="px-3 py-2">1700</td>
+                      <td className="px-3 py-2">58.0</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             
-            {/* WIW 230 MZ 402 - 149.0m Drum */}
-            <div className="mb-6">
-              <h4 className="font-bold mb-2 text-gray-300">Hoist: WIW 230 MZ 402 – 3.8 / 18.5 / 22.0 kW</h4>
-              <p className="text-gray-400 mb-3">149.0 m LS-Trommel, 5 Layers</p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* 2-part line */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">2</div>
-                    <span className="text-gray-300">2-part line</span>
-                  </div>
-                  <table className="w-full bg-gray-900 rounded-lg overflow-hidden">
-                    <thead className="bg-gray-800">
-                      <tr>
-                        <th className="px-3 py-2 text-left font-bold">Step</th>
-                        <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
-                        <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-800">
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">1</td>
-                        <td className="px-3 py-2">3000</td>
-                        <td className="px-3 py-2">6.2</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">2</td>
-                        <td className="px-3 py-2">3000</td>
-                        <td className="px-3 py-2">28.0</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">3</td>
-                        <td className="px-3 py-2">1700</td>
-                        <td className="px-3 py-2">58.0</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                
-                {/* 4-part line */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">4</div>
-                    <span className="text-gray-300">4-part line</span>
-                  </div>
-                  <table className="w-full bg-gray-900 rounded-lg overflow-hidden">
-                    <thead className="bg-gray-800">
-                      <tr>
-                        <th className="px-3 py-2 text-left font-bold">Step</th>
-                        <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
-                        <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-800">
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">1</td>
-                        <td className="px-3 py-2">6000</td>
-                        <td className="px-3 py-2">3.1</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">2</td>
-                        <td className="px-3 py-2">6000</td>
-                        <td className="px-3 py-2">14.0</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">3</td>
-                        <td className="px-3 py-2">3500</td>
-                        <td className="px-3 py-2">29.0</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            
-            {/* WIW 230 MZ 404 - 149.0m Drum */}
+            {/* 4-part line */}
             <div>
-              <h4 className="font-bold mb-2 text-gray-300">Hoist: WIW 230 MZ 404 – 22.0 kW FU</h4>
-              <p className="text-gray-400 mb-3">149.0 m LS-Trommel, 5 Layers</p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* 2-part line */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">2</div>
-                    <span className="text-gray-300">2-part line</span>
-                  </div>
-                  <table className="w-full bg-gray-900 rounded-lg overflow-hidden">
-                    <thead className="bg-gray-800">
-                      <tr>
-                        <th className="px-3 py-2 text-left font-bold">Step</th>
-                        <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
-                        <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-800">
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">1</td>
-                        <td className="px-3 py-2">3000</td>
-                        <td className="px-3 py-2">3.1</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">2</td>
-                        <td className="px-3 py-2">3000</td>
-                        <td className="px-3 py-2">31.0</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">3</td>
-                        <td className="px-3 py-2">2400</td>
-                        <td className="px-3 py-2">43.0</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">4</td>
-                        <td className="px-3 py-2">1500</td>
-                        <td className="px-3 py-2">70.0</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                
-                {/* 4-part line */}
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">4</div>
-                    <span className="text-gray-300">4-part line</span>
-                  </div>
-                  <table className="w-full bg-gray-900 rounded-lg overflow-hidden">
-                    <thead className="bg-gray-800">
-                      <tr>
-                        <th className="px-3 py-2 text-left font-bold">Step</th>
-                        <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
-                        <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-800">
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">1</td>
-                        <td className="px-3 py-2">6000</td>
-                        <td className="px-3 py-2">1.5</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">2</td>
-                        <td className="px-3 py-2">6000</td>
-                        <td className="px-3 py-2">15.0</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">3</td>
-                        <td className="px-3 py-2">4800</td>
-                        <td className="px-3 py-2">22.0</td>
-                      </tr>
-                      <tr className="text-gray-300 hover:bg-gray-800">
-                        <td className="px-3 py-2">4</td>
-                        <td className="px-3 py-2">3000</td>
-                        <td className="px-3 py-2">35.0</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">4</div>
+                <span className="text-gray-300">4-part line</span>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="min-w-full bg-gray-900 rounded-lg overflow-hidden">
+                  <thead className="bg-gray-800">
+                    <tr>
+                      <th className="px-3 py-2 text-left font-bold">Step</th>
+                      <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
+                      <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-800">
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">1</td>
+                      <td className="px-3 py-2">6000</td>
+                      <td className="px-3 py-2">3.1</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">2</td>
+                      <td className="px-3 py-2">6000</td>
+                      <td className="px-3 py-2">14.0</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">3</td>
+                      <td className="px-3 py-2">3500</td>
+                      <td className="px-3 py-2">29.0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          {/* WIW 230 MZ 404 - 149.0m Drum */}
+          <div className="mb-10">
+            <h4 className="font-bold mb-2 text-gray-300">Hoist: WIW 230 MZ 404 – 22.0 kW FU</h4>
+            <p className="text-gray-400 mb-3">149.0 m LS-Trommel, 5 Layers</p>
+            
+            {/* 2-part line */}
+            <div className="mb-6">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">2</div>
+                <span className="text-gray-300">2-part line</span>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="min-w-full bg-gray-900 rounded-lg overflow-hidden">
+                  <thead className="bg-gray-800">
+                    <tr>
+                      <th className="px-3 py-2 text-left font-bold">Step</th>
+                      <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
+                      <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-800">
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">1</td>
+                      <td className="px-3 py-2">3000</td>
+                      <td className="px-3 py-2">3.1</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">2</td>
+                      <td className="px-3 py-2">3000</td>
+                      <td className="px-3 py-2">31.0</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">3</td>
+                      <td className="px-3 py-2">2400</td>
+                      <td className="px-3 py-2">43.0</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">4</td>
+                      <td className="px-3 py-2">1500</td>
+                      <td className="px-3 py-2">70.0</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            {/* 4-part line */}
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-6 h-6 text-center leading-6 border border-gray-600 rounded">4</div>
+                <span className="text-gray-300">4-part line</span>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="min-w-full bg-gray-900 rounded-lg overflow-hidden">
+                  <thead className="bg-gray-800">
+                    <tr>
+                      <th className="px-3 py-2 text-left font-bold">Step</th>
+                      <th className="px-3 py-2 text-left font-bold">Capacity (kg)</th>
+                      <th className="px-3 py-2 text-left font-bold">Speed (m/min)</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-800">
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">1</td>
+                      <td className="px-3 py-2">6000</td>
+                      <td className="px-3 py-2">1.5</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">2</td>
+                      <td className="px-3 py-2">6000</td>
+                      <td className="px-3 py-2">15.0</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">3</td>
+                      <td className="px-3 py-2">4800</td>
+                      <td className="px-3 py-2">22.0</td>
+                    </tr>
+                    <tr className="text-gray-300 hover:bg-gray-800">
+                      <td className="px-3 py-2">4</td>
+                      <td className="px-3 py-2">3000</td>
+                      <td className="px-3 py-2">35.0</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
