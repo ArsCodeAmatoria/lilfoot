@@ -37,6 +37,298 @@ export default function Liebherr81K1Page() {
         </p>
       </div>
 
+      {/* Transport & Setup Information */}
+      <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="rounded-lg bg-black p-4 shadow-lg">
+          <h2 className="mb-3 text-xl font-bold text-white">Transport & Mobility</h2>
+          <p className="mb-4 text-gray-400">
+            The Liebherr 81K.1 is designed for exceptional mobility and rapid deployment across job sites:
+          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                Compact transport dimensions of 14.3m (L) × 2.55m (W) × 4.0m (H)
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                Single-vehicle transport configuration with integrated axle system
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                Road-legal transport without special permits (in most regions)
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                Integrated ballast system with automatic deployment sequence
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                Air and hydraulic braking systems for secure transportation
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                Multiple support base options: 4.5m × 4.5m to 6.0m × 6.0m
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="rounded-lg bg-black p-4 shadow-lg">
+          <h2 className="mb-3 text-xl font-bold text-white">Setup & Operation</h2>
+          <p className="mb-4 text-gray-400">
+            The 81K.1 features Liebherr's advanced self-erection system for minimal crew requirements:
+          </p>
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                Fully automated erection sequence controlled via remote
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                20-minute setup time from transport to operational configuration
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                Single-phase erection with integrated hydraulic systems
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                MICROMOVE precision positioning system with millimeter accuracy
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                Adaptive load detection with automatic adjustment of operational parameters
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2 mt-1 inline-block h-4 w-4 rounded-full bg-highlight"></span>
+              <span className="text-gray-300">
+                Electronic wind monitoring system with automatic safety protocols
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Safety & Technology Features */}
+      <div className="mb-8 rounded-lg bg-black p-6 shadow-lg">
+        <h2 className="mb-4 text-xl font-bold text-white">Safety & Technology Features</h2>
+        <p className="mb-6 text-gray-400">
+          The Liebherr 81K.1 incorporates advanced safety systems and innovative technologies to enhance operational efficiency and protect personnel.
+        </p>
+        
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="space-y-4">
+            <div className="rounded-lg bg-gray-900 p-4">
+              <h3 className="mb-3 flex items-center text-lg font-semibold text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-highlight" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Safety Systems
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">ABB Anti-Collision System:</span> Prevents crane-to-crane and crane-to-obstacle collisions with automated avoidance protocols
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">Load Moment Limitation:</span> Real-time monitoring with automatic shutdown if maximum capacity is approached
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">Electronic Wind Monitoring:</span> Continuous measurement with automated safety protocols for high-wind conditions
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">Emergency Lowering System:</span> Battery-backed hydraulic system for load lowering during power outages
+                  </span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="rounded-lg bg-gray-900 p-4">
+              <h3 className="mb-3 flex items-center text-lg font-semibold text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-highlight" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                </svg>
+                Power Management
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">ECOmode:</span> Intelligent power management system that reduces energy consumption by up to 30%
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">Frequency-Controlled Drives:</span> All motions use FU drives for precise control and reduced power consumption
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">Regenerative Braking:</span> Energy recovery during braking operations for improved efficiency
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="space-y-4">
+            <div className="rounded-lg bg-gray-900 p-4">
+              <h3 className="mb-3 flex items-center text-lg font-semibold text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-highlight" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.168 1.168a4 4 0 01-8.274 0l1.17-1.169A3 3 0 0010 8.172z" clipRule="evenodd" />
+                </svg>
+                Smart Control Systems
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">LiDAT Telematics:</span> Remote monitoring of operational data, maintenance status, and location information
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">MICROMOVE:</span> Ultra-precise positioning system allowing millimeter-level load placement
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">Smart Load Control:</span> Automatic load sway dampening for improved handling in challenging conditions
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">Remote Diagnostic:</span> Cloud-based troubleshooting and performance optimization
+                  </span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="rounded-lg bg-gray-900 p-4">
+              <h3 className="mb-3 flex items-center text-lg font-semibold text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-highlight" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                </svg>
+                Operator Comfort & Control
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">Ergonomic Remote Control:</span> Lightweight, intuitive interface with haptic feedback
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">Customizable Control Profiles:</span> Operator-specific settings with automatic recognition
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 mt-1 text-gray-300">•</span>
+                  <span className="text-gray-300">
+                    <span className="font-semibold text-white">RC Vision System:</span> Optional camera integration for improved visual feedback in challenging environments
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-6 rounded-lg bg-gray-900/50 p-4">
+          <p className="text-gray-400 italic">
+            Liebherr's commitment to safety and innovation is reflected in every aspect of the 81K.1 design, providing operators
+            with advanced tools to maximize productivity while maintaining the highest safety standards in the industry.
+          </p>
+        </div>
+      </div>
+
+      {/* Tower Height Options */}
+      <div className="mb-8 rounded-lg bg-black p-4 shadow-lg">
+        <h2 className="mb-4 text-xl font-bold text-white">Tower Height Options</h2>
+        <p className="mb-4 text-gray-400">
+          The Liebherr 81K.1 offers multiple tower configurations to suit diverse project requirements:
+        </p>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div className="rounded bg-gray-900 p-3">
+            <h3 className="mb-2 font-semibold text-white">Standard Configuration</h3>
+            <ul className="ml-4 list-disc text-gray-300 space-y-1">
+              <li>Hook height: 26.0m</li>
+              <li>Tower sections: 1</li>
+              <li>Setup time: 20 minutes</li>
+              <li>Base spread: 4.5m × 4.5m</li>
+            </ul>
+          </div>
+          <div className="rounded bg-gray-900 p-3">
+            <h3 className="mb-2 font-semibold text-white">Extended Tower</h3>
+            <ul className="ml-4 list-disc text-gray-300 space-y-1">
+              <li>Hook height: 40.4m</li>
+              <li>Tower sections: 2</li>
+              <li>Setup time: 35 minutes</li>
+              <li>Base spread: 4.5m × 4.5m</li>
+            </ul>
+          </div>
+          <div className="rounded bg-gray-900 p-3">
+            <h3 className="mb-2 font-semibold text-white">Climbing Configuration</h3>
+            <ul className="ml-4 list-disc text-gray-300 space-y-1">
+              <li>Hook height: Up to 55.0m</li>
+              <li>Tower sections: Multiple</li>
+              <li>Setup time: 60+ minutes</li>
+              <li>Base spread: 6.0m × 6.0m</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-4 p-3 rounded bg-gray-900/50">
+          <h3 className="mb-2 font-semibold text-white flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-highlight" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+            </svg>
+            Technical Note
+          </h3>
+          <p className="text-gray-400">
+            All tower configurations include Liebherr's LITRONIC electronic monitoring system, which provides real-time load moment calculations,
+            anti-collision protection, and integrated wind speed monitoring. The system automatically adjusts operational parameters 
+            based on the specific configuration, ensuring optimal performance and safety regardless of setup.
+          </p>
+        </div>
+      </div>
+
       {/* Crane Charts */}
       <div className="mb-8">
         <Liebherr81K1Charts highlightColor="#53C03F" />
