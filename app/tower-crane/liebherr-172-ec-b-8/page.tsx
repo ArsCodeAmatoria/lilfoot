@@ -188,6 +188,8 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.18</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.04</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">1.92</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">1.80</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">1.70</td>
                 <td className="px-3 py-3 text-white text-center">1.60</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
@@ -218,69 +220,71 @@ export default function Liebherr172ECB8Page() {
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
                 <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">57.5</td>
                 <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=59.0</td>
-                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–19.2</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–17.8</td>
                 <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.88</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.98</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.26</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.69</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.21</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.81</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.48</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.23</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.01</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.81</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.64</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.48</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.33</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.20</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.92</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.36</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.67</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.08</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.49</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.09</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.74</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.45</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.19</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.96</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.76</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.57</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.41</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.26</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.12</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.01</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">2.00</span></td>
                 <td className="px-3 py-3 text-white text-center">-</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
                 <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">55.0</td>
                 <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=56.5</td>
-                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–21.5</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–20.2</td>
                 <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.80</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.78</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.98</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.34</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.81</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.36</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.98</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.70</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.46</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.24</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.04</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.86</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.30</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.52</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.85</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.17</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.72</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.33</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.99</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.71</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.45</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.21</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.01</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.82</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.65</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">2.50</span></td>
                 <td className="px-3 py-3 text-white text-center">-</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
                 <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">52.5</td>
                 <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=54.0</td>
-                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–21.4</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–20.2</td>
                 <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.77</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.76</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.96</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.32</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.79</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.34</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.96</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.69</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.29</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.51</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.84</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.17</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.72</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.33</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.99</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.70</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.44</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.23</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.03</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.21</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.00</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.82</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
@@ -290,21 +294,20 @@ export default function Liebherr172ECB8Page() {
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
                 <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">50.0</td>
                 <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=51.5</td>
-                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–23.0</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–21.5</td>
                 <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.30</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.44</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.75</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.19</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.71</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.82</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.98</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.27</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.55</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.07</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.66</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.30</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.01</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.75</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.51</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.30</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.99</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.71</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.47</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.25</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
@@ -479,6 +482,8 @@ export default function Liebherr172ECB8Page() {
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.18</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.04</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">1.92</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">1.80</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">1.70</td>
                 <td className="px-3 py-3 text-white text-center">1.60</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
@@ -509,69 +514,71 @@ export default function Liebherr172ECB8Page() {
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
                 <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">57.5</td>
                 <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=59.0</td>
-                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–19.2</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–17.8</td>
                 <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.88</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.98</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.26</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.69</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.21</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.81</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.48</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.23</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.01</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.81</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.64</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.48</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.33</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.20</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.92</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.36</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.67</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.08</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.49</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.09</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.74</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.45</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.19</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.96</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.76</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.57</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.41</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.26</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.12</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.01</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">2.00</span></td>
                 <td className="px-3 py-3 text-white text-center">-</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
                 <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">55.0</td>
                 <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=56.5</td>
-                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–21.5</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–20.2</td>
                 <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.80</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.78</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.98</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.34</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.81</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.36</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.98</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.70</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.46</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.24</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.04</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.86</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.30</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.52</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.85</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.17</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.72</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.33</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.99</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.71</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.45</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.21</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.01</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.82</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.65</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">2.50</span></td>
                 <td className="px-3 py-3 text-white text-center">-</td>
               </tr>
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
                 <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">52.5</td>
                 <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=54.0</td>
-                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–21.4</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–20.2</td>
                 <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.77</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.76</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.96</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.32</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.79</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.34</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.96</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.69</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.29</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.51</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.84</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.17</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.72</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.33</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.99</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.70</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.44</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.23</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.03</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.21</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.00</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">2.82</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
@@ -581,21 +588,20 @@ export default function Liebherr172ECB8Page() {
               <tr className="border-b border-gray-800 hover:bg-gray-900/50">
                 <td className="sticky left-0 z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">50.0</td>
                 <td className="sticky left-[65px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">r=51.5</td>
-                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–23.0</td>
+                <td className="sticky left-[140px] z-10 bg-gray-800/50 px-3 py-3 text-white border-r border-gray-800">2.6–21.5</td>
                 <td className="sticky left-[230px] z-10 bg-gray-800/50 px-3 py-3 text-white font-medium border-r border-gray-800">8</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800"><span className="font-bold">8.00</span></td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.30</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.44</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.75</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.19</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.71</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">7.82</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.98</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">6.27</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.55</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">5.07</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.66</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.30</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">4.01</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.75</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.51</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.30</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
-                <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.99</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.71</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.47</td>
+                <td className="px-3 py-3 text-white text-center border-r border-gray-800">3.25</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
                 <td className="px-3 py-3 text-white text-center border-r border-gray-800">-</td>
