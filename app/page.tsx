@@ -111,7 +111,7 @@ export default function Page() {
               Essential rigging references including wire rope slings, chain slings, and material weights for safe and efficient crane operations.
             </p>
             <Link
-              href="/wire-rope-slings"
+              href="/rigging-charts/basic"
               className="inline-flex items-center font-medium text-green-500 hover:text-green-400"
             >
               View rigging charts <ChevronRight size={16} className="ml-1" />

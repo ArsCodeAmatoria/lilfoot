@@ -255,27 +255,4 @@ export const demos: { name: string; items: Item[] }[] = [
       },
     ],
   },
-  {
-    name: 'Material Information',
-    items: [
-      {
-        name: 'Material Weights',
-        slug: 'material-weights',
-        description:
-          'Reference table of common material weights for load calculation',
-      },
-      {
-        name: 'Steel Pipe Weights',
-        slug: 'steel-pipe-weights',
-        description:
-          'Weight charts for steel pipes of various dimensions',
-      },
-      {
-        name: 'Wire Rope Slings',
-        slug: 'wire-rope-slings',
-        description:
-          'Working load limit charts for wire rope slings in various configurations',
-      },
-    ],
-  },
 ];
