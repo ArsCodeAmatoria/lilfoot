@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Download, FileText, FileSymlink } from 'lucide-react';
 import LoadCharts from './charts';
+import PdfDownload from '../../components/PdfDownload';
 
 export const metadata: Metadata = {
   title: 'Liebherr 100LC Tower Crane | LilFoot',
@@ -184,6 +185,26 @@ export default function Liebherr100LC() {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+      
+      {/* Technical Documentation Section */}
+      <div className="mb-10">
+        <h2 className="text-2xl font-bold mb-4 flex items-center">
+          <FileText className="mr-2 text-highlight" size={24} />
+          Technical Documentation
+        </h2>
+        <p className="mb-4 text-gray-300">
+          Download the official Liebherr 100LC specifications and load charts document for detailed
+          technical information, setup configurations, and operational parameters:
+        </p>
+        <div className="mt-4">
+          <PdfDownload
+            title="Liebherr 100LC Specifications"
+            description="Official technical data, dimensions, load charts, and operating parameters for the Liebherr 100LC tower crane."
+            pdfPath="/pdfs/100LC.pdf"
+            fileSize="766 KB"
+          />
         </div>
       </div>
       
